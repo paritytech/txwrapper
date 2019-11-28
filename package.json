@@ -1,0 +1,22 @@
+{
+  "name": "@amaurymartiny/polkadotjs-wrapper",
+  "version": "0.0.1",
+  "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
+  "description": "Simple wrapper around @polkadot/api",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": "https://github.com/amaurymartiny/polkadotjs-wrapper",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@polkadot/api": "^0.97.0-beta.39"
+  },
+  "devDependencies": {
+    "@amaurymartiny/config": "^1.0.10",
+    "@types/jest": "^24.0.23",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.2"
+  }
+}
