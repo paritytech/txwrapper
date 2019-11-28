@@ -3,11 +3,16 @@
   "version": "0.0.1",
   "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
   "description": "Simple wrapper around @polkadot/api",
+  "files": [
+    "lib"
+  ],
   "license": "MIT",
   "main": "lib/index.js",
   "repository": "https://github.com/amaurymartiny/polkadotjs-wrapper",
   "scripts": {
+    "build": "rimraf lib/ && tsc",
     "lint": "tsc --noEmit && eslint . --ext ts",
+    "prepublish": "yarn build",
     "test": "jest"
   },
   "dependencies": {

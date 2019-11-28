@@ -1,3 +1,4 @@
 {
+  "compilerOptions": { "outDir": "lib" },
   "extends": "./node_modules/@amaurymartiny/tsconfig/tsconfig"
 }
