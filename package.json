@@ -1,6 +1,6 @@
 {
   "name": "@amaurymartiny/polkadotjs-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
   "description": "Simple wrapper around @polkadot/api",
   "files": [
