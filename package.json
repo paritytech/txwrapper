@@ -8,6 +8,9 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "https://github.com/amaurymartiny/polkadotjs-wrapper",
   "scripts": {
     "build": "rimraf lib/ && tsc",
