@@ -1,5 +1,5 @@
 {
-  "name": "@amaurymartiny/polkadotjs-wrapper",
+  "name": "@amaurymartiny/txwrapper",
   "version": "0.0.2",
   "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
   "description": "Simple wrapper around @polkadot/api",
@@ -11,11 +11,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/amaurymartiny/polkadotjs-wrapper",
+  "repository": "https://github.com/amaurymartiny/txwrapper",
   "scripts": {
     "build": "rimraf lib/ && tsc",
+    "docs": "typedoc",
     "lint": "tsc --noEmit && eslint . --ext ts",
-    "prepublish": "yarn build",
     "test": "jest"
   },
   "dependencies": {
@@ -26,6 +26,8 @@
     "@types/jest": "^24.0.23",
     "jest": "^24.9.0",
     "ts-jest": "^24.2.0",
+    "typedoc": "^0.15.3",
+    "typedoc-plugin-markdown": "^2.2.11",
     "typescript": "^3.7.2"
   }
 }
