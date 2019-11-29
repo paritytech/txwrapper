@@ -3,8 +3,8 @@ import { createType, TypeRegistry } from '@polkadot/types';
 import { UnsignedTransaction } from './balanceTransfer';
 
 /**
- * Create the signing payload (i.e. the payload that needs to be signed) from
- * an unsigned transaction.
+ * Construct the signing payload from an unsigned transaction and export it to
+ * a remote signer (this is often called "detached signing")
  *
  * @param unsigned - The JSON representing the unsigned transaction
  */

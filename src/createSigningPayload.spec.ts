@@ -1,5 +1,5 @@
-import { createSigningPayload } from './createSigningPayload';
 import { balanceTransfer } from './balanceTransfer';
+import { createSigningPayload } from './createSigningPayload';
 import { TEST_TX_INFO } from './util/testUtil';
 
 describe('createSigningPayload', () => {

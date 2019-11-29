@@ -2,6 +2,8 @@ import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
 import { SignerPayloadJSON } from '@polkadot/types/types';
 
+import { EXTRINSIC_VERSION } from './util/constants';
+
 /**
  * JSON format for an unsigned transaction
  */
@@ -57,7 +59,8 @@ const ONE_MINUTE = 60 / BLOCKTIME;
 const DEFAULT_MORTAL_LENGTH = 240 * ONE_MINUTE;
 
 /**
- * Construct a balance transfer transaction offline
+ * Construct a balance transfer transaction offline. Transactions can be
+ * constructed in such a way that it is valid for at least 240 minutes
  *
  * @param info - Information required to construct the transaction
  * @param amount -
@@ -81,6 +84,6 @@ export function balanceTransfer(info: TxInfo): UnsignedTransaction {
     nonce: createType(registry, 'Compact<Index>', info.nonce).toHex(),
     specVersion: createType(registry, 'u32', info.specVersion).toHex(),
     tip: createType(registry, 'Compact<Balance>', info.tip).toHex(),
-    version: 4
+    version: EXTRINSIC_VERSION
   };
 }

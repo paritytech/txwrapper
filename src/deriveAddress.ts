@@ -1,6 +1,6 @@
 import { encodeAddress } from '@polkadot/keyring';
 
-const KUSAMA_SS58_FORMAT = 2;
+import { KUSAMA_SS58_FORMAT } from './util/constants';
 
 /**
  * Derive an address from a cryptographic public key offline
