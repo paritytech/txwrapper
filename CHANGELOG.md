@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/amaurymartiny/txwrapper/compare/v0.0.3...v0.0.4) (2019-12-02)
+
+
+### Bug Fixes
+
+* Small bugs here and there ([#3](https://github.com/amaurymartiny/txwrapper/issues/3)) ([f300844](https://github.com/amaurymartiny/txwrapper/commit/f300844c87e4954711aafd5393e7247295059a81))
+
 ### [0.0.3](https://github.com/amaurymartiny/txwrapper/compare/v0.0.2...v0.0.3) (2019-11-29)
 
 ### [0.0.2](https://github.com/amaurymartiny/txwrapper/compare/v0.0.1...v0.0.2) (2019-11-29)
