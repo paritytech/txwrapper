@@ -84,8 +84,8 @@ export function balanceTransfer(info: TxInfo): UnsignedTransaction {
   const metadata = new Metadata(registry, info.metadataRpc);
 
   const transfer = info.keepAlive
-    ? metadata.tx.balances.transfer
-    : metadata.tx.balances.transferKeepAlive;
+    ? metadata.tx.balances.transferKeepAlivetransfer
+    : metadata.tx.balances.transfer;
   const method = transfer(info.to, info.amount).toHex();
 
   return {
