@@ -21,7 +21,8 @@ export const TEST_TX_INFO: TxInfo = {
   nonce: 2,
   specVersion: 1019,
   tip: 0,
-  to: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s'
+  to: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+  validityPeriod: 240 * 60
 };
 
 /**

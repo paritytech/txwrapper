@@ -57,12 +57,16 @@ export interface TxInfo {
    * The recipient address, ss-58 encoded
    */
   to: string;
+  /**
+   * The amount of time (in minutes) the transaction is valid for. Will be translated
+   * into a mortal era
+   */
+  validityPeriod: number;
 }
 
-// Calculting Era. The default here allows for 240min mortal eras.
+// Useful constants for calculting an Era.
 const BLOCKTIME = 6;
-const ONE_MINUTE = 60 / BLOCKTIME;
-const DEFAULT_MORTAL_LENGTH = 240 * ONE_MINUTE;
+const ONE_SECOND = 1 / BLOCKTIME;
 
 /**
  * Construct a balance transfer transaction offline. Transactions can be
@@ -83,7 +87,7 @@ export function balanceTransfer(info: TxInfo): UnsignedTransaction {
     blockNumber: createType(registry, 'BlockNumber', info.blockNumber).toHex(),
     era: createType(registry, 'ExtrinsicEra', {
       current: info.blockNumber,
-      period: DEFAULT_MORTAL_LENGTH
+      period: ONE_SECOND * info.validityPeriod
     }).toHex(),
     genesisHash: info.genesisHash,
     metadataRpc: info.metadataRpc,
