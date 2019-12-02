@@ -58,8 +58,8 @@ export interface TxInfo {
    */
   to: string;
   /**
-   * The amount of time (in minutes) the transaction is valid for. Will be translated
-   * into a mortal era
+   * The amount of time (in second) the transaction is valid for. Will be
+   * translated into a mortal era
    */
   validityPeriod: number;
 }

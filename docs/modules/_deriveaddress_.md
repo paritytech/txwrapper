@@ -14,7 +14,7 @@
 
 ▸ **deriveAddress**(`publicKey`: string | Uint8Array, `ss58Format`: number): *string*
 
-*Defined in [src/deriveAddress.ts:11](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/deriveAddress.ts#L11)*
+*Defined in [src/deriveAddress.ts:11](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/deriveAddress.ts#L11)*
 
 Derive an address from a cryptographic public key offline
 

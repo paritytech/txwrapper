@@ -20,6 +20,7 @@
 * [specVersion](_balancetransfer_.txinfo.md#specversion)
 * [tip](_balancetransfer_.txinfo.md#tip)
 * [to](_balancetransfer_.txinfo.md#to)
+* [validityPeriod](_balancetransfer_.txinfo.md#validityperiod)
 
 ## Properties
 
@@ -27,7 +28,7 @@
 
 • **address**: *string*
 
-*Defined in [src/balanceTransfer.ts:16](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L16)*
+*Defined in [src/balanceTransfer.ts:22](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L22)*
 
 The ss-58 encoded address
 
@@ -37,7 +38,7 @@ ___
 
 • **amount**: *number*
 
-*Defined in [src/balanceTransfer.ts:20](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L20)*
+*Defined in [src/balanceTransfer.ts:26](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L26)*
 
 The amount to send
 
@@ -47,7 +48,7 @@ ___
 
 • **blockHash**: *string*
 
-*Defined in [src/balanceTransfer.ts:24](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L24)*
+*Defined in [src/balanceTransfer.ts:30](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L30)*
 
 The checkpoint hash of the block, in hex
 
@@ -57,7 +58,7 @@ ___
 
 • **blockNumber**: *number*
 
-*Defined in [src/balanceTransfer.ts:28](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L28)*
+*Defined in [src/balanceTransfer.ts:34](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L34)*
 
 The checkpoint block number (u32), in hex
 
@@ -67,7 +68,7 @@ ___
 
 • **genesisHash**: *string*
 
-*Defined in [src/balanceTransfer.ts:32](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L32)*
+*Defined in [src/balanceTransfer.ts:38](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L38)*
 
 The genesis hash of the chain, in hex
 
@@ -77,7 +78,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/balanceTransfer.ts:37](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L37)*
+*Defined in [src/balanceTransfer.ts:43](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L43)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`
@@ -88,7 +89,7 @@ ___
 
 • **nonce**: *number*
 
-*Defined in [src/balanceTransfer.ts:41](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L41)*
+*Defined in [src/balanceTransfer.ts:47](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L47)*
 
 The nonce for this transaction,
 
@@ -98,7 +99,7 @@ ___
 
 • **specVersion**: *number*
 
-*Defined in [src/balanceTransfer.ts:45](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L45)*
+*Defined in [src/balanceTransfer.ts:51](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L51)*
 
 The current spec version for the runtime
 
@@ -108,7 +109,7 @@ ___
 
 • **tip**: *number*
 
-*Defined in [src/balanceTransfer.ts:49](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L49)*
+*Defined in [src/balanceTransfer.ts:55](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L55)*
 
 The tip for this transaction, in hex
 
@@ -118,6 +119,17 @@ ___
 
 • **to**: *string*
 
-*Defined in [src/balanceTransfer.ts:53](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L53)*
+*Defined in [src/balanceTransfer.ts:59](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L59)*
 
 The recipient address, ss-58 encoded
+
+___
+
+###  validityPeriod
+
+• **validityPeriod**: *number*
+
+*Defined in [src/balanceTransfer.ts:64](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L64)*
+
+The amount of time (in second) the transaction is valid for. Will be
+translated into a mortal era

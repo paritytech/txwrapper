@@ -18,7 +18,7 @@
 
 ▸ **generateKeypair**(): *[KeyringPair](../interfaces/_generatekeypair_.keyringpair.md)*
 
-*Defined in [src/generateKeypair.ts:13](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/generateKeypair.ts#L13)*
+*Defined in [src/generateKeypair.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/generateKeypair.ts#L15)*
 
 Generate a valid public/private keypair offline
 

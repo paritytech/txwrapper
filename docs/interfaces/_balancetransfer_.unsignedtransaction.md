@@ -19,6 +19,7 @@ JSON format for an unsigned transaction
 * [blockNumber](_balancetransfer_.unsignedtransaction.md#blocknumber)
 * [era](_balancetransfer_.unsignedtransaction.md#era)
 * [genesisHash](_balancetransfer_.unsignedtransaction.md#genesishash)
+* [metadataRpc](_balancetransfer_.unsignedtransaction.md#metadatarpc)
 * [method](_balancetransfer_.unsignedtransaction.md#method)
 * [nonce](_balancetransfer_.unsignedtransaction.md#nonce)
 * [specVersion](_balancetransfer_.unsignedtransaction.md#specversion)
@@ -84,6 +85,17 @@ ___
 Defined in node_modules/@polkadot/types/types.d.ts:193
 
 **`description`** The genesis hash of the chain, in hex
+
+___
+
+###  metadataRpc
+
+• **metadataRpc**: *string*
+
+*Defined in [src/balanceTransfer.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L15)*
+
+The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
+call `state_getMetadata`
 
 ___
 
