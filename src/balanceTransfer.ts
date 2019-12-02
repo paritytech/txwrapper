@@ -37,6 +37,10 @@ export interface TxInfo {
    */
   genesisHash: string;
   /**
+   * Use balances::transfer_keep_alive instead of balances::transfer
+   */
+  keepAlive?: boolean;
+  /**
    * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
    * call `state_getMetadata`
    */
@@ -79,7 +83,10 @@ export function balanceTransfer(info: TxInfo): UnsignedTransaction {
   const registry = new TypeRegistry();
   const metadata = new Metadata(registry, info.metadataRpc);
 
-  const method = metadata.tx.balances.transfer(info.to, info.amount).toHex();
+  const transfer = info.keepAlive
+    ? metadata.tx.balances.transferKeepAlivetransfer
+    : metadata.tx.balances.transfer;
+  const method = transfer(info.to, info.amount).toHex();
 
   return {
     address: info.address,
