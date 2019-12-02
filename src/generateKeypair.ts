@@ -1,6 +1,11 @@
 import { Keyring } from '@polkadot/keyring';
-import { KeyringPair } from '@polkadot/keyring/types';
+import { KeyringPair as KeyringPairBase } from '@polkadot/keyring/types';
 import { mnemonicGenerate } from '@polkadot/util-crypto';
+
+/**
+ * A keyring pair
+ */
+export interface KeyringPair extends KeyringPairBase {} // eslint-disable-line @typescript-eslint/no-empty-interface
 
 /**
  * Generate a valid public/private keypair offline

@@ -12,9 +12,9 @@
 
 ###  createSigningPayload
 
-▸ **createSigningPayload**(`unsigned`: [UnsignedTransaction](_balancetransfer_.md#unsignedtransaction)): *string*
+▸ **createSigningPayload**(`unsigned`: [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md)): *string*
 
-*Defined in [createSigningPayload.ts:11](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/createSigningPayload.ts#L11)*
+*Defined in [src/createSigningPayload.ts:11](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/createSigningPayload.ts#L11)*
 
 Construct the signing payload from an unsigned transaction and export it to
 a remote signer (this is often called "detached signing")
@@ -23,6 +23,6 @@ a remote signer (this is often called "detached signing")
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`unsigned` | [UnsignedTransaction](_balancetransfer_.md#unsignedtransaction) | The JSON representing the unsigned transaction  |
+`unsigned` | [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md) | The JSON representing the unsigned transaction  |
 
 **Returns:** *string*
