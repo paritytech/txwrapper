@@ -6,7 +6,6 @@ import { UnsignedTransaction } from './balanceTransfer';
  * Serialize a signed transaction in a format that can be submitted over the
  * Node RPC Interface from the signing payload and signature produced by the
  * remote signer
-
  *
  * @param unsigned - The JSON representing the unsigned transaction
  * @param signature - Signature of the signing payload produced by the remote
@@ -14,11 +13,10 @@ import { UnsignedTransaction } from './balanceTransfer';
  */
 export function createSignedTx(
   unsigned: UnsignedTransaction,
-  signature: string,
-  metadataRpc: string
+  signature: string
 ): string {
   const registry = new TypeRegistry();
-  registry.setMetadata(new Metadata(registry, metadataRpc));
+  registry.setMetadata(new Metadata(registry, unsigned.metadataRpc));
 
   const extrinsic = createType(
     registry,

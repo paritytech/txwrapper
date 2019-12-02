@@ -12,8 +12,7 @@
 ### Variables
 
 * [BLOCKTIME](_balancetransfer_.md#const-blocktime)
-* [DEFAULT_MORTAL_LENGTH](_balancetransfer_.md#const-default_mortal_length)
-* [ONE_MINUTE](_balancetransfer_.md#const-one_minute)
+* [ONE_SECOND](_balancetransfer_.md#const-one_second)
 
 ### Functions
 
@@ -25,23 +24,15 @@
 
 • **BLOCKTIME**: *6* = 6
 
-*Defined in [src/balanceTransfer.ts:57](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L57)*
+*Defined in [src/balanceTransfer.ts:68](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L68)*
 
 ___
 
-### `Const` DEFAULT_MORTAL_LENGTH
+### `Const` ONE_SECOND
 
-• **DEFAULT_MORTAL_LENGTH**: *number* =  240 * ONE_MINUTE
+• **ONE_SECOND**: *number* =  1 / BLOCKTIME
 
-*Defined in [src/balanceTransfer.ts:59](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L59)*
-
-___
-
-### `Const` ONE_MINUTE
-
-• **ONE_MINUTE**: *number* =  60 / BLOCKTIME
-
-*Defined in [src/balanceTransfer.ts:58](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L58)*
+*Defined in [src/balanceTransfer.ts:69](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L69)*
 
 ## Functions
 
@@ -49,7 +40,7 @@ ___
 
 ▸ **balanceTransfer**(`info`: [TxInfo](../interfaces/_balancetransfer_.txinfo.md)): *[UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md)*
 
-*Defined in [src/balanceTransfer.ts:68](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L68)*
+*Defined in [src/balanceTransfer.ts:78](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/balanceTransfer.ts#L78)*
 
 Construct a balance transfer transaction offline. Transactions can be
 constructed in such a way that it is valid for at least 240 minutes

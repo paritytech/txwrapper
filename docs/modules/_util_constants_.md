@@ -15,7 +15,7 @@
 
 • **EXTRINSIC_VERSION**: *4* = 4
 
-*Defined in [src/util/constants.ts:3](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/util/constants.ts#L3)*
+*Defined in [src/util/constants.ts:3](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/util/constants.ts#L3)*
 
 ___
 
@@ -23,4 +23,4 @@ ___
 
 • **KUSAMA_SS58_FORMAT**: *2* = 2
 
-*Defined in [src/util/constants.ts:1](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/util/constants.ts#L1)*
+*Defined in [src/util/constants.ts:1](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/util/constants.ts#L1)*

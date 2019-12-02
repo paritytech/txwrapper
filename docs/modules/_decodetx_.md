@@ -14,7 +14,7 @@
 
 ▸ **decodeTx**(`signedTx`: string, `metadataRpc`: string): *Partial‹[TxInfo](../interfaces/_balancetransfer_.txinfo.md)›*
 
-*Defined in [src/decodeTx.ts:17](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/decodeTx.ts#L17)*
+*Defined in [src/decodeTx.ts:17](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/6203cdc/src/decodeTx.ts#L17)*
 
 Parse the transaction information from an unsigned and signed transaction
 offline

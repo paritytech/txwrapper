@@ -10,7 +10,7 @@ describe('decodeTx', () => {
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
 
-    const tx = createSignedTx(unsigned, signature, metadataRpc);
+    const tx = createSignedTx(unsigned, signature);
 
     const txInfo = decodeTx(tx, metadataRpc);
 

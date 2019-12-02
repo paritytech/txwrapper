@@ -7,7 +7,13 @@ import { EXTRINSIC_VERSION } from './util/constants';
 /**
  * JSON format for an unsigned transaction
  */
-export interface UnsignedTransaction extends SignerPayloadJSON {} // eslint-disable-line @typescript-eslint/no-empty-interface
+export interface UnsignedTransaction extends SignerPayloadJSON {
+  /**
+   * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
+   * call `state_getMetadata`
+   */
+  metadataRpc: string;
+}
 
 export interface TxInfo {
   /**
@@ -51,12 +57,16 @@ export interface TxInfo {
    * The recipient address, ss-58 encoded
    */
   to: string;
+  /**
+   * The amount of time (in second) the transaction is valid for. Will be
+   * translated into a mortal era
+   */
+  validityPeriod: number;
 }
 
-// Calculting Era. The default here allows for 240min mortal eras.
+// Useful constants for calculting an Era.
 const BLOCKTIME = 6;
-const ONE_MINUTE = 60 / BLOCKTIME;
-const DEFAULT_MORTAL_LENGTH = 240 * ONE_MINUTE;
+const ONE_SECOND = 1 / BLOCKTIME;
 
 /**
  * Construct a balance transfer transaction offline. Transactions can be
@@ -77,9 +87,10 @@ export function balanceTransfer(info: TxInfo): UnsignedTransaction {
     blockNumber: createType(registry, 'BlockNumber', info.blockNumber).toHex(),
     era: createType(registry, 'ExtrinsicEra', {
       current: info.blockNumber,
-      period: DEFAULT_MORTAL_LENGTH
+      period: ONE_SECOND * info.validityPeriod
     }).toHex(),
     genesisHash: info.genesisHash,
+    metadataRpc: info.metadataRpc,
     method,
     nonce: createType(registry, 'Compact<Index>', info.nonce).toHex(),
     specVersion: createType(registry, 'u32', info.specVersion).toHex(),
