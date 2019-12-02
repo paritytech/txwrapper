@@ -14,11 +14,10 @@ import { UnsignedTransaction } from './balanceTransfer';
  */
 export function createSignedTx(
   unsigned: UnsignedTransaction,
-  signature: string,
-  metadataRpc: string
+  signature: string
 ): string {
   const registry = new TypeRegistry();
-  registry.setMetadata(new Metadata(registry, metadataRpc));
+  registry.setMetadata(new Metadata(registry, unsigned.metadataRpc));
 
   const extrinsic = createType(
     registry,

@@ -6,8 +6,6 @@ import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import { TxInfo } from '../balanceTransfer';
 
-export { metadataRpc };
-
 /**
  * @ignore
  */

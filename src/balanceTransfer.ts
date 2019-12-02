@@ -7,7 +7,13 @@ import { EXTRINSIC_VERSION } from './util/constants';
 /**
  * JSON format for an unsigned transaction
  */
-export interface UnsignedTransaction extends SignerPayloadJSON {} // eslint-disable-line @typescript-eslint/no-empty-interface
+export interface UnsignedTransaction extends SignerPayloadJSON {
+  /**
+   * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
+   * call `state_getMetadata`
+   */
+  metadataRpc: string;
+}
 
 export interface TxInfo {
   /**
@@ -80,6 +86,7 @@ export function balanceTransfer(info: TxInfo): UnsignedTransaction {
       period: DEFAULT_MORTAL_LENGTH
     }).toHex(),
     genesisHash: info.genesisHash,
+    metadataRpc: info.metadataRpc,
     method,
     nonce: createType(registry, 'Compact<Index>', info.nonce).toHex(),
     specVersion: createType(registry, 'u32', info.specVersion).toHex(),
