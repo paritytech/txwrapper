@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/amaurymartiny/txwrapper/compare/v0.0.4...v0.0.5) (2019-12-02)
+
+
+### Features
+
+* Add balances::transfer_keep_alive ([#4](https://github.com/amaurymartiny/txwrapper/issues/4)) ([d480fb9](https://github.com/amaurymartiny/txwrapper/commit/d480fb9de9d23c652172386554c20db621ec4e2e))
+
 ### [0.0.4](https://github.com/amaurymartiny/txwrapper/compare/v0.0.3...v0.0.4) (2019-12-02)
 
 
