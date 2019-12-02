@@ -2,7 +2,7 @@ import { balanceTransfer } from './balanceTransfer';
 import { createSignedTx } from './createSignedTx';
 import { createSigningPayload } from './createSigningPayload';
 import { decodeTx } from './decodeTx';
-import { signWithAlice, TEST_TX_INFO } from './util/testUtil';
+import { metadataRpc, signWithAlice, TEST_TX_INFO } from './util/testUtil';
 
 describe('decodeTx', () => {
   it('should work', async done => {
@@ -12,7 +12,7 @@ describe('decodeTx', () => {
 
     const tx = createSignedTx(unsigned, signature);
 
-    const txInfo = decodeTx(tx, unsigned.metadataRpc);
+    const txInfo = decodeTx(tx, metadataRpc);
 
     (['address', 'amount', 'nonce', 'tip', 'to'] as const).forEach(key =>
       expect(txInfo[key]).toBe(TEST_TX_INFO[key])
