@@ -7,7 +7,7 @@ import { EXTRINSIC_VERSION } from './util/constants';
 /**
  * JSON format for an unsigned transaction
  */
-export type UnsignedTransaction = SignerPayloadJSON;
+export interface UnsignedTransaction extends SignerPayloadJSON {} // eslint-disable-line @typescript-eslint/no-empty-interface
 
 export interface TxInfo {
   /**

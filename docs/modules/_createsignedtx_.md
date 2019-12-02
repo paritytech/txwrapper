@@ -12,9 +12,9 @@
 
 ###  createSignedTx
 
-▸ **createSignedTx**(`unsigned`: [UnsignedTransaction](_balancetransfer_.md#unsignedtransaction), `signature`: string, `metadataRpc`: string): *string*
+▸ **createSignedTx**(`unsigned`: [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md), `signature`: string, `metadataRpc`: string): *string*
 
-*Defined in [createSignedTx.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/createSignedTx.ts#L15)*
+*Defined in [src/createSignedTx.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/createSignedTx.ts#L15)*
 
 Serialize a signed transaction in a format that can be submitted over the
 Node RPC Interface from the signing payload and signature produced by the
@@ -24,7 +24,7 @@ remote signer
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`unsigned` | [UnsignedTransaction](_balancetransfer_.md#unsignedtransaction) | The JSON representing the unsigned transaction |
+`unsigned` | [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md) | The JSON representing the unsigned transaction |
 `signature` | string | Signature of the signing payload produced by the remote signer  |
 `metadataRpc` | string | - |
 

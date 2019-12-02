@@ -27,7 +27,7 @@
 
 • **address**: *string*
 
-*Defined in [balanceTransfer.ts:16](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L16)*
+*Defined in [src/balanceTransfer.ts:16](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L16)*
 
 The ss-58 encoded address
 
@@ -37,7 +37,7 @@ ___
 
 • **amount**: *number*
 
-*Defined in [balanceTransfer.ts:20](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L20)*
+*Defined in [src/balanceTransfer.ts:20](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L20)*
 
 The amount to send
 
@@ -47,7 +47,7 @@ ___
 
 • **blockHash**: *string*
 
-*Defined in [balanceTransfer.ts:24](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L24)*
+*Defined in [src/balanceTransfer.ts:24](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L24)*
 
 The checkpoint hash of the block, in hex
 
@@ -57,7 +57,7 @@ ___
 
 • **blockNumber**: *number*
 
-*Defined in [balanceTransfer.ts:28](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L28)*
+*Defined in [src/balanceTransfer.ts:28](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L28)*
 
 The checkpoint block number (u32), in hex
 
@@ -67,7 +67,7 @@ ___
 
 • **genesisHash**: *string*
 
-*Defined in [balanceTransfer.ts:32](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L32)*
+*Defined in [src/balanceTransfer.ts:32](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L32)*
 
 The genesis hash of the chain, in hex
 
@@ -77,7 +77,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [balanceTransfer.ts:37](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L37)*
+*Defined in [src/balanceTransfer.ts:37](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L37)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`
@@ -88,7 +88,7 @@ ___
 
 • **nonce**: *number*
 
-*Defined in [balanceTransfer.ts:41](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L41)*
+*Defined in [src/balanceTransfer.ts:41](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L41)*
 
 The nonce for this transaction,
 
@@ -98,7 +98,7 @@ ___
 
 • **specVersion**: *number*
 
-*Defined in [balanceTransfer.ts:45](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L45)*
+*Defined in [src/balanceTransfer.ts:45](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L45)*
 
 The current spec version for the runtime
 
@@ -108,7 +108,7 @@ ___
 
 • **tip**: *number*
 
-*Defined in [balanceTransfer.ts:49](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L49)*
+*Defined in [src/balanceTransfer.ts:49](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L49)*
 
 The tip for this transaction, in hex
 
@@ -118,6 +118,6 @@ ___
 
 • **to**: *string*
 
-*Defined in [balanceTransfer.ts:53](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/balanceTransfer.ts#L53)*
+*Defined in [src/balanceTransfer.ts:53](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/balanceTransfer.ts#L53)*
 
 The recipient address, ss-58 encoded

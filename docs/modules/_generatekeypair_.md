@@ -4,6 +4,10 @@
 
 ## Index
 
+### Interfaces
+
+* [KeyringPair](../interfaces/_generatekeypair_.keyringpair.md)
+
 ### Functions
 
 * [generateKeypair](_generatekeypair_.md#generatekeypair)
@@ -12,10 +16,10 @@
 
 ###  generateKeypair
 
-▸ **generateKeypair**(): *KeyringPair*
+▸ **generateKeypair**(): *[KeyringPair](../interfaces/_generatekeypair_.keyringpair.md)*
 
-*Defined in [generateKeypair.ts:8](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/07b7ece/src/generateKeypair.ts#L8)*
+*Defined in [src/generateKeypair.ts:13](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/4ad0632/src/generateKeypair.ts#L13)*
 
 Generate a valid public/private keypair offline
 
-**Returns:** *KeyringPair*
+**Returns:** *[KeyringPair](../interfaces/_generatekeypair_.keyringpair.md)*
