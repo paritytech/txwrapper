@@ -7,12 +7,7 @@ import { TxInfo } from '../balanceTransfer';
 import { KUSAMA_SS58_FORMAT } from '../util/constants';
 
 /**
-<<<<<<< HEAD:src/decode/decodeSignedTx.ts
  * Parse the transaction information from a signed transaction offline
-=======
- * Parse the transaction information from a signed transaction
- * offline
->>>>>>> master:src/decodeSignedTx.ts
  *
  * @param unsigned - The JSON representing the unsigned transaction
  * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
