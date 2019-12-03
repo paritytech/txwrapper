@@ -14,9 +14,14 @@ describe('decodeTx', () => {
 
     const txInfo = decodeTx(tx, metadataRpc);
 
-    (['address', 'amount', 'nonce', 'tip', 'to'] as const).forEach(key =>
-      expect(txInfo[key]).toBe(TEST_TX_INFO[key])
-    );
+    ([
+      'address',
+      'amount',
+      'keepAlive',
+      'nonce',
+      'tip',
+      'to'
+    ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));
 
     done();
   });

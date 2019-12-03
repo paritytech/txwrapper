@@ -30,6 +30,7 @@ export function decodeTx(
   return {
     address: tx.signer.toString(),
     amount: (tx.method.args[1] as Compact<Balance>).toNumber(),
+    keepAlive: tx.method.methodName === 'transferKeepAlive',
     metadataRpc,
     nonce: tx.nonce.toNumber(),
     tip: tx.tip.toNumber(),

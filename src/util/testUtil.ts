@@ -20,6 +20,7 @@ export const TEST_TX_INFO: TxInfo = {
   genesisHash:
     '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
   metadataRpc,
+  keepAlive: true,
   nonce: 2,
   specVersion: 1019,
   tip: 0,
