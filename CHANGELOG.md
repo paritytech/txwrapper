@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/amaurymartiny/txwrapper/compare/v0.1.0...v0.1.1) (2019-12-03)
+
+
+### Bug Fixes
+
+* Better typescript typings ([e9a7450](https://github.com/amaurymartiny/txwrapper/commit/e9a7450960def9cb00c32e54a61a8a09d68585c4))
+
 ## [0.1.0](https://github.com/amaurymartiny/txwrapper/compare/v0.0.5...v0.1.0) (2019-12-03)
 
 

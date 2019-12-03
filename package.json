@@ -1,6 +1,6 @@
 {
   "name": "@amaurymartiny/txwrapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
   "description": "Simple wrapper around @polkadot/api",
   "files": [
