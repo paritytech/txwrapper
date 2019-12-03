@@ -1,6 +1,6 @@
-import { balanceTransfer } from './balanceTransfer';
+import { balanceTransfer } from '../balanceTransfer';
+import { metadataRpc, TEST_TX_INFO } from '../util/testUtil';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
-import { metadataRpc, TEST_TX_INFO } from './util/testUtil';
 
 describe('decodeSignedTx', () => {
   it('should work', () => {

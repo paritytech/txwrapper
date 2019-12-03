@@ -2,12 +2,11 @@ import { Compact, createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { Balance } from '@polkadot/types/interfaces';
 import { setSS58Format } from '@polkadot/util-crypto';
 
-import { TxInfo, UnsignedTransaction } from './balanceTransfer';
-import { BLOCKTIME, KUSAMA_SS58_FORMAT } from './util/constants';
+import { TxInfo, UnsignedTransaction } from '../balanceTransfer';
+import { BLOCKTIME, KUSAMA_SS58_FORMAT } from '../util/constants';
 
 /**
- * Parse the transaction information from a signed transaction
- * offline
+ * Parse the transaction information from an unigned transaction offline
  *
  * @param unsigned - The JSON representing the unsigned transaction
  * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
