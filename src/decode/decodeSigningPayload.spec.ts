@@ -19,9 +19,7 @@ describe('decodeSigningPayload', () => {
       'specVersion',
       'tip',
       'to'
-    ] as (keyof typeof TEST_TX_INFO)[]).forEach(key =>
-      expect(txInfo[key]).toBe(TEST_TX_INFO[key])
-    );
+    ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));
 
     expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
       TEST_TX_INFO.validityPeriod

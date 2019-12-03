@@ -19,7 +19,7 @@ import {
 export function decodeSigningPayload(
   signingPayload: string,
   metadataRpc: string
-): Partial<TxInfo> {
+): Omit<TxInfo, 'address' | 'blockNumber'> {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
 

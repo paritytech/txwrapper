@@ -4,7 +4,7 @@ import { hexToU8a } from '@polkadot/util';
 import { setSS58Format } from '@polkadot/util-crypto';
 
 import { TxInfo } from '../balanceTransfer';
-import { KUSAMA_SS58_FORMAT } from '../util/constants';
+import { BLOCKTIME, KUSAMA_SS58_FORMAT } from '../util/constants';
 
 /**
  * Parse the transaction information from a signed transaction offline
@@ -16,7 +16,10 @@ import { KUSAMA_SS58_FORMAT } from '../util/constants';
 export function decodeSignedTx(
   signedTx: string,
   metadataRpc: string
-): Partial<TxInfo> {
+): Omit<
+  TxInfo,
+  'blockHash' | 'blockNumber' | 'genesisHash' | 'specVersion' | 'version'
+> {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
 
@@ -33,6 +36,7 @@ export function decodeSignedTx(
     metadataRpc,
     nonce: tx.nonce.toNumber(),
     tip: tx.tip.toNumber(),
-    to: tx.method.args[0].toString()
+    to: tx.method.args[0].toString(),
+    validityPeriod: tx.era.asMortalEra.period.toNumber() * BLOCKTIME
   };
 }
