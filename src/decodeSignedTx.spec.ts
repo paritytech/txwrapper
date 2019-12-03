@@ -1,18 +1,18 @@
 import { balanceTransfer } from './balanceTransfer';
 import { createSignedTx } from './createSignedTx';
 import { createSigningPayload } from './createSigningPayload';
-import { decodeTx } from './decodeTx';
+import { decodeSignedTx } from './decodeSignedTx';
 import { metadataRpc, signWithAlice, TEST_TX_INFO } from './util/testUtil';
 
-describe('decodeTx', () => {
+describe('decodeSignedTx', () => {
   it('should work', async done => {
     const unsigned = balanceTransfer(TEST_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
 
-    const tx = createSignedTx(unsigned, signature);
+    const signedTx = createSignedTx(unsigned, signature);
 
-    const txInfo = decodeTx(tx, metadataRpc);
+    const txInfo = decodeSignedTx(signedTx, metadataRpc);
 
     ([
       'address',
