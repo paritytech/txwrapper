@@ -17,7 +17,7 @@
 
 • **BLOCKTIME**: *6* = 6
 
-*Defined in [src/util/constants.ts:7](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/23f3f82/src/util/constants.ts#L7)*
+*Defined in [src/util/constants.ts:7](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/a95c050/src/util/constants.ts#L7)*
 
 ___
 
@@ -25,7 +25,7 @@ ___
 
 • **EXTRINSIC_VERSION**: *4* = 4
 
-*Defined in [src/util/constants.ts:4](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/23f3f82/src/util/constants.ts#L4)*
+*Defined in [src/util/constants.ts:4](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/a95c050/src/util/constants.ts#L4)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **KUSAMA_SS58_FORMAT**: *2* = 2
 
-*Defined in [src/util/constants.ts:2](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/23f3f82/src/util/constants.ts#L2)*
+*Defined in [src/util/constants.ts:2](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/a95c050/src/util/constants.ts#L2)*
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 • **ONE_SECOND**: *number* =  1 / BLOCKTIME
 
-*Defined in [src/util/constants.ts:8](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/23f3f82/src/util/constants.ts#L8)*
+*Defined in [src/util/constants.ts:8](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/a95c050/src/util/constants.ts#L8)*

@@ -1,8 +1,8 @@
-import { balanceTransfer } from './balanceTransfer';
-import { createSignedTx } from './createSignedTx';
-import { createSigningPayload } from './createSigningPayload';
+import { balanceTransfer } from '../balanceTransfer';
+import { createSignedTx } from '../createSignedTx';
+import { createSigningPayload } from '../createSigningPayload';
+import { metadataRpc, signWithAlice, TEST_TX_INFO } from '../util/testUtil';
 import { decodeSignedTx } from './decodeSignedTx';
-import { metadataRpc, signWithAlice, TEST_TX_INFO } from './util/testUtil';
 
 describe('decodeSignedTx', () => {
   it('should work', async done => {
