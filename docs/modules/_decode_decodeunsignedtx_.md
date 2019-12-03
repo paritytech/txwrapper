@@ -1,12 +1,12 @@
-[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["decodeUnsignedTx"](_decodeunsignedtx_.md)
+[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["decode/decodeUnsignedTx"](_decode_decodeunsignedtx_.md)
 
-# External module: "decodeUnsignedTx"
+# External module: "decode/decodeUnsignedTx"
 
 ## Index
 
 ### Functions
 
-* [decodeUnsignedTx](_decodeunsignedtx_.md#decodeunsignedtx)
+* [decodeUnsignedTx](_decode_decodeunsignedtx_.md#decodeunsignedtx)
 
 ## Functions
 
@@ -14,10 +14,9 @@
 
 ▸ **decodeUnsignedTx**(`unsigned`: [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md), `metadataRpc`: string): *[TxInfo](../interfaces/_balancetransfer_.txinfo.md)*
 
-*Defined in [src/decodeUnsignedTx.ts:16](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/23f3f82/src/decodeUnsignedTx.ts#L16)*
+*Defined in [src/decode/decodeUnsignedTx.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/a95c050/src/decode/decodeUnsignedTx.ts#L15)*
 
-Parse the transaction information from a signed transaction
-offline
+Parse the transaction information from an unigned transaction offline
 
 **Parameters:**
 
