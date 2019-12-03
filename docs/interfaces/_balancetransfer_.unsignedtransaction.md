@@ -92,7 +92,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/balanceTransfer.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/9e2988f/src/balanceTransfer.ts#L15)*
+*Defined in [src/balanceTransfer.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/23f3f82/src/balanceTransfer.ts#L15)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`
