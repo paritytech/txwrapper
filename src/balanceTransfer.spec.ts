@@ -11,7 +11,7 @@ describe('balanceTransfer', () => {
     expect(unsigned.blockNumber).toBe('0x0041a58e');
     expect(unsigned.era).toBe('0xeb58');
     expect(unsigned.method).toBe(
-      '0x0600ff96074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
+      '0x0603ff96074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
     );
     expect(unsigned.nonce).toBe('0x00000002');
     expect(unsigned.specVersion).toBe('0x000003fb');
