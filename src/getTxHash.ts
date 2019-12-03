@@ -5,6 +5,6 @@ import { blake2AsHex } from '@polkadot/util-crypto';
  *
  * @param signedTx - The hex encoding of a signed transaction
  */
-export function getExtrinsicHash(signedTx: string): string {
+export function getTxHash(signedTx: string): string {
   return blake2AsHex(signedTx, 256);
 }

@@ -6,3 +6,4 @@ export * from './decode/decodeSigningPayload';
 export * from './decode/decodeUnsignedTx';
 export * from './deriveAddress';
 export * from './generateKeypair';
+export * from './getTxHash';
