@@ -2,7 +2,7 @@ import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
 import { SignerPayloadJSON } from '@polkadot/types/types';
 
-import { EXTRINSIC_VERSION } from './util/constants';
+import { EXTRINSIC_VERSION, ONE_SECOND } from './util/constants';
 
 /**
  * JSON format for an unsigned transaction
@@ -67,10 +67,6 @@ export interface TxInfo {
    */
   validityPeriod: number;
 }
-
-// Useful constants for calculting an Era.
-const BLOCKTIME = 6;
-const ONE_SECOND = 1 / BLOCKTIME;
 
 /**
  * Construct a balance transfer transaction offline. Transactions can be

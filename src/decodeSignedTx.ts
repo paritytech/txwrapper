@@ -7,14 +7,14 @@ import { TxInfo } from './balanceTransfer';
 import { KUSAMA_SS58_FORMAT } from './util/constants';
 
 /**
- * Parse the transaction information from an unsigned and signed transaction
+ * Parse the transaction information from a signed transaction
  * offline
  *
  * @param unsigned - The JSON representing the unsigned transaction
  * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
  * retrieved via the RPC call `state_getMetadata`
  */
-export function decodeTx(
+export function decodeSignedTx(
   signedTx: string,
   metadataRpc: string
 ): Partial<TxInfo> {
