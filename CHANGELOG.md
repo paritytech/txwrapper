@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/amaurymartiny/txwrapper/compare/v0.1.1...v0.1.2) (2019-12-05)
+
+
+### Bug Fixes
+
+* Add ss58 prefix for Polkadot ([#8](https://github.com/amaurymartiny/txwrapper/issues/8)) ([5f9fde8](https://github.com/amaurymartiny/txwrapper/commit/5f9fde87c912c86f0bb837ec746f4c138f5d0cf1))
+
 ### [0.1.1](https://github.com/amaurymartiny/txwrapper/compare/v0.1.0...v0.1.1) (2019-12-03)
 
 
