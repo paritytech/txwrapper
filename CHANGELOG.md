@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/amaurymartiny/txwrapper/compare/v0.1.3...v0.2.0) (2019-12-06)
+
+
+### Features
+
+* Add `decode` for signedTx and signingPayload ([#10](https://github.com/amaurymartiny/txwrapper/issues/10)) ([674253e](https://github.com/amaurymartiny/txwrapper/commit/674253e7e1987a2190137a22841465b885071b69))
+* Generic `decode` also decodes unsigned ([#12](https://github.com/amaurymartiny/txwrapper/issues/12)) ([a91f7ba](https://github.com/amaurymartiny/txwrapper/commit/a91f7ba8132e146ff2c52215c9e003a9998e752e))
+
 ### [0.1.3](https://github.com/amaurymartiny/txwrapper/compare/v0.1.2...v0.1.3) (2019-12-05)
 
 
