@@ -1,6 +1,7 @@
 import { createType, Metadata, TypeRegistry } from '@polkadot/types';
 
-import { UnsignedTransaction } from './balanceTransfer';
+import { decodeSigningPayload } from './decode/decodeSigningPayload';
+import { EXTRINSIC_VERSION } from './util/constants';
 
 /**
  * Serialize a signed transaction in a format that can be submitted over the
@@ -12,20 +13,24 @@ import { UnsignedTransaction } from './balanceTransfer';
  * signer
  */
 export function createSignedTx(
-  unsigned: UnsignedTransaction,
-  signature: string
+  address: string,
+  signingPayload: string,
+  signature: string,
+  metadataRpc: string
 ): string {
   const registry = new TypeRegistry();
-  registry.setMetadata(new Metadata(registry, unsigned.metadataRpc));
+  registry.setMetadata(new Metadata(registry, metadataRpc));
+
+  const decoded = decodeSigningPayload(signingPayload, metadataRpc);
 
   const extrinsic = createType(
     registry,
     'Extrinsic',
-    { method: unsigned.method },
-    { version: unsigned.version }
+    { method: decoded.method },
+    { version: EXTRINSIC_VERSION }
   );
 
-  extrinsic.addSignature(unsigned.address, signature, unsigned);
+  extrinsic.addSignature(address, signature, decoded);
 
   return extrinsic.toHex();
 }

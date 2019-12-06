@@ -9,7 +9,11 @@ import {
   KUSAMA_SS58_FORMAT
 } from '../util/constants';
 
-export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
+export interface DecodedSigningPayload
+  extends Omit<TxInfo, 'address' | 'blockNumber'> {
+  era: string;
+  method: string;
+}
 
 /**
  * Parse the transaction information from a signing payload
@@ -35,9 +39,11 @@ export function decodeSigningPayload(
   return {
     amount: (method.args[1] as Compact<Balance>).toNumber(),
     blockHash: payload.blockHash.toHex(),
+    era: payload.era.toHex(),
     genesisHash: payload.genesisHash.toHex(),
     keepAlive: method.methodName === 'transferKeepAlive',
     metadataRpc,
+    method: method.toHex(),
     nonce: payload.nonce.toNumber(),
     specVersion: payload.specVersion.toNumber(),
     tip: payload.tip.toNumber(),
