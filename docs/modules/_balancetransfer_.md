@@ -19,7 +19,7 @@
 
 ▸ **balanceTransfer**(`info`: [TxInfo](../interfaces/_balancetransfer_.txinfo.md)): *[UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md)*
 
-*Defined in [src/balanceTransfer.ts:78](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/8a10176/src/balanceTransfer.ts#L78)*
+*Defined in [src/balanceTransfer.ts:78](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/e82c558/src/balanceTransfer.ts#L78)*
 
 Construct a balance transfer transaction offline. Transactions can be
 constructed in such a way that it is valid for at least 240 minutes

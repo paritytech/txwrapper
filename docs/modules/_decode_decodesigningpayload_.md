@@ -18,7 +18,7 @@
 
 Ƭ **DecodedSigningPayload**: *Omit‹[TxInfo](../interfaces/_balancetransfer_.txinfo.md), "address" | "blockNumber"›*
 
-*Defined in [src/decode/decodeSigningPayload.ts:12](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/8a10176/src/decode/decodeSigningPayload.ts#L12)*
+*Defined in [src/decode/decodeSigningPayload.ts:12](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/e82c558/src/decode/decodeSigningPayload.ts#L12)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **decodeSigningPayload**(`signingPayload`: string, `metadataRpc`: string): *[DecodedSigningPayload](_decode_decodesigningpayload_.md#decodedsigningpayload)*
 
-*Defined in [src/decode/decodeSigningPayload.ts:21](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/8a10176/src/decode/decodeSigningPayload.ts#L21)*
+*Defined in [src/decode/decodeSigningPayload.ts:21](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/e82c558/src/decode/decodeSigningPayload.ts#L21)*
 
 Parse the transaction information from a signing payload
 
