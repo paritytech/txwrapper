@@ -9,7 +9,12 @@ describe('createSignedTx', () => {
     const unsigned = balanceTransfer(TEST_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
-    const signedTx = createSignedTx(unsigned, signature);
+    const signedTx = createSignedTx(
+      unsigned.address,
+      signingPayload,
+      signature,
+      unsigned.metadataRpc
+    );
 
     const txHash = getTxHash(signedTx);
     expect(txHash).toBe(
