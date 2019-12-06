@@ -54,10 +54,15 @@ describe('decode', () => {
     const txInfo = decode(unsigned, metadataRpc);
 
     ([
+      'address',
       'amount',
+      'blockHash',
+      'blockNumber',
+      'genesisHash',
       'keepAlive',
       'metadataRpc',
       'nonce',
+      'specVersion',
       'tip',
       'to'
     ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));

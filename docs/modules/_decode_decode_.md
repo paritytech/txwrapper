@@ -12,9 +12,9 @@
 
 ###  decode
 
-▸ **decode**(`data`: string | [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md), `metadataRpc`: string): *[DecodedSignedTx](_decode_decodesignedtx_.md#decodedsignedtx) | [DecodedSigningPayload](_decode_decodesigningpayload_.md#decodedsigningpayload)*
+▸ **decode**(`unsigned`: [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md), `metadataRpc`: string): *[TxInfo](../interfaces/_balancetransfer_.txinfo.md)*
 
-*Defined in [src/decode/decode.ts:17](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/e82c558/src/decode/decode.ts#L17)*
+*Defined in [src/decode/decode.ts:18](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/b63db16/src/decode/decode.ts#L18)*
 
 Parse the transaction information from a signing payload, an unsigned tx or
 a signed tx
@@ -23,7 +23,20 @@ a signed tx
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`data` | string &#124; [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md) | The data to parse, should be a signing payload or a signed tx |
+`unsigned` | [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md) | - |
 `metadataRpc` | string | The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC call `state_getMetadata`  |
 
-**Returns:** *[DecodedSignedTx](_decode_decodesignedtx_.md#decodedsignedtx) | [DecodedSigningPayload](_decode_decodesigningpayload_.md#decodedsigningpayload)*
+**Returns:** *[TxInfo](../interfaces/_balancetransfer_.txinfo.md)*
+
+▸ **decode**(`data`: string, `metadataRpc`: string): *DecodedSignedTx | DecodedSigningPayload*
+
+*Defined in [src/decode/decode.ts:22](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/b63db16/src/decode/decode.ts#L22)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`data` | string |
+`metadataRpc` | string |
+
+**Returns:** *DecodedSignedTx | DecodedSigningPayload*

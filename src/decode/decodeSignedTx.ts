@@ -1,3 +1,11 @@
+/**
+ * @ignore
+ */
+
+/**
+ * Blank comment to make typedoc work
+ */
+
 import { Compact, createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { Balance } from '@polkadot/types/interfaces';
 import { hexToU8a } from '@polkadot/util';
