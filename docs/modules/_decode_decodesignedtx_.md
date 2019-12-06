@@ -18,7 +18,7 @@
 
 Ƭ **DecodedSignedTx**: *Omit‹[TxInfo](../interfaces/_balancetransfer_.txinfo.md), "blockHash" | "blockNumber" | "genesisHash" | "specVersion" | "version"›*
 
-*Defined in [src/decode/decodeSignedTx.ts:9](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/8a10176/src/decode/decodeSignedTx.ts#L9)*
+*Defined in [src/decode/decodeSignedTx.ts:9](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/d55e27d/src/decode/decodeSignedTx.ts#L9)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **decodeSignedTx**(`signedTx`: string, `metadataRpc`: string): *[DecodedSignedTx](_decode_decodesignedtx_.md#decodedsignedtx)*
 
-*Defined in [src/decode/decodeSignedTx.ts:21](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/8a10176/src/decode/decodeSignedTx.ts#L21)*
+*Defined in [src/decode/decodeSignedTx.ts:21](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/d55e27d/src/decode/decodeSignedTx.ts#L21)*
 
 Parse the transaction information from a signed transaction offline
 

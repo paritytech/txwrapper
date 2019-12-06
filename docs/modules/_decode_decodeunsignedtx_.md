@@ -14,7 +14,7 @@
 
 ▸ **decodeUnsignedTx**(`unsigned`: [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md), `metadataRpc`: string): *[TxInfo](../interfaces/_balancetransfer_.txinfo.md)*
 
-*Defined in [src/decode/decodeUnsignedTx.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/8a10176/src/decode/decodeUnsignedTx.ts#L15)*
+*Defined in [src/decode/decodeUnsignedTx.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/d55e27d/src/decode/decodeUnsignedTx.ts#L15)*
 
 Parse the transaction information from an unigned transaction offline
 
