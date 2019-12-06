@@ -9,6 +9,7 @@
 * ["balanceTransfer"](modules/_balancetransfer_.md)
 * ["createSignedTx"](modules/_createsignedtx_.md)
 * ["createSigningPayload"](modules/_createsigningpayload_.md)
+* ["decode/decode"](modules/_decode_decode_.md)
 * ["decode/decodeSignedTx"](modules/_decode_decodesignedtx_.md)
 * ["decode/decodeSigningPayload"](modules/_decode_decodesigningpayload_.md)
 * ["decode/decodeUnsignedTx"](modules/_decode_decodeunsignedtx_.md)
