@@ -1,6 +1,7 @@
 export * from './balanceTransfer';
 export * from './createSignedTx';
 export * from './createSigningPayload';
+export * from './decode/decode';
 export * from './decode/decodeSignedTx';
 export * from './decode/decodeSigningPayload';
 export * from './decode/decodeUnsignedTx';
