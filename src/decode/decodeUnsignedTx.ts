@@ -1,3 +1,11 @@
+/**
+ * @ignore
+ */
+
+/**
+ * Blank comment to make typedoc work
+ */
+
 import { Compact, createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { Balance } from '@polkadot/types/interfaces';
 import { setSS58Format } from '@polkadot/util-crypto';

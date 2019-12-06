@@ -15,6 +15,7 @@ describe('decode', () => {
     const txInfo = decode(signedTx, metadataRpc);
 
     ([
+      'address',
       'amount',
       'keepAlive',
       'metadataRpc',
@@ -30,16 +31,20 @@ describe('decode', () => {
     done();
   });
 
-  it('should decode signingPayload', () => {
-    const signingPayload = createSigningPayload(balanceTransfer(TEST_TX_INFO));
-
-    const txInfo = decode(signingPayload, metadataRpc);
+  it('decode unsigned tx', () => {
+    const unsigned = balanceTransfer(TEST_TX_INFO);
+    const txInfo = decode(unsigned, metadataRpc);
 
     ([
+      'address',
       'amount',
+      'blockHash',
+      'blockNumber',
+      'genesisHash',
       'keepAlive',
       'metadataRpc',
       'nonce',
+      'specVersion',
       'tip',
       'to'
     ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));
