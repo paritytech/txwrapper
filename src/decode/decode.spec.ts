@@ -48,4 +48,22 @@ describe('decode', () => {
       TEST_TX_INFO.validityPeriod
     );
   });
+
+  it('decode unsigned tx', () => {
+    const unsigned = balanceTransfer(TEST_TX_INFO);
+    const txInfo = decode(unsigned, metadataRpc);
+
+    ([
+      'amount',
+      'keepAlive',
+      'metadataRpc',
+      'nonce',
+      'tip',
+      'to'
+    ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));
+
+    expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
+      TEST_TX_INFO.validityPeriod
+    );
+  });
 });
