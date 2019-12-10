@@ -1,3 +1,11 @@
+/**
+ * @ignore
+ */
+
+/**
+ * Blank comment to make typedoc work
+ */
+
 import { Compact, createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { Balance } from '@polkadot/types/interfaces';
 import { setSS58Format } from '@polkadot/util-crypto';
@@ -9,6 +17,8 @@ import {
   KUSAMA_SS58_FORMAT
 } from '../util/constants';
 
+export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
+
 /**
  * Parse the transaction information from a signing payload
  *
@@ -19,7 +29,7 @@ import {
 export function decodeSigningPayload(
   signingPayload: string,
   metadataRpc: string
-): Omit<TxInfo, 'address' | 'blockNumber'> {
+): DecodedSigningPayload {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
 

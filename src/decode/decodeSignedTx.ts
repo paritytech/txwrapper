@@ -1,3 +1,11 @@
+/**
+ * @ignore
+ */
+
+/**
+ * Blank comment to make typedoc work
+ */
+
 import { Compact, createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { Balance } from '@polkadot/types/interfaces';
 import { hexToU8a } from '@polkadot/util';
@@ -5,6 +13,11 @@ import { setSS58Format } from '@polkadot/util-crypto';
 
 import { TxInfo } from '../balanceTransfer';
 import { BLOCKTIME, KUSAMA_SS58_FORMAT } from '../util/constants';
+
+export type DecodedSignedTx = Omit<
+  TxInfo,
+  'blockHash' | 'blockNumber' | 'genesisHash' | 'specVersion' | 'version'
+>;
 
 /**
  * Parse the transaction information from a signed transaction offline
@@ -16,10 +29,7 @@ import { BLOCKTIME, KUSAMA_SS58_FORMAT } from '../util/constants';
 export function decodeSignedTx(
   signedTx: string,
   metadataRpc: string
-): Omit<
-  TxInfo,
-  'blockHash' | 'blockNumber' | 'genesisHash' | 'specVersion' | 'version'
-> {
+): DecodedSignedTx {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
 

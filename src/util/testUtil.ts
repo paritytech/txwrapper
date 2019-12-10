@@ -1,3 +1,11 @@
+/**
+ * @ignore
+ */
+
+/**
+ * Blank comment to make typedoc work
+ */
+
 import { Keyring } from '@polkadot/api';
 import metadataRpc from '@polkadot/metadata/Metadata/v9/static';
 import { createType, TypeRegistry } from '@polkadot/types';

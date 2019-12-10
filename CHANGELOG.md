@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/amaurymartiny/txwrapper/compare/v0.1.3...v0.2.0) (2019-12-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* - `decodeSignedTx`, `decodeSigningPayload`, `decodeUnsignedTx` are not exposed from `@amaurymartiny/txwrapper` root anymore, as they are considered low-level. Consider using the high-level `decode` function, which can decode an unsigned tx or a signed tx.
+
+```diff
+- import { decodeSignedTx } from '@amaurymartiny/txwrapper';
++ import { decode } from '@amaurymartiny/txwrapper';
+
+- decodeSignedTx('0x...');
++ decode('0x...');
+```
+
+* - If you still need to access the above functions separately, please use e.g. `import { decodeSigningPayload } from '@amaurymartiny/txwrapper/lib/decode/decodeSigningPayload'`
+
+### Features
+
+* Add `decode` for signedTx and signingPayload ([#10](https://github.com/amaurymartiny/txwrapper/issues/10)) ([674253e](https://github.com/amaurymartiny/txwrapper/commit/674253e7e1987a2190137a22841465b885071b69))
+* Generic `decode` also decodes unsigned ([#12](https://github.com/amaurymartiny/txwrapper/issues/12)) ([a91f7ba](https://github.com/amaurymartiny/txwrapper/commit/a91f7ba8132e146ff2c52215c9e003a9998e752e))
+
+### [0.1.3](https://github.com/amaurymartiny/txwrapper/compare/v0.1.2...v0.1.3) (2019-12-05)
+
+
+### Bug Fixes
+
+* Fix Polkadot SS58 prefix ([#9](https://github.com/amaurymartiny/txwrapper/issues/9)) ([dd63aa5](https://github.com/amaurymartiny/txwrapper/commit/dd63aa583f0323cabb0a88afbb3b08c14e32260e))
+
 ### [0.1.2](https://github.com/amaurymartiny/txwrapper/compare/v0.1.1...v0.1.2) (2019-12-05)
 
 
