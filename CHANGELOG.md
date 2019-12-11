@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/amaurymartiny/txwrapper/compare/v0.2.0...v0.3.0) (2019-12-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* `generateKeypair` has been removed.
+
+### Features
+
+* Add importPrivateKey ([#13](https://github.com/amaurymartiny/txwrapper/issues/13)) ([d26ae4a](https://github.com/amaurymartiny/txwrapper/commit/d26ae4ac7dee6999bd9065fec62a8ccd1904dd66))
+
 ## [0.2.0](https://github.com/amaurymartiny/txwrapper/compare/v0.1.3...v0.2.0) (2019-12-06)
 
 
