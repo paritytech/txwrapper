@@ -54,7 +54,7 @@ describe('decode', () => {
     );
   });
 
-  it('should decode signing payload', async done => {
+  it('should decode signing payload', done => {
     const unsigned = balanceTransfer(TEST_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
 
@@ -69,7 +69,7 @@ describe('decode', () => {
       'nonce',
       // 'specVersion',
       'tip',
-      'to',
+      'to'
     ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));
 
     expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(

@@ -29,17 +29,19 @@ export function decode(signedTx: string, metadataRpc: string): DecodedSignedTx;
  * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
  * retrieved via the RPC call `state_getMetadata`.
  */
-export function decode(signingPayload: string, metadataRpc: string): DecodedSigningPayload;
+export function decode(
+  signingPayload: string,
+  metadataRpc: string
+): DecodedSigningPayload;
 export function decode(
   data: string | UnsignedTransaction,
   metadataRpc: string
 ): DecodedSignedTx | TxInfo | DecodedSigningPayload {
   if (typeof data === 'string') {
-    var decodedInfo: DecodedSigningPayload | DecodedSignedTx;
+    let decodedInfo: DecodedSigningPayload | DecodedSignedTx;
     try {
       decodedInfo = decodeSigningPayload(data, metadataRpc);
-    }
-    catch {
+    } catch {
       decodedInfo = decodeSignedTx(data, metadataRpc);
     }
     return decodedInfo;
