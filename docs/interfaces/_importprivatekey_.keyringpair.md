@@ -1,4 +1,4 @@
-[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["generateKeypair"](../modules/_generatekeypair_.md) › [KeyringPair](_generatekeypair_.keyringpair.md)
+[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["importPrivateKey"](../modules/_importprivatekey_.md) › [KeyringPair](_importprivatekey_.keyringpair.md)
 
 # Interface: KeyringPair
 
@@ -14,22 +14,22 @@ A keyring pair
 
 ### Properties
 
-* [address](_generatekeypair_.keyringpair.md#address)
-* [decodePkcs8](_generatekeypair_.keyringpair.md#decodepkcs8)
-* [derive](_generatekeypair_.keyringpair.md#derive)
-* [encodePkcs8](_generatekeypair_.keyringpair.md#encodepkcs8)
-* [isLocked](_generatekeypair_.keyringpair.md#islocked)
-* [lock](_generatekeypair_.keyringpair.md#lock)
-* [meta](_generatekeypair_.keyringpair.md#meta)
-* [publicKey](_generatekeypair_.keyringpair.md#publickey)
-* [setMeta](_generatekeypair_.keyringpair.md#setmeta)
-* [type](_generatekeypair_.keyringpair.md#type)
+* [address](_importprivatekey_.keyringpair.md#address)
+* [decodePkcs8](_importprivatekey_.keyringpair.md#decodepkcs8)
+* [derive](_importprivatekey_.keyringpair.md#derive)
+* [encodePkcs8](_importprivatekey_.keyringpair.md#encodepkcs8)
+* [isLocked](_importprivatekey_.keyringpair.md#islocked)
+* [lock](_importprivatekey_.keyringpair.md#lock)
+* [meta](_importprivatekey_.keyringpair.md#meta)
+* [publicKey](_importprivatekey_.keyringpair.md#publickey)
+* [setMeta](_importprivatekey_.keyringpair.md#setmeta)
+* [type](_importprivatekey_.keyringpair.md#type)
 
 ### Methods
 
-* [sign](_generatekeypair_.keyringpair.md#sign)
-* [toJson](_generatekeypair_.keyringpair.md#tojson)
-* [verify](_generatekeypair_.keyringpair.md#verify)
+* [sign](_importprivatekey_.keyringpair.md#sign)
+* [toJson](_importprivatekey_.keyringpair.md#tojson)
+* [verify](_importprivatekey_.keyringpair.md#verify)
 
 ## Properties
 
