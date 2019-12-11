@@ -53,4 +53,29 @@ describe('decode', () => {
       TEST_TX_INFO.validityPeriod
     );
   });
+
+  it('should decode signing payload', async done => {
+    const unsigned = balanceTransfer(TEST_TX_INFO);
+    const signingPayload = createSigningPayload(unsigned);
+
+    const txInfo = decode(signingPayload, metadataRpc);
+
+    ([
+      'amount',
+      // 'blockHash',
+      // 'genesisHash',
+      'keepAlive',
+      'metadataRpc',
+      'nonce',
+      // 'specVersion',
+      'tip',
+      'to',
+    ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));
+
+    expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
+      TEST_TX_INFO.validityPeriod
+    );
+
+    done();
+  });
 });
