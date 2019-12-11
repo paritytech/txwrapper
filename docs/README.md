@@ -11,9 +11,9 @@ yarn add @amaurymartiny/txwrapper
 In a JS file:
 
 ```typescript
-import { generateKeypair } from '@amaurymartiny/txwrapper';
+import { importPrivateKey } from '@amaurymartiny/txwrapper';
 
-console.log(generateKeypair().address);
+console.log(importPrivateKey('0x...').address);
 ```
 
 Go to [documentation](https://github.com/amaurymartiny/txwrapper/tree/master/docs/globals.md) for all the functions.

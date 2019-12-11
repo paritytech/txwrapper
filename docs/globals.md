@@ -11,6 +11,6 @@
 * ["createSigningPayload"](modules/_createsigningpayload_.md)
 * ["decode/decode"](modules/_decode_decode_.md)
 * ["deriveAddress"](modules/_deriveaddress_.md)
-* ["generateKeypair"](modules/_generatekeypair_.md)
 * ["getTxHash"](modules/_gettxhash_.md)
+* ["importPrivateKey"](modules/_importprivatekey_.md)
 * ["util/constants"](modules/_util_constants_.md)

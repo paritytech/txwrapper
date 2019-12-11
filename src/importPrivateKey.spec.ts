@@ -1,4 +1,4 @@
-import { importPrivateKey } from './generateKeypair';
+import { importPrivateKey } from './importPrivateKey';
 
 const PRIVATE_KEY =
   '0x9d61b19deffd5a60ba844af492ec2cc44449c5697b326919703bac031cae7f60';
