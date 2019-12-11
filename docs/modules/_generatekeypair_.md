@@ -10,16 +10,22 @@
 
 ### Functions
 
-* [generateKeypair](_generatekeypair_.md#generatekeypair)
+* [importPrivateKey](_generatekeypair_.md#importprivatekey)
 
 ## Functions
 
-###  generateKeypair
+###  importPrivateKey
 
-▸ **generateKeypair**(): *[KeyringPair](../interfaces/_generatekeypair_.keyringpair.md)*
+▸ **importPrivateKey**(`privateKey`: string | Uint8Array): *[KeyringPair](../interfaces/_generatekeypair_.keyringpair.md)*
 
-*Defined in [src/generateKeypair.ts:15](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/b3dc78e/src/generateKeypair.ts#L15)*
+*Defined in [src/generateKeypair.ts:17](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/446bc11/src/generateKeypair.ts#L17)*
 
-Generate a valid public/private keypair offline
+Import a private key and create a KeyringPair
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`privateKey` | string &#124; Uint8Array | The private key of the key pair  |
 
 **Returns:** *[KeyringPair](../interfaces/_generatekeypair_.keyringpair.md)*

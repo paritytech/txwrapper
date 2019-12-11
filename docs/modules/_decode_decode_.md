@@ -14,7 +14,7 @@
 
 ▸ **decode**(`unsignedTx`: [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md), `metadataRpc`: string): *[TxInfo](../interfaces/_balancetransfer_.txinfo.md)*
 
-*Defined in [src/decode/decode.ts:12](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/b3dc78e/src/decode/decode.ts#L12)*
+*Defined in [src/decode/decode.ts:12](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/446bc11/src/decode/decode.ts#L12)*
 
 Parse the transaction information from an unsigned tx or a signed tx
 
@@ -29,7 +29,7 @@ Name | Type | Description |
 
 ▸ **decode**(`signedTx`: string, `metadataRpc`: string): *DecodedSignedTx*
 
-*Defined in [src/decode/decode.ts:23](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/b3dc78e/src/decode/decode.ts#L23)*
+*Defined in [src/decode/decode.ts:23](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/446bc11/src/decode/decode.ts#L23)*
 
 Parse the transaction information from an unsigned tx or a signed tx
 
