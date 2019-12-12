@@ -1,7 +1,10 @@
 import { TxInfo, UnsignedTransaction } from '../balanceTransfer';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
+import {
+  DecodedSigningPayload,
+  decodeSigningPayload
+} from './decodeSigningPayload';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
-import { DecodedSigningPayload, decodeSigningPayload } from './decodeSigningPayload';
 
 /**
  * Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
