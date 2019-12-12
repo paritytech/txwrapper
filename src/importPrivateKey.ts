@@ -11,12 +11,16 @@ export interface KeyringPair extends KeyringPairBase {} // eslint-disable-line @
 // Using an interface above so that KeyringPair shows up in docs
 
 /**
- * Import a private key and create a KeyringPair
- * @param privateKey - The private key of the key pair
+ * Import a private key and create a KeyringPair.
+ * @param privateKey - The private key of the key pair.
+ * @param ss58Format - The SS58 encoding of the address.
  */
-export function importPrivateKey(privateKey: string | Uint8Array): KeyringPair {
+export function importPrivateKey(
+  privateKey: string | Uint8Array,
+  ss58Format: number = KUSAMA_SS58_FORMAT
+): KeyringPair {
   const keyring = new Keyring({ type: 'ed25519' });
-  keyring.setSS58Format(KUSAMA_SS58_FORMAT);
+  keyring.setSS58Format(ss58Format);
 
   if (typeof privateKey === 'string') {
     return keyring.addFromSeed(hexToU8a(privateKey));
