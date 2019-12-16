@@ -16,7 +16,7 @@
 
 ###  importPrivateKey
 
-▸ **importPrivateKey**(`privateKey`: string | Uint8Array): *[KeyringPair](../interfaces/_importprivatekey_.keyringpair.md)*
+▸ **importPrivateKey**(`privateKey`: string | Uint8Array, `ss58Format`: number): *[KeyringPair](../interfaces/_importprivatekey_.keyringpair.md)*
 
 Defined in src/importPrivateKey.ts:17
 
@@ -26,6 +26,7 @@ Import a private key and create a KeyringPair
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`privateKey` | string &#124; Uint8Array | The private key of the key pair  |
+`privateKey` | string &#124; Uint8Array | The private key of the key pair.  |
+`ss58Format` | number | The [SS58 prefix](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)) with which to encode the address. Default is Kusama.  |
 
 **Returns:** *[KeyringPair](../interfaces/_importprivatekey_.keyringpair.md)*
