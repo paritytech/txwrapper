@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/amaurymartiny/txwrapper/compare/v0.3.0...v0.3.1) (2019-12-16)
+
+
+### Features
+
+* Add ss58Format as param to importPrivateKey ([#16](https://github.com/amaurymartiny/txwrapper/issues/16)) ([f47611e](https://github.com/amaurymartiny/txwrapper/commit/f47611ea569f72ca0e98f4c9a296ab5a65c84cea))
+
+
+### Bug Fixes
+
+* Add decodeSigningPayload to decode export ([#15](https://github.com/amaurymartiny/txwrapper/issues/15)) ([38505a6](https://github.com/amaurymartiny/txwrapper/commit/38505a6f9841a93c41bb8ee41780544ac7071a73))
+* Put function importPrivateKey in correct file ([#14](https://github.com/amaurymartiny/txwrapper/issues/14)) ([14e1c27](https://github.com/amaurymartiny/txwrapper/commit/14e1c275ee2ba42f03d97a89c7cef6d5c42ca90c))
+
 ## [0.3.0](https://github.com/amaurymartiny/txwrapper/compare/v0.2.0...v0.3.0) (2019-12-11)
 
 
