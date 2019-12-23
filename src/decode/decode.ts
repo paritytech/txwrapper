@@ -36,6 +36,7 @@ export function decode(
   signingPayload: string,
   metadataRpc: string
 ): DecodedSigningPayload;
+
 export function decode(
   data: string | UnsignedTransaction,
   metadataRpc: string

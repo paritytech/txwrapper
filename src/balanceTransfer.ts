@@ -70,10 +70,9 @@ export interface TxInfo {
 
 /**
  * Construct a balance transfer transaction offline. Transactions can be
- * constructed in such a way that it is valid for at least 240 minutes
+ * constructed in such a way that they are valid for at least 240 minutes.
  *
- * @param info - Information required to construct the transaction
- * @param amount -
+ * @param info - Information required to construct the transaction.
  */
 export function balanceTransfer(info: TxInfo): UnsignedTransaction {
   const registry = new TypeRegistry();

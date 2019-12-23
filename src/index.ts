@@ -5,3 +5,6 @@ export * from './decode/decode';
 export * from './deriveAddress';
 export * from './getTxHash';
 export * from './importPrivateKey';
+export * from './staking/bond';
+export * from './staking/nominate';
+export * from './staking/unbond';
