@@ -1,8 +1,8 @@
-[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["unbond"](../modules/_staking_unbond_.md) › [UnsignedUnbondTransaction](_staking_unbond_.unsignedunbondtransaction.md)
+[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["staking/unbond"](../modules/_staking_unbond_.md) › [UnsignedUnbondTransaction](_staking_unbond_.unsignedunbondtransaction.md)
 
 # Interface: UnsignedUnbondTransaction
 
-JSON format for an unsigned transaction.
+JSON format for an unsigned transaction
 
 ## Hierarchy
 
@@ -36,7 +36,7 @@ JSON format for an unsigned transaction.
 
 Defined in node_modules/@polkadot/types/types.d.ts:177
 
-**`description`** The SS-58 encoded address of the account making the transaction.
+**`description`** The ss-58 encoded address
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 Defined in node_modules/@polkadot/types/types.d.ts:181
 
-**`description`** The checkpoint hash of the block, in hex.
+**`description`** The checkpoint hash of the block, in hex
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 Defined in node_modules/@polkadot/types/types.d.ts:185
 
-**`description`** The checkpoint block number, in hex.
+**`description`** The checkpoint block number, in hex
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 Defined in node_modules/@polkadot/types/types.d.ts:189
 
-**`description`** The era for this transaction, in hex.
+**`description`** The era for this transaction, in hex
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 Defined in node_modules/@polkadot/types/types.d.ts:193
 
-**`description`** The genesis hash of the chain, in hex.
+**`description`** The genesis hash of the chain, in hex
 
 ___
 
@@ -92,8 +92,7 @@ ___
 
 • **metadataRpc**: *string*
 
-<!-- TODO: Update commit hashes once commit is made. -->
-*Defined in [src/staking/unbond.ts:16](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/91a53f7/src/staking/unbond.ts#L16)*
+*Defined in [src/staking/unbond.ts:16](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/unbond.ts#L16)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
@@ -108,7 +107,7 @@ ___
 
 Defined in node_modules/@polkadot/types/types.d.ts:197
 
-**`description`** The encoded method (with arguments) in hex.
+**`description`** The encoded method (with arguments) in hex
 
 ___
 
@@ -120,7 +119,7 @@ ___
 
 Defined in node_modules/@polkadot/types/types.d.ts:201
 
-**`description`** The nonce for this transaction, in hex.
+**`description`** The nonce for this transaction, in hex
 
 ___
 
@@ -132,7 +131,7 @@ ___
 
 Defined in node_modules/@polkadot/types/types.d.ts:205
 
-**`description`** The current spec version for the runtime.
+**`description`** The current spec version for  the runtime
 
 ___
 
@@ -144,7 +143,7 @@ ___
 
 Defined in node_modules/@polkadot/types/types.d.ts:209
 
-**`description`** The tip for this transaction, in hex.
+**`description`** The tip for this transaction, in hex
 
 ___
 
@@ -156,4 +155,4 @@ ___
 
 Defined in node_modules/@polkadot/types/types.d.ts:213
 
-**`description`** The version of the extrinsic we are dealing with.
+**`description`** The version of the extrinsic we are dealing with

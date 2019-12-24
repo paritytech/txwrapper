@@ -14,7 +14,7 @@
 
 ▸ **createSignedTx**(`unsigned`: [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md), `signature`: string): *string*
 
-*Defined in [src/createSignedTx.ts:14](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/91a53f7/src/createSignedTx.ts#L14)*
+*Defined in [src/createSignedTx.ts:14](https://github.com/paritytech/txwrapper/blob/29e727e/src/createSignedTx.ts#L14)*
 
 Serialize a signed transaction in a format that can be submitted over the
 Node RPC Interface from the signing payload and signature produced by the
