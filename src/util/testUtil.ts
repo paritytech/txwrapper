@@ -13,7 +13,11 @@ import { TRANSACTION_VERSION } from '@polkadot/types/primitive/Extrinsic/v4/Extr
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import { TxInfo } from '../balanceTransfer';
-import { TxInfoBond, TxInfoNominate, TxInfoUnbond } from '../staking/stakingTxTypeUtils';
+import {
+  TxInfoBond,
+  TxInfoNominate,
+  TxInfoUnbond
+} from '../staking/stakingTxTypeUtils';
 
 export { metadataRpc };
 
@@ -86,9 +90,11 @@ export const TEST_BOND_TX_INFO: TxInfoBond = {
  * @ignore
  */
 export const TEST_NOMINATE_TX_INFO: TxInfoNominate = {
-  address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F',   // seed "//Alice"
-  targets: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP,' + // seed "//Bob"
-    'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P',          // seed "//Charlie"
+  address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+  targets: [
+    'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+    'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
+  ],
   blockHash:
     '0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
   blockNumber: 4302222,

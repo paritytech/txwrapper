@@ -1,5 +1,5 @@
-import { nominate } from './nominate';
 import { TEST_NOMINATE_TX_INFO } from '../util/testUtil';
+import { nominate } from './nominate';
 
 describe('nominate', () => {
   it('should work', () => {
@@ -9,8 +9,8 @@ describe('nominate', () => {
       expect(unsigned[key]).toBe(TEST_NOMINATE_TX_INFO[key])
     );
     expect(unsigned.blockNumber).toBe('0x0041a58e');
-	expect(unsigned.era).toBe('0xeb58');
-	// TODO: Get this method encoding
+    expect(unsigned.era).toBe('0xeb58');
+    // TODO: Get this method encoding
     // expect(unsigned.method).toBe(
     //   '0x0603ff96074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
     // );
