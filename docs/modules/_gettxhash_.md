@@ -14,7 +14,7 @@
 
 ▸ **getTxHash**(`signedTx`: string): *string*
 
-*Defined in [src/getTxHash.ts:8](https://github.com/paritytech/txwrapper/blob/29e727e/src/getTxHash.ts#L8)*
+*Defined in [src/getTxHash.ts:8](https://github.com/paritytech/txwrapper/blob/ef34f88/src/getTxHash.ts#L8)*
 
 Derive the tx hash of a signed transaction offline
 

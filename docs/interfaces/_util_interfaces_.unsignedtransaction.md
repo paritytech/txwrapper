@@ -1,30 +1,30 @@
-[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["staking/nominate"](../modules/_staking_nominate_.md) › [UnsignedNominateTransaction](_staking_nominate_.unsignednominatetransaction.md)
+[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["util/interfaces"](../modules/_util_interfaces_.md) › [UnsignedTransaction](_util_interfaces_.unsignedtransaction.md)
 
-# Interface: UnsignedNominateTransaction
+# Interface: UnsignedTransaction
 
-JSON format for an unsigned transaction
+JSON format for an unsigned transaction.
 
 ## Hierarchy
 
 * SignerPayloadJSON
 
-  ↳ **UnsignedNominateTransaction**
+  ↳ **UnsignedTransaction**
 
 ## Index
 
 ### Properties
 
-* [address](_staking_nominate_.unsignednominatetransaction.md#address)
-* [blockHash](_staking_nominate_.unsignednominatetransaction.md#blockhash)
-* [blockNumber](_staking_nominate_.unsignednominatetransaction.md#blocknumber)
-* [era](_staking_nominate_.unsignednominatetransaction.md#era)
-* [genesisHash](_staking_nominate_.unsignednominatetransaction.md#genesishash)
-* [metadataRpc](_staking_nominate_.unsignednominatetransaction.md#metadatarpc)
-* [method](_staking_nominate_.unsignednominatetransaction.md#method)
-* [nonce](_staking_nominate_.unsignednominatetransaction.md#nonce)
-* [specVersion](_staking_nominate_.unsignednominatetransaction.md#specversion)
-* [tip](_staking_nominate_.unsignednominatetransaction.md#tip)
-* [version](_staking_nominate_.unsignednominatetransaction.md#version)
+* [address](_util_interfaces_.unsignedtransaction.md#address)
+* [blockHash](_util_interfaces_.unsignedtransaction.md#blockhash)
+* [blockNumber](_util_interfaces_.unsignedtransaction.md#blocknumber)
+* [era](_util_interfaces_.unsignedtransaction.md#era)
+* [genesisHash](_util_interfaces_.unsignedtransaction.md#genesishash)
+* [metadataRpc](_util_interfaces_.unsignedtransaction.md#metadatarpc)
+* [method](_util_interfaces_.unsignedtransaction.md#method)
+* [nonce](_util_interfaces_.unsignedtransaction.md#nonce)
+* [specVersion](_util_interfaces_.unsignedtransaction.md#specversion)
+* [tip](_util_interfaces_.unsignedtransaction.md#tip)
+* [version](_util_interfaces_.unsignedtransaction.md#version)
 
 ## Properties
 
@@ -92,7 +92,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/staking/nominate.ts:16](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/nominate.ts#L16)*
+*Defined in [src/util/interfaces.ts:11](https://github.com/paritytech/txwrapper/blob/ef34f88/src/util/interfaces.ts#L11)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.

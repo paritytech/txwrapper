@@ -4,10 +4,6 @@
 
 ## Index
 
-### Interfaces
-
-* [UnsignedBondTransaction](../interfaces/_staking_bond_.unsignedbondtransaction.md)
-
 ### Functions
 
 * [bond](_staking_bond_.md#bond)
@@ -16,9 +12,9 @@
 
 ###  bond
 
-▸ **bond**(`info`: [TxInfoBond](../interfaces/_staking_stakingtxtypeutils_.txinfobond.md)): *[UnsignedBondTransaction](../interfaces/_staking_bond_.unsignedbondtransaction.md)*
+▸ **bond**(`info`: [TxInfoBond](../interfaces/_staking_stakingtxtypeutils_.txinfobond.md)): *[UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)*
 
-*Defined in [src/staking/bond.ts:24](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/bond.ts#L24)*
+*Defined in [src/staking/bond.ts:13](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/bond.ts#L13)*
 
 Construct a transaction to bond funds and create a Stash account.
 
@@ -28,4 +24,4 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `info` | [TxInfoBond](../interfaces/_staking_stakingtxtypeutils_.txinfobond.md) | Information required to construct the transaction.  |
 
-**Returns:** *[UnsignedBondTransaction](../interfaces/_staking_bond_.unsignedbondtransaction.md)*
+**Returns:** *[UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)*

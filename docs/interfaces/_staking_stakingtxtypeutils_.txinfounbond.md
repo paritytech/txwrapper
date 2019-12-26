@@ -27,7 +27,7 @@
 
 • **address**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:110](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L110)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:110](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L110)*
 
 The ss-58 encoded address of the sending account.
 
@@ -37,7 +37,7 @@ ___
 
 • **blockHash**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:118](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L118)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:118](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L118)*
 
 The checkpoint hash of the block, in hex.
 
@@ -47,7 +47,7 @@ ___
 
 • **blockNumber**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:122](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L122)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:122](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L122)*
 
 The checkpoint block number (u32), in hex.
 
@@ -57,7 +57,7 @@ ___
 
 • **genesisHash**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:126](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L126)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:126](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L126)*
 
 The genesis hash of the chain, in hex.
 
@@ -67,7 +67,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:131](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L131)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:131](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L131)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
@@ -78,7 +78,7 @@ ___
 
 • **nonce**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:135](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L135)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:135](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L135)*
 
 The nonce for this transaction.
 
@@ -88,7 +88,7 @@ ___
 
 • **specVersion**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:139](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L139)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:139](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L139)*
 
 The current spec version for the runtime.
 
@@ -98,7 +98,7 @@ ___
 
 • **tip**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:143](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L143)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:143](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L143)*
 
 The tip for this transaction, in hex.
 
@@ -108,7 +108,7 @@ ___
 
 • **validityPeriod**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:148](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L148)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:148](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L148)*
 
 The amount of time (in second) the transaction is valid for. Will be
 translated into a mortal era.
@@ -119,6 +119,6 @@ ___
 
 • **value**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:114](https://github.com/paritytech/txwrapper/blob/29e727e/src/staking/stakingTxTypeUtils.ts#L114)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:114](https://github.com/paritytech/txwrapper/blob/ef34f88/src/staking/stakingTxTypeUtils.ts#L114)*
 
 The number of tokens to unbond.

@@ -18,7 +18,7 @@
 
 ▸ **importPrivateKey**(`privateKey`: string | Uint8Array, `ss58Format`: number): *[KeyringPair](../interfaces/_importprivatekey_.keyringpair.md)*
 
-*Defined in [src/importPrivateKey.ts:18](https://github.com/paritytech/txwrapper/blob/29e727e/src/importPrivateKey.ts#L18)*
+*Defined in [src/importPrivateKey.ts:18](https://github.com/paritytech/txwrapper/blob/ef34f88/src/importPrivateKey.ts#L18)*
 
 Import a private key and create a KeyringPair.
 
