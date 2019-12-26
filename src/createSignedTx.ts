@@ -1,6 +1,6 @@
 import { createType, Metadata, TypeRegistry } from '@polkadot/types';
 
-import { UnsignedTransaction } from './balanceTransfer';
+import { UnsignedTransaction } from './util/interfaces';
 
 /**
  * Serialize a signed transaction in a format that can be submitted over the

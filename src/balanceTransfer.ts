@@ -1,19 +1,7 @@
 import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
-import { SignerPayloadJSON } from '@polkadot/types/types';
-
 import { EXTRINSIC_VERSION, ONE_SECOND } from './util/constants';
-
-/**
- * JSON format for an unsigned transaction
- */
-export interface UnsignedTransaction extends SignerPayloadJSON {
-  /**
-   * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
-   * call `state_getMetadata`
-   */
-  metadataRpc: string;
-}
+import { UnsignedTransaction } from './util/interfaces';
 
 export interface TxInfo {
   /**

@@ -10,8 +10,9 @@ import { Compact, createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { Balance } from '@polkadot/types/interfaces';
 import { setSS58Format } from '@polkadot/util-crypto';
 
-import { TxInfo, UnsignedTransaction } from '../balanceTransfer';
+import { TxInfo } from '../balanceTransfer';
 import { BLOCKTIME, KUSAMA_SS58_FORMAT } from '../util/constants';
+import { UnsignedTransaction } from '../util/interfaces';
 
 /**
  * Parse the transaction information from an unigned transaction offline

@@ -1,20 +1,9 @@
 import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
-import { SignerPayloadJSON } from '@polkadot/types/types';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from '../util/constants';
 import { TxInfoUnbond } from './stakingTxTypeUtils';
-
-/**
- * JSON format for an unsigned transaction
- */
-export interface UnsignedUnbondTransaction extends SignerPayloadJSON {
-  /**
-   * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
-   * call `state_getMetadata`.
-   */
-  metadataRpc: string;
-}
+import { UnsignedTransaction } from '../util/interfaces';
 
 /**
  * Construct a transaction to unbond funds from a Stash account. This must be called
@@ -22,7 +11,7 @@ export interface UnsignedUnbondTransaction extends SignerPayloadJSON {
  *
  * @param info - Information required to construct the transaction.
  */
-export function unbond(info: TxInfoUnbond): UnsignedUnbondTransaction {
+export function unbond(info: TxInfoUnbond): UnsignedTransaction {
   const registry = new TypeRegistry();
   const metadata = new Metadata(registry, info.metadataRpc);
 
