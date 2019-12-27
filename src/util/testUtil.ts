@@ -12,7 +12,7 @@ import { createType, TypeRegistry } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/primitive/Extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
-import { TxInfo } from '../balanceTransfer';
+import { TxInfoTransfer } from '../balanceTransfer';
 import {
   TxInfoBond,
   TxInfoNominate,
@@ -24,7 +24,7 @@ export { metadataRpc };
 /**
  * @ignore
  */
-export const TEST_TX_INFO: TxInfo = {
+export const TEST_TRANSFER_TX_INFO: TxInfoTransfer = {
   address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
   amount: 12,
   blockHash:

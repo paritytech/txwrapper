@@ -2,11 +2,11 @@ import { balanceTransfer } from './balanceTransfer';
 import { createSignedTx } from './createSignedTx';
 import { createSigningPayload } from './createSigningPayload';
 import { getTxHash } from './getTxHash';
-import { signWithAlice, TEST_TX_INFO } from './util/testUtil';
+import { signWithAlice, TEST_TRANSFER_TX_INFO } from './util/testUtil';
 
 describe('createSignedTx', () => {
   it('should work', async done => {
-    const unsigned = balanceTransfer(TEST_TX_INFO);
+    const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
     const signedTx = createSignedTx(unsigned, signature);

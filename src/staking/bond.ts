@@ -2,8 +2,8 @@ import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from '../util/constants';
-import { TxInfoBond } from './stakingTxTypeUtils';
 import { UnsignedTransaction } from '../util/interfaces';
+import { TxInfoBond } from './stakingTxTypeUtils';
 
 /**
  * Construct a transaction to bond funds and create a Stash account.

@@ -10,7 +10,7 @@ import { Compact, createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { Balance } from '@polkadot/types/interfaces';
 import { setSS58Format } from '@polkadot/util-crypto';
 
-import { TxInfo } from '../balanceTransfer';
+import { TxInfoTransfer } from '../balanceTransfer';
 import { BLOCKTIME, KUSAMA_SS58_FORMAT } from '../util/constants';
 import { UnsignedTransaction } from '../util/interfaces';
 
@@ -24,7 +24,7 @@ import { UnsignedTransaction } from '../util/interfaces';
 export function decodeUnsignedTx(
   unsigned: UnsignedTransaction,
   metadataRpc: string
-): TxInfo {
+): TxInfoTransfer {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
 

@@ -1,12 +1,12 @@
 import { balanceTransfer } from './balanceTransfer';
-import { TEST_TX_INFO } from './util/testUtil';
+import { TEST_TRANSFER_TX_INFO } from './util/testUtil';
 
 describe('balanceTransfer', () => {
   it('should work', () => {
-    const unsigned = balanceTransfer(TEST_TX_INFO);
+    const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
 
     (['address', 'blockHash', 'genesisHash'] as const).forEach(key =>
-      expect(unsigned[key]).toBe(TEST_TX_INFO[key])
+      expect(unsigned[key]).toBe(TEST_TRANSFER_TX_INFO[key])
     );
     expect(unsigned.blockNumber).toBe('0x0041a58e');
     expect(unsigned.era).toBe('0xeb58');

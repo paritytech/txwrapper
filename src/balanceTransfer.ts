@@ -1,9 +1,10 @@
 import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
+
 import { EXTRINSIC_VERSION, ONE_SECOND } from './util/constants';
 import { UnsignedTransaction } from './util/interfaces';
 
-export interface TxInfo {
+export interface TxInfoTransfer {
   /**
    * The ss-58 encoded address
    */
@@ -62,7 +63,7 @@ export interface TxInfo {
  *
  * @param info - Information required to construct the transaction.
  */
-export function balanceTransfer(info: TxInfo): UnsignedTransaction {
+export function balanceTransfer(info: TxInfoTransfer): UnsignedTransaction {
   const registry = new TypeRegistry();
   const metadata = new Metadata(registry, info.metadataRpc);
 

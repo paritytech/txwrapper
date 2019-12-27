@@ -2,8 +2,8 @@ import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from '../util/constants';
-import { TxInfoUnbond } from './stakingTxTypeUtils';
 import { UnsignedTransaction } from '../util/interfaces';
+import { TxInfoUnbond } from './stakingTxTypeUtils';
 
 /**
  * Construct a transaction to unbond funds from a Stash account. This must be called

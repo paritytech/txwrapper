@@ -10,14 +10,17 @@ import { Compact, createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { Balance } from '@polkadot/types/interfaces';
 import { setSS58Format } from '@polkadot/util-crypto';
 
-import { TxInfo } from '../balanceTransfer';
+import { TxInfoTransfer } from '../balanceTransfer';
 import {
   BLOCKTIME,
   EXTRINSIC_VERSION,
   KUSAMA_SS58_FORMAT
 } from '../util/constants';
 
-export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
+export type DecodedSigningPayload = Omit<
+  TxInfoTransfer,
+  'address' | 'blockNumber'
+>;
 
 /**
  * Parse the transaction information from a signing payload

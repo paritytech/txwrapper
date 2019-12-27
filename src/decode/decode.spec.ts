@@ -1,12 +1,16 @@
 import { balanceTransfer } from '../balanceTransfer';
 import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
-import { metadataRpc, signWithAlice, TEST_TX_INFO } from '../util/testUtil';
+import {
+  metadataRpc,
+  signWithAlice,
+  TEST_TRANSFER_TX_INFO
+} from '../util/testUtil';
 import { decode } from './decode';
 
 describe('decode', () => {
   it('should decode signedTx', async done => {
-    const unsigned = balanceTransfer(TEST_TX_INFO);
+    const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
 
@@ -22,17 +26,19 @@ describe('decode', () => {
       'nonce',
       'tip',
       'to'
-    ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));
+    ] as const).forEach(key =>
+      expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
+    );
 
     expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
-      TEST_TX_INFO.validityPeriod
+      TEST_TRANSFER_TX_INFO.validityPeriod
     );
 
     done();
   });
 
   it('decode unsigned tx', () => {
-    const unsigned = balanceTransfer(TEST_TX_INFO);
+    const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
     const txInfo = decode(unsigned, metadataRpc);
 
     ([
@@ -47,15 +53,17 @@ describe('decode', () => {
       'specVersion',
       'tip',
       'to'
-    ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));
+    ] as const).forEach(key =>
+      expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
+    );
 
     expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
-      TEST_TX_INFO.validityPeriod
+      TEST_TRANSFER_TX_INFO.validityPeriod
     );
   });
 
   it('should decode signing payload', done => {
-    const unsigned = balanceTransfer(TEST_TX_INFO);
+    const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
 
     const txInfo = decode(signingPayload, metadataRpc);
@@ -70,10 +78,12 @@ describe('decode', () => {
       // 'specVersion',
       'tip',
       'to'
-    ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_TX_INFO[key]));
+    ] as const).forEach(key =>
+      expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
+    );
 
     expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
-      TEST_TX_INFO.validityPeriod
+      TEST_TRANSFER_TX_INFO.validityPeriod
     );
 
     done();
