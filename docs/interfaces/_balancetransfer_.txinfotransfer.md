@@ -4,7 +4,9 @@
 
 ## Hierarchy
 
-* **TxInfoTransfer**
+* [BaseTxInfo](_util_interfaces_.basetxinfo.md)
+
+  ↳ **TxInfoTransfer**
 
 ## Index
 
@@ -29,9 +31,11 @@
 
 • **address**: *string*
 
-*Defined in [src/balanceTransfer.ts:10](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L10)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[address](_util_interfaces_.basetxinfo.md#address)*
 
-The ss-58 encoded address
+*Defined in [src/util/interfaces.ts:21](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L21)*
+
+The ss-58 encoded address of the sending account.
 
 ___
 
@@ -39,9 +43,9 @@ ___
 
 • **amount**: *number*
 
-*Defined in [src/balanceTransfer.ts:14](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L14)*
+*Defined in [src/balanceTransfer.ts:11](https://github.com/paritytech/txwrapper/blob/c5e4189/src/balanceTransfer.ts#L11)*
 
-The amount to send
+The amount to send.
 
 ___
 
@@ -49,9 +53,11 @@ ___
 
 • **blockHash**: *string*
 
-*Defined in [src/balanceTransfer.ts:18](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L18)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[blockHash](_util_interfaces_.basetxinfo.md#blockhash)*
 
-The checkpoint hash of the block, in hex
+*Defined in [src/util/interfaces.ts:25](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L25)*
+
+The checkpoint hash of the block, in hex.
 
 ___
 
@@ -59,9 +65,11 @@ ___
 
 • **blockNumber**: *number*
 
-*Defined in [src/balanceTransfer.ts:22](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L22)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[blockNumber](_util_interfaces_.basetxinfo.md#blocknumber)*
 
-The checkpoint block number (u32), in hex
+*Defined in [src/util/interfaces.ts:29](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L29)*
+
+The checkpoint block number (u32), in hex.
 
 ___
 
@@ -69,9 +77,11 @@ ___
 
 • **genesisHash**: *string*
 
-*Defined in [src/balanceTransfer.ts:26](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L26)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[genesisHash](_util_interfaces_.basetxinfo.md#genesishash)*
 
-The genesis hash of the chain, in hex
+*Defined in [src/util/interfaces.ts:33](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L33)*
+
+The genesis hash of the chain, in hex.
 
 ___
 
@@ -79,9 +89,9 @@ ___
 
 • **keepAlive**? : *undefined | false | true*
 
-*Defined in [src/balanceTransfer.ts:30](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L30)*
+*Defined in [src/balanceTransfer.ts:15](https://github.com/paritytech/txwrapper/blob/c5e4189/src/balanceTransfer.ts#L15)*
 
-Use balances::transfer_keep_alive instead of balances::transfer
+Use `balances::transfer_keep_alive` instead of `balances::transfer`.
 
 ___
 
@@ -89,10 +99,12 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/balanceTransfer.ts:35](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L35)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[metadataRpc](_util_interfaces_.basetxinfo.md#metadatarpc)*
+
+*Defined in [src/util/interfaces.ts:38](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L38)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
-call `state_getMetadata`
+call `state_getMetadata`.
 
 ___
 
@@ -100,9 +112,11 @@ ___
 
 • **nonce**: *number*
 
-*Defined in [src/balanceTransfer.ts:39](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L39)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[nonce](_util_interfaces_.basetxinfo.md#nonce)*
 
-The nonce for this transaction,
+*Defined in [src/util/interfaces.ts:42](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L42)*
+
+The nonce for this transaction.
 
 ___
 
@@ -110,9 +124,11 @@ ___
 
 • **specVersion**: *number*
 
-*Defined in [src/balanceTransfer.ts:43](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L43)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[specVersion](_util_interfaces_.basetxinfo.md#specversion)*
 
-The current spec version for the runtime
+*Defined in [src/util/interfaces.ts:46](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L46)*
+
+The current spec version for the runtime.
 
 ___
 
@@ -120,9 +136,11 @@ ___
 
 • **tip**: *number*
 
-*Defined in [src/balanceTransfer.ts:47](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L47)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[tip](_util_interfaces_.basetxinfo.md#tip)*
 
-The tip for this transaction, in hex
+*Defined in [src/util/interfaces.ts:50](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L50)*
+
+The tip for this transaction, in hex.
 
 ___
 
@@ -130,9 +148,9 @@ ___
 
 • **to**: *string*
 
-*Defined in [src/balanceTransfer.ts:51](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L51)*
+*Defined in [src/balanceTransfer.ts:19](https://github.com/paritytech/txwrapper/blob/c5e4189/src/balanceTransfer.ts#L19)*
 
-The recipient address, ss-58 encoded
+The recipient address, SS-58 encoded.
 
 ___
 
@@ -140,7 +158,9 @@ ___
 
 • **validityPeriod**: *number*
 
-*Defined in [src/balanceTransfer.ts:56](https://github.com/paritytech/txwrapper/blob/b01afa4/src/balanceTransfer.ts#L56)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[validityPeriod](_util_interfaces_.basetxinfo.md#validityperiod)*
+
+*Defined in [src/util/interfaces.ts:55](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L55)*
 
 The amount of time (in second) the transaction is valid for. Will be
-translated into a mortal era
+translated into a mortal era.

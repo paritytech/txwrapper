@@ -4,7 +4,9 @@
 
 ## Hierarchy
 
-* **TxInfoBond**
+* [BaseTxInfo](_util_interfaces_.basetxinfo.md)
+
+  ↳ **TxInfoBond**
 
 ## Index
 
@@ -29,7 +31,9 @@
 
 • **address**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:5](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L5)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[address](_util_interfaces_.basetxinfo.md#address)*
+
+*Defined in [src/util/interfaces.ts:21](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L21)*
 
 The ss-58 encoded address of the sending account.
 
@@ -39,7 +43,9 @@ ___
 
 • **blockHash**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:21](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L21)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[blockHash](_util_interfaces_.basetxinfo.md#blockhash)*
+
+*Defined in [src/util/interfaces.ts:25](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L25)*
 
 The checkpoint hash of the block, in hex.
 
@@ -49,7 +55,9 @@ ___
 
 • **blockNumber**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:25](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L25)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[blockNumber](_util_interfaces_.basetxinfo.md#blocknumber)*
+
+*Defined in [src/util/interfaces.ts:29](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L29)*
 
 The checkpoint block number (u32), in hex.
 
@@ -59,7 +67,7 @@ ___
 
 • **controller**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:9](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L9)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:7](https://github.com/paritytech/txwrapper/blob/c5e4189/src/staking/stakingTxTypeUtils.ts#L7)*
 
 The SS-58 encoded address of the Controller account.
 
@@ -69,7 +77,9 @@ ___
 
 • **genesisHash**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:29](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L29)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[genesisHash](_util_interfaces_.basetxinfo.md#genesishash)*
+
+*Defined in [src/util/interfaces.ts:33](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L33)*
 
 The genesis hash of the chain, in hex.
 
@@ -79,7 +89,9 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:34](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L34)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[metadataRpc](_util_interfaces_.basetxinfo.md#metadatarpc)*
+
+*Defined in [src/util/interfaces.ts:38](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L38)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
@@ -90,7 +102,9 @@ ___
 
 • **nonce**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:38](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L38)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[nonce](_util_interfaces_.basetxinfo.md#nonce)*
+
+*Defined in [src/util/interfaces.ts:42](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L42)*
 
 The nonce for this transaction.
 
@@ -100,7 +114,7 @@ ___
 
 • **payee**: *string*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:17](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L17)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:15](https://github.com/paritytech/txwrapper/blob/c5e4189/src/staking/stakingTxTypeUtils.ts#L15)*
 
 The rewards destination. Can be "Stash", "Staked", or "Controller".
 
@@ -110,7 +124,9 @@ ___
 
 • **specVersion**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:42](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L42)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[specVersion](_util_interfaces_.basetxinfo.md#specversion)*
+
+*Defined in [src/util/interfaces.ts:46](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L46)*
 
 The current spec version for the runtime.
 
@@ -120,7 +136,9 @@ ___
 
 • **tip**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:46](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L46)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[tip](_util_interfaces_.basetxinfo.md#tip)*
+
+*Defined in [src/util/interfaces.ts:50](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L50)*
 
 The tip for this transaction, in hex.
 
@@ -130,7 +148,9 @@ ___
 
 • **validityPeriod**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:51](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L51)*
+*Inherited from [BaseTxInfo](_util_interfaces_.basetxinfo.md).[validityPeriod](_util_interfaces_.basetxinfo.md#validityperiod)*
+
+*Defined in [src/util/interfaces.ts:55](https://github.com/paritytech/txwrapper/blob/c5e4189/src/util/interfaces.ts#L55)*
 
 The amount of time (in second) the transaction is valid for. Will be
 translated into a mortal era.
@@ -141,6 +161,6 @@ ___
 
 • **value**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:13](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/stakingTxTypeUtils.ts#L13)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:11](https://github.com/paritytech/txwrapper/blob/c5e4189/src/staking/stakingTxTypeUtils.ts#L11)*
 
 The number of tokens to bond.

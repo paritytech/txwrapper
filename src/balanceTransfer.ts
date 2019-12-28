@@ -2,59 +2,21 @@ import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from './util/constants';
-import { UnsignedTransaction } from './util/interfaces';
+import { BaseTxInfo, UnsignedTransaction } from './util/interfaces';
 
-export interface TxInfoTransfer {
+export interface TxInfoTransfer extends BaseTxInfo {
   /**
-   * The ss-58 encoded address
-   */
-  address: string;
-  /**
-   * The amount to send
+   * The amount to send.
    */
   amount: number;
   /**
-   * The checkpoint hash of the block, in hex
-   */
-  blockHash: string;
-  /**
-   * The checkpoint block number (u32), in hex
-   */
-  blockNumber: number;
-  /**
-   * The genesis hash of the chain, in hex
-   */
-  genesisHash: string;
-  /**
-   * Use balances::transfer_keep_alive instead of balances::transfer
+   * Use `balances::transfer_keep_alive` instead of `balances::transfer`.
    */
   keepAlive?: boolean;
   /**
-   * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
-   * call `state_getMetadata`
-   */
-  metadataRpc: string;
-  /**
-   * The nonce for this transaction,
-   */
-  nonce: number;
-  /**
-   * The current spec version for the runtime
-   */
-  specVersion: number;
-  /**
-   * The tip for this transaction, in hex
-   */
-  tip: number;
-  /**
-   * The recipient address, ss-58 encoded
+   * The recipient address, SS-58 encoded.
    */
   to: string;
-  /**
-   * The amount of time (in second) the transaction is valid for. Will be
-   * translated into a mortal era
-   */
-  validityPeriod: number;
 }
 
 /**

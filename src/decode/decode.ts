@@ -18,6 +18,7 @@ export function decode(
   unsignedTx: UnsignedTransaction,
   metadataRpc: string
 ): TxInfoTransfer;
+
 /**
  * Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
  *
@@ -26,6 +27,7 @@ export function decode(
  * retrieved via the RPC call `state_getMetadata`.
  */
 export function decode(signedTx: string, metadataRpc: string): DecodedSignedTx;
+
 /**
  * Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
  *

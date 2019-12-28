@@ -14,7 +14,7 @@
 
 ▸ **nominate**(`info`: [TxInfoNominate](../interfaces/_staking_stakingtxtypeutils_.txinfonominate.md)): *[UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)*
 
-*Defined in [src/staking/nominate.ts:13](https://github.com/paritytech/txwrapper/blob/b01afa4/src/staking/nominate.ts#L13)*
+*Defined in [src/staking/nominate.ts:13](https://github.com/paritytech/txwrapper/blob/c5e4189/src/staking/nominate.ts#L13)*
 
 Construct a transaction to nominate. This must be called by the _Controller_ account.
 

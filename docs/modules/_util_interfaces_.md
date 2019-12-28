@@ -6,4 +6,5 @@
 
 ### Interfaces
 
+* [BaseTxInfo](../interfaces/_util_interfaces_.basetxinfo.md)
 * [UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)
