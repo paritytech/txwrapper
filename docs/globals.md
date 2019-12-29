@@ -10,6 +10,7 @@
 * ["createSignedTx"](modules/_createsignedtx_.md)
 * ["createSigningPayload"](modules/_createsigningpayload_.md)
 * ["decode/decode"](modules/_decode_decode_.md)
+* ["decode/decodeUtils"](modules/_decode_decodeutils_.md)
 * ["deriveAddress"](modules/_deriveaddress_.md)
 * ["getTxHash"](modules/_gettxhash_.md)
 * ["importPrivateKey"](modules/_importprivatekey_.md)

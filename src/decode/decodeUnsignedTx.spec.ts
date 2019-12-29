@@ -1,30 +1,62 @@
 import { balanceTransfer } from '../balanceTransfer';
-import { metadataRpc, TEST_TRANSFER_TX_INFO } from '../util/testUtil';
+import { unbond } from '../staking/unbond';
+import {
+  metadataRpc,
+  TEST_TRANSFER_TX_INFO,
+  TEST_UNBOND_TX_INFO
+} from '../util/testUtil';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
 
 describe('decodeSignedTx', () => {
-  it('should work', () => {
+  it('should decode SignedTx balance transfer', () => {
     const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
     const txInfo = decodeUnsignedTx(unsigned, metadataRpc);
 
     ([
       'address',
-      'amount',
       'blockHash',
       'blockNumber',
       'genesisHash',
-      'keepAlive',
       'metadataRpc',
       'nonce',
       'specVersion',
-      'tip',
-      'to'
+      'tip'
     ] as const).forEach(key =>
       expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
     );
 
+    (['keepAlive', 'amount', 'to'] as const).forEach(key =>
+      expect(txInfo.methodData[key]).toBe(TEST_TRANSFER_TX_INFO[key])
+    );
+
     expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
       TEST_TRANSFER_TX_INFO.validityPeriod
+    );
+  });
+
+  it('should decode SignedTx unbond', () => {
+    const unsigned = unbond(TEST_UNBOND_TX_INFO);
+    const txInfo = decodeUnsignedTx(unsigned, metadataRpc);
+
+    ([
+      'address',
+      'blockHash',
+      'blockNumber',
+      'genesisHash',
+      'metadataRpc',
+      'nonce',
+      'specVersion',
+      'tip'
+    ] as const).forEach(key =>
+      expect(txInfo[key]).toBe(TEST_UNBOND_TX_INFO[key])
+    );
+
+    (['value'] as const).forEach(key =>
+      expect(txInfo.methodData[key]).toBe(TEST_UNBOND_TX_INFO[key])
+    );
+
+    expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
+      TEST_UNBOND_TX_INFO.validityPeriod
     );
   });
 });

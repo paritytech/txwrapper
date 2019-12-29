@@ -1,11 +1,10 @@
-import { TxInfoTransfer } from '../balanceTransfer';
 import { UnsignedTransaction } from '../util/interfaces';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 import {
   DecodedSigningPayload,
   decodeSigningPayload
 } from './decodeSigningPayload';
-import { decodeUnsignedTx } from './decodeUnsignedTx';
+import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
 
 /**
  * Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
@@ -17,7 +16,7 @@ import { decodeUnsignedTx } from './decodeUnsignedTx';
 export function decode(
   unsignedTx: UnsignedTransaction,
   metadataRpc: string
-): TxInfoTransfer;
+): DecodedUnsignedTx;
 
 /**
  * Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
@@ -43,7 +42,7 @@ export function decode(
 export function decode(
   data: string | UnsignedTransaction,
   metadataRpc: string
-): DecodedSignedTx | TxInfoTransfer | DecodedSigningPayload {
+): DecodedSignedTx | DecodedUnsignedTx | DecodedSigningPayload {
   if (typeof data === 'string') {
     let decodedInfo: DecodedSigningPayload | DecodedSignedTx;
     try {

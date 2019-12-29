@@ -18,16 +18,12 @@ describe('decode', () => {
 
     const txInfo = decode(signedTx, metadataRpc);
 
-    ([
-      'address',
-      'amount',
-      'keepAlive',
-      'metadataRpc',
-      'nonce',
-      'tip',
-      'to'
-    ] as const).forEach(key =>
+    (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach(key =>
       expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
+    );
+
+    (['keepAlive', 'amount', 'to'] as const).forEach(key =>
+      expect(txInfo.methodData[key]).toBe(TEST_TRANSFER_TX_INFO[key])
     );
 
     expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
@@ -43,18 +39,19 @@ describe('decode', () => {
 
     ([
       'address',
-      'amount',
       'blockHash',
       'blockNumber',
       'genesisHash',
-      'keepAlive',
       'metadataRpc',
       'nonce',
       'specVersion',
-      'tip',
-      'to'
+      'tip'
     ] as const).forEach(key =>
       expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
+    );
+
+    (['keepAlive', 'amount', 'to'] as const).forEach(key =>
+      expect(txInfo.methodData[key]).toBe(TEST_TRANSFER_TX_INFO[key])
     );
 
     expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
@@ -69,17 +66,18 @@ describe('decode', () => {
     const txInfo = decode(signingPayload, metadataRpc);
 
     ([
-      'amount',
       // 'blockHash',
       // 'genesisHash',
-      'keepAlive',
       'metadataRpc',
       'nonce',
       // 'specVersion',
-      'tip',
-      'to'
+      'tip'
     ] as const).forEach(key =>
       expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
+    );
+
+    (['keepAlive', 'amount', 'to'] as const).forEach(key =>
+      expect(txInfo.methodData[key]).toBe(TEST_TRANSFER_TX_INFO[key])
     );
 
     expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
