@@ -1,4 +1,4 @@
-import { BaseTxInfo } from '../util/interfaces';
+import { BaseTxInfo } from '../util/types';
 
 export interface TxInfoBond extends BaseTxInfo {
   /**

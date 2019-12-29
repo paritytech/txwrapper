@@ -16,9 +16,9 @@
 
 ###  balanceTransfer
 
-▸ **balanceTransfer**(`info`: [TxInfoTransfer](../interfaces/_balancetransfer_.txinfotransfer.md)): *[UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)*
+▸ **balanceTransfer**(`info`: [TxInfoTransfer](../interfaces/_balancetransfer_.txinfotransfer.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/balanceTransfer.ts:28](https://github.com/paritytech/txwrapper/blob/0fb6503/src/balanceTransfer.ts#L28)*
+*Defined in [src/balanceTransfer.ts:28](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/balanceTransfer.ts#L28)*
 
 Construct a balance transfer transaction offline. Transactions can be
 constructed in such a way that they are valid for at least 240 minutes.
@@ -29,4 +29,4 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `info` | [TxInfoTransfer](../interfaces/_balancetransfer_.txinfotransfer.md) | Information required to construct the transaction.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)*
+**Returns:** *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*

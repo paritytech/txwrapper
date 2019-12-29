@@ -19,4 +19,4 @@
 * ["staking/stakingTxTypeUtils"](modules/_staking_stakingtxtypeutils_.md)
 * ["staking/unbond"](modules/_staking_unbond_.md)
 * ["util/constants"](modules/_util_constants_.md)
-* ["util/interfaces"](modules/_util_interfaces_.md)
+* ["util/types"](modules/_util_types_.md)

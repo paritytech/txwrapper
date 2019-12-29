@@ -14,7 +14,7 @@
 
 ▸ **getMethodData**(`method`: Call): *any*
 
-Defined in src/decode/decodeUtils.ts:7
+*Defined in [src/decode/decodeUtils.ts:8](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/decode/decodeUtils.ts#L8)*
 
 **Parameters:**
 

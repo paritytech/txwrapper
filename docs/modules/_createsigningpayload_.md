@@ -12,9 +12,9 @@
 
 ###  createSigningPayload
 
-▸ **createSigningPayload**(`unsigned`: [UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)): *string*
+▸ **createSigningPayload**(`unsigned`: [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)): *string*
 
-*Defined in [src/createSigningPayload.ts:11](https://github.com/paritytech/txwrapper/blob/0fb6503/src/createSigningPayload.ts#L11)*
+*Defined in [src/createSigningPayload.ts:11](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/createSigningPayload.ts#L11)*
 
 Construct the signing payload from an unsigned transaction and export it to
 a remote signer (this is often called "detached signing").
@@ -23,6 +23,6 @@ a remote signer (this is often called "detached signing").
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`unsigned` | [UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md) | The JSON representing the unsigned transaction.  |
+`unsigned` | [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md) | The JSON representing the unsigned transaction.  |
 
 **Returns:** *string*

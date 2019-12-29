@@ -2,7 +2,7 @@ import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from '../util/constants';
-import { UnsignedTransaction } from '../util/interfaces';
+import { UnsignedTransaction } from '../util/types';
 import { TxInfoUnbond } from './stakingTxTypeUtils';
 
 /**

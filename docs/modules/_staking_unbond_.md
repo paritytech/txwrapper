@@ -12,9 +12,9 @@
 
 ###  unbond
 
-▸ **unbond**(`info`: [TxInfoUnbond](../interfaces/_staking_stakingtxtypeutils_.txinfounbond.md)): *[UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)*
+▸ **unbond**(`info`: [TxInfoUnbond](../interfaces/_staking_stakingtxtypeutils_.txinfounbond.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/staking/unbond.ts:14](https://github.com/paritytech/txwrapper/blob/0fb6503/src/staking/unbond.ts#L14)*
+*Defined in [src/staking/unbond.ts:14](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/staking/unbond.ts#L14)*
 
 Construct a transaction to unbond funds from a Stash account. This must be called
 by the _Controller_ account.
@@ -25,4 +25,4 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `info` | [TxInfoUnbond](../interfaces/_staking_stakingtxtypeutils_.txinfounbond.md) | Information required to construct the transaction.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)*
+**Returns:** *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*

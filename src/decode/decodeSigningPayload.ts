@@ -9,7 +9,7 @@
 import { createType, Metadata, TypeRegistry } from '@polkadot/types';
 
 import { BLOCKTIME, EXTRINSIC_VERSION } from '../util/constants';
-import { BaseTxInfo } from '../util/interfaces';
+import { BaseTxInfo } from '../util/types';
 import { getMethodData } from './decodeUtils';
 
 interface DecodedWithMethod extends BaseTxInfo {

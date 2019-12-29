@@ -12,9 +12,9 @@
 
 ###  nominate
 
-▸ **nominate**(`info`: [TxInfoNominate](../interfaces/_staking_stakingtxtypeutils_.txinfonominate.md)): *[UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)*
+▸ **nominate**(`info`: [TxInfoNominate](../interfaces/_staking_stakingtxtypeutils_.txinfonominate.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/staking/nominate.ts:13](https://github.com/paritytech/txwrapper/blob/0fb6503/src/staking/nominate.ts#L13)*
+*Defined in [src/staking/nominate.ts:13](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/staking/nominate.ts#L13)*
 
 Construct a transaction to nominate. This must be called by the _Controller_ account.
 
@@ -24,4 +24,4 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `info` | [TxInfoNominate](../interfaces/_staking_stakingtxtypeutils_.txinfonominate.md) | Information required to construct the transaction.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_util_interfaces_.unsignedtransaction.md)*
+**Returns:** *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*

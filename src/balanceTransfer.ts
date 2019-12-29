@@ -2,7 +2,7 @@ import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from './util/constants';
-import { BaseTxInfo, UnsignedTransaction } from './util/interfaces';
+import { BaseTxInfo, UnsignedTransaction } from './util/types';
 
 export interface TxInfoTransfer extends BaseTxInfo {
   /**

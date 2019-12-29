@@ -11,7 +11,7 @@ import { hexToU8a } from '@polkadot/util';
 import { setSS58Format } from '@polkadot/util-crypto';
 
 import { BLOCKTIME, KUSAMA_SS58_FORMAT } from '../util/constants';
-import { BaseTxInfo } from '../util/interfaces';
+import { BaseTxInfo } from '../util/types';
 import { getMethodData } from './decodeUtils';
 
 interface DecodedWithMethod extends BaseTxInfo {

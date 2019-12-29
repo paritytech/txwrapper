@@ -1,4 +1,4 @@
-[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["util/interfaces"](../modules/_util_interfaces_.md) › [UnsignedTransaction](_util_interfaces_.unsignedtransaction.md)
+[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["util/types"](../modules/_util_types_.md) › [UnsignedTransaction](_util_types_.unsignedtransaction.md)
 
 # Interface: UnsignedTransaction
 
@@ -14,17 +14,17 @@ JSON format for an unsigned transaction.
 
 ### Properties
 
-* [address](_util_interfaces_.unsignedtransaction.md#address)
-* [blockHash](_util_interfaces_.unsignedtransaction.md#blockhash)
-* [blockNumber](_util_interfaces_.unsignedtransaction.md#blocknumber)
-* [era](_util_interfaces_.unsignedtransaction.md#era)
-* [genesisHash](_util_interfaces_.unsignedtransaction.md#genesishash)
-* [metadataRpc](_util_interfaces_.unsignedtransaction.md#metadatarpc)
-* [method](_util_interfaces_.unsignedtransaction.md#method)
-* [nonce](_util_interfaces_.unsignedtransaction.md#nonce)
-* [specVersion](_util_interfaces_.unsignedtransaction.md#specversion)
-* [tip](_util_interfaces_.unsignedtransaction.md#tip)
-* [version](_util_interfaces_.unsignedtransaction.md#version)
+* [address](_util_types_.unsignedtransaction.md#address)
+* [blockHash](_util_types_.unsignedtransaction.md#blockhash)
+* [blockNumber](_util_types_.unsignedtransaction.md#blocknumber)
+* [era](_util_types_.unsignedtransaction.md#era)
+* [genesisHash](_util_types_.unsignedtransaction.md#genesishash)
+* [metadataRpc](_util_types_.unsignedtransaction.md#metadatarpc)
+* [method](_util_types_.unsignedtransaction.md#method)
+* [nonce](_util_types_.unsignedtransaction.md#nonce)
+* [specVersion](_util_types_.unsignedtransaction.md#specversion)
+* [tip](_util_types_.unsignedtransaction.md#tip)
+* [version](_util_types_.unsignedtransaction.md#version)
 
 ## Properties
 
@@ -92,7 +92,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/util/interfaces.ts:11](https://github.com/paritytech/txwrapper/blob/0fb6503/src/util/interfaces.ts#L11)*
+*Defined in [src/util/types.ts:11](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L11)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.

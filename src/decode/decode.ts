@@ -1,4 +1,4 @@
-import { UnsignedTransaction } from '../util/interfaces';
+import { UnsignedTransaction } from '../util/types';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 import {
   DecodedSigningPayload,

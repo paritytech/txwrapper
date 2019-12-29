@@ -1,6 +1,6 @@
 import { createType, TypeRegistry } from '@polkadot/types';
 
-import { UnsignedTransaction } from './util/interfaces';
+import { UnsignedTransaction } from './util/types';
 
 /**
  * Construct the signing payload from an unsigned transaction and export it to
