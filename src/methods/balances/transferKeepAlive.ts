@@ -1,5 +1,9 @@
-import { createMethod } from '../../util/method';
-import { BaseTxInfo, UnsignedTransaction } from '../../util/types';
+import {
+  Args,
+  BaseTxInfo,
+  createMethod,
+  UnsignedTransaction
+} from '../../util';
 import { BalancesTransferArgs } from './transfer';
 
 export type BalancesTransferKeepAliveArgs = BalancesTransferArgs;

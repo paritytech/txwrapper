@@ -3,7 +3,7 @@ import {
   TEST_BALANCES_TRANSFER_ARGS,
   TEST_BASE_TX_INFO,
   testBaseTxInfo
-} from '../../util/testUtil';
+} from '../../util';
 
 describe('balances::transferKeepAlive', () => {
   it('should work', () => {

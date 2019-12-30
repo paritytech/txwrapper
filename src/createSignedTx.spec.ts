@@ -1,6 +1,6 @@
 import { createSignedTx } from './createSignedTx';
 import { createSigningPayload } from './createSigningPayload';
-import { transfer } from './methods';
+import { transferKeepAlive } from './methods';
 import {
   signWithAlice,
   TEST_BALANCES_TRANSFER_ARGS,
@@ -9,7 +9,10 @@ import {
 
 describe('createSignedTx', () => {
   it('should work', async done => {
-    const unsigned = transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = transferKeepAlive(
+      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_BASE_TX_INFO
+    );
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
 

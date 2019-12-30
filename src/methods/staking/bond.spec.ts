@@ -1,16 +1,13 @@
-import { testBaseTxInfo, TEST_BASE_TX_INFO } from '../../util/testUtil';
+import {
+  testBaseTxInfo,
+  TEST_BASE_TX_INFO,
+  TEST_STAKING_BOND_ARGS
+} from '../../util';
 import { bond } from './bond';
 
 describe('bond', () => {
   it('should work', () => {
-    const unsigned = bond(
-      {
-        controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
-        value: 100,
-        payee: 'Staked'
-      },
-      TEST_BASE_TX_INFO
-    );
+    const unsigned = bond(TEST_STAKING_BOND_ARGS, TEST_BASE_TX_INFO);
 
     testBaseTxInfo(unsigned);
     expect(unsigned.method).toBe(

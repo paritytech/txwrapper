@@ -8,7 +8,12 @@ import { createType, TypeRegistry } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/primitive/Extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
-import { BalancesTransferArgs } from '../methods';
+import {
+  BalancesTransferArgs,
+  StakingBondArgs,
+  StakingNominateArgs,
+  StakingUnbondArgs
+} from '../methods';
 import { BaseTxInfo, UnsignedTransaction } from './types';
 
 export { metadataRpc };
@@ -48,6 +53,21 @@ export const TEST_BALANCES_TRANSFER_ARGS: BalancesTransferArgs = {
   dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
   value: 12
 };
+
+export const TEST_STAKING_BOND_ARGS: StakingBondArgs = {
+  controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+  value: 100,
+  payee: 'Staked'
+};
+
+export const TEST_STAKING_NOMINATE_ARGS: StakingNominateArgs = {
+  targets: [
+    'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+    'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
+  ]
+};
+
+export const TEST_STAKING_UNBOND_ARGS: StakingUnbondArgs = { value: 100 };
 
 export async function signWithAlice(signingPayload: string): Promise<string> {
   // We're creating an Alice account that will sign the payload

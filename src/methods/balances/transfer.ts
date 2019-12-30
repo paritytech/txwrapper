@@ -1,5 +1,9 @@
-import { Args, createMethod } from '../../util/method';
-import { BaseTxInfo, UnsignedTransaction } from '../../util/types';
+import {
+  Args,
+  BaseTxInfo,
+  createMethod,
+  UnsignedTransaction
+} from '../../util';
 
 export interface BalancesTransferArgs extends Args {
   /**

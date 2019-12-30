@@ -6,12 +6,10 @@ import { createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { setSS58Format } from '@polkadot/util-crypto';
 
 import { BLOCKTIME } from '../util/constants';
-import { BaseTxInfo, UnsignedTransaction } from '../util/types';
-import { getMethodData } from './decodeUtils';
+import { serializeMethod, TxInfo } from '../util/method';
+import { UnsignedTransaction } from '../util/types';
 
-export interface DecodedUnsignedTx extends BaseTxInfo {
-  methodData: any;
-}
+export type DecodedUnsignedTx = TxInfo;
 
 /**
  * Parse the transaction information from an unigned transaction offline.
@@ -28,16 +26,13 @@ export function decodeUnsignedTx(
 ): DecodedUnsignedTx {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
-
-  const method = createType(registry, 'Call', unsigned.method);
-
-  const methodInfo = getMethodData(method, ss58Format);
-
   setSS58Format(ss58Format);
+
+  const methodCall = createType(registry, 'Call', unsigned.method);
+  const method = serializeMethod(registry, methodCall);
 
   return {
     address: unsigned.address,
-    methodData: methodInfo,
     blockHash: unsigned.blockHash,
     blockNumber: createType(
       registry,
@@ -46,6 +41,7 @@ export function decodeUnsignedTx(
     ).toNumber(),
     genesisHash: unsigned.genesisHash,
     metadataRpc,
+    method,
     nonce: createType(registry, 'Compact<Index>', unsigned.nonce).toNumber(),
     specVersion: createType(registry, 'u32', unsigned.specVersion).toNumber(),
     tip: createType(registry, 'Compact<Balance>', unsigned.tip).toNumber(),

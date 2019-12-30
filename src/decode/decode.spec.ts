@@ -1,89 +1,56 @@
-import { balanceTransfer } from '../balanceTransfer';
 import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
-import { KUSAMA_SS58_FORMAT } from '../util/constants';
+import { transfer } from '../methods';
 import {
   metadataRpc,
   signWithAlice,
-  TEST_TRANSFER_TX_INFO
-} from '../util/testUtil';
+  TEST_BALANCES_TRANSFER_ARGS,
+  TEST_BASE_TX_INFO
+} from '../util';
 import { decode } from './decode';
+import { decodeBaseTxInfo as decodeSignedBase } from './decodeSignedTx.spec';
+import { DecodedSigningPayload } from './decodeSigningPayload';
+import { decodeBaseTxInfo as decodeSigningBase } from './decodeSigningPayload.spec';
+import { decodeBaseTxInfo as decodeUnsignedBase } from './decodeUnsignedTx.spec';
 
 describe('decode', () => {
   it('should decode signedTx', async done => {
-    const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
+    const unsigned = transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
 
     const signedTx = createSignedTx(unsigned, signature);
 
-    const txInfo = decode(signedTx, metadataRpc, KUSAMA_SS58_FORMAT);
+    const txInfo = decode(signedTx, metadataRpc);
 
-    (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach(key =>
-      expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
-    );
-
-    (['keepAlive', 'amount', 'to'] as const).forEach(key =>
-      expect(txInfo.methodData[key]).toBe(TEST_TRANSFER_TX_INFO[key])
-    );
-
-    expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
-      TEST_TRANSFER_TX_INFO.validityPeriod
-    );
+    decodeSignedBase(txInfo);
+    expect(txInfo.method.pallet).toBe('balances');
+    expect(txInfo.method.name).toBe('transfer');
+    expect(txInfo.method.args).toEqual(TEST_BALANCES_TRANSFER_ARGS);
 
     done();
   });
 
   it('decode unsigned tx', () => {
-    const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
-    const txInfo = decode(unsigned, metadataRpc, KUSAMA_SS58_FORMAT);
+    const unsigned = transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO);
+    const txInfo = decode(unsigned, metadataRpc);
 
-    ([
-      'address',
-      'blockHash',
-      'blockNumber',
-      'genesisHash',
-      'metadataRpc',
-      'nonce',
-      'specVersion',
-      'tip'
-    ] as const).forEach(key =>
-      expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
-    );
-
-    (['keepAlive', 'amount', 'to'] as const).forEach(key =>
-      expect(txInfo.methodData[key]).toBe(TEST_TRANSFER_TX_INFO[key])
-    );
-
-    expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
-      TEST_TRANSFER_TX_INFO.validityPeriod
-    );
+    decodeUnsignedBase(txInfo);
+    expect(txInfo.method.pallet).toBe('balances');
+    expect(txInfo.method.name).toBe('transfer');
+    expect(txInfo.method.args).toEqual(TEST_BALANCES_TRANSFER_ARGS);
   });
 
   it('should decode signing payload', done => {
-    const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
+    const unsigned = transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
 
-    const txInfo = decode(signingPayload, metadataRpc, KUSAMA_SS58_FORMAT);
+    const txInfo = decode(signingPayload, metadataRpc) as DecodedSigningPayload;
 
-    ([
-      // 'blockHash',
-      // 'genesisHash',
-      'metadataRpc',
-      'nonce',
-      // 'specVersion',
-      'tip'
-    ] as const).forEach(key =>
-      expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
-    );
-
-    (['keepAlive', 'amount', 'to'] as const).forEach(key =>
-      expect(txInfo.methodData[key]).toBe(TEST_TRANSFER_TX_INFO[key])
-    );
-
-    expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
-      TEST_TRANSFER_TX_INFO.validityPeriod
-    );
+    decodeSigningBase(txInfo);
+    expect(txInfo.method.pallet).toBe('balances');
+    expect(txInfo.method.name).toBe('transfer');
+    expect(txInfo.method.args).toEqual(TEST_BALANCES_TRANSFER_ARGS);
 
     done();
   });

@@ -1,17 +1,13 @@
-import { TEST_BASE_TX_INFO, testBaseTxInfo } from '../../util/testUtil';
+import {
+  TEST_BASE_TX_INFO,
+  TEST_STAKING_NOMINATE_ARGS,
+  testBaseTxInfo
+} from '../../util';
 import { nominate } from './nominate';
 
 describe('nominate', () => {
   it('should work', () => {
-    const unsigned = nominate(
-      {
-        targets: [
-          'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
-          'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
-        ]
-      },
-      TEST_BASE_TX_INFO
-    );
+    const unsigned = nominate(TEST_STAKING_NOMINATE_ARGS, TEST_BASE_TX_INFO);
 
     testBaseTxInfo(unsigned);
     expect(unsigned.method).toBe(
