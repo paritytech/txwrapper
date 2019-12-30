@@ -1,9 +1,9 @@
-import { balanceTransfer } from './balanceTransfer';
-import { TEST_TRANSFER_TX_INFO } from './util/testUtil';
+import { transfer } from './transfer';
+import { TEST_TRANSFER_TX_INFO } from '../../util/testUtil';
 
 describe('balanceTransfer', () => {
   it('should work', () => {
-    const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
+    const unsigned = transfer(TEST_TRANSFER_TX_INFO);
 
     (['address', 'blockHash', 'genesisHash'] as const).forEach(key =>
       expect(unsigned[key]).toBe(TEST_TRANSFER_TX_INFO[key])

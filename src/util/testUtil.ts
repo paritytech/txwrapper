@@ -1,10 +1,6 @@
 /**
  * @ignore
- */
-
-/**
- * Blank comment to make typedoc work
- */
+ */ /** */
 
 import { Keyring } from '@polkadot/api';
 import metadataRpc from '@polkadot/metadata/Metadata/v9/static';
@@ -12,12 +8,12 @@ import { createType, TypeRegistry } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/primitive/Extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
-import { TxInfoTransfer } from '../balanceTransfer';
 import {
   TxInfoBond,
   TxInfoNominate,
+  TxInfoTransfer,
   TxInfoUnbond
-} from '../staking/stakingTxTypeUtils';
+} from '../methods';
 
 export { metadataRpc };
 

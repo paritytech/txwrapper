@@ -1,10 +1,6 @@
 /**
  * @ignore
- */
-
-/**
- * Blank comment to make typedoc work
- */
+ */ /** */
 
 import { createType, Metadata, TypeRegistry } from '@polkadot/types';
 

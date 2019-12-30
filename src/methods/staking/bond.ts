@@ -1,22 +1,35 @@
 import Metadata from '@polkadot/metadata';
 import { createType, TypeRegistry } from '@polkadot/types';
 
-import { EXTRINSIC_VERSION, ONE_SECOND } from '../util/constants';
-import { UnsignedTransaction } from '../util/types';
-import { TxInfoUnbond } from './stakingTxTypeUtils';
+import { EXTRINSIC_VERSION, ONE_SECOND } from '../../util/constants';
+import { BaseTxInfo, UnsignedTransaction } from '../../util/types';
+
+export interface TxInfoBond extends BaseTxInfo {
+  /**
+   * The SS-58 encoded address of the Controller account.
+   */
+  controller: string;
+  /**
+   * The number of tokens to bond.
+   */
+  value: number;
+  /**
+   * The rewards destination. Can be "Stash", "Staked", or "Controller".
+   */
+  payee: string;
+}
 
 /**
- * Construct a transaction to unbond funds from a Stash account. This must be called
- * by the _Controller_ account.
+ * Construct a transaction to bond funds and create a Stash account.
  *
  * @param info - Information required to construct the transaction.
  */
-export function unbond(info: TxInfoUnbond): UnsignedTransaction {
+export function bond(info: TxInfoBond): UnsignedTransaction {
   const registry = new TypeRegistry();
   const metadata = new Metadata(registry, info.metadataRpc);
 
-  const unbond = metadata.tx.staking.unbond;
-  const method = unbond(info.value).toHex();
+  const bond = metadata.tx.staking.bond;
+  const method = bond(info.controller, info.value, info.payee).toHex();
 
   return {
     address: info.address,
