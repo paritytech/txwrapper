@@ -8,7 +8,11 @@
 
 import { createType, Metadata, TypeRegistry } from '@polkadot/types';
 
-import { BLOCKTIME, EXTRINSIC_VERSION } from '../util/constants';
+import {
+  BLOCKTIME,
+  EXTRINSIC_VERSION,
+  KUSAMA_SS58_FORMAT
+} from '../util/constants';
 import { BaseTxInfo } from '../util/types';
 import { getMethodData } from './decodeUtils';
 
@@ -27,10 +31,12 @@ export type DecodedSigningPayload = Omit<
  * @param signingPayload - The signing payload, in hex.
  * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
  * retrieved via the RPC call `state_getMetadata`.
+ * @param ss58Format - The SS-58 address encoding to return.
  */
 export function decodeSigningPayload(
   signingPayload: string,
-  metadataRpc: string
+  metadataRpc: string,
+  ss58Format: number = KUSAMA_SS58_FORMAT
 ): DecodedSigningPayload {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
@@ -40,7 +46,7 @@ export function decodeSigningPayload(
   });
   const method = createType(registry, 'Call', payload.method);
 
-  const methodInfo = getMethodData(method);
+  const methodInfo = getMethodData(method, ss58Format);
 
   return {
     methodData: methodInfo,

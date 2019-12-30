@@ -29,10 +29,12 @@ export type DecodedSignedTx = Omit<
  * @param unsigned - The JSON representing the unsigned transaction.
  * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
  * retrieved via the RPC call `state_getMetadata`.
+ * @param ss58Format - The SS-58 address encoding to return.
  */
 export function decodeSignedTx(
   signedTx: string,
-  metadataRpc: string
+  metadataRpc: string,
+  ss58Format: number = KUSAMA_SS58_FORMAT
 ): DecodedSignedTx {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
@@ -41,9 +43,9 @@ export function decodeSignedTx(
     isSigned: true
   });
 
-  const methodInfo = getMethodData(tx.method);
+  const methodInfo = getMethodData(tx.method, ss58Format);
 
-  setSS58Format(KUSAMA_SS58_FORMAT);
+  setSS58Format(ss58Format);
 
   return {
     address: tx.signer.toString(),

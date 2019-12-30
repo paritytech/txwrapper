@@ -31,7 +31,7 @@
 
 *Inherited from [BaseTxInfo](_util_types_.basetxinfo.md).[address](_util_types_.basetxinfo.md#address)*
 
-*Defined in [src/util/types.ts:21](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L21)*
+*Defined in [src/util/types.ts:21](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/types.ts#L21)*
 
 The ss-58 encoded address of the sending account.
 
@@ -43,7 +43,7 @@ ___
 
 *Inherited from [BaseTxInfo](_util_types_.basetxinfo.md).[blockHash](_util_types_.basetxinfo.md#blockhash)*
 
-*Defined in [src/util/types.ts:25](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L25)*
+*Defined in [src/util/types.ts:25](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/types.ts#L25)*
 
 The checkpoint hash of the block, in hex.
 
@@ -55,7 +55,7 @@ ___
 
 *Inherited from [BaseTxInfo](_util_types_.basetxinfo.md).[blockNumber](_util_types_.basetxinfo.md#blocknumber)*
 
-*Defined in [src/util/types.ts:29](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L29)*
+*Defined in [src/util/types.ts:29](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/types.ts#L29)*
 
 The checkpoint block number (u32), in hex.
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseTxInfo](_util_types_.basetxinfo.md).[genesisHash](_util_types_.basetxinfo.md#genesishash)*
 
-*Defined in [src/util/types.ts:33](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L33)*
+*Defined in [src/util/types.ts:33](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/types.ts#L33)*
 
 The genesis hash of the chain, in hex.
 
@@ -79,7 +79,7 @@ ___
 
 *Inherited from [BaseTxInfo](_util_types_.basetxinfo.md).[metadataRpc](_util_types_.basetxinfo.md#metadatarpc)*
 
-*Defined in [src/util/types.ts:38](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L38)*
+*Defined in [src/util/types.ts:38](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/types.ts#L38)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
@@ -92,7 +92,7 @@ ___
 
 *Inherited from [BaseTxInfo](_util_types_.basetxinfo.md).[nonce](_util_types_.basetxinfo.md#nonce)*
 
-*Defined in [src/util/types.ts:42](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L42)*
+*Defined in [src/util/types.ts:42](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/types.ts#L42)*
 
 The nonce for this transaction.
 
@@ -104,7 +104,7 @@ ___
 
 *Inherited from [BaseTxInfo](_util_types_.basetxinfo.md).[specVersion](_util_types_.basetxinfo.md#specversion)*
 
-*Defined in [src/util/types.ts:46](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L46)*
+*Defined in [src/util/types.ts:46](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/types.ts#L46)*
 
 The current spec version for the runtime.
 
@@ -116,7 +116,7 @@ ___
 
 *Inherited from [BaseTxInfo](_util_types_.basetxinfo.md).[tip](_util_types_.basetxinfo.md#tip)*
 
-*Defined in [src/util/types.ts:50](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L50)*
+*Defined in [src/util/types.ts:50](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/types.ts#L50)*
 
 The tip for this transaction, in hex.
 
@@ -128,7 +128,7 @@ ___
 
 *Inherited from [BaseTxInfo](_util_types_.basetxinfo.md).[validityPeriod](_util_types_.basetxinfo.md#validityperiod)*
 
-*Defined in [src/util/types.ts:55](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/util/types.ts#L55)*
+*Defined in [src/util/types.ts:55](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/types.ts#L55)*
 
 The amount of time (in second) the transaction is valid for. Will be
 translated into a mortal era.
@@ -139,6 +139,6 @@ ___
 
 • **value**: *number*
 
-*Defined in [src/staking/stakingTxTypeUtils.ts:32](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/staking/stakingTxTypeUtils.ts#L32)*
+*Defined in [src/staking/stakingTxTypeUtils.ts:32](https://github.com/paritytech/txwrapper/blob/74e5037/src/staking/stakingTxTypeUtils.ts#L32)*
 
 The number of tokens to unbond.
