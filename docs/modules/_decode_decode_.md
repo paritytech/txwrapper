@@ -12,9 +12,9 @@
 
 ###  decode
 
-▸ **decode**(`unsignedTx`: [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md), `metadataRpc`: string): *DecodedUnsignedTx*
+▸ **decode**(`unsignedTx`: [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md), `metadataRpc`: string, `ss58Format`: number): *DecodedUnsignedTx*
 
-*Defined in [src/decode/decode.ts:16](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/decode/decode.ts#L16)*
+*Defined in [src/decode/decode.ts:17](https://github.com/paritytech/txwrapper/blob/74e5037/src/decode/decode.ts#L17)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 
@@ -23,13 +23,14 @@ Parse the transaction information from a signing payload, an unsigned tx, or a s
 Name | Type | Description |
 ------ | ------ | ------ |
 `unsignedTx` | [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md) | The data to parse, as an unsigned tx. |
-`metadataRpc` | string | The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC call `state_getMetadata`.  |
+`metadataRpc` | string | The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC call `state_getMetadata`. |
+`ss58Format` | number | The SS-58 address encoding to return.  |
 
 **Returns:** *DecodedUnsignedTx*
 
-▸ **decode**(`signedTx`: string, `metadataRpc`: string): *DecodedSignedTx*
+▸ **decode**(`signedTx`: string, `metadataRpc`: string, `ss58Format`: number): *DecodedSignedTx*
 
-*Defined in [src/decode/decode.ts:28](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/decode/decode.ts#L28)*
+*Defined in [src/decode/decode.ts:31](https://github.com/paritytech/txwrapper/blob/74e5037/src/decode/decode.ts#L31)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 
@@ -38,13 +39,14 @@ Parse the transaction information from a signing payload, an unsigned tx, or a s
 Name | Type | Description |
 ------ | ------ | ------ |
 `signedTx` | string | The data to parse, as a signed tx hex string. |
-`metadataRpc` | string | The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC call `state_getMetadata`.  |
+`metadataRpc` | string | The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC call `state_getMetadata`. |
+`ss58Format` | number | The SS-58 address encoding to return.  |
 
 **Returns:** *DecodedSignedTx*
 
-▸ **decode**(`signingPayload`: string, `metadataRpc`: string): *DecodedSigningPayload*
+▸ **decode**(`signingPayload`: string, `metadataRpc`: string, `ss58Format`: number): *DecodedSigningPayload*
 
-*Defined in [src/decode/decode.ts:37](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/decode/decode.ts#L37)*
+*Defined in [src/decode/decode.ts:45](https://github.com/paritytech/txwrapper/blob/74e5037/src/decode/decode.ts#L45)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 
@@ -53,6 +55,7 @@ Parse the transaction information from a signing payload, an unsigned tx, or a s
 Name | Type | Description |
 ------ | ------ | ------ |
 `signingPayload` | string | The data to parse, as a signing payload hex string. |
-`metadataRpc` | string | The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC call `state_getMetadata`.  |
+`metadataRpc` | string | The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC call `state_getMetadata`. |
+`ss58Format` | number | The SS-58 address encoding to return.  |
 
 **Returns:** *DecodedSigningPayload*

@@ -1,5 +1,6 @@
 import { balanceTransfer } from '../balanceTransfer';
 import { unbond } from '../staking/unbond';
+import { KUSAMA_SS58_FORMAT } from '../util/constants';
 import {
   metadataRpc,
   TEST_TRANSFER_TX_INFO,
@@ -10,7 +11,7 @@ import { decodeUnsignedTx } from './decodeUnsignedTx';
 describe('decodeSignedTx', () => {
   it('should decode SignedTx balance transfer', () => {
     const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
-    const txInfo = decodeUnsignedTx(unsigned, metadataRpc);
+    const txInfo = decodeUnsignedTx(unsigned, metadataRpc, KUSAMA_SS58_FORMAT);
 
     ([
       'address',

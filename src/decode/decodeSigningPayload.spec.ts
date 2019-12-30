@@ -1,6 +1,7 @@
 import { balanceTransfer } from '../balanceTransfer';
 import { createSigningPayload } from '../createSigningPayload';
 import { nominate } from '../staking/nominate';
+import { KUSAMA_SS58_FORMAT } from '../util/constants';
 import {
   metadataRpc,
   TEST_NOMINATE_TX_INFO,
@@ -14,7 +15,11 @@ describe('decodeSigningPayload', () => {
       balanceTransfer(TEST_TRANSFER_TX_INFO)
     );
 
-    const txInfo = decodeSigningPayload(signingPayload, metadataRpc);
+    const txInfo = decodeSigningPayload(
+      signingPayload,
+      metadataRpc,
+      KUSAMA_SS58_FORMAT
+    );
 
     ([
       'blockHash',

@@ -23,19 +23,21 @@ export interface DecodedUnsignedTx extends BaseTxInfo {
  * @param unsigned - The JSON representing the unsigned transaction.
  * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
  * retrieved via the RPC call `state_getMetadata`.
+ * @param ss58Format - The SS-58 address encoding to return.
  */
 export function decodeUnsignedTx(
   unsigned: UnsignedTransaction,
-  metadataRpc: string
+  metadataRpc: string,
+  ss58Format: number = KUSAMA_SS58_FORMAT
 ): DecodedUnsignedTx {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
 
   const method = createType(registry, 'Call', unsigned.method);
 
-  const methodInfo = getMethodData(method);
+  const methodInfo = getMethodData(method, ss58Format);
 
-  setSS58Format(KUSAMA_SS58_FORMAT);
+  setSS58Format(ss58Format);
 
   return {
     address: unsigned.address,

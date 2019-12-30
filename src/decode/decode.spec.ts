@@ -1,6 +1,7 @@
 import { balanceTransfer } from '../balanceTransfer';
 import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
+import { KUSAMA_SS58_FORMAT } from '../util/constants';
 import {
   metadataRpc,
   signWithAlice,
@@ -16,7 +17,7 @@ describe('decode', () => {
 
     const signedTx = createSignedTx(unsigned, signature);
 
-    const txInfo = decode(signedTx, metadataRpc);
+    const txInfo = decode(signedTx, metadataRpc, KUSAMA_SS58_FORMAT);
 
     (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach(key =>
       expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
@@ -35,7 +36,7 @@ describe('decode', () => {
 
   it('decode unsigned tx', () => {
     const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
-    const txInfo = decode(unsigned, metadataRpc);
+    const txInfo = decode(unsigned, metadataRpc, KUSAMA_SS58_FORMAT);
 
     ([
       'address',
@@ -63,7 +64,7 @@ describe('decode', () => {
     const unsigned = balanceTransfer(TEST_TRANSFER_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
 
-    const txInfo = decode(signingPayload, metadataRpc);
+    const txInfo = decode(signingPayload, metadataRpc, KUSAMA_SS58_FORMAT);
 
     ([
       // 'blockHash',

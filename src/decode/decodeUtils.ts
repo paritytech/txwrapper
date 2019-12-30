@@ -3,10 +3,8 @@ import { Balance } from '@polkadot/types/interfaces';
 import Call from '@polkadot/types/primitive/Generic/Call';
 import { setSS58Format } from '@polkadot/util-crypto';
 
-import { KUSAMA_SS58_FORMAT } from '../util/constants';
-
-export function getMethodData(method: Call): any {
-  setSS58Format(KUSAMA_SS58_FORMAT);
+export function getMethodData(method: Call, ss58Format: number): any {
+  setSS58Format(ss58Format);
   if (
     method.methodName === 'transfer' ||
     method.methodName === 'transferKeepAlive'
