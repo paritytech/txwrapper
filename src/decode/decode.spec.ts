@@ -1,6 +1,6 @@
 import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
-import { transfer } from '../methods';
+import { balances } from '../methods';
 import {
   metadataRpc,
   signWithAlice,
@@ -15,7 +15,10 @@ import { decodeBaseTxInfo as decodeUnsignedBase } from './decodeUnsignedTx.spec'
 
 describe('decode', () => {
   it('should decode signedTx', async done => {
-    const unsigned = transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = balances.transfer(
+      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_BASE_TX_INFO
+    );
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
 
@@ -32,7 +35,10 @@ describe('decode', () => {
   });
 
   it('decode unsigned tx', () => {
-    const unsigned = transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = balances.transfer(
+      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_BASE_TX_INFO
+    );
     const txInfo = decode(unsigned, metadataRpc);
 
     decodeUnsignedBase(txInfo);
@@ -42,7 +48,10 @@ describe('decode', () => {
   });
 
   it('should decode signing payload', done => {
-    const unsigned = transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = balances.transfer(
+      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_BASE_TX_INFO
+    );
     const signingPayload = createSigningPayload(unsigned);
 
     const txInfo = decode(signingPayload, metadataRpc) as DecodedSigningPayload;

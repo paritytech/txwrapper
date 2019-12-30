@@ -1,9 +1,9 @@
-import { transferKeepAlive } from './transferKeepAlive';
 import {
   TEST_BALANCES_TRANSFER_ARGS,
   TEST_BASE_TX_INFO,
   testBaseTxInfo
 } from '../../util';
+import { transferKeepAlive } from './transferKeepAlive';
 
 describe('balances::transferKeepAlive', () => {
   it('should work', () => {

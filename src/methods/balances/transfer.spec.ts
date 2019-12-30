@@ -1,9 +1,9 @@
-import { transfer } from './transfer';
 import {
   TEST_BALANCES_TRANSFER_ARGS,
   TEST_BASE_TX_INFO,
   testBaseTxInfo
 } from '../../util';
+import { transfer } from './transfer';
 
 describe('balances::transfer', () => {
   it('should work', () => {

@@ -1,6 +1,6 @@
 import { createSignedTx } from './createSignedTx';
 import { createSigningPayload } from './createSigningPayload';
-import { transferKeepAlive } from './methods';
+import { balances } from './methods';
 import {
   signWithAlice,
   TEST_BALANCES_TRANSFER_ARGS,
@@ -9,7 +9,7 @@ import {
 
 describe('createSignedTx', () => {
   it('should work', async done => {
-    const unsigned = transferKeepAlive(
+    const unsigned = balances.transferKeepAlive(
       TEST_BALANCES_TRANSFER_ARGS,
       TEST_BASE_TX_INFO
     );

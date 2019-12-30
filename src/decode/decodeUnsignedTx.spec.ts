@@ -1,4 +1,4 @@
-import { transfer, unbond } from '../methods';
+import { balances, staking } from '../methods';
 import {
   KUSAMA_SS58_FORMAT,
   metadataRpc,
@@ -30,7 +30,10 @@ export function decodeBaseTxInfo(txInfo: TxInfo): void {
 
 describe('decodeSignedTx', () => {
   it('should decode balances::transfer', () => {
-    const unsigned = transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = balances.transfer(
+      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_BASE_TX_INFO
+    );
     const txInfo = decodeUnsignedTx(unsigned, metadataRpc, KUSAMA_SS58_FORMAT);
 
     decodeBaseTxInfo(txInfo);
@@ -40,7 +43,10 @@ describe('decodeSignedTx', () => {
   });
 
   it('should decode staking::unbond', () => {
-    const unsigned = unbond(TEST_STAKING_UNBOND_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = staking.unbond(
+      TEST_STAKING_UNBOND_ARGS,
+      TEST_BASE_TX_INFO
+    );
     const txInfo = decodeUnsignedTx(unsigned, metadataRpc, KUSAMA_SS58_FORMAT);
 
     decodeBaseTxInfo(txInfo);

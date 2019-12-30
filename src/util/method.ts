@@ -80,8 +80,21 @@ export function serializeMethod(registry: TypeRegistry, method: Call): Method {
       method.args[index]
     ]);
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (accumulator as any)[key] = codec.toJSON();
+    // Normally, we would just use `codec.toJSON()` to output a nice JSON
+    // format. But for some methods, we might want a customized output. Here
+    // we handle these exceptions:
+
+    // staking::bond, payee: we want string (e.g. "Staked") instead of number
+    // (e.g. 0)
+    if (
+      method.sectionName === 'staking' &&
+      method.methodName === 'bond' &&
+      key === 'payee'
+    ) {
+      accumulator[key] = codec.toString();
+    } else {
+      accumulator[key] = codec.toJSON();
+    }
 
     return accumulator;
   }, {} as Args);

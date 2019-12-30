@@ -1,2 +1,4 @@
-export * from './balances';
-export * from './staking';
+import * as balances from './balances';
+import * as staking from './staking';
+
+export { balances, staking };

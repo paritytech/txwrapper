@@ -1,7 +1,7 @@
 import {
-  testBaseTxInfo,
   TEST_BASE_TX_INFO,
-  TEST_STAKING_BOND_ARGS
+  TEST_STAKING_BOND_ARGS,
+  testBaseTxInfo
 } from '../../util';
 import { bond } from './bond';
 

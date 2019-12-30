@@ -1,5 +1,5 @@
 import { createSigningPayload } from '../createSigningPayload';
-import { nominate, transfer } from '../methods';
+import { balances, staking } from '../methods';
 import {
   KUSAMA_SS58_FORMAT,
   metadataRpc,
@@ -29,7 +29,7 @@ export function decodeBaseTxInfo(txInfo: DecodedSigningPayload): void {
 describe('decodeSigningPayload', () => {
   it('should decode balances::transfer', () => {
     const signingPayload = createSigningPayload(
-      transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO)
+      balances.transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO)
     );
     const txInfo = decodeSigningPayload(
       signingPayload,
@@ -45,7 +45,7 @@ describe('decodeSigningPayload', () => {
 
   it('should decode staking::nominate', () => {
     const signingPayload = createSigningPayload(
-      nominate(TEST_STAKING_NOMINATE_ARGS, TEST_BASE_TX_INFO)
+      staking.nominate(TEST_STAKING_NOMINATE_ARGS, TEST_BASE_TX_INFO)
     );
     const txInfo = decodeSigningPayload(signingPayload, metadataRpc);
 

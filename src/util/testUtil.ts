@@ -8,12 +8,12 @@ import { createType, TypeRegistry } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/primitive/Extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
+import { BalancesTransferArgs } from '../methods/balances';
 import {
-  BalancesTransferArgs,
   StakingBondArgs,
   StakingNominateArgs,
   StakingUnbondArgs
-} from '../methods';
+} from '../methods/staking';
 import { BaseTxInfo, UnsignedTransaction } from './types';
 
 export { metadataRpc };

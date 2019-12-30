@@ -1,9 +1,4 @@
-import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  UnsignedTransaction
-} from '../../util';
+import { BaseTxInfo, createMethod, UnsignedTransaction } from '../../util';
 import { BalancesTransferArgs } from './transfer';
 
 export type BalancesTransferKeepAliveArgs = BalancesTransferArgs;

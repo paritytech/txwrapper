@@ -1,6 +1,6 @@
 import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
-import { bond, transfer } from '../methods';
+import { balances, staking } from '../methods';
 import {
   KUSAMA_SS58_FORMAT,
   metadataRpc,
@@ -25,7 +25,10 @@ export function decodeBaseTxInfo(txInfo: DecodedSignedTx): void {
 
 describe('decodeSignedTx', () => {
   it('should decode balances::transfer', async done => {
-    const unsigned = transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = balances.transfer(
+      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_BASE_TX_INFO
+    );
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
 
@@ -42,7 +45,7 @@ describe('decodeSignedTx', () => {
   });
 
   it('should decode staking::bond', async done => {
-    const unsigned = bond(TEST_STAKING_BOND_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = staking.bond(TEST_STAKING_BOND_ARGS, TEST_BASE_TX_INFO);
     const signingPayload = createSigningPayload(unsigned);
     const signature = await signWithAlice(signingPayload);
 
