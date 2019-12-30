@@ -5,7 +5,7 @@
 import { createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { setSS58Format } from '@polkadot/util-crypto';
 
-import { BLOCKTIME, KUSAMA_SS58_FORMAT } from '../util/constants';
+import { BLOCKTIME } from '../util/constants';
 import { BaseTxInfo, UnsignedTransaction } from '../util/types';
 import { getMethodData } from './decodeUtils';
 
@@ -24,7 +24,7 @@ export interface DecodedUnsignedTx extends BaseTxInfo {
 export function decodeUnsignedTx(
   unsigned: UnsignedTransaction,
   metadataRpc: string,
-  ss58Format: number = KUSAMA_SS58_FORMAT
+  ss58Format: number
 ): DecodedUnsignedTx {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
