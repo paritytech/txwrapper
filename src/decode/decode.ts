@@ -1,10 +1,10 @@
-import { TxInfo, UnsignedTransaction } from '../balanceTransfer';
+import { UnsignedTransaction } from '../util/types';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 import {
   DecodedSigningPayload,
   decodeSigningPayload
 } from './decodeSigningPayload';
-import { decodeUnsignedTx } from './decodeUnsignedTx';
+import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
 
 /**
  * Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
@@ -16,7 +16,8 @@ import { decodeUnsignedTx } from './decodeUnsignedTx';
 export function decode(
   unsignedTx: UnsignedTransaction,
   metadataRpc: string
-): TxInfo;
+): DecodedUnsignedTx;
+
 /**
  * Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
  *
@@ -25,6 +26,7 @@ export function decode(
  * retrieved via the RPC call `state_getMetadata`.
  */
 export function decode(signedTx: string, metadataRpc: string): DecodedSignedTx;
+
 /**
  * Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
  *
@@ -36,10 +38,11 @@ export function decode(
   signingPayload: string,
   metadataRpc: string
 ): DecodedSigningPayload;
+
 export function decode(
   data: string | UnsignedTransaction,
   metadataRpc: string
-): DecodedSignedTx | TxInfo | DecodedSigningPayload {
+): DecodedSignedTx | DecodedUnsignedTx | DecodedSigningPayload {
   if (typeof data === 'string') {
     let decodedInfo: DecodedSigningPayload | DecodedSignedTx;
     try {

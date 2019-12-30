@@ -1,15 +1,15 @@
 import { createType, Metadata, TypeRegistry } from '@polkadot/types';
 
-import { UnsignedTransaction } from './balanceTransfer';
+import { UnsignedTransaction } from './util/types';
 
 /**
  * Serialize a signed transaction in a format that can be submitted over the
  * Node RPC Interface from the signing payload and signature produced by the
- * remote signer
+ * remote signer.
  *
- * @param unsigned - The JSON representing the unsigned transaction
+ * @param unsigned - The JSON representing the unsigned transaction.
  * @param signature - Signature of the signing payload produced by the remote
- * signer
+ * signer.
  */
 export function createSignedTx(
   unsigned: UnsignedTransaction,

@@ -6,8 +6,7 @@
 
 ### Interfaces
 
-* [TxInfo](../interfaces/_balancetransfer_.txinfo.md)
-* [UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md)
+* [TxInfoTransfer](../interfaces/_balancetransfer_.txinfotransfer.md)
 
 ### Functions
 
@@ -17,17 +16,17 @@
 
 ###  balanceTransfer
 
-▸ **balanceTransfer**(`info`: [TxInfo](../interfaces/_balancetransfer_.txinfo.md)): *[UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md)*
+▸ **balanceTransfer**(`info`: [TxInfoTransfer](../interfaces/_balancetransfer_.txinfotransfer.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/balanceTransfer.ts:78](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/91a53f7/src/balanceTransfer.ts#L78)*
+*Defined in [src/balanceTransfer.ts:28](https://github.com/paritytech/txwrapper/blob/fcbe6db/src/balanceTransfer.ts#L28)*
 
 Construct a balance transfer transaction offline. Transactions can be
-constructed in such a way that it is valid for at least 240 minutes
+constructed in such a way that they are valid for at least 240 minutes.
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`info` | [TxInfo](../interfaces/_balancetransfer_.txinfo.md) | Information required to construct the transaction |
+`info` | [TxInfoTransfer](../interfaces/_balancetransfer_.txinfotransfer.md) | Information required to construct the transaction.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_balancetransfer_.unsignedtransaction.md)*
+**Returns:** *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
