@@ -5,16 +5,14 @@ import { AnyJson } from '@polkadot/types/types';
 import { EXTRINSIC_VERSION, ONE_SECOND } from './constants';
 import { BaseTxInfo, UnsignedTransaction } from './types';
 
+export type Args = Record<string, AnyJson>;
+
 /**
  *
  */
 interface TxInfo extends BaseTxInfo {
   method: {
-    args: {
-      name: string;
-      type: string;
-      value: AnyJson;
-    }[];
+    args: Args;
     name: string;
     pallet: string;
   };
@@ -24,9 +22,20 @@ export function createMethod(info: TxInfo): UnsignedTransaction {
   const registry = new TypeRegistry();
   const metadata = new Metadata(registry, info.metadataRpc);
 
-  const method = metadata.tx[info.method.pallet]
-    [info.method.name](...info.method.args.map(({ value }) => value))
-    .toHex();
+  const methodFunction = metadata.tx[info.method.pallet][info.method.name];
+  const method = methodFunction(
+    ...methodFunction.meta.args.map(arg => {
+      if (info.method.args[arg.name.toString()] === undefined) {
+        throw new Error(
+          `Method ${info.method.pallet}::${
+            info.method.name
+          } expects argument ${arg.toString()}, but got undefined`
+        );
+      }
+
+      return info.method.args[arg.name.toString()];
+    })
+  ).toHex();
 
   return {
     address: info.address,

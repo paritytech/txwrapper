@@ -1,10 +1,7 @@
-import Metadata from '@polkadot/metadata';
-import { createType, TypeRegistry } from '@polkadot/types';
-
-import { EXTRINSIC_VERSION, ONE_SECOND } from '../../util/constants';
+import { Args, createMethod } from '../../util/method';
 import { BaseTxInfo, UnsignedTransaction } from '../../util/types';
 
-export interface TxInfoUnbond extends BaseTxInfo {
+export interface StakingUnbondArgs extends Args {
   /**
    * The number of tokens to unbond.
    */
@@ -17,27 +14,16 @@ export interface TxInfoUnbond extends BaseTxInfo {
  *
  * @param info - Information required to construct the transaction.
  */
-export function unbond(info: TxInfoUnbond): UnsignedTransaction {
-  const registry = new TypeRegistry();
-  const metadata = new Metadata(registry, info.metadataRpc);
-
-  const unbond = metadata.tx.staking.unbond;
-  const method = unbond(info.value).toHex();
-
-  return {
-    address: info.address,
-    blockHash: info.blockHash,
-    blockNumber: createType(registry, 'BlockNumber', info.blockNumber).toHex(),
-    era: createType(registry, 'ExtrinsicEra', {
-      current: info.blockNumber,
-      period: ONE_SECOND * info.validityPeriod
-    }).toHex(),
-    genesisHash: info.genesisHash,
-    metadataRpc: info.metadataRpc,
-    method,
-    nonce: createType(registry, 'Compact<Index>', info.nonce).toHex(),
-    specVersion: createType(registry, 'u32', info.specVersion).toHex(),
-    tip: createType(registry, 'Compact<Balance>', info.tip).toHex(),
-    version: EXTRINSIC_VERSION
-  };
+export function unbond(
+  args: StakingUnbondArgs,
+  info: BaseTxInfo
+): UnsignedTransaction {
+  return createMethod({
+    method: {
+      args,
+      name: 'unbond',
+      pallet: 'staking'
+    },
+    ...info
+  });
 }

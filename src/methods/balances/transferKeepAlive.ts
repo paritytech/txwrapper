@@ -1,30 +1,22 @@
-import { Args, createMethod } from '../../util/method';
+import { createMethod } from '../../util/method';
 import { BaseTxInfo, UnsignedTransaction } from '../../util/types';
+import { BalancesTransferArgs } from './transfer';
 
-export interface BalancesTransferArgs extends Args {
-  /**
-   * The recipient address, SS-58 encoded.
-   */
-  dest: string;
-  /**
-   * The amount to send.
-   */
-  value: number;
-}
+export type BalancesTransferKeepAliveArgs = BalancesTransferArgs;
 
 /**
  * Construct a balance transfer transaction offline.
  *
  * @param info - Information required to construct the transaction.
  */
-export function transfer(
-  args: BalancesTransferArgs,
+export function transferKeepAlive(
+  args: BalancesTransferKeepAliveArgs,
   info: BaseTxInfo
 ): UnsignedTransaction {
   return createMethod({
     method: {
       args,
-      name: 'transfer',
+      name: 'transferKeepAlive',
       pallet: 'balances'
     },
     ...info
