@@ -18,7 +18,7 @@
 
 Ƭ **BalancesTransferKeepAliveArgs**: *[BalancesTransferArgs](../interfaces/_methods_balances_transfer_.balancestransferargs.md)*
 
-*Defined in [src/methods/balances/transferKeepAlive.ts:4](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/8d67f3d/src/methods/balances/transferKeepAlive.ts#L4)*
+*Defined in [src/methods/balances/transferKeepAlive.ts:4](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/ffb9177/src/methods/balances/transferKeepAlive.ts#L4)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **transferKeepAlive**(`args`: [BalancesTransferKeepAliveArgs](_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/balances/transferKeepAlive.ts:11](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/8d67f3d/src/methods/balances/transferKeepAlive.ts#L11)*
+*Defined in [src/methods/balances/transferKeepAlive.ts:11](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/ffb9177/src/methods/balances/transferKeepAlive.ts#L11)*
 
 Construct a balance transfer transaction offline.
 

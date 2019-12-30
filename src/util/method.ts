@@ -1,3 +1,7 @@
+/**
+ * @ignore
+ */ /** */
+
 import Metadata from '@polkadot/metadata';
 import { createType, createTypeUnsafe, TypeRegistry } from '@polkadot/types';
 import { Call } from '@polkadot/types/interfaces';

@@ -18,5 +18,4 @@
 * ["methods/staking/nominate"](modules/_methods_staking_nominate_.md)
 * ["methods/staking/unbond"](modules/_methods_staking_unbond_.md)
 * ["util/constants"](modules/_util_constants_.md)
-* ["util/method"](modules/_util_method_.md)
 * ["util/types"](modules/_util_types_.md)
