@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/amaurymartiny/txwrapper/compare/v0.3.1...v0.3.2) (2019-12-30)
+
+
+### Features
+
+* Add staking functions ([#19](https://github.com/amaurymartiny/txwrapper/issues/19)) ([28dd82c](https://github.com/amaurymartiny/txwrapper/commit/28dd82c25b945586c9163f00a9dadf2ce148d3be))
+
 ### [0.3.1](https://github.com/amaurymartiny/txwrapper/compare/v0.3.0...v0.3.1) (2019-12-16)
 
 
