@@ -33,7 +33,7 @@ export const TEST_BASE_TX_INFO: BaseTxInfo = {
 };
 
 /**
- * Test helper to test that all base tx information al correctly populated
+ * Test helper to test that all base tx information al correctly populated.
  *
  * @param unsigned - Unsigned transaction to test
  */

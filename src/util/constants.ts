@@ -1,14 +1,14 @@
 /**
- * Prefix for SS58-encoded addresses on Kusama
+ * Prefix for SS58-encoded addresses on Kusama.
  */
 export const KUSAMA_SS58_FORMAT = 2;
 /**
- * Prefix for SS58-encoded addresses on Polkadot
+ * Prefix for SS58-encoded addresses on Polkadot.
  */
 export const POLKADOT_SS58_FORMAT = 0;
 
 /**
- * Latest extrinsic version
+ * Latest extrinsic version.
  */
 export const EXTRINSIC_VERSION = 4;
 

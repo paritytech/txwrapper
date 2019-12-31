@@ -70,7 +70,7 @@ export function createMethod(info: TxInfo): UnsignedTransaction {
 }
 
 /**
- * From a PolkadotJs `Call` type, get a serialized object representing the call
+ * From a PolkadotJs `Call` type, get a serialized object representing the call.
  *
  * @param registry - The type registry
  * @param method - The method to serialize

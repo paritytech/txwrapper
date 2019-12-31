@@ -1,7 +1,7 @@
 import { blake2AsHex } from '@polkadot/util-crypto';
 
 /**
- * Derive the tx hash of a signed transaction offline
+ * Derive the tx hash of a signed transaction offline.
  *
  * @param signedTx - The hex encoding of a signed transaction
  */
