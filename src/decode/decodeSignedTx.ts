@@ -1,25 +1,16 @@
 /**
  * @ignore
- */
-
-/**
- * Blank comment to make typedoc work
- */
+ */ /** */
 
 import { createType, Metadata, TypeRegistry } from '@polkadot/types';
 import { hexToU8a } from '@polkadot/util';
 import { setSS58Format } from '@polkadot/util-crypto';
 
 import { BLOCKTIME, KUSAMA_SS58_FORMAT } from '../util/constants';
-import { BaseTxInfo } from '../util/types';
-import { getMethodData } from './decodeUtils';
-
-interface DecodedWithMethod extends BaseTxInfo {
-  methodData: any;
-}
+import { serializeMethod, TxInfo } from '../util/method';
 
 export type DecodedSignedTx = Omit<
-  DecodedWithMethod,
+  TxInfo,
   'blockHash' | 'blockNumber' | 'genesisHash' | 'specVersion' | 'version'
 >;
 
@@ -38,19 +29,18 @@ export function decodeSignedTx(
 ): DecodedSignedTx {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
+  setSS58Format(ss58Format);
 
   const tx = createType(registry, 'Extrinsic', hexToU8a(signedTx), {
     isSigned: true
   });
-
-  const methodInfo = getMethodData(tx.method, ss58Format);
-
-  setSS58Format(ss58Format);
+  const methodCall = createType(registry, 'Call', tx.method);
+  const method = serializeMethod(registry, methodCall);
 
   return {
     address: tx.signer.toString(),
-    methodData: methodInfo,
     metadataRpc,
+    method,
     nonce: tx.nonce.toNumber(),
     tip: tx.tip.toNumber(),
     validityPeriod: tx.era.asMortalEra.period.toNumber() * BLOCKTIME

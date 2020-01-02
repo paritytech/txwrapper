@@ -1,29 +1,18 @@
 /**
  * @ignore
- */
-
-/**
- * Blank comment to make typedoc work
- */
+ */ /** */
 
 import { createType, Metadata, TypeRegistry } from '@polkadot/types';
+import { setSS58Format } from '@polkadot/util-crypto';
 
 import {
   BLOCKTIME,
   EXTRINSIC_VERSION,
   KUSAMA_SS58_FORMAT
 } from '../util/constants';
-import { BaseTxInfo } from '../util/types';
-import { getMethodData } from './decodeUtils';
+import { serializeMethod, TxInfo } from '../util/method';
 
-interface DecodedWithMethod extends BaseTxInfo {
-  methodData: any;
-}
-
-export type DecodedSigningPayload = Omit<
-  DecodedWithMethod,
-  'address' | 'blockNumber'
->;
+export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
 
 /**
  * Parse the transaction information from a signing payload.
@@ -40,19 +29,19 @@ export function decodeSigningPayload(
 ): DecodedSigningPayload {
   const registry = new TypeRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
+  setSS58Format(ss58Format);
 
   const payload = createType(registry, 'ExtrinsicPayload', signingPayload, {
     version: EXTRINSIC_VERSION
   });
-  const method = createType(registry, 'Call', payload.method);
-
-  const methodInfo = getMethodData(method, ss58Format);
+  const methodCall = createType(registry, 'Call', payload.method);
+  const method = serializeMethod(registry, methodCall);
 
   return {
-    methodData: methodInfo,
     blockHash: payload.blockHash.toHex(),
     genesisHash: payload.genesisHash.toHex(),
     metadataRpc,
+    method,
     nonce: payload.nonce.toNumber(),
     specVersion: payload.specVersion.toNumber(),
     tip: payload.tip.toNumber(),

@@ -1,75 +1,57 @@
-import { balanceTransfer } from '../balanceTransfer';
 import { createSigningPayload } from '../createSigningPayload';
-import { nominate } from '../staking/nominate';
-import { KUSAMA_SS58_FORMAT } from '../util/constants';
+import { balances, staking } from '../methods';
 import {
+  KUSAMA_SS58_FORMAT,
   metadataRpc,
-  TEST_NOMINATE_TX_INFO,
-  TEST_TRANSFER_TX_INFO
-} from '../util/testUtil';
-import { decodeSigningPayload } from './decodeSigningPayload';
+  TEST_BALANCES_TRANSFER_ARGS,
+  TEST_BASE_TX_INFO,
+  TEST_STAKING_NOMINATE_ARGS
+} from '../util';
+import {
+  DecodedSigningPayload,
+  decodeSigningPayload
+} from './decodeSigningPayload';
+
+/**
+ * Helper function to decode base tx info
+ */
+export function decodeBaseTxInfo(txInfo: DecodedSigningPayload): void {
+  ([
+    'blockHash',
+    'genesisHash',
+    'metadataRpc',
+    'nonce',
+    'specVersion',
+    'tip'
+  ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key]));
+}
 
 describe('decodeSigningPayload', () => {
-  it('should decode SigningPayload balance transfer', () => {
+  it('should decode balances::transfer', () => {
     const signingPayload = createSigningPayload(
-      balanceTransfer(TEST_TRANSFER_TX_INFO)
+      balances.transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO)
     );
-
     const txInfo = decodeSigningPayload(
       signingPayload,
       metadataRpc,
       KUSAMA_SS58_FORMAT
     );
 
-    ([
-      'blockHash',
-      'genesisHash',
-      'metadataRpc',
-      'nonce',
-      'specVersion',
-      'tip'
-    ] as const).forEach(key =>
-      expect(txInfo[key]).toBe(TEST_TRANSFER_TX_INFO[key])
-    );
-
-    (['keepAlive', 'amount', 'to'] as const).forEach(key =>
-      expect(txInfo.methodData[key]).toBe(TEST_TRANSFER_TX_INFO[key])
-    );
-
-    expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
-      TEST_TRANSFER_TX_INFO.validityPeriod
-    );
+    decodeBaseTxInfo(txInfo);
+    expect(txInfo.method.pallet).toBe('balances');
+    expect(txInfo.method.name).toBe('transfer');
+    expect(txInfo.method.args).toEqual(TEST_BALANCES_TRANSFER_ARGS);
   });
 
-  it('should decode SigningPayload nominate', () => {
+  it('should decode staking::nominate', () => {
     const signingPayload = createSigningPayload(
-      nominate(TEST_NOMINATE_TX_INFO)
+      staking.nominate(TEST_STAKING_NOMINATE_ARGS, TEST_BASE_TX_INFO)
     );
-
     const txInfo = decodeSigningPayload(signingPayload, metadataRpc);
 
-    ([
-      'blockHash',
-      'genesisHash',
-      'metadataRpc',
-      'nonce',
-      'specVersion',
-      'tip'
-    ] as const).forEach(key =>
-      expect(txInfo[key]).toBe(TEST_NOMINATE_TX_INFO[key])
-    );
-
-    (['targets'] as const).forEach(key =>
-      expect(
-        txInfo.methodData[key]
-          .replace(' ', '')
-          .replace('[', '')
-          .replace(']', '') // TODO: make not hideous
-      ).toBe(TEST_NOMINATE_TX_INFO[key].toString())
-    );
-
-    expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
-      TEST_NOMINATE_TX_INFO.validityPeriod
-    );
+    decodeBaseTxInfo(txInfo);
+    expect(txInfo.method.pallet).toBe('staking');
+    expect(txInfo.method.name).toBe('nominate');
+    expect(txInfo.method.args).toEqual(TEST_STAKING_NOMINATE_ARGS);
   });
 });

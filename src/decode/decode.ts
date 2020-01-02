@@ -1,3 +1,4 @@
+import { KUSAMA_SS58_FORMAT } from '../util/constants';
 import { UnsignedTransaction } from '../util/types';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 import {
@@ -17,7 +18,7 @@ import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
 export function decode(
   unsignedTx: UnsignedTransaction,
   metadataRpc: string,
-  ss58Format: number
+  ss58Format?: number
 ): DecodedUnsignedTx;
 
 /**
@@ -31,7 +32,7 @@ export function decode(
 export function decode(
   signedTx: string,
   metadataRpc: string,
-  ss58Format: number
+  ss58Format?: number
 ): DecodedSignedTx;
 
 /**
@@ -45,13 +46,13 @@ export function decode(
 export function decode(
   signingPayload: string,
   metadataRpc: string,
-  ss58Format: number
+  ss58Format?: number
 ): DecodedSigningPayload;
 
 export function decode(
   data: string | UnsignedTransaction,
   metadataRpc: string,
-  ss58Format: number
+  ss58Format: number = KUSAMA_SS58_FORMAT
 ): DecodedSignedTx | DecodedUnsignedTx | DecodedSigningPayload {
   if (typeof data === 'string') {
     let decodedInfo: DecodedSigningPayload | DecodedSignedTx;

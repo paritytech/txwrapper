@@ -16,9 +16,9 @@
 
 • **EXTRINSIC_VERSION**: *4* = 4
 
-*Defined in [src/util/constants.ts:13](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/constants.ts#L13)*
+*Defined in [src/util/constants.ts:13](https://github.com/paritytech/txwrapper/blob/d69a262/src/util/constants.ts#L13)*
 
-Latest extrinsic version
+Latest extrinsic version.
 
 ___
 
@@ -26,9 +26,9 @@ ___
 
 • **KUSAMA_SS58_FORMAT**: *2* = 2
 
-*Defined in [src/util/constants.ts:4](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/constants.ts#L4)*
+*Defined in [src/util/constants.ts:4](https://github.com/paritytech/txwrapper/blob/d69a262/src/util/constants.ts#L4)*
 
-Prefix for SS58-encoded addresses on Kusama
+Prefix for SS58-encoded addresses on Kusama.
 
 ___
 
@@ -36,6 +36,6 @@ ___
 
 • **POLKADOT_SS58_FORMAT**: *0* = 0
 
-*Defined in [src/util/constants.ts:8](https://github.com/paritytech/txwrapper/blob/74e5037/src/util/constants.ts#L8)*
+*Defined in [src/util/constants.ts:8](https://github.com/paritytech/txwrapper/blob/d69a262/src/util/constants.ts#L8)*
 
-Prefix for SS58-encoded addresses on Polkadot
+Prefix for SS58-encoded addresses on Polkadot.

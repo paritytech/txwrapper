@@ -7,7 +7,7 @@ import { KUSAMA_SS58_FORMAT } from './util/constants';
 /**
  * A keyring pair
  */
-export interface KeyringPair extends KeyringPairBase {} // eslint-disable-line @typescript-eslint/no-empty-interface
+export type KeyringPair = KeyringPairBase; // eslint-disable-line @typescript-eslint/no-empty-interface
 // Using an interface above so that KeyringPair shows up in docs
 
 /**
