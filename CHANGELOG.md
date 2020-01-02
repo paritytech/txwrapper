@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/paritytech/txwrapper/compare/v0.3.2...v0.4.0) (2020-01-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* - Instead of importing methods (like `bond`, `balanceTransfer`) directly from the root, the package exposes a `methods` object in the root, and this object contains all available methods organized by pallet:
+
+```diff
+- import { bond, balanceTransfer } from '@amaurymartiny/txwrapper';
++ import { methods } from '@amaurymartiny/txwrapper';
+
+- bond(...);
+- balanceTransfer(...);
++ methods.staking.bond(...);
++ methods.balances.tranfer({dest: '...', value: }, {blockHash: '0x...'});
++ methods.balances.transferKeepAlive(...);
+```
+
+- All the methods under `methods.*.*` take now 2 arguments: the first one is the actual args specific to the tx method, and the second one is `BaseTxInfo`, common to all transactions
+
+```typescript
+methods.staking.nominate({target: ['F1...']}, {blockHash: '0x..', ...});
+```
+
+- `balances::transfer` arguments has been renamed from `{to, amount}` to `{dest, value}`, to reflect the rust codebase:
+
+```typescript
+methods.balances.transfer({dest: '5....', value: 100}, {blockHash: '0x..', ...});
+```
+
+### Features
+
+* Add SS58 parameter to decode suite ([#22](https://github.com/paritytech/txwrapper/issues/22)) ([3f7dd01](https://github.com/paritytech/txwrapper/commit/3f7dd01e4853535229d6f43495401be2b2a4fc2f))
+
+
+* Put all available methods under `method.*` ([#23](https://github.com/paritytech/txwrapper/issues/23)) ([77176a3](https://github.com/paritytech/txwrapper/commit/77176a3f4b66323e5c8994b065e14ab26cf7245c))
+
 ### [0.3.2](https://github.com/amaurymartiny/txwrapper/compare/v0.3.1...v0.3.2) (2019-12-30)
 
 
