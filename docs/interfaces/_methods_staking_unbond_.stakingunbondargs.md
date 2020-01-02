@@ -1,4 +1,4 @@
-[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/staking/unbond"](../modules/_methods_staking_unbond_.md) › [StakingUnbondArgs](_methods_staking_unbond_.stakingunbondargs.md)
+[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/staking/unbond"](../modules/_methods_staking_unbond_.md) › [StakingUnbondArgs](_methods_staking_unbond_.stakingunbondargs.md)
 
 # Interface: StakingUnbondArgs
 
@@ -20,6 +20,6 @@
 
 • **value**: *number*
 
-*Defined in [src/methods/staking/unbond.ts:12](https://github.com/paritytech/txwrapper/blob/d69a262/src/methods/staking/unbond.ts#L12)*
+*Defined in [src/methods/staking/unbond.ts:12](https://github.com/paritytech/txwrapper/blob/235c097/src/methods/staking/unbond.ts#L12)*
 
 The number of tokens to unbond.
