@@ -1,4 +1,4 @@
-[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["importPrivateKey"](_importprivatekey_.md)
+[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["importPrivateKey"](_importprivatekey_.md)
 
 # External module: "importPrivateKey"
 
@@ -18,7 +18,7 @@
 
 Ƭ **KeyringPair**: *KeyringPairBase*
 
-*Defined in [src/importPrivateKey.ts:10](https://github.com/paritytech/txwrapper/blob/d69a262/src/importPrivateKey.ts#L10)*
+*Defined in [src/importPrivateKey.ts:10](https://github.com/paritytech/txwrapper/blob/235c097/src/importPrivateKey.ts#L10)*
 
 A keyring pair
 
@@ -28,7 +28,7 @@ A keyring pair
 
 ▸ **importPrivateKey**(`privateKey`: string | Uint8Array, `ss58Format`: number): *KeyringPair*
 
-*Defined in [src/importPrivateKey.ts:18](https://github.com/paritytech/txwrapper/blob/d69a262/src/importPrivateKey.ts#L18)*
+*Defined in [src/importPrivateKey.ts:18](https://github.com/paritytech/txwrapper/blob/235c097/src/importPrivateKey.ts#L18)*
 
 Import a private key and create a KeyringPair.
 

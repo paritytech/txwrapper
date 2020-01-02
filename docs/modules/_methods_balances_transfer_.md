@@ -1,4 +1,4 @@
-[@amaurymartiny/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/balances/transfer"](_methods_balances_transfer_.md)
+[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/balances/transfer"](_methods_balances_transfer_.md)
 
 # External module: "methods/balances/transfer"
 
@@ -18,7 +18,7 @@
 
 ▸ **transfer**(`args`: [BalancesTransferArgs](../interfaces/_methods_balances_transfer_.balancestransferargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/balances/transfer.ts:24](https://github.com/paritytech/txwrapper/blob/d69a262/src/methods/balances/transfer.ts#L24)*
+*Defined in [src/methods/balances/transfer.ts:24](https://github.com/paritytech/txwrapper/blob/235c097/src/methods/balances/transfer.ts#L24)*
 
 Construct a balance transfer transaction offline.
 

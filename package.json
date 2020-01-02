@@ -1,8 +1,8 @@
 {
-  "name": "@amaurymartiny/txwrapper",
+  "name": "@substrate/txwrapper",
   "version": "0.3.2",
-  "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
-  "description": "Simple wrapper around @polkadot/api",
+  "author": "Parity Technologies <admin@parity.io>",
+  "description": "Helper funtions for offline transaction generation.",
   "files": [
     "lib"
   ],
@@ -11,7 +11,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/amaurymartiny/txwrapper",
+  "repository": "https://github.com/paritytech/txwrapper",
   "scripts": {
     "build": "rimraf lib/ && tsc",
     "docs": "typedoc",

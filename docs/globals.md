@@ -1,6 +1,6 @@
-[@amaurymartiny/txwrapper](README.md) › [Globals](globals.md)
+[@substrate/txwrapper](README.md) › [Globals](globals.md)
 
-# @amaurymartiny/txwrapper
+# @substrate/txwrapper
 
 ## Index
 
