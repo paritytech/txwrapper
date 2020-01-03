@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/paritytech/txwrapper/compare/v0.4.0...v0.4.1) (2020-01-03)
+
+
+### Bug Fixes
+
+* Update polkadot-js API ([#26](https://github.com/paritytech/txwrapper/issues/26)) ([b18aae0](https://github.com/paritytech/txwrapper/commit/b18aae084cb189cb42bd191f7f7c9c5e8edc6e55))
+
 ## [0.4.0](https://github.com/paritytech/txwrapper/compare/v0.3.2...v0.4.0) (2020-01-02)
 
 
