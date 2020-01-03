@@ -34,7 +34,7 @@ JSON format for an unsigned transaction.
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:177
+Defined in node_modules/@polkadot/types/types.d.ts:182
 
 **`description`** The ss-58 encoded address
 
@@ -46,7 +46,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:181
+Defined in node_modules/@polkadot/types/types.d.ts:186
 
 **`description`** The checkpoint hash of the block, in hex
 
@@ -58,7 +58,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:185
+Defined in node_modules/@polkadot/types/types.d.ts:190
 
 **`description`** The checkpoint block number, in hex
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:189
+Defined in node_modules/@polkadot/types/types.d.ts:194
 
 **`description`** The era for this transaction, in hex
 
@@ -82,7 +82,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:193
+Defined in node_modules/@polkadot/types/types.d.ts:198
 
 **`description`** The genesis hash of the chain, in hex
 
@@ -92,7 +92,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/util/types.ts:11](https://github.com/paritytech/txwrapper/blob/235c097/src/util/types.ts#L11)*
+*Defined in [src/util/types.ts:11](https://github.com/paritytech/txwrapper/blob/770ebb6/src/util/types.ts#L11)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
@@ -105,7 +105,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:197
+Defined in node_modules/@polkadot/types/types.d.ts:202
 
 **`description`** The encoded method (with arguments) in hex
 
@@ -117,7 +117,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:201
+Defined in node_modules/@polkadot/types/types.d.ts:206
 
 **`description`** The nonce for this transaction, in hex
 
@@ -129,7 +129,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:205
+Defined in node_modules/@polkadot/types/types.d.ts:210
 
 **`description`** The current spec version for  the runtime
 
@@ -141,7 +141,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:209
+Defined in node_modules/@polkadot/types/types.d.ts:214
 
 **`description`** The tip for this transaction, in hex
 
@@ -153,6 +153,6 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@polkadot/types/types.d.ts:213
+Defined in node_modules/@polkadot/types/types.d.ts:218
 
 **`description`** The version of the extrinsic we are dealing with

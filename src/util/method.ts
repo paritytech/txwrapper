@@ -2,7 +2,7 @@
  * @ignore
  */ /** */
 
-import Metadata from '@polkadot/metadata';
+import Metadata from '@polkadot/metadata/Decorated';
 import { createType, createTypeUnsafe, TypeRegistry } from '@polkadot/types';
 import { Call } from '@polkadot/types/interfaces';
 import { AnyJson } from '@polkadot/types/types';
