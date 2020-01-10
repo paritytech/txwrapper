@@ -6,7 +6,7 @@
   "files": [
     "lib"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "main": "lib/index.js",
   "publishConfig": {
     "access": "public"
@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@polkadot/api": "^0.100.0-beta.17"
+    "@polkadot/api": "^0.100.0-beta.26"
   },
   "devDependencies": {
     "@amaurymartiny/config": "^1.0.10",
