@@ -1,6 +1,6 @@
 import {
-  TEST_BALANCES_TRANSFER_ARGS,
   TEST_BASE_TX_INFO,
+  TEST_METHOD_ARGS,
   testBaseTxInfo
 } from '../../util';
 import { transferKeepAlive } from './transferKeepAlive';
@@ -8,7 +8,7 @@ import { transferKeepAlive } from './transferKeepAlive';
 describe('balances::transferKeepAlive', () => {
   it('should work', () => {
     const unsigned = transferKeepAlive(
-      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_METHOD_ARGS.balances.transferKeepAlive,
       TEST_BASE_TX_INFO
     );
 

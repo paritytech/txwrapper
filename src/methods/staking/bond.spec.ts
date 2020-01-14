@@ -1,13 +1,13 @@
 import {
   TEST_BASE_TX_INFO,
-  TEST_STAKING_BOND_ARGS,
+  TEST_METHOD_ARGS,
   testBaseTxInfo
 } from '../../util';
 import { bond } from './bond';
 
-describe('bond', () => {
+describe('staking::bond', () => {
   it('should work', () => {
-    const unsigned = bond(TEST_STAKING_BOND_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = bond(TEST_METHOD_ARGS.staking.bond, TEST_BASE_TX_INFO);
 
     testBaseTxInfo(unsigned);
     expect(unsigned.method).toBe(

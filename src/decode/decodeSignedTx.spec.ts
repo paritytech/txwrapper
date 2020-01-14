@@ -1,15 +1,16 @@
 import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
-import { balances, staking } from '../methods';
+import * as methods from '../methods';
 import {
   KUSAMA_SS58_FORMAT,
   metadataRpc,
   signWithAlice,
-  TEST_BALANCES_TRANSFER_ARGS,
   TEST_BASE_TX_INFO,
-  TEST_STAKING_BOND_ARGS
+  TEST_METHOD_ARGS
 } from '../util';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 /**
  * Helper function to decode base tx info
@@ -23,10 +24,13 @@ export function decodeBaseTxInfo(txInfo: DecodedSignedTx): void {
   );
 }
 
-describe('decodeSignedTx', () => {
-  it('should decode balances::transfer', async done => {
-    const unsigned = balances.transfer(
-      TEST_BALANCES_TRANSFER_ARGS,
+/**
+ * Test the [[decodeSignedTx]] function
+ */
+function testDecodeSignedTx(pallet: string, name: string): void {
+  it(`should decode ${pallet}::${name}`, async done => {
+    const unsigned = (methods as any)[pallet][name](
+      (TEST_METHOD_ARGS as any)[pallet][name],
       TEST_BASE_TX_INFO
     );
     const signingPayload = createSigningPayload(unsigned);
@@ -37,27 +41,20 @@ describe('decodeSignedTx', () => {
     const txInfo = decodeSignedTx(signedTx, metadataRpc, KUSAMA_SS58_FORMAT);
 
     decodeBaseTxInfo(txInfo);
-    expect(txInfo.method.pallet).toBe('balances');
-    expect(txInfo.method.name).toBe('transfer');
-    expect(txInfo.method.args).toEqual(TEST_BALANCES_TRANSFER_ARGS);
+    expect(txInfo.method.pallet).toBe(pallet);
+    expect(txInfo.method.name).toBe(name);
+    expect(txInfo.method.args).toEqual((TEST_METHOD_ARGS as any)[pallet][name]);
 
     done();
   });
+}
 
-  it('should decode staking::bond', async done => {
-    const unsigned = staking.bond(TEST_STAKING_BOND_ARGS, TEST_BASE_TX_INFO);
-    const signingPayload = createSigningPayload(unsigned);
-    const signature = await signWithAlice(signingPayload);
-
-    const signedTx = createSignedTx(unsigned, signature);
-
-    const txInfo = decodeSignedTx(signedTx, metadataRpc);
-
-    decodeBaseTxInfo(txInfo);
-    expect(txInfo.method.pallet).toBe('staking');
-    expect(txInfo.method.name).toBe('bond');
-    expect(txInfo.method.args).toEqual(TEST_STAKING_BOND_ARGS);
-
-    done();
-  });
+describe('decodeSignedTx', () => {
+  testDecodeSignedTx('balances', 'transfer');
+  testDecodeSignedTx('balances', 'transferKeepAlive');
+  testDecodeSignedTx('staking', 'bond');
+  testDecodeSignedTx('staking', 'bondExtra');
+  testDecodeSignedTx('staking', 'nominate');
+  testDecodeSignedTx('staking', 'unbond');
+  testDecodeSignedTx('staking', 'withdrawUnbonded');
 });

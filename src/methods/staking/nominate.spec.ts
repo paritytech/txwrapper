@@ -1,13 +1,16 @@
 import {
   TEST_BASE_TX_INFO,
-  TEST_STAKING_NOMINATE_ARGS,
+  TEST_METHOD_ARGS,
   testBaseTxInfo
 } from '../../util';
 import { nominate } from './nominate';
 
-describe('nominate', () => {
+describe('staking::nominate', () => {
   it('should work', () => {
-    const unsigned = nominate(TEST_STAKING_NOMINATE_ARGS, TEST_BASE_TX_INFO);
+    const unsigned = nominate(
+      TEST_METHOD_ARGS.staking.nominate,
+      TEST_BASE_TX_INFO
+    );
 
     testBaseTxInfo(unsigned);
     expect(unsigned.method).toBe(

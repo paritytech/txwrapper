@@ -3,21 +3,18 @@
  */ /** */
 
 import { Keyring } from '@polkadot/api';
-import metadataRpc from '@polkadot/metadata/Metadata/v9/static';
+import metadataRpc from '@polkadot/metadata/Metadata/v10/static';
 import { createType, TypeRegistry } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/primitive/Extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
-import { BalancesTransferArgs } from '../methods/balances';
-import {
-  StakingBondArgs,
-  StakingNominateArgs,
-  StakingUnbondArgs
-} from '../methods/staking';
 import { BaseTxInfo, UnsignedTransaction } from './types';
 
 export { metadataRpc };
 
+/**
+ * Base tx information common to all tested transactions
+ */
 export const TEST_BASE_TX_INFO: BaseTxInfo = {
   address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
   blockHash:
@@ -49,25 +46,39 @@ export function testBaseTxInfo(unsigned: UnsignedTransaction): void {
   expect(unsigned.version).toBe(4);
 }
 
-export const TEST_BALANCES_TRANSFER_ARGS: BalancesTransferArgs = {
-  dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
-  value: 12
+/**
+ * Arguments for all methods we're testing
+ */
+export const TEST_METHOD_ARGS = {
+  balances: {
+    transfer: {
+      dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+      value: 12
+    },
+    transferKeepAlive: {
+      dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+      value: 12
+    }
+  },
+  staking: {
+    bond: {
+      controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+      value: 100,
+      payee: 'staked'
+    },
+    bondExtra: {
+      maxAdditional: 100
+    },
+    nominate: {
+      targets: [
+        'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+        'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
+      ]
+    },
+    unbond: { value: 100 },
+    withdrawUnbonded: {}
+  }
 };
-
-export const TEST_STAKING_BOND_ARGS: StakingBondArgs = {
-  controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
-  value: 100,
-  payee: 'Staked'
-};
-
-export const TEST_STAKING_NOMINATE_ARGS: StakingNominateArgs = {
-  targets: [
-    'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
-    'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
-  ]
-};
-
-export const TEST_STAKING_UNBOND_ARGS: StakingUnbondArgs = { value: 100 };
 
 export async function signWithAlice(signingPayload: string): Promise<string> {
   // We're creating an Alice account that will sign the payload

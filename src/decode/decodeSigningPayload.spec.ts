@@ -1,16 +1,17 @@
 import { createSigningPayload } from '../createSigningPayload';
-import { balances, staking } from '../methods';
+import * as methods from '../methods';
 import {
   KUSAMA_SS58_FORMAT,
   metadataRpc,
-  TEST_BALANCES_TRANSFER_ARGS,
   TEST_BASE_TX_INFO,
-  TEST_STAKING_NOMINATE_ARGS
+  TEST_METHOD_ARGS
 } from '../util';
 import {
   DecodedSigningPayload,
   decodeSigningPayload
 } from './decodeSigningPayload';
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 /**
  * Helper function to decode base tx info
@@ -26,10 +27,16 @@ export function decodeBaseTxInfo(txInfo: DecodedSigningPayload): void {
   ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key]));
 }
 
-describe('decodeSigningPayload', () => {
-  it('should decode balances::transfer', () => {
+/**
+ * Test the [[decodeSigningPayload]] function
+ */
+function testDecodeSigningPayload(pallet: string, name: string): void {
+  it(`should decode ${pallet}::${name}`, () => {
     const signingPayload = createSigningPayload(
-      balances.transfer(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO)
+      (methods as any)[pallet][name](
+        (TEST_METHOD_ARGS as any)[pallet][name],
+        TEST_BASE_TX_INFO
+      )
     );
     const txInfo = decodeSigningPayload(
       signingPayload,
@@ -38,20 +45,18 @@ describe('decodeSigningPayload', () => {
     );
 
     decodeBaseTxInfo(txInfo);
-    expect(txInfo.method.pallet).toBe('balances');
-    expect(txInfo.method.name).toBe('transfer');
-    expect(txInfo.method.args).toEqual(TEST_BALANCES_TRANSFER_ARGS);
+    expect(txInfo.method.pallet).toBe(pallet);
+    expect(txInfo.method.name).toBe(name);
+    expect(txInfo.method.args).toEqual((TEST_METHOD_ARGS as any)[pallet][name]);
   });
+}
 
-  it('should decode staking::nominate', () => {
-    const signingPayload = createSigningPayload(
-      staking.nominate(TEST_STAKING_NOMINATE_ARGS, TEST_BASE_TX_INFO)
-    );
-    const txInfo = decodeSigningPayload(signingPayload, metadataRpc);
-
-    decodeBaseTxInfo(txInfo);
-    expect(txInfo.method.pallet).toBe('staking');
-    expect(txInfo.method.name).toBe('nominate');
-    expect(txInfo.method.args).toEqual(TEST_STAKING_NOMINATE_ARGS);
-  });
+describe('decodeSigningPayload', () => {
+  testDecodeSigningPayload('balances', 'transfer');
+  testDecodeSigningPayload('balances', 'transferKeepAlive');
+  testDecodeSigningPayload('staking', 'bond');
+  testDecodeSigningPayload('staking', 'bondExtra');
+  testDecodeSigningPayload('staking', 'nominate');
+  testDecodeSigningPayload('staking', 'unbond');
+  testDecodeSigningPayload('staking', 'withdrawUnbonded');
 });
