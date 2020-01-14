@@ -7,14 +7,14 @@ import {
 
 export interface StakingBondExtraArgs extends Args {
   /**
-   * Add some extra amount that have appeared in the stash `free_balance` into
-   * the balance up for staking
+   * The maximum amount to bond.
    */
   maxAdditional: number;
 }
 
 /**
- * Construct a transaction to bond funds and create a Stash account.
+ * Add some extra amount that have appeared in the stash `free_balance` into
+ * the balance up for staking.
  *
  * @param info - Information required to construct the transaction.
  */
