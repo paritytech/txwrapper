@@ -4,8 +4,8 @@ import { balances } from '../methods';
 import {
   metadataRpc,
   signWithAlice,
-  TEST_BALANCES_TRANSFER_ARGS,
-  TEST_BASE_TX_INFO
+  TEST_BASE_TX_INFO,
+  TEST_METHOD_ARGS
 } from '../util';
 import { decode } from './decode';
 import { decodeBaseTxInfo as decodeSignedBase } from './decodeSignedTx.spec';
@@ -16,7 +16,7 @@ import { decodeBaseTxInfo as decodeUnsignedBase } from './decodeUnsignedTx.spec'
 describe('decode', () => {
   it('should decode signedTx', async done => {
     const unsigned = balances.transfer(
-      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO
     );
     const signingPayload = createSigningPayload(unsigned);
@@ -29,14 +29,14 @@ describe('decode', () => {
     decodeSignedBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
     expect(txInfo.method.name).toBe('transfer');
-    expect(txInfo.method.args).toEqual(TEST_BALANCES_TRANSFER_ARGS);
+    expect(txInfo.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
 
     done();
   });
 
   it('decode unsigned tx', () => {
     const unsigned = balances.transfer(
-      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO
     );
     const txInfo = decode(unsigned, metadataRpc);
@@ -44,12 +44,12 @@ describe('decode', () => {
     decodeUnsignedBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
     expect(txInfo.method.name).toBe('transfer');
-    expect(txInfo.method.args).toEqual(TEST_BALANCES_TRANSFER_ARGS);
+    expect(txInfo.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
   });
 
   it('should decode signing payload', done => {
     const unsigned = balances.transfer(
-      TEST_BALANCES_TRANSFER_ARGS,
+      TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO
     );
     const signingPayload = createSigningPayload(unsigned);
@@ -59,7 +59,7 @@ describe('decode', () => {
     decodeSigningBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
     expect(txInfo.method.name).toBe('transfer');
-    expect(txInfo.method.args).toEqual(TEST_BALANCES_TRANSFER_ARGS);
+    expect(txInfo.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
 
     done();
   });

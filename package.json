@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@polkadot/api": "^0.100.0-beta.26"
+    "@polkadot/api": "^1.0.0-beta.4"
   },
   "devDependencies": {
     "@amaurymartiny/config": "^1.0.10",

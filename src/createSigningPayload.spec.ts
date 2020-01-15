@@ -1,14 +1,14 @@
 import { createSigningPayload } from './createSigningPayload';
 import { balances } from './methods';
-import {
-  TEST_BALANCES_TRANSFER_ARGS,
-  TEST_BASE_TX_INFO
-} from './util/testUtil';
+import { TEST_BASE_TX_INFO, TEST_METHOD_ARGS } from './util/testUtil';
 
 describe('createSigningPayload', () => {
   it('should work', () => {
     const signingPayload = createSigningPayload(
-      balances.transferKeepAlive(TEST_BALANCES_TRANSFER_ARGS, TEST_BASE_TX_INFO)
+      balances.transferKeepAlive(
+        TEST_METHOD_ARGS.balances.transfer,
+        TEST_BASE_TX_INFO
+      )
     );
 
     expect(signingPayload).toEqual(

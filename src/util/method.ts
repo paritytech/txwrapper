@@ -6,6 +6,7 @@ import Metadata from '@polkadot/metadata/Decorated';
 import { createType, createTypeUnsafe, TypeRegistry } from '@polkadot/types';
 import { Call } from '@polkadot/types/interfaces';
 import { AnyJson } from '@polkadot/types/types';
+import { stringCamelCase } from '@polkadot/util';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from './constants';
 import { BaseTxInfo, UnsignedTransaction } from './types';
@@ -39,7 +40,9 @@ export function createMethod(info: TxInfo): UnsignedTransaction {
   const methodFunction = metadata.tx[info.method.pallet][info.method.name];
   const method = methodFunction(
     ...methodFunction.meta.args.map(arg => {
-      if (info.method.args[arg.name.toString()] === undefined) {
+      if (
+        info.method.args[stringCamelCase(arg.name.toString())] === undefined
+      ) {
         throw new Error(
           `Method ${info.method.pallet}::${
             info.method.name
@@ -47,7 +50,7 @@ export function createMethod(info: TxInfo): UnsignedTransaction {
         );
       }
 
-      return info.method.args[arg.name.toString()];
+      return info.method.args[stringCamelCase(arg.name.toString())];
     })
   ).toHex();
 
@@ -84,22 +87,7 @@ export function serializeMethod(registry: TypeRegistry, method: Call): Method {
       method.args[index]
     ]);
 
-    // Normally, we would just use `codec.toJSON()` to output a nice JSON
-    // format. But for some methods, we might want a customized output. Here
-    // we handle these exceptions:
-
-    // staking::bond, payee: we want string (e.g. "Staked") instead of number
-    // (e.g. 0)
-    if (
-      method.sectionName === 'staking' &&
-      method.methodName === 'bond' &&
-      key === 'payee'
-    ) {
-      accumulator[key] = codec.toString();
-    } else {
-      accumulator[key] = codec.toJSON();
-    }
-
+    accumulator[stringCamelCase(key)] = codec.toJSON();
     return accumulator;
   }, {} as Args);
 
