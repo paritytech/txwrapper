@@ -2,7 +2,10 @@ stages:
   - test
 
 variables:
-  GIT_DEPTH: '3'
+  GIT_DEPTH:                       3
+  REGISTRY:                        "registry.parity.io/parity/infrastructure/scripts"
+
+image:                             ${REGISTRY}/parity-ci-docs:latest
 
 cache:
   key: '${CI_JOB_NAME}'
@@ -13,9 +16,6 @@ linux-test:
   stage: test
   image: node:12
   script:
-    - curl -o- -L https://yarnpkg.com/install.sh | bash
-    - export PATH=$HOME/.yarn/bin:$PATH
-    - yarn install --frozen-lockfile
     - yarn test
     - yarn lint
   tags:
