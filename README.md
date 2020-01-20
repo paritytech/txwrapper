@@ -36,7 +36,7 @@ There might be special cases where you don't want to follow semver. In this case
 
 The above command, which only does local operations and doesn't push anything, will output more or less the following lines:
 
-```
+```bash
 $ yarn deploy
 yarn run v1.21.1
 $ yarn build && standard-version -r minor
