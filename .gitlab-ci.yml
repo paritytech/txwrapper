@@ -1,3 +1,9 @@
+# .gitlab-ci.yml
+#
+# txwrapper
+#
+# pipelines can be triggered manually in the web
+
 stages:
   - test
 
@@ -5,18 +11,38 @@ variables:
   GIT_DEPTH:                       3
   REGISTRY:                        "registry.parity.io/parity/infrastructure/scripts"
 
-image:                             ${REGISTRY}/parity-ci-docs:latest
+.docker-env:                       &docker-env
+  image:                           ${REGISTRY}/parity-ci-docs:latest
+  before_script:
+    - bash --version
+    - yarn --version
+  only:
+    - master
+    - /^v[0-9]+\.[0-9]+.*$/        # i.e. v1.0, v2.1rc1
+    - schedules
+    - web
+    - /^[0-9]+$/                   # PRs
+  dependencies:                    []
+  interruptible:                   true
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - unknown_failure
+      - api_failure
+  tags:
+    - linux-docker
 
 cache:
   key: '${CI_JOB_NAME}'
   paths:
     - node_modules/
 
+### stage:                         test
+
 linux-test:
   stage: test
-  image: node:12
+  <<:                              *docker-env
   script:
     - yarn test
     - yarn lint
-  tags:
-    - linux-docker
