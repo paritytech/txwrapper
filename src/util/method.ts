@@ -11,6 +11,20 @@ import { stringCamelCase } from '@polkadot/util';
 import { EXTRINSIC_VERSION, ONE_SECOND } from './constants';
 import { BaseTxInfo, UnsignedTransaction } from './types';
 
+/**
+ * Default values for tx info, if the user doesn't specify any
+ */
+const DEFAULTS = {
+  /**
+   * Don't add any tip by default
+   */
+  tip: 0,
+  /**
+   * Contrusct a mortal extrinsic of ~5 minutes
+   */
+  validityPeriod: 5 * 60
+};
+
 export type Args = Record<string, AnyJson>;
 
 export interface Method {
@@ -60,14 +74,18 @@ export function createMethod(info: TxInfo): UnsignedTransaction {
     blockNumber: createType(registry, 'BlockNumber', info.blockNumber).toHex(),
     era: createType(registry, 'ExtrinsicEra', {
       current: info.blockNumber,
-      period: ONE_SECOND * info.validityPeriod
+      period: ONE_SECOND * (info.validityPeriod || DEFAULTS.validityPeriod)
     }).toHex(),
     genesisHash: info.genesisHash,
     metadataRpc: info.metadataRpc,
     method,
     nonce: createType(registry, 'Compact<Index>', info.nonce).toHex(),
     specVersion: createType(registry, 'u32', info.specVersion).toHex(),
-    tip: createType(registry, 'Compact<Balance>', info.tip).toHex(),
+    tip: createType(
+      registry,
+      'Compact<Balance>',
+      info.tip || DEFAULTS.tip
+    ).toHex(),
     version: EXTRINSIC_VERSION
   };
 }
