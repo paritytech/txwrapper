@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.5](https://github.com/paritytech/txwrapper/compare/v0.4.4...v0.4.5) (2020-01-21)
+
+
+### Bug Fixes
+
+* Add default values for tip and validityPeriod ([#41](https://github.com/paritytech/txwrapper/issues/41)) ([44cefad](https://github.com/paritytech/txwrapper/commit/44cefadafcffef9279375a62c226ad9cc2e4e01a))
+
 ### [0.4.4](https://github.com/paritytech/txwrapper/compare/v0.4.3...v0.4.4) (2020-01-15)
 
 

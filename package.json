@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Helper funtions for offline transaction generation.",
   "files": [
