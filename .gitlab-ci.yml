@@ -44,5 +44,6 @@ linux-test:
   stage: test
   <<:                              *docker-env
   script:
+    - yarn install
     - yarn test
     - yarn lint
