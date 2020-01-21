@@ -19,8 +19,8 @@ JSON format for information that is common to all transactions.
 * [metadataRpc](_util_types_.basetxinfo.md#metadatarpc)
 * [nonce](_util_types_.basetxinfo.md#nonce)
 * [specVersion](_util_types_.basetxinfo.md#specversion)
-* [tip](_util_types_.basetxinfo.md#tip)
-* [validityPeriod](_util_types_.basetxinfo.md#validityperiod)
+* [tip](_util_types_.basetxinfo.md#optional-tip)
+* [validityPeriod](_util_types_.basetxinfo.md#optional-validityperiod)
 
 ## Properties
 
@@ -28,7 +28,7 @@ JSON format for information that is common to all transactions.
 
 • **address**: *string*
 
-*Defined in [src/util/types.ts:21](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/82747d9/src/util/types.ts#L21)*
+*Defined in [src/util/types.ts:21](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/util/types.ts#L21)*
 
 The ss-58 encoded address of the sending account.
 
@@ -38,7 +38,7 @@ ___
 
 • **blockHash**: *string*
 
-*Defined in [src/util/types.ts:25](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/82747d9/src/util/types.ts#L25)*
+*Defined in [src/util/types.ts:25](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/util/types.ts#L25)*
 
 The checkpoint hash of the block, in hex.
 
@@ -48,7 +48,7 @@ ___
 
 • **blockNumber**: *number*
 
-*Defined in [src/util/types.ts:29](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/82747d9/src/util/types.ts#L29)*
+*Defined in [src/util/types.ts:29](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/util/types.ts#L29)*
 
 The checkpoint block number (u32), in hex.
 
@@ -58,7 +58,7 @@ ___
 
 • **genesisHash**: *string*
 
-*Defined in [src/util/types.ts:33](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/82747d9/src/util/types.ts#L33)*
+*Defined in [src/util/types.ts:33](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/util/types.ts#L33)*
 
 The genesis hash of the chain, in hex.
 
@@ -68,7 +68,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/util/types.ts:38](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/82747d9/src/util/types.ts#L38)*
+*Defined in [src/util/types.ts:38](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/util/types.ts#L38)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
@@ -79,7 +79,7 @@ ___
 
 • **nonce**: *number*
 
-*Defined in [src/util/types.ts:42](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/82747d9/src/util/types.ts#L42)*
+*Defined in [src/util/types.ts:42](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/util/types.ts#L42)*
 
 The nonce for this transaction.
 
@@ -89,27 +89,31 @@ ___
 
 • **specVersion**: *number*
 
-*Defined in [src/util/types.ts:46](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/82747d9/src/util/types.ts#L46)*
+*Defined in [src/util/types.ts:46](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/util/types.ts#L46)*
 
 The current spec version for the runtime.
 
 ___
 
-###  tip
+### `Optional` tip
 
-• **tip**: *number*
+• **tip**? : *undefined | number*
 
-*Defined in [src/util/types.ts:50](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/82747d9/src/util/types.ts#L50)*
+*Defined in [src/util/types.ts:52](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/util/types.ts#L52)*
 
 The tip for this transaction, in hex.
 
+**`default`** 0
+
 ___
 
-###  validityPeriod
+### `Optional` validityPeriod
 
-• **validityPeriod**: *number*
+• **validityPeriod**? : *undefined | number*
 
-*Defined in [src/util/types.ts:55](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/82747d9/src/util/types.ts#L55)*
+*Defined in [src/util/types.ts:59](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/util/types.ts#L59)*
 
 The amount of time (in second) the transaction is valid for. Will be
-translated into a mortal era.
+translated into a mortal era. Defaults to 5 minutes.
+
+**`default`** 300
