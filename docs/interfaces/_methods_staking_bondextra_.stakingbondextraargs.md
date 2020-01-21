@@ -20,6 +20,6 @@
 
 • **maxAdditional**: *number*
 
-*Defined in [src/methods/staking/bondExtra.ts:12](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/methods/staking/bondExtra.ts#L12)*
+*Defined in [src/methods/staking/bondExtra.ts:12](https://github.com/paritytech/txwrapper/blob/0023326/src/methods/staking/bondExtra.ts#L12)*
 
 The maximum amount to bond.

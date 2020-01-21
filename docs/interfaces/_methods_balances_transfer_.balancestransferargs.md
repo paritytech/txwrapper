@@ -21,7 +21,7 @@
 
 • **dest**: *string*
 
-*Defined in [src/methods/balances/transfer.ts:12](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/methods/balances/transfer.ts#L12)*
+*Defined in [src/methods/balances/transfer.ts:12](https://github.com/paritytech/txwrapper/blob/0023326/src/methods/balances/transfer.ts#L12)*
 
 The recipient address, SS-58 encoded.
 
@@ -31,6 +31,6 @@ ___
 
 • **value**: *number*
 
-*Defined in [src/methods/balances/transfer.ts:16](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/methods/balances/transfer.ts#L16)*
+*Defined in [src/methods/balances/transfer.ts:16](https://github.com/paritytech/txwrapper/blob/0023326/src/methods/balances/transfer.ts#L16)*
 
 The amount to send.

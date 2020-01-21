@@ -18,7 +18,7 @@
 
 ▸ **nominate**(`args`: [StakingNominateArgs](../interfaces/_methods_staking_nominate_.stakingnominateargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/nominate.ts:23](https://github.com/amaurymartiny/polkadotjs-wrapper/blob/0023326/src/methods/staking/nominate.ts#L23)*
+*Defined in [src/methods/staking/nominate.ts:23](https://github.com/paritytech/txwrapper/blob/0023326/src/methods/staking/nominate.ts#L23)*
 
 Construct a transaction to nominate. This must be called by the _Controller_ account.
 
