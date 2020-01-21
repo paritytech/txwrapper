@@ -8,14 +8,14 @@ import { createType, TypeRegistry } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/primitive/Extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
-import { BaseTxInfo, UnsignedTransaction } from './types';
+import { UnsignedTransaction } from './types';
 
 export { metadataRpc };
 
 /**
  * Base tx information common to all tested transactions
  */
-export const TEST_BASE_TX_INFO: BaseTxInfo = {
+export const TEST_BASE_TX_INFO = {
   address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
   blockHash:
     '0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',

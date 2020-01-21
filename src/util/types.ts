@@ -46,11 +46,15 @@ export interface BaseTxInfo {
   specVersion: number;
   /**
    * The tip for this transaction, in hex.
+   *
+   * @default 0
    */
-  tip: number;
+  tip?: number;
   /**
    * The amount of time (in second) the transaction is valid for. Will be
-   * translated into a mortal era.
+   * translated into a mortal era. Defaults to 5 minutes.
+   *
+   * @default 300
    */
-  validityPeriod: number;
+  validityPeriod?: number;
 }
