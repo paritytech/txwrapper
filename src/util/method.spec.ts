@@ -16,6 +16,6 @@ describe('createMethod', () => {
       }
     });
 
-    expect(unsigned.era).toBe('0xe500');
+    expect(unsigned.era).toBe('0xe500'); // 0x00 means immortal, anything else is mortal
   });
 });
