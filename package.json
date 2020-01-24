@@ -26,9 +26,9 @@
     "@amaurymartiny/config": "^1.0.10",
     "@amaurymartiny/tsconfig": "^1.0.9",
     "@types/jest": "^24.0.23",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "standard-version": "^7.0.1",
-    "ts-jest": "^24.2.0",
+    "ts-jest": "^25.0.0",
     "typedoc": "^0.16.7",
     "typedoc-plugin-markdown": "^2.2.11",
     "typescript": "^3.7.2"
