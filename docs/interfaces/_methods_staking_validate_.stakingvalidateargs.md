@@ -20,9 +20,9 @@
 
 • **prefs**: *object*
 
-*Defined in [src/methods/staking/validate.ts:12](https://github.com/paritytech/txwrapper/blob/660ed27/src/methods/staking/validate.ts#L12)*
+*Defined in [src/methods/staking/validate.ts:12](https://github.com/paritytech/txwrapper/blob/79244a4/src/methods/staking/validate.ts#L12)*
 
-Set the desired commission for the validator. Value is {percent, Perbill, ???}.
+Set the desired commission for the validator. Value is Perbill.
 
 #### Type declaration:
 
