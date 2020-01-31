@@ -1,7 +1,7 @@
 import { BaseTxInfo, createMethod, UnsignedTransaction } from '../../util';
 
 /**
- *Declare no desire to either validate or nominate.
+ * Declare the desire to cease validating or nominating. Does not unbond funds.
  *
  * @param info - Information required to construct the transaction.
  */
