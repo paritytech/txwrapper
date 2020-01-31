@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.6](https://github.com/paritytech/txwrapper/compare/v0.4.5...v0.4.6) (2020-01-31)
+
+
+### Features
+
+* Add staking::{chill, validate} and session::setKeys ([#51](https://github.com/paritytech/txwrapper/issues/51)) ([f5a6eed](https://github.com/paritytech/txwrapper/commit/f5a6eed9040bd74daca2aa8b414de403d88d1aef))
+
 ### [0.4.5](https://github.com/paritytech/txwrapper/compare/v0.4.4...v0.4.5) (2020-01-21)
 
 
