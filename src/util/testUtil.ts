@@ -69,6 +69,7 @@ export const TEST_METHOD_ARGS = {
     bondExtra: {
       maxAdditional: 100
     },
+    chill: {},
     nominate: {
       targets: [
         'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
@@ -76,6 +77,11 @@ export const TEST_METHOD_ARGS = {
       ]
     },
     unbond: { value: 100 },
+    validate: {
+      targets: [
+        'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+      ]
+    },
     withdrawUnbonded: {}
   }
 };
