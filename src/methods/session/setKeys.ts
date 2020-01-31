@@ -7,7 +7,7 @@ import {
 
 export interface SessionSetKeysArgs extends Args {
   /**
-   * The keys to set.
+   * The 5 keys to set.
    */
   keys: string[];
   /**

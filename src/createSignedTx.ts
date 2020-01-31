@@ -1,6 +1,6 @@
-import { createType, Metadata, TypeRegistry } from '@polkadot/types';
+import { createType, Metadata } from '@polkadot/types';
 
-import { UnsignedTransaction } from './util/types';
+import { getRegistry, UnsignedTransaction } from './util';
 
 /**
  * Serialize a signed transaction in a format that can be submitted over the
@@ -15,7 +15,7 @@ export function createSignedTx(
   unsigned: UnsignedTransaction,
   signature: string
 ): string {
-  const registry = new TypeRegistry();
+  const registry = getRegistry();
   registry.setMetadata(new Metadata(registry, unsigned.metadataRpc));
 
   const extrinsic = createType(

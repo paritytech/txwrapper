@@ -2,15 +2,17 @@
  * @ignore
  */ /** */
 
-import { createType, Metadata, TypeRegistry } from '@polkadot/types';
+import { createType, Metadata } from '@polkadot/types';
 import { setSS58Format } from '@polkadot/util-crypto';
 
 import {
   BLOCKTIME,
   EXTRINSIC_VERSION,
-  KUSAMA_SS58_FORMAT
-} from '../util/constants';
-import { serializeMethod, TxInfo } from '../util/method';
+  getRegistry,
+  KUSAMA_SS58_FORMAT,
+  serializeMethod,
+  TxInfo
+} from '../util';
 
 export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
 
@@ -27,7 +29,7 @@ export function decodeSigningPayload(
   metadataRpc: string,
   ss58Format: number = KUSAMA_SS58_FORMAT
 ): DecodedSigningPayload {
-  const registry = new TypeRegistry();
+  const registry = getRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
   setSS58Format(ss58Format);
 

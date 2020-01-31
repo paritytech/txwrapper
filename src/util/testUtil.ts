@@ -4,10 +4,11 @@
 
 import { Keyring } from '@polkadot/api';
 import metadataRpc from '@polkadot/metadata/Metadata/v10/static';
-import { createType, TypeRegistry } from '@polkadot/types';
+import { createType } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/primitive/Extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
+import { getRegistry } from './registry';
 import { UnsignedTransaction } from './types';
 
 export { metadataRpc };
@@ -66,7 +67,8 @@ export const TEST_METHOD_ARGS = {
         'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
         'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
         'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
-        'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F' // seed "//Alice"
+        'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+        'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
       ],
       proof: '0x'
     }
@@ -100,7 +102,7 @@ export async function signWithAlice(signingPayload: string): Promise<string> {
   // Wait for the promise to resolve async WASM
   await cryptoWaitReady();
 
-  const registry = new TypeRegistry();
+  const registry = getRegistry();
   // Use ed25519 because it has deterministic signatures
   const keyring = new Keyring({ type: 'ed25519' });
   const alice = keyring.addFromUri('//Alice', { name: 'Alice default' });

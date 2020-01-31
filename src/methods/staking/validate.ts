@@ -10,8 +10,8 @@ export interface StakingValidateArgs extends Args {
    * Declare the desire to nominate `targets` for the origin controller.
    */
   prefs: {
-    commission: number
-  }
+    commission: number;
+  };
 }
 
 /**

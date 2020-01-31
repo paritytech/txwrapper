@@ -9,6 +9,7 @@ import { AnyJson } from '@polkadot/types/types';
 import { stringCamelCase } from '@polkadot/util';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from './constants';
+import { getRegistry } from './registry';
 import { BaseTxInfo, UnsignedTransaction } from './types';
 
 /**
@@ -48,7 +49,7 @@ export interface TxInfo extends BaseTxInfo {
  * tx info, as well as method name & arguments.
  */
 export function createMethod(info: TxInfo): UnsignedTransaction {
-  const registry = new TypeRegistry();
+  const registry = getRegistry();
   const metadata = new Metadata(registry, info.metadataRpc);
 
   const methodFunction = metadata.tx[info.method.pallet][info.method.name];
