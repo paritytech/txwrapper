@@ -13,6 +13,6 @@ describe('staking::validate', () => {
     );
 
     testBaseTxInfo(unsigned);
-    expect(unsigned.method).toBe('0x0703');
+    expect(unsigned.method).toBe('0x070414');
   });
 });

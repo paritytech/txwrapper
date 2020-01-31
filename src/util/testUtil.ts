@@ -60,6 +60,17 @@ export const TEST_METHOD_ARGS = {
       value: 12
     }
   },
+  session: {
+    setKeys: {
+      keys: [
+        'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+        'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+        'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
+        'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F' // seed "//Alice"
+      ],
+      proof: '0x'
+    }
+  },
   staking: {
     bond: {
       controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
@@ -78,9 +89,7 @@ export const TEST_METHOD_ARGS = {
     },
     unbond: { value: 100 },
     validate: {
-      targets: [
-        'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
-      ]
+      prefs: { commission: 5 }
     },
     withdrawUnbonded: {}
   }

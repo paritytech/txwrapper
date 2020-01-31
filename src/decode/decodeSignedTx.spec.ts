@@ -52,9 +52,12 @@ function testDecodeSignedTx(pallet: string, name: string): void {
 describe('decodeSignedTx', () => {
   testDecodeSignedTx('balances', 'transfer');
   testDecodeSignedTx('balances', 'transferKeepAlive');
+  testDecodeSignedTx('session', 'setKeys');
   testDecodeSignedTx('staking', 'bond');
   testDecodeSignedTx('staking', 'bondExtra');
+  testDecodeSignedTx('staking', 'chill');
   testDecodeSignedTx('staking', 'nominate');
   testDecodeSignedTx('staking', 'unbond');
+  testDecodeSignedTx('staking', 'validate');
   testDecodeSignedTx('staking', 'withdrawUnbonded');
 });
