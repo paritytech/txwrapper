@@ -7,7 +7,7 @@ import {
 
 export interface StakingValidateArgs extends Args {
   /**
-   * Declare the desire to nominate `targets` for the origin controller.
+   * Set the desired commission for the validator. Value is {percent, Perbill, ???}.
    */
   prefs: {
     commission: number;
