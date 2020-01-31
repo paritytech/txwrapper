@@ -7,7 +7,7 @@ import {
 
 export interface StakingValidateArgs extends Args {
   /**
-   * Set the desired commission for the validator. Value is {percent, Perbill, ???}.
+   * Set the desired commission for the validator. Value is Perbill.
    */
   prefs: {
     commission: number;
