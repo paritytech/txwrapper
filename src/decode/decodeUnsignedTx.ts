@@ -2,12 +2,16 @@
  * @ignore
  */ /** */
 
-import { createType, Metadata, TypeRegistry } from '@polkadot/types';
+import { createType, Metadata } from '@polkadot/types';
 import { setSS58Format } from '@polkadot/util-crypto';
 
-import { BLOCKTIME } from '../util/constants';
-import { serializeMethod, TxInfo } from '../util/method';
-import { UnsignedTransaction } from '../util/types';
+import {
+  BLOCKTIME,
+  getRegistry,
+  serializeMethod,
+  TxInfo,
+  UnsignedTransaction
+} from '../util';
 
 export type DecodedUnsignedTx = TxInfo;
 
@@ -24,7 +28,7 @@ export function decodeUnsignedTx(
   metadataRpc: string,
   ss58Format: number
 ): DecodedUnsignedTx {
-  const registry = new TypeRegistry();
+  const registry = getRegistry();
   registry.setMetadata(new Metadata(registry, metadataRpc));
   setSS58Format(ss58Format);
 

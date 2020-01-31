@@ -14,7 +14,7 @@
 
 ▸ **decode**(`unsignedTx`: [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md), `metadataRpc`: string, `ss58Format?`: undefined | number): *DecodedUnsignedTx*
 
-*Defined in [src/decode/decode.ts:18](https://github.com/paritytech/txwrapper/blob/0023326/src/decode/decode.ts#L18)*
+*Defined in [src/decode/decode.ts:18](https://github.com/paritytech/txwrapper/blob/79244a4/src/decode/decode.ts#L18)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 
@@ -30,7 +30,7 @@ Name | Type | Description |
 
 ▸ **decode**(`signedTx`: string, `metadataRpc`: string, `ss58Format?`: undefined | number): *DecodedSignedTx*
 
-*Defined in [src/decode/decode.ts:32](https://github.com/paritytech/txwrapper/blob/0023326/src/decode/decode.ts#L32)*
+*Defined in [src/decode/decode.ts:32](https://github.com/paritytech/txwrapper/blob/79244a4/src/decode/decode.ts#L32)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 
@@ -46,7 +46,7 @@ Name | Type | Description |
 
 ▸ **decode**(`signingPayload`: string, `metadataRpc`: string, `ss58Format?`: undefined | number): *DecodedSigningPayload*
 
-*Defined in [src/decode/decode.ts:46](https://github.com/paritytech/txwrapper/blob/0023326/src/decode/decode.ts#L46)*
+*Defined in [src/decode/decode.ts:46](https://github.com/paritytech/txwrapper/blob/79244a4/src/decode/decode.ts#L46)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 

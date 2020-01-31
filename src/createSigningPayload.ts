@@ -1,6 +1,6 @@
-import { createType, TypeRegistry } from '@polkadot/types';
+import { createType } from '@polkadot/types';
 
-import { UnsignedTransaction } from './util/types';
+import { getRegistry, UnsignedTransaction } from './util';
 
 /**
  * Construct the signing payload from an unsigned transaction and export it to
@@ -9,7 +9,7 @@ import { UnsignedTransaction } from './util/types';
  * @param unsigned - The JSON representing the unsigned transaction.
  */
 export function createSigningPayload(unsigned: UnsignedTransaction): string {
-  const registry = new TypeRegistry();
+  const registry = getRegistry();
 
   return createType(registry, 'ExtrinsicPayload', unsigned, {
     version: unsigned.version

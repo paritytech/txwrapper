@@ -51,9 +51,12 @@ function testDecodeUnsignedTx(pallet: string, name: string): void {
 describe('decodeUnsignedTx', () => {
   testDecodeUnsignedTx('balances', 'transfer');
   testDecodeUnsignedTx('balances', 'transferKeepAlive');
+  testDecodeUnsignedTx('session', 'setKeys');
   testDecodeUnsignedTx('staking', 'bond');
   testDecodeUnsignedTx('staking', 'bondExtra');
+  testDecodeUnsignedTx('staking', 'chill');
   testDecodeUnsignedTx('staking', 'nominate');
   testDecodeUnsignedTx('staking', 'unbond');
+  testDecodeUnsignedTx('staking', 'validate');
   testDecodeUnsignedTx('staking', 'withdrawUnbonded');
 });
