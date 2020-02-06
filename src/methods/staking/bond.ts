@@ -15,7 +15,7 @@ export interface StakingBondArgs extends Args {
    */
   value: number;
   /**
-   * The rewards destination. Can be "stash", "staked", or "controller".
+   * The rewards destination. Can be "Stash", "Staked", or "Controller".
    */
   payee: string;
 }

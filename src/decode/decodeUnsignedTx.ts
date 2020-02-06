@@ -8,7 +8,7 @@ import { setSS58Format } from '@polkadot/util-crypto';
 import {
   BLOCKTIME,
   getRegistry,
-  serializeMethod,
+  toTxMethod,
   TxInfo,
   UnsignedTransaction
 } from '../util';
@@ -33,7 +33,7 @@ export function decodeUnsignedTx(
   setSS58Format(ss58Format);
 
   const methodCall = createType(registry, 'Call', unsigned.method);
-  const method = serializeMethod(registry, methodCall);
+  const method = toTxMethod(registry, methodCall);
 
   return {
     address: unsigned.address,

@@ -10,7 +10,7 @@ import {
   EXTRINSIC_VERSION,
   getRegistry,
   KUSAMA_SS58_FORMAT,
-  serializeMethod,
+  toTxMethod,
   TxInfo
 } from '../util';
 
@@ -37,7 +37,7 @@ export function decodeSigningPayload(
     version: EXTRINSIC_VERSION
   });
   const methodCall = createType(registry, 'Call', payload.method);
-  const method = serializeMethod(registry, methodCall);
+  const method = toTxMethod(registry, methodCall);
 
   return {
     blockHash: payload.blockHash.toHex(),

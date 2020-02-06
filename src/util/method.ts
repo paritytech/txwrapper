@@ -28,7 +28,10 @@ const DEFAULTS = {
 
 export type Args = Record<string, AnyJson>;
 
-export interface Method {
+/**
+ * Format used in txwrapper to represent a method.
+ */
+export interface TxMethod {
   args: Args;
   name: string;
   pallet: string;
@@ -38,7 +41,7 @@ export interface Method {
  * Complete information about a tx
  */
 export interface TxInfo extends BaseTxInfo {
-  method: Method;
+  method: TxMethod;
 }
 
 /**
@@ -92,12 +95,13 @@ export function createMethod(info: TxInfo): UnsignedTransaction {
 }
 
 /**
- * From a PolkadotJs `Call` type, get a serialized object representing the call.
+ * From a PolkadotJs `Call` type, get a serializable object representing the
+ * call.
  *
  * @param registry - The type registry
  * @param method - The method to serialize
  */
-export function serializeMethod(registry: TypeRegistry, method: Call): Method {
+export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
   // Mapping of argName->argType
   const argsDef = JSON.parse(method.Type.args);
   // Mapping of argName->argValue

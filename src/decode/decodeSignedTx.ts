@@ -10,7 +10,7 @@ import {
   BLOCKTIME,
   getRegistry,
   KUSAMA_SS58_FORMAT,
-  serializeMethod,
+  toTxMethod,
   TxInfo
 } from '../util';
 
@@ -40,7 +40,7 @@ export function decodeSignedTx(
     isSigned: true
   });
   const methodCall = createType(registry, 'Call', tx.method);
-  const method = serializeMethod(registry, methodCall);
+  const method = toTxMethod(registry, methodCall);
 
   return {
     address: tx.signer.toString(),
