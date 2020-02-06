@@ -14,7 +14,7 @@
 
 ▸ **getRegistry**(`specName`: "kusama", `specVersion`: number): *TypeRegistry*
 
-*Defined in [src/util/registry.ts:13](https://github.com/paritytech/txwrapper/blob/2967ce5/src/util/registry.ts#L13)*
+*Defined in [src/util/registry.ts:13](https://github.com/paritytech/txwrapper/blob/1897b31/src/util/registry.ts#L13)*
 
 Create a specific TypeRegistry for a current chain. The reason we have this
 is, depending on different runtime versions, we have different types (e.g.:

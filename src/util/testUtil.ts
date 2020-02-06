@@ -77,7 +77,7 @@ export const TEST_METHOD_ARGS = {
     bond: {
       controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
       value: 100,
-      payee: 'staked'
+      payee: 'Staked'
     },
     bondExtra: {
       maxAdditional: 100

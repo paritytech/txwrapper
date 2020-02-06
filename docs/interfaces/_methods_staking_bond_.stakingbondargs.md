@@ -22,7 +22,7 @@
 
 • **controller**: *string*
 
-*Defined in [src/methods/staking/bond.ts:12](https://github.com/paritytech/txwrapper/blob/2967ce5/src/methods/staking/bond.ts#L12)*
+*Defined in [src/methods/staking/bond.ts:12](https://github.com/paritytech/txwrapper/blob/1897b31/src/methods/staking/bond.ts#L12)*
 
 The SS-58 encoded address of the Controller account.
 
@@ -32,9 +32,9 @@ ___
 
 • **payee**: *string*
 
-*Defined in [src/methods/staking/bond.ts:20](https://github.com/paritytech/txwrapper/blob/2967ce5/src/methods/staking/bond.ts#L20)*
+*Defined in [src/methods/staking/bond.ts:20](https://github.com/paritytech/txwrapper/blob/1897b31/src/methods/staking/bond.ts#L20)*
 
-The rewards destination. Can be "stash", "staked", or "controller".
+The rewards destination. Can be "Stash", "Staked", or "Controller".
 
 ___
 
@@ -42,6 +42,6 @@ ___
 
 • **value**: *number*
 
-*Defined in [src/methods/staking/bond.ts:16](https://github.com/paritytech/txwrapper/blob/2967ce5/src/methods/staking/bond.ts#L16)*
+*Defined in [src/methods/staking/bond.ts:16](https://github.com/paritytech/txwrapper/blob/1897b31/src/methods/staking/bond.ts#L16)*
 
 The number of tokens to bond.
