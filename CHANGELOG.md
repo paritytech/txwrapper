@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.7](https://github.com/paritytech/txwrapper/compare/v0.4.6...v0.4.7) (2020-02-06)
+
+
+### Bug Fixes
+
+* Use again Capitalized enum in payee ([#57](https://github.com/paritytech/txwrapper/issues/57)) ([694148d](https://github.com/paritytech/txwrapper/commit/694148df4813fd9264872fbf453df422270c82a1))
+
 ### [0.4.6](https://github.com/paritytech/txwrapper/compare/v0.4.5...v0.4.6) (2020-01-31)
 
 
