@@ -61,6 +61,29 @@ export const TEST_METHOD_ARGS = {
       value: 12
     }
   },
+  democracy: {
+    proxyVote: {
+      refIndex: 0,
+      vote: {
+        aye: true,
+        conviction: 'Locked1x'
+      }
+    },
+    removeProxy: {
+      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+    },
+    resignProxy: {},
+    setProxy: {
+      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+    },
+    vote: {
+      refIndex: 0,
+      vote: {
+        aye: true,
+        conviction: 'Locked1x'
+      }
+    }
+  },
   session: {
     setKeys: {
       keys: [
