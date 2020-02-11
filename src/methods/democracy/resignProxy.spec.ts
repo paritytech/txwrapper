@@ -13,6 +13,6 @@ describe('democracy::resignProxy', () => {
     );
 
     testBaseTxInfo(unsigned);
-    expect(unsigned.method).toBe('...');
+    expect(unsigned.method).toBe('0x090d');
   });
 });

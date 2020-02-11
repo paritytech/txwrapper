@@ -13,6 +13,8 @@ describe('democracy::removeProxy', () => {
     );
 
     testBaseTxInfo(unsigned);
-    expect(unsigned.method).toBe('...');
+    expect(unsigned.method).toBe(
+      '0x090e8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48'
+    );
   });
 });

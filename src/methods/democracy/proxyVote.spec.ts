@@ -13,6 +13,6 @@ describe('democracy::proxyVote', () => {
     );
 
     testBaseTxInfo(unsigned);
-    expect(unsigned.method).toBe('...');
+    expect(unsigned.method).toBe('0x09030081');
   });
 });
