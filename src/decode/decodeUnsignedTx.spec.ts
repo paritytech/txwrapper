@@ -51,6 +51,11 @@ function testDecodeUnsignedTx(pallet: string, name: string): void {
 describe('decodeUnsignedTx', () => {
   testDecodeUnsignedTx('balances', 'transfer');
   testDecodeUnsignedTx('balances', 'transferKeepAlive');
+  testDecodeUnsignedTx('democracy', 'proxyVote');
+  testDecodeUnsignedTx('democracy', 'removeProxy');
+  testDecodeUnsignedTx('democracy', 'resignProxy');
+  testDecodeUnsignedTx('democracy', 'setProxy');
+  testDecodeUnsignedTx('democracy', 'vote');
   testDecodeUnsignedTx('session', 'setKeys');
   testDecodeUnsignedTx('staking', 'bond');
   testDecodeUnsignedTx('staking', 'bondExtra');

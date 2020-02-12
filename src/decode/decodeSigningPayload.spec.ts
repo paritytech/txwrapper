@@ -54,6 +54,11 @@ function testDecodeSigningPayload(pallet: string, name: string): void {
 describe('decodeSigningPayload', () => {
   testDecodeSigningPayload('balances', 'transfer');
   testDecodeSigningPayload('balances', 'transferKeepAlive');
+  testDecodeSigningPayload('democracy', 'proxyVote');
+  testDecodeSigningPayload('democracy', 'removeProxy');
+  testDecodeSigningPayload('democracy', 'resignProxy');
+  testDecodeSigningPayload('democracy', 'setProxy');
+  testDecodeSigningPayload('democracy', 'vote');
   testDecodeSigningPayload('session', 'setKeys');
   testDecodeSigningPayload('staking', 'bond');
   testDecodeSigningPayload('staking', 'bondExtra');
