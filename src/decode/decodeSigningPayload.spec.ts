@@ -54,6 +54,12 @@ function testDecodeSigningPayload(pallet: string, name: string): void {
 describe('decodeSigningPayload', () => {
   testDecodeSigningPayload('balances', 'transfer');
   testDecodeSigningPayload('balances', 'transferKeepAlive');
+  testDecodeSigningPayload('democracy', 'removeProxy');
+  testDecodeSigningPayload('democracy', 'resignProxy');
+  testDecodeSigningPayload('democracy', 'setProxy');
+  // Skipping until Vote has correct JSON serialization in polkadot-api.
+  // testDecodeSigningPayload('democracy', 'proxyVote');
+  // testDecodeSigningPayload('democracy', 'vote');
   testDecodeSigningPayload('session', 'setKeys');
   testDecodeSigningPayload('staking', 'bond');
   testDecodeSigningPayload('staking', 'bondExtra');
