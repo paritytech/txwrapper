@@ -1,5 +1,5 @@
 import { createType, TypeRegistry } from '@polkadot/types';
-import { getChainTypes } from '@polkadot/types/known';
+import { getSpecTypes } from '@polkadot/types/known';
 
 /**
  * Create a specific TypeRegistry for a current chain. The reason we have this
@@ -19,7 +19,7 @@ export function getRegistry(
   const registry = new TypeRegistry();
   // Register types specific to chain/runtimeVersion
   registry.register(
-    getChainTypes(
+    getSpecTypes(
       createType(registry, 'Text'), // Unneeded for now
       createType(registry, 'RuntimeVersion', {
         specName,
