@@ -14,7 +14,7 @@
 
 ▸ **resignProxy**(`args`: object, `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/resignProxy.ts:8](https://github.com/paritytech/txwrapper/blob/57a1bc2/src/methods/democracy/resignProxy.ts#L8)*
+*Defined in [src/methods/democracy/resignProxy.ts:8](https://github.com/paritytech/txwrapper/blob/230d329/src/methods/democracy/resignProxy.ts#L8)*
 
 Clear the proxy. Called by the proxy.
 

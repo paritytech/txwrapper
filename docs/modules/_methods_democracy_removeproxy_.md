@@ -18,7 +18,7 @@
 
 ▸ **removeProxy**(`args`: [DemocracyRemoveProxyArgs](../interfaces/_methods_democracy_removeproxy_.democracyremoveproxyargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/removeProxy.ts:20](https://github.com/paritytech/txwrapper/blob/57a1bc2/src/methods/democracy/removeProxy.ts#L20)*
+*Defined in [src/methods/democracy/removeProxy.ts:20](https://github.com/paritytech/txwrapper/blob/230d329/src/methods/democracy/removeProxy.ts#L20)*
 
 Clear the proxy. Called by the stash.
 
