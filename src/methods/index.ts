@@ -5,5 +5,3 @@ import * as staking from './staking';
 import * as vesting from './vesting';
 
 export { balances, democracy, session, staking, vesting };
-
-export const methods = { balances, democracy, session, staking, vesting };
