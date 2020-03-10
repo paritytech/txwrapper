@@ -18,9 +18,10 @@
 
 ▸ **deactivateProxy**(`args`: [DemocracyDeactivateProxyArgs](../interfaces/_methods_democracy_deactivateproxy_.democracydeactivateproxyargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/deactivateProxy.ts:20](https://github.com/paritytech/txwrapper/blob/79435da/src/methods/democracy/deactivateProxy.ts#L20)*
+*Defined in [src/methods/democracy/deactivateProxy.ts:21](https://github.com/paritytech/txwrapper/blob/562ba6e/src/methods/democracy/deactivateProxy.ts#L21)*
 
-Clear the proxy. Called by the stash.
+Deactivate the proxy, but leave open to this account. Called by the stash.
+The proxy must already be active.
 
 **Parameters:**
 
