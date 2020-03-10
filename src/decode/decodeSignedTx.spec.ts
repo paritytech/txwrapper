@@ -2,6 +2,7 @@ import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
 import * as methods from '../methods';
 import {
+  getAllMethods,
   KUSAMA_SS58_FORMAT,
   metadataRpc,
   signWithAlice,
@@ -50,24 +51,5 @@ function testDecodeSignedTx(pallet: string, name: string): void {
 }
 
 describe('decodeSignedTx', () => {
-  testDecodeSignedTx('balances', 'transfer');
-  testDecodeSignedTx('balances', 'transferKeepAlive');
-  testDecodeSignedTx('democracy', 'activateProxy');
-  testDecodeSignedTx('democracy', 'closeProxy');
-  testDecodeSignedTx('democracy', 'deactivateProxy');
-  testDecodeSignedTx('democracy', 'openProxy');
-  // Skipping until Vote has correct JSON serialization in polkadot-api.
-  // testDecodeSignedTx('democracy', 'proxyVote');
-  // testDecodeSignedTx('democracy', 'vote');
-  testDecodeSignedTx('session', 'setKeys');
-  testDecodeSignedTx('staking', 'bond');
-  testDecodeSignedTx('staking', 'bondExtra');
-  testDecodeSignedTx('staking', 'chill');
-  testDecodeSignedTx('staking', 'nominate');
-  testDecodeSignedTx('staking', 'payoutNominator');
-  testDecodeSignedTx('staking', 'payoutValidator');
-  testDecodeSignedTx('staking', 'validate');
-  testDecodeSignedTx('staking', 'unbond');
-  testDecodeSignedTx('staking', 'validate');
-  testDecodeSignedTx('staking', 'withdrawUnbonded');
+  getAllMethods().forEach(method => testDecodeSignedTx(...method));
 });

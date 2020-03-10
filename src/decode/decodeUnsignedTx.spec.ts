@@ -1,5 +1,6 @@
 import * as methods from '../methods';
 import {
+  getAllMethods,
   KUSAMA_SS58_FORMAT,
   metadataRpc,
   TEST_BASE_TX_INFO,
@@ -49,23 +50,5 @@ function testDecodeUnsignedTx(pallet: string, name: string): void {
 }
 
 describe('decodeUnsignedTx', () => {
-  testDecodeUnsignedTx('balances', 'transfer');
-  testDecodeUnsignedTx('balances', 'transferKeepAlive');
-  testDecodeUnsignedTx('democracy', 'activateProxy');
-  testDecodeUnsignedTx('democracy', 'closeProxy');
-  testDecodeUnsignedTx('democracy', 'deactivateProxy');
-  testDecodeUnsignedTx('democracy', 'openProxy');
-  // Skipping until Vote has correct JSON serialization in polkadot-api.
-  // testDecodeUnsignedTx('democracy', 'proxyVote');
-  // testDecodeUnsignedTx('democracy', 'vote');
-  testDecodeUnsignedTx('session', 'setKeys');
-  testDecodeUnsignedTx('staking', 'bond');
-  testDecodeUnsignedTx('staking', 'bondExtra');
-  testDecodeUnsignedTx('staking', 'chill');
-  testDecodeUnsignedTx('staking', 'nominate');
-  testDecodeUnsignedTx('staking', 'payoutNominator');
-  testDecodeUnsignedTx('staking', 'payoutValidator');
-  testDecodeUnsignedTx('staking', 'unbond');
-  testDecodeUnsignedTx('staking', 'validate');
-  testDecodeUnsignedTx('staking', 'withdrawUnbonded');
+  getAllMethods().forEach(method => testDecodeUnsignedTx(...method));
 });

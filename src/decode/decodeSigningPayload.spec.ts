@@ -1,6 +1,7 @@
 import { createSigningPayload } from '../createSigningPayload';
 import * as methods from '../methods';
 import {
+  getAllMethods,
   KUSAMA_SS58_FORMAT,
   metadataRpc,
   TEST_BASE_TX_INFO,
@@ -52,23 +53,5 @@ function testDecodeSigningPayload(pallet: string, name: string): void {
 }
 
 describe('decodeSigningPayload', () => {
-  testDecodeSigningPayload('balances', 'transfer');
-  testDecodeSigningPayload('balances', 'transferKeepAlive');
-  testDecodeSigningPayload('democracy', 'activateProxy');
-  testDecodeSigningPayload('democracy', 'closeProxy');
-  testDecodeSigningPayload('democracy', 'deactivateProxy');
-  testDecodeSigningPayload('democracy', 'openProxy');
-  // Skipping until Vote has correct JSON serialization in polkadot-api.
-  // testDecodeSigningPayload('democracy', 'proxyVote');
-  // testDecodeSigningPayload('democracy', 'vote');
-  testDecodeSigningPayload('session', 'setKeys');
-  testDecodeSigningPayload('staking', 'bond');
-  testDecodeSigningPayload('staking', 'bondExtra');
-  testDecodeSigningPayload('staking', 'chill');
-  testDecodeSigningPayload('staking', 'nominate');
-  testDecodeSigningPayload('staking', 'payoutNominator');
-  testDecodeSigningPayload('staking', 'payoutValidator');
-  testDecodeSigningPayload('staking', 'unbond');
-  testDecodeSigningPayload('staking', 'validate');
-  testDecodeSigningPayload('staking', 'withdrawUnbonded');
+  getAllMethods().forEach(method => testDecodeSigningPayload(...method));
 });

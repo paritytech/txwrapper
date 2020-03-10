@@ -8,6 +8,7 @@ import { createType } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
+import * as methods from '../methods';
 import { getRegistry } from './registry';
 import { UnsignedTransaction } from './types';
 
@@ -48,7 +49,33 @@ export function testBaseTxInfo(unsigned: UnsignedTransaction): void {
 }
 
 /**
- * Arguments for all methods we're testing
+ * Return all methods available in txwrapper as [pallet, methodName]. Used for
+ * testing decodes on all methods.
+ */
+export function getAllMethods(): [string, string][] {
+  return Object.keys(methods)
+    .reduce((acc, pallet) => {
+      return acc.concat(
+        Object.keys(methods[pallet as keyof typeof methods]).map(name => [
+          pallet,
+          name
+        ])
+      );
+    }, [] as [string, string][])
+    .filter(
+      ([pallet, name]) =>
+        !(
+          // Skipping until Vote has correct JSON serialization in polkadot-api.
+          (
+            (pallet === 'democracy' && name === 'proxyVote') ||
+            (pallet === 'democracy' && name === 'vote')
+          )
+        )
+    );
+}
+
+/**
+ * Dummy arguments for all methods we're testing.
  */
 export const TEST_METHOD_ARGS = {
   balances: {
@@ -130,9 +157,18 @@ export const TEST_METHOD_ARGS = {
       prefs: { commission: 5 }
     },
     withdrawUnbonded: {}
+  },
+  vesting: {
+    vest: {},
+    vestOther: {
+      target: 'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
+    }
   }
 };
 
+/**
+ * Sign a payload with seed `//Alice`.
+ */
 export async function signWithAlice(signingPayload: string): Promise<string> {
   // We're creating an Alice account that will sign the payload
   // Wait for the promise to resolve async WASM
