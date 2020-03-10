@@ -20,7 +20,7 @@
 
 • **era**: *number*
 
-*Defined in [src/methods/staking/payoutValidator.ts:14](https://github.com/paritytech/txwrapper/blob/562ba6e/src/methods/staking/payoutValidator.ts#L14)*
+*Defined in [src/methods/staking/payoutValidator.ts:14](https://github.com/paritytech/txwrapper/blob/2ef02a5/src/methods/staking/payoutValidator.ts#L14)*
 
 May not be lower than one following the most recently paid era. If it is
 higher, then it indicates an instruction to skip the payout of all

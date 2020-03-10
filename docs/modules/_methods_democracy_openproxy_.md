@@ -18,9 +18,9 @@
 
 ▸ **openProxy**(`args`: [DemocracyOpenProxyArgs](../interfaces/_methods_democracy_openproxy_.democracyopenproxyargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/openProxy.ts:20](https://github.com/paritytech/txwrapper/blob/562ba6e/src/methods/democracy/openProxy.ts#L20)*
+*Defined in [src/methods/democracy/openProxy.ts:20](https://github.com/paritytech/txwrapper/blob/2ef02a5/src/methods/democracy/openProxy.ts#L20)*
 
-Become a proxy. This must be called prior to a later `activate_proxy`.
+Become a proxy. This must be called prior to a later `activateProxy`.
 
 **Parameters:**
 
