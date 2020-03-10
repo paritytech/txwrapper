@@ -15,7 +15,7 @@ export interface StakingPayoutValidatorArgs extends Args {
 }
 
 /**
- * Make one nominator's payout for one era.
+ * Make one validator's payout for one era.
  * WARNING: once an era is payed for a validator such validator can't claim the
  * payout of previous era.
  * WARNING: Incorrect arguments here can result in loss of payout. Be very careful.

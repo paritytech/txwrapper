@@ -14,7 +14,7 @@ export interface VestingVestOtherArgs extends Args {
 }
 
 /**
- * Unlock any vested funds of the sender account.
+ * Unlock any vested funds of a `target` account.
  *
  * @param info - Information required to construct the transaction.
  */

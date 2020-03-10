@@ -13,7 +13,8 @@ export interface DemocracyDeactivateProxyArgs extends Args {
 }
 
 /**
- * Clear the proxy. Called by the stash.
+ * Deactivate the proxy, but leave open to this account. Called by the stash.
+ * The proxy must already be active.
  *
  * @param info - Information required to construct the transaction.
  */

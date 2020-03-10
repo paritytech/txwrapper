@@ -13,7 +13,7 @@ export interface DemocracyActivateProxyArgs extends Args {
 }
 
 /**
- * Specify a proxy. Called by the stash.
+ * Specify a proxy that is already open to us. Called by the stash.
  *
  * @param info - Information required to construct the transaction.
  */
