@@ -51,9 +51,10 @@ function testDecodeUnsignedTx(pallet: string, name: string): void {
 describe('decodeUnsignedTx', () => {
   testDecodeUnsignedTx('balances', 'transfer');
   testDecodeUnsignedTx('balances', 'transferKeepAlive');
-  testDecodeUnsignedTx('democracy', 'removeProxy');
-  testDecodeUnsignedTx('democracy', 'resignProxy');
-  testDecodeUnsignedTx('democracy', 'setProxy');
+  testDecodeUnsignedTx('democracy', 'activateProxy');
+  testDecodeUnsignedTx('democracy', 'closeProxy');
+  testDecodeUnsignedTx('democracy', 'deactivateProxy');
+  testDecodeUnsignedTx('democracy', 'openProxy');
   // Skipping until Vote has correct JSON serialization in polkadot-api.
   // testDecodeUnsignedTx('democracy', 'proxyVote');
   // testDecodeUnsignedTx('democracy', 'vote');
@@ -62,6 +63,8 @@ describe('decodeUnsignedTx', () => {
   testDecodeUnsignedTx('staking', 'bondExtra');
   testDecodeUnsignedTx('staking', 'chill');
   testDecodeUnsignedTx('staking', 'nominate');
+  testDecodeUnsignedTx('staking', 'payoutNominator');
+  testDecodeUnsignedTx('staking', 'payoutValidator');
   testDecodeUnsignedTx('staking', 'unbond');
   testDecodeUnsignedTx('staking', 'validate');
   testDecodeUnsignedTx('staking', 'withdrawUnbonded');

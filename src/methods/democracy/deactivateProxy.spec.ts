@@ -3,12 +3,12 @@ import {
   TEST_METHOD_ARGS,
   testBaseTxInfo
 } from '../../util';
-import { removeProxy } from './removeProxy';
+import { deactivateProxy } from './deactivateProxy';
 
-describe('democracy::removeProxy', () => {
+describe('democracy::deactivateProxy', () => {
   it('should work', () => {
-    const unsigned = removeProxy(
-      TEST_METHOD_ARGS.democracy.removeProxy,
+    const unsigned = deactivateProxy(
+      TEST_METHOD_ARGS.democracy.deactivateProxy,
       TEST_BASE_TX_INFO
     );
 
