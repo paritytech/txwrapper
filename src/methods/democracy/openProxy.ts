@@ -13,7 +13,7 @@ export interface DemocracyOpenProxyArgs extends Args {
 }
 
 /**
- * Become a proxy. This must be called prior to a later `activate_proxy`.
+ * Become a proxy. This must be called prior to a later `activateProxy`.
  *
  * @param info - Information required to construct the transaction.
  */
