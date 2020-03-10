@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/paritytech/txwrapper/compare/v1.0.0...v1.1.0) (2020-03-10)
+
+
+### Features
+
+* Add new calls for staking, democracy and vesting pallets ([#84](https://github.com/paritytech/txwrapper/issues/84)) ([819d11e](https://github.com/paritytech/txwrapper/commit/819d11ecad0fc0501702d7e823cac860385c4c10))
+
 ## [1.0.0](https://github.com/paritytech/txwrapper/compare/v0.4.8...v1.0.0) (2020-02-26)
 
 No breaking change. This package will follow [semver](https://semver.org/) henceforth.
