@@ -152,6 +152,9 @@ export const TEST_METHOD_ARGS = {
     payoutValidator: {
       era: 100
     },
+    setController: {
+      controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+    },
     unbond: { value: 100 },
     validate: {
       prefs: { commission: 5 }

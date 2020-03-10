@@ -4,6 +4,7 @@ export * from './chill';
 export * from './nominate';
 export * from './payoutNominator';
 export * from './payoutValidator';
+export * from './setController';
 export * from './unbond';
 export * from './validate';
 export * from './withdrawUnbonded';
