@@ -3,11 +3,12 @@
  */ /** */
 
 import { Keyring } from '@polkadot/api';
-import metadataRpc from '@polkadot/metadata/Metadata/v10/static';
+import metadataRpc from '@polkadot/metadata/Metadata/v11/static';
 import { createType } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
+import * as methods from '../methods';
 import { getRegistry } from './registry';
 import { UnsignedTransaction } from './types';
 
@@ -48,7 +49,33 @@ export function testBaseTxInfo(unsigned: UnsignedTransaction): void {
 }
 
 /**
- * Arguments for all methods we're testing
+ * Return all methods available in txwrapper as [pallet, methodName]. Used for
+ * testing decodes on all methods.
+ */
+export function getAllMethods(): [string, string][] {
+  return Object.keys(methods)
+    .reduce((acc, pallet) => {
+      return acc.concat(
+        Object.keys(methods[pallet as keyof typeof methods]).map(name => [
+          pallet,
+          name
+        ])
+      );
+    }, [] as [string, string][])
+    .filter(
+      ([pallet, name]) =>
+        !(
+          // Skipping until Vote has correct JSON serialization in polkadot-api.
+          (
+            (pallet === 'democracy' && name === 'proxyVote') ||
+            (pallet === 'democracy' && name === 'vote')
+          )
+        )
+    );
+}
+
+/**
+ * Dummy arguments for all methods we're testing.
  */
 export const TEST_METHOD_ARGS = {
   balances: {
@@ -62,19 +89,22 @@ export const TEST_METHOD_ARGS = {
     }
   },
   democracy: {
+    activateProxy: {
+      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+    },
+    closeProxy: {},
+    deactivateProxy: {
+      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+    },
+    openProxy: {
+      target: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+    },
     proxyVote: {
       refIndex: 0,
       vote: {
         aye: true,
         conviction: 'Locked1x'
       }
-    },
-    removeProxy: {
-      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
-    },
-    resignProxy: {},
-    setProxy: {
-      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
     },
     vote: {
       refIndex: 0,
@@ -112,14 +142,36 @@ export const TEST_METHOD_ARGS = {
         'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
       ]
     },
+    payoutNominator: {
+      era: 100,
+      validators: [['FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', 2]] as [
+        string,
+        number
+      ][]
+    },
+    payoutValidator: {
+      era: 100
+    },
+    setController: {
+      controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+    },
     unbond: { value: 100 },
     validate: {
       prefs: { commission: 5 }
     },
     withdrawUnbonded: {}
+  },
+  vesting: {
+    vest: {},
+    vestOther: {
+      target: 'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
+    }
   }
 };
 
+/**
+ * Sign a payload with seed `//Alice`.
+ */
 export async function signWithAlice(signingPayload: string): Promise<string> {
   // We're creating an Alice account that will sign the payload
   // Wait for the promise to resolve async WASM

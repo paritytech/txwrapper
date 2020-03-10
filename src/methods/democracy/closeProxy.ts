@@ -5,11 +5,11 @@ import { BaseTxInfo, createMethod, UnsignedTransaction } from '../../util';
  *
  * @param info - Information required to construct the transaction.
  */
-export function resignProxy(args: {}, info: BaseTxInfo): UnsignedTransaction {
+export function closeProxy(args: {}, info: BaseTxInfo): UnsignedTransaction {
   return createMethod({
     method: {
       args,
-      name: 'resignProxy',
+      name: 'closeProxy',
       pallet: 'democracy'
     },
     ...info

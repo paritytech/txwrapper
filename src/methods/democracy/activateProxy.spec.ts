@@ -3,12 +3,12 @@ import {
   TEST_METHOD_ARGS,
   testBaseTxInfo
 } from '../../util';
-import { setProxy } from './setProxy';
+import { activateProxy } from './activateProxy';
 
-describe('democracy::setProxy', () => {
+describe('democracy::activateProxy', () => {
   it('should work', () => {
-    const unsigned = setProxy(
-      TEST_METHOD_ARGS.democracy.setProxy,
+    const unsigned = activateProxy(
+      TEST_METHOD_ARGS.democracy.activateProxy,
       TEST_BASE_TX_INFO
     );
 

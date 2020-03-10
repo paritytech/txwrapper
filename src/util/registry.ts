@@ -20,6 +20,7 @@ export function getRegistry(
   // Register types specific to chain/runtimeVersion
   registry.register(
     getSpecTypes(
+      registry,
       createType(registry, 'Text'), // Unneeded for now
       createType(registry, 'RuntimeVersion', {
         specName,

@@ -5,7 +5,7 @@ import {
   UnsignedTransaction
 } from '../../util';
 
-export interface DemocracySetProxyArgs extends Args {
+export interface DemocracyActivateProxyArgs extends Args {
   /**
    * Address to set as proxy, SS-58 encoded.
    */
@@ -13,18 +13,18 @@ export interface DemocracySetProxyArgs extends Args {
 }
 
 /**
- * Specify a proxy. Called by the stash.
+ * Specify a proxy that is already open to us. Called by the stash.
  *
  * @param info - Information required to construct the transaction.
  */
-export function setProxy(
-  args: DemocracySetProxyArgs,
+export function activateProxy(
+  args: DemocracyActivateProxyArgs,
   info: BaseTxInfo
 ): UnsignedTransaction {
   return createMethod({
     method: {
       args,
-      name: 'setProxy',
+      name: 'activateProxy',
       pallet: 'democracy'
     },
     ...info

@@ -3,12 +3,12 @@ import {
   TEST_METHOD_ARGS,
   testBaseTxInfo
 } from '../../util';
-import { resignProxy } from './resignProxy';
+import { closeProxy } from './closeProxy';
 
-describe('democracy::resignProxy', () => {
+describe('democracy::closeProxy', () => {
   it('should work', () => {
-    const unsigned = resignProxy(
-      TEST_METHOD_ARGS.democracy.resignProxy,
+    const unsigned = closeProxy(
+      TEST_METHOD_ARGS.democracy.closeProxy,
       TEST_BASE_TX_INFO
     );
 
