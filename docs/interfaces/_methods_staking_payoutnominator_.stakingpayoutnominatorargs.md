@@ -21,7 +21,7 @@
 
 • **era**: *number*
 
-*Defined in [src/methods/staking/payoutNominator.ts:14](https://github.com/paritytech/txwrapper/blob/a7b5a55/src/methods/staking/payoutNominator.ts#L14)*
+*Defined in [src/methods/staking/payoutNominator.ts:14](https://github.com/paritytech/txwrapper/blob/4462996/src/methods/staking/payoutNominator.ts#L14)*
 
 May not be lower than one following the most recently paid era. If it is
 higher, then it indicates an instruction to skip the payout of all
@@ -33,8 +33,9 @@ ___
 
 • **validators**: *[string, number][]*
 
-*Defined in [src/methods/staking/payoutNominator.ts:20](https://github.com/paritytech/txwrapper/blob/a7b5a55/src/methods/staking/payoutNominator.ts#L20)*
+*Defined in [src/methods/staking/payoutNominator.ts:21](https://github.com/paritytech/txwrapper/blob/4462996/src/methods/staking/payoutNominator.ts#L21)*
 
-List of all validators that `who` had exposure to during `era`. If it is
-incomplete, then less than the full reward will be paid out. It must not
-exceed `MAX_NOMINATIONS`.
+List of all validators that `who` had exposure to during `era` alongside
+the index of the `who` in the clipped exposure of the validator. i.e. each
+element is a tuple of `(validator, index of `who` in clipped exposure of
+validator)`.
