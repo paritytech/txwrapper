@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/paritytech/txwrapper/compare/v1.1.0...v1.1.1) (2020-03-11)
+
+
+### Bug Fixes
+
+* Export methods object ([#87](https://github.com/paritytech/txwrapper/issues/87)) ([1819373](https://github.com/paritytech/txwrapper/commit/18193732b17aca892831d4e4fc26c27cb0a76f94))
+
 ## [1.1.0](https://github.com/paritytech/txwrapper/compare/v1.0.0...v1.1.0) (2020-03-10)
 
 
