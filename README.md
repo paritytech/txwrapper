@@ -1,4 +1,4 @@
-<br /><br /><br />
+<br /><br />
 
 <h1 align="center">@substrate/txwrapper</h1>
 <h4 align="center">Helper funtions for offline transaction generation.</h4>
@@ -15,7 +15,7 @@
   </a>
 </p>
 
-<br /><br /><br />
+<br /><br />
 
 ## Get Started
 

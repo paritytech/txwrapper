@@ -74,6 +74,8 @@ function signWith(
  * Entry point of the script.
  */
 async function main(): Promise<void> {
+  // If you're using your own chain with custom types, add these types here. We
+  // are using a vanilla Substrate chain, no no type overriding is needed.
   const registry = new TypeRegistry();
 
   // Wait for the promise to resolve async WASM
@@ -114,7 +116,7 @@ async function main(): Promise<void> {
       ).toNumber(),
       genesisHash,
       metadataRpc,
-      nonce: 4, // Assuming this is Alice's first tx on the chain
+      nonce: 1, // Assuming this is Alice's first tx on the chain
       specVersion,
       tip: 0,
       validityPeriod: 240
@@ -129,7 +131,7 @@ async function main(): Promise<void> {
   });
   console.log(
     `\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
-    `  Amount: ${decodedUnsigned.method.args.value}`
+      `  Amount: ${decodedUnsigned.method.args.value}`
   );
 
   // Construct the signing payload from an unsigned transaction.
@@ -144,7 +146,7 @@ async function main(): Promise<void> {
   });
   console.log(
     `\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
-    `  Amount: ${payloadInfo.method.args.value}`
+      `  Amount: ${payloadInfo.method.args.value}`
   );
 
   // Sign a payload. This operation should be performed on an offline device.
@@ -162,9 +164,7 @@ async function main(): Promise<void> {
   // Send the tx to the node. Again, since `txwrapper` is offline-only, this
   // operation should be handled externally. Here, we just send a JSONRPC
   // request directly to the node.
-  const actualTxHash = await rpcToNode('author_submitExtrinsic', [
-    '0x2c0284d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d01b852f11be1b4d63f772f34cce3c70e0f5b7ef90e938d2cfb5c603a5c9f6b3b36caa600430e1fb6b3447362ef70d703070a05ee4fc692181626f72cbc3667148cf50304000400ff8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a4830'
-  ]);
+  const actualTxHash = await rpcToNode('author_submitExtrinsic', [tx]);
   console.log(`\nActual Tx Hash: ${actualTxHash}`);
 
   // Decode a signed payload.
@@ -175,7 +175,7 @@ async function main(): Promise<void> {
   });
   console.log(
     `\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
-    `  Amount: ${txInfo.method.args.value}\n`
+      `  Amount: ${txInfo.method.args.value}\n`
   );
 }
 

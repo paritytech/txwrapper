@@ -63,7 +63,7 @@ export function createMethod(info: TxInfo): UnsignedTransaction {
       ) {
         throw new Error(
           `Method ${info.method.pallet}::${
-          info.method.name
+            info.method.name
           } expects argument ${arg.toString()}, but got undefined`
         );
       }
