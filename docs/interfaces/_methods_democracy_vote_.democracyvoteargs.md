@@ -21,7 +21,7 @@
 
 • **refIndex**: *number*
 
-*Defined in [src/methods/democracy/vote.ts:13](https://github.com/paritytech/txwrapper/blob/ba35923/src/methods/democracy/vote.ts#L13)*
+*Defined in [src/methods/democracy/vote.ts:13](https://github.com/paritytech/txwrapper/blob/123d47d/src/methods/democracy/vote.ts#L13)*
 
 ___
 
@@ -29,6 +29,6 @@ ___
 
 • **vote**: *[Vote](../modules/_methods_democracy_types_.md#vote)*
 
-*Defined in [src/methods/democracy/vote.ts:18](https://github.com/paritytech/txwrapper/blob/ba35923/src/methods/democracy/vote.ts#L18)*
+*Defined in [src/methods/democracy/vote.ts:18](https://github.com/paritytech/txwrapper/blob/123d47d/src/methods/democracy/vote.ts#L18)*
 
 Vote

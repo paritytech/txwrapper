@@ -14,7 +14,7 @@
 
 Ƭ **Vote**: *object*
 
-*Defined in [src/methods/democracy/types.ts:4](https://github.com/paritytech/txwrapper/blob/ba35923/src/methods/democracy/types.ts#L4)*
+*Defined in [src/methods/democracy/types.ts:4](https://github.com/paritytech/txwrapper/blob/123d47d/src/methods/democracy/types.ts#L4)*
 
 A vote in a referendum
 
