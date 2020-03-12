@@ -13,9 +13,10 @@ export interface StakingPayoutNominatorArgs extends Args {
    */
   era: number;
   /**
-   * List of all validators that `who` had exposure to during `era`. If it is
-   * incomplete, then less than the full reward will be paid out. It must not
-   * exceed `MAX_NOMINATIONS`.
+   * List of all validators that `who` had exposure to during `era` alongside
+   * the index of the `who` in the clipped exposure of the validator. i.e. each
+   * element is a tuple of `(validator, index of `who` in clipped exposure of
+   * validator)`.
    */
   validators: [string, number][];
 }

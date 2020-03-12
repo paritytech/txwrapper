@@ -21,7 +21,7 @@ const DEFAULTS = {
    */
   tip: 0,
   /**
-   * Contrusct a mortal extrinsic of ~5 minutes
+   * Contruct a mortal extrinsic of ~5 minutes
    */
   validityPeriod: 5 * 60
 };
@@ -63,7 +63,7 @@ export function createMethod(info: TxInfo): UnsignedTransaction {
       ) {
         throw new Error(
           `Method ${info.method.pallet}::${
-            info.method.name
+          info.method.name
           } expects argument ${arg.toString()}, but got undefined`
         );
       }
@@ -71,6 +71,23 @@ export function createMethod(info: TxInfo): UnsignedTransaction {
       return info.method.args[stringCamelCase(arg.name.toString())];
     })
   ).toHex();
+
+  console.log(
+    'era',
+    createType(registry, 'ExtrinsicEra', {
+      current: info.blockNumber,
+      period: ONE_SECOND * (info.validityPeriod || DEFAULTS.validityPeriod)
+    }).toHex()
+  );
+  console.log(
+    'nonce',
+    createType(registry, 'Compact<Index>', info.nonce).toHex()
+  );
+
+  console.log(
+    'tip:',
+    createType(registry, 'Compact<Balance>', info.tip || DEFAULTS.tip).toHex()
+  );
 
   return {
     address: info.address,

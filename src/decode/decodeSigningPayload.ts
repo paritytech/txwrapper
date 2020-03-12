@@ -8,13 +8,39 @@ import { setSS58Format } from '@polkadot/util-crypto';
 import {
   BLOCKTIME,
   EXTRINSIC_VERSION,
-  getRegistry,
-  KUSAMA_SS58_FORMAT,
+  Options,
+  sanitizeOptions,
   toTxMethod,
   TxInfo
 } from '../util';
 
 export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
+
+/**
+ * Parse the transaction information from a signing payload.
+ *
+ * @param signingPayload - The signing payload, in hex.
+ * @param options - Runtime-specific data used for decoding the transaction.
+ */
+export function decodeSigningPayload(
+  signingPayload: string,
+  options: Options
+): DecodedSigningPayload;
+
+/**
+ * Parse the transaction information from a signing payload.
+ *
+ * @deprecated Prefer passing an `options` object as second argument.
+ * @param signingPayload - The signing payload, in hex.
+ * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
+ * retrieved via the RPC call `state_getMetadata`.
+ * @param ss58Format - The SS-58 address encoding to return.
+ */
+export function decodeSigningPayload(
+  signingPayload: string,
+  metadataRpc: string,
+  ss58Format?: number
+): DecodedSigningPayload;
 
 /**
  * Parse the transaction information from a signing payload.
@@ -26,11 +52,15 @@ export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
  */
 export function decodeSigningPayload(
   signingPayload: string,
-  metadataRpc: string,
-  ss58Format: number = KUSAMA_SS58_FORMAT
+  metadataOrOptions: string | Options,
+  _ss58Format?: number
 ): DecodedSigningPayload {
-  const registry = getRegistry();
-  registry.setMetadata(new Metadata(registry, metadataRpc));
+  const { metadata, registry, ss58Format } = sanitizeOptions(
+    metadataOrOptions,
+    _ss58Format
+  );
+
+  registry.setMetadata(new Metadata(registry, metadata));
   setSS58Format(ss58Format);
 
   const payload = createType(registry, 'ExtrinsicPayload', signingPayload, {
@@ -42,7 +72,7 @@ export function decodeSigningPayload(
   return {
     blockHash: payload.blockHash.toHex(),
     genesisHash: payload.genesisHash.toHex(),
-    metadataRpc,
+    metadataRpc: metadata,
     method,
     nonce: payload.nonce.toNumber(),
     specVersion: payload.specVersion.toNumber(),

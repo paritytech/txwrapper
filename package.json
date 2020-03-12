@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Helper funtions for offline transaction generation.",
   "files": [
@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@polkadot/api": "^1.5.1"
+    "@polkadot/api": "^1.6.1"
   },
   "devDependencies": {
     "@amaurymartiny/config": "^1.0.10",
