@@ -46,7 +46,7 @@ Decoded Transaction
   Amount: 12
 ```
 
-## Offline vs Online
+## Offline vs. Online
 
 In `./index.ts`, the `rpcToNode` function is the only function that needs to be called online. Everything else can be performed offline. In particular, this example shows how to perform the following offline:
 
