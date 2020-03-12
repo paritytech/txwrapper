@@ -135,7 +135,7 @@ async function main(): Promise<void> {
   );
 
   // Construct the signing payload from an unsigned transaction.
-  const signingPayload = createSigningPayload(unsigned);
+  const signingPayload = createSigningPayload(unsigned, { registry });
   console.log(`\nPayload to Sign: ${signingPayload}`);
 
   // Decode the information from a signing payload.
@@ -154,7 +154,7 @@ async function main(): Promise<void> {
   console.log(`\nSignature: ${signature}`);
 
   // Serialize a signed transaction.
-  const tx = createSignedTx(unsigned, signature);
+  const tx = createSignedTx(unsigned, signature, { registry });
   console.log(`\nTransaction to Submit: ${tx}`);
 
   // Derive the tx hash of a signed transaction offline.
