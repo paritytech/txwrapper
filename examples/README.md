@@ -48,7 +48,7 @@ Decoded Transaction
 
 ## Offline vs Online
 
-In `./index.ts`, the only online parts of the scripts are all using the `rpcToNode` function. Everything else can be performed offline. In particular, this example shows how to perform offline:
+In `./index.ts`, the `rpcToNode` function is the only function that needs to be called online. Everything else can be performed offline. In particular, this example shows how to perform the following offline:
 
 - generate a tx
 - create its signing payload
