@@ -4,7 +4,7 @@ Here's a mini-tutorial on how `txwrapper` can interact with a Substrate chain. W
 
 ## Get Started
 
-1. Run a Substrate dev chain.
+1. Fetch the latest Substrate from https://github.com/paritytech/substrate. Follow instructions to build it, and start a dev chain.
 
 ```bash
 substrate --dev

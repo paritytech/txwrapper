@@ -9,7 +9,7 @@ import { AnyJson } from '@polkadot/types/types';
 import { stringCamelCase } from '@polkadot/util';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from './constants';
-import { getRegistry } from './registry';
+import { getRegistry } from './options';
 import { BaseTxInfo, UnsignedTransaction } from './types';
 
 /**

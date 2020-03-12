@@ -75,9 +75,6 @@ function signWith(
  */
 async function main(): Promise<void> {
   const registry = new TypeRegistry();
-  registry.register({
-    Address: 'AccountId'
-  });
 
   // Wait for the promise to resolve async WASM
   await cryptoWaitReady();
@@ -150,7 +147,7 @@ async function main(): Promise<void> {
     `  Amount: ${payloadInfo.method.args.value}`
   );
 
-  // Sign a payload.
+  // Sign a payload. This operation should be performed on an offline device.
   const signature = signWith(registry, alice, signingPayload);
   console.log(`\nSignature: ${signature}`);
 
