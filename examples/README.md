@@ -50,8 +50,8 @@ Decoded Transaction
 
 In `./index.ts`, the `rpcToNode` function is the only function that needs to be called online. Everything else can be performed offline. In particular, this example shows how to perform the following offline:
 
-- generate a tx
-- create its signing payload
-- sign the signing payload
-- derive the tx hash
-- decoding at various levels of the tx lifecycle
+- Generate a tx
+- Create its signing payload
+- Sign the signing payload
+- Derive the tx hash
+- Decode at various levels of the tx lifecycle
