@@ -2,9 +2,24 @@
 
 # @substrate/txwrapper
 
-# @substrate/txwrapper
+<br /><br />
 
-Helper funtions for offline transaction generation.
+<h1 align="center">@substrate/txwrapper</h1>
+<h4 align="center">Helper funtions for offline transaction generation.</h4>
+
+<p align="center">
+  <a href="https://github.com/paritytech/txwrapper/actions">
+    <img alt="Github Actions" src="https://github.com/paritytech/txwrapper/workflows/pr/badge.svg" />
+  </a>
+  <a href="https://opensource.org/licenses/Apache-2.0">
+    <img alt="apache-2.0" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" />
+  </a>
+  <a href="https://david-dm.org/paritytech/txwrapper">
+    <img alt="david-dm" src="https://img.shields.io/david/paritytech/txwrapper.svg" />
+  </a>
+</p>
+
+<br /><br />
 
 ## Get Started
 
@@ -15,12 +30,33 @@ yarn add @substrate/txwrapper
 In a JS file:
 
 ```typescript
-import { importPrivateKey } from '@substrate/txwrapper';
+import {
+  createSignedTx,
+  createSigningPayload,
+  methods
+} from '@substrate/txwrapper';
 
-console.log(importPrivateKey('0x...').address);
+const unsigned = methods.balance.transfer(
+  {
+    dest: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP',
+    value: 100
+  },
+  {
+    // Additional information needed to construct the transaction offline.
+  }
+);
+const signingPayload = createSigningPayload(unsigned);
+
+// On your offline device, sign the payload.
+const signature = myOfflineSigning(signingPayload);
+
+// `tx` is ready to be broadcasted.
+const tx = createSignedTx(unsigned, signature);
 ```
 
-Go to [documentation](https://github.com/paritytech/txwrapper/tree/master/docs/globals.md) for all the functions.
+Have a look at the [example](./examples/index.ts) to see how you can perform the whole lifecycle of a transaction, from generation to signing to broadcast.
+
+Go to [documentation](https://github.com/paritytech/txwrapper/tree/master/docs/globals.md) to see all available functions.
 
 ## Contribute
 

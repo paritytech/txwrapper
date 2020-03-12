@@ -7,5 +7,8 @@ export * from './deriveAddress';
 export * from './getTxHash';
 export * from './importPrivateKey';
 export * from './methods';
+export * from './util/constants';
+export * from './util/method';
+export * from './util/types';
 
 export { methods };

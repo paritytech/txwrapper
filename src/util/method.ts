@@ -9,7 +9,7 @@ import { AnyJson } from '@polkadot/types/types';
 import { stringCamelCase } from '@polkadot/util';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from './constants';
-import { getRegistry } from './registry';
+import { getRegistry } from './options';
 import { BaseTxInfo, UnsignedTransaction } from './types';
 
 /**
@@ -21,7 +21,7 @@ const DEFAULTS = {
    */
   tip: 0,
   /**
-   * Contrusct a mortal extrinsic of ~5 minutes
+   * Construct a mortal extrinsic of ~5 minutes
    */
   validityPeriod: 5 * 60
 };

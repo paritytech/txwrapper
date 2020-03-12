@@ -9,7 +9,7 @@ import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import * as methods from '../methods';
-import { getRegistry } from './registry';
+import { getRegistry } from './options';
 import { UnsignedTransaction } from './types';
 
 export { metadataRpc };
