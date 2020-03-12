@@ -20,7 +20,7 @@
 
 • **targets**: *Array‹string›*
 
-*Defined in [src/methods/staking/nominate.ts:15](https://github.com/paritytech/txwrapper/blob/ba35923/src/methods/staking/nominate.ts#L15)*
+*Defined in [src/methods/staking/nominate.ts:15](https://github.com/paritytech/txwrapper/blob/beed255/src/methods/staking/nominate.ts#L15)*
 
 The SS-58 encoded addresses of the targets you wish to nominate. A maximum of 16
 nominations are allowed.
