@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/paritytech/txwrapper/compare/v1.1.1...v1.2.0) (2020-03-12)
+
+
+### Features
+
+* Pass options object as second argument in decode* ([#88](https://github.com/paritytech/txwrapper/issues/88)) ([97ccc31](https://github.com/paritytech/txwrapper/commit/97ccc31bcf62142e215085e107073ba2e085c9cb))
+
 ### [1.1.1](https://github.com/paritytech/txwrapper/compare/v1.1.0...v1.1.1) (2020-03-11)
 
 
