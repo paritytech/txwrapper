@@ -20,6 +20,6 @@
 
 • **proxy**: *string*
 
-*Defined in [src/methods/democracy/deactivateProxy.ts:12](https://github.com/paritytech/txwrapper/blob/32e6680/src/methods/democracy/deactivateProxy.ts#L12)*
+*Defined in [src/methods/democracy/deactivateProxy.ts:12](https://github.com/paritytech/txwrapper/blob/ba35923/src/methods/democracy/deactivateProxy.ts#L12)*
 
 The address of the proxy to remove, SS-58 encoded.
