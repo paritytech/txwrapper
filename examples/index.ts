@@ -75,7 +75,7 @@ function signWith(
  */
 async function main(): Promise<void> {
   // If you're using your own chain with custom types, add these types here. We
-  // are using a vanilla Substrate chain, no no type overriding is needed.
+  // are using a vanilla Substrate chain, so no type overriding is needed.
   const registry = new TypeRegistry();
 
   // Wait for the promise to resolve async WASM
