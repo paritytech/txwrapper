@@ -9,6 +9,7 @@ export * from './importPrivateKey';
 export * from './methods';
 export * from './util/constants';
 export * from './util/method';
+export * from './util/options';
 export * from './util/types';
 
 export { methods };

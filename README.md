@@ -4,6 +4,9 @@
 <h4 align="center">Helper funtions for offline transaction generation.</h4>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/@amaurymartiny/now-middleware">
+    <img alt="npm" src="https://img.shields.io/npm/v/@amaurymartiny/now-middleware.svg" />
+  </a>
   <a href="https://github.com/paritytech/txwrapper/actions">
     <img alt="Github Actions" src="https://github.com/paritytech/txwrapper/workflows/pr/badge.svg" />
   </a>
