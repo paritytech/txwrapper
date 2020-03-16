@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/staking/bondExtra"](_methods_staking_bondextra_.md)
 
-# External module: "methods/staking/bondExtra"
+# Module: "methods/staking/bondExtra"
 
 ## Index
 
@@ -18,7 +18,7 @@
 
 ▸ **bondExtra**(`args`: [StakingBondExtraArgs](../interfaces/_methods_staking_bondextra_.stakingbondextraargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/bondExtra.ts:21](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/staking/bondExtra.ts#L21)*
+*Defined in [src/methods/staking/bondExtra.ts:21](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/staking/bondExtra.ts#L21)*
 
 Add some extra amount that have appeared in the stash `free_balance` into
 the balance up for staking.

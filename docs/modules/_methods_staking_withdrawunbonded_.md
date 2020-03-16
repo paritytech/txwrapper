@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/staking/withdrawUnbonded"](_methods_staking_withdrawunbonded_.md)
 
-# External module: "methods/staking/withdrawUnbonded"
+# Module: "methods/staking/withdrawUnbonded"
 
 ## Index
 
@@ -14,7 +14,7 @@
 
 ▸ **withdrawUnbonded**(`args`: object, `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/withdrawUnbonded.ts:8](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/staking/withdrawUnbonded.ts#L8)*
+*Defined in [src/methods/staking/withdrawUnbonded.ts:8](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/staking/withdrawUnbonded.ts#L8)*
 
 Remove any unlocked chunks from the `unlocking` queue from our management.
 

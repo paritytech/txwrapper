@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/democracy/proxyVote"](_methods_democracy_proxyvote_.md)
 
-# External module: "methods/democracy/proxyVote"
+# Module: "methods/democracy/proxyVote"
 
 ## Index
 
@@ -18,7 +18,7 @@
 
 ▸ **proxyVote**(`args`: [DemocracyProxyVoteArgs](../interfaces/_methods_democracy_proxyvote_.democracyproxyvoteargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/proxyVote.ts:26](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/democracy/proxyVote.ts#L26)*
+*Defined in [src/methods/democracy/proxyVote.ts:26](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/democracy/proxyVote.ts#L26)*
 
 Vote in a referendum on behalf of a stash.
 

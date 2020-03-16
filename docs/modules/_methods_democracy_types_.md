@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/democracy/types"](_methods_democracy_types_.md)
 
-# External module: "methods/democracy/types"
+# Module: "methods/democracy/types"
 
 ## Index
 
@@ -14,7 +14,7 @@
 
 Ƭ **Vote**: *object*
 
-*Defined in [src/methods/democracy/types.ts:4](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/democracy/types.ts#L4)*
+*Defined in [src/methods/democracy/types.ts:4](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/democracy/types.ts#L4)*
 
 A vote in a referendum
 

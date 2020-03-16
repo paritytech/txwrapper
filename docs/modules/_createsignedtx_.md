@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["createSignedTx"](_createsignedtx_.md)
 
-# External module: "createSignedTx"
+# Module: "createSignedTx"
 
 ## Index
 
@@ -14,7 +14,7 @@
 
 ▸ **createSignedTx**(`unsigned`: [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md), `signature`: string, `options?`: Partial‹[Options](../interfaces/_util_options_.options.md)›): *string*
 
-*Defined in [src/createSignedTx.ts:14](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/createSignedTx.ts#L14)*
+*Defined in [src/createSignedTx.ts:14](https://github.com/paritytech/txwrapper/blob/1b54171/src/createSignedTx.ts#L14)*
 
 Serialize a signed transaction in a format that can be submitted over the
 Node RPC Interface from the signing payload and signature produced by the

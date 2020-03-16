@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/staking/payoutValidator"](_methods_staking_payoutvalidator_.md)
 
-# External module: "methods/staking/payoutValidator"
+# Module: "methods/staking/payoutValidator"
 
 ## Index
 
@@ -18,7 +18,7 @@
 
 ▸ **payoutValidator**(`args`: [StakingPayoutValidatorArgs](../interfaces/_methods_staking_payoutvalidator_.stakingpayoutvalidatorargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/payoutValidator.ts:25](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/staking/payoutValidator.ts#L25)*
+*Defined in [src/methods/staking/payoutValidator.ts:25](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/staking/payoutValidator.ts#L25)*
 
 Make one validator's payout for one era.
 WARNING: once an era is payed for a validator such validator can't claim the

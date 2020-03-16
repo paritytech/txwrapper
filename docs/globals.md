@@ -4,7 +4,7 @@
 
 ## Index
 
-### External modules
+### Modules
 
 * ["createSignedTx"](modules/_createsignedtx_.md)
 * ["createSigningPayload"](modules/_createsigningpayload_.md)

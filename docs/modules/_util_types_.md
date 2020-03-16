@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["util/types"](_util_types_.md)
 
-# External module: "util/types"
+# Module: "util/types"
 
 ## Index
 

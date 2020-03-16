@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/democracy/openProxy"](_methods_democracy_openproxy_.md)
 
-# External module: "methods/democracy/openProxy"
+# Module: "methods/democracy/openProxy"
 
 ## Index
 
@@ -18,7 +18,7 @@
 
 ▸ **openProxy**(`args`: [DemocracyOpenProxyArgs](../interfaces/_methods_democracy_openproxy_.democracyopenproxyargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/openProxy.ts:20](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/democracy/openProxy.ts#L20)*
+*Defined in [src/methods/democracy/openProxy.ts:20](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/democracy/openProxy.ts#L20)*
 
 Become a proxy. This must be called prior to a later `activateProxy`.
 

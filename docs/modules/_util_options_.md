@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["util/options"](_util_options_.md)
 
-# External module: "util/options"
+# Module: "util/options"
 
 ## Index
 
@@ -23,7 +23,7 @@
 
 ▸ **getRegistry**(`specName`: "kusama", `specVersion`: number): *TypeRegistry*
 
-*Defined in [src/util/options.ts:15](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/util/options.ts#L15)*
+*Defined in [src/util/options.ts:15](https://github.com/paritytech/txwrapper/blob/1b54171/src/util/options.ts#L15)*
 
 Create a specific TypeRegistry for a current chain. The reason we have this
 is, depending on different runtime versions, we have different types (e.g.:
@@ -47,7 +47,7 @@ ___
 
 ▸ **sanitizeOptions**(`metadataOrOptions`: string | [Options](../interfaces/_util_options_.options.md), `ss58Format`: number): *Required‹[Options](../interfaces/_util_options_.options.md)›*
 
-*Defined in [src/util/options.ts:68](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/util/options.ts#L68)*
+*Defined in [src/util/options.ts:68](https://github.com/paritytech/txwrapper/blob/1b54171/src/util/options.ts#L68)*
 
 Sanitize the options that the user pass in. In particular, the second
 argument can either be a string (the metadata) or an Options object. Also
@@ -68,16 +68,16 @@ Name | Type | Default | Description |
 
 ### ▪ **defaultOptions**: *object*
 
-*Defined in [src/util/options.ts:55](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/util/options.ts#L55)*
+*Defined in [src/util/options.ts:55](https://github.com/paritytech/txwrapper/blob/1b54171/src/util/options.ts#L55)*
 
 ###  ss58Format
 
 • **ss58Format**: *number* = KUSAMA_SS58_FORMAT
 
-*Defined in [src/util/options.ts:56](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/util/options.ts#L56)*
+*Defined in [src/util/options.ts:56](https://github.com/paritytech/txwrapper/blob/1b54171/src/util/options.ts#L56)*
 
 ###  typeRegistry
 
 • **typeRegistry**: *TypeRegistry‹›* = getRegistry()
 
-*Defined in [src/util/options.ts:57](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/util/options.ts#L57)*
+*Defined in [src/util/options.ts:57](https://github.com/paritytech/txwrapper/blob/1b54171/src/util/options.ts#L57)*
