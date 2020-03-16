@@ -25,7 +25,7 @@
     eslint-plugin-simple-import-sort "^5.0.0"
     prettier "^1.19.1"
 
-"@amaurymartiny/tsconfig@^1.0.11", "@amaurymartiny/tsconfig@^1.0.9":
+"@amaurymartiny/tsconfig@^1.0.11":
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@amaurymartiny/tsconfig/-/tsconfig-1.0.11.tgz#ca764edc34cf9d3ffd6e37f90b12dbd4f5217496"
   integrity sha512-NynnIEqB+8nhw4Cu/omsJfpDUtHurj1NimXFaAFD4c2O8O0aia79B9bNGhTG5cmaYSkPxxG8Q3MZQnL1xxulUg==

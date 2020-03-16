@@ -13,7 +13,7 @@
   },
   "repository": "https://github.com/paritytech/txwrapper",
   "scripts": {
-    "build": "rimraf lib/ && tsc",
+    "build": "rimraf lib/ && tsc -p tsconfig.build.json",
     "deploy": "yarn build && standard-version",
     "docs": "typedoc",
     "lint": "tsc --noEmit && eslint . --ext ts",
@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@amaurymartiny/config": "^1.0.10",
-    "@amaurymartiny/tsconfig": "^1.0.9",
     "@types/jest": "^25.1.1",
     "jest": "^25.1.0",
     "standard-version": "^7.0.1",
