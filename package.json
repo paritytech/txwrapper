@@ -34,6 +34,8 @@
     "typescript": "^3.8.2"
   },
   "resolutions": {
-    "kind-of": ">=6.0.3"
+    "acorn": ">=7.1.1",
+    "kind-of": ">=6.0.3",
+    "minimist": ">=1.2.2"
   }
 }
