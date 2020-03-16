@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/paritytech/txwrapper/compare/v1.2.1...v1.2.2) (2020-03-16)
+
+
+### Bug Fixes
+
+* Let tsc only build src folder ([#95](https://github.com/paritytech/txwrapper/issues/95)) ([c6f2b83](https://github.com/paritytech/txwrapper/commit/c6f2b83bbcbb24f08625710ac646f813a30cda26))
+
 ### [1.2.1](https://github.com/paritytech/txwrapper/compare/v1.2.0...v1.2.1) (2020-03-16)
 
 
