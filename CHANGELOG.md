@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/paritytech/txwrapper/compare/v1.2.0...v1.2.1) (2020-03-16)
+
+
+### Bug Fixes
+
+* Add options to createSignedTx and createSigningPayload ([#91](https://github.com/paritytech/txwrapper/issues/91)) ([d72ac3e](https://github.com/paritytech/txwrapper/commit/d72ac3eaf5e9d613ac053b9bf93491a09cfae64b))
+
 ## [1.2.0](https://github.com/paritytech/txwrapper/compare/v1.1.1...v1.2.0) (2020-03-12)
 
 
