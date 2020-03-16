@@ -5,5 +5,6 @@
     "target": "ES2015",
     "outDir": "lib"
   },
-  "extends": "./node_modules/@amaurymartiny/tsconfig/tsconfig"
+  "extends": "./node_modules/@amaurymartiny/tsconfig/tsconfig",
+  "include": ["./src"]
 }
