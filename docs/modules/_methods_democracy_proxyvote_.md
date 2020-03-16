@@ -18,7 +18,7 @@
 
 ▸ **proxyVote**(`args`: [DemocracyProxyVoteArgs](../interfaces/_methods_democracy_proxyvote_.democracyproxyvoteargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/proxyVote.ts:26](https://github.com/paritytech/txwrapper/blob/beed255/src/methods/democracy/proxyVote.ts#L26)*
+*Defined in [src/methods/democracy/proxyVote.ts:26](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/democracy/proxyVote.ts#L26)*
 
 Vote in a referendum on behalf of a stash.
 

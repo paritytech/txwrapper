@@ -12,9 +12,9 @@
 
 ###  createSigningPayload
 
-▸ **createSigningPayload**(`unsigned`: [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)): *string*
+▸ **createSigningPayload**(`unsigned`: [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md), `options?`: Partial‹[Options](../interfaces/_util_options_.options.md)›): *string*
 
-*Defined in [src/createSigningPayload.ts:11](https://github.com/paritytech/txwrapper/blob/beed255/src/createSigningPayload.ts#L11)*
+*Defined in [src/createSigningPayload.ts:11](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/createSigningPayload.ts#L11)*
 
 Construct the signing payload from an unsigned transaction and export it to
 a remote signer (this is often called "detached signing").
@@ -24,5 +24,6 @@ a remote signer (this is often called "detached signing").
 Name | Type | Description |
 ------ | ------ | ------ |
 `unsigned` | [UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md) | The JSON representing the unsigned transaction.  |
+`options?` | Partial‹[Options](../interfaces/_util_options_.options.md)› | - |
 
 **Returns:** *string*

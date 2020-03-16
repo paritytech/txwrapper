@@ -8,6 +8,9 @@
 <h4 align="center">Helper funtions for offline transaction generation.</h4>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/@substrate/txwrapper">
+    <img alt="npm" src="https://img.shields.io/npm/v/@substrate/txwrapper.svg" />
+  </a>
   <a href="https://github.com/paritytech/txwrapper/actions">
     <img alt="Github Actions" src="https://github.com/paritytech/txwrapper/workflows/pr/badge.svg" />
   </a>
@@ -45,8 +48,8 @@ const unsigned = methods.balance.transfer(
     // Additional information needed to construct the transaction offline.
   }
 );
-const signingPayload = createSigningPayload(unsigned);
 
+const signingPayload = createSigningPayload(unsigned);
 // On your offline device, sign the payload.
 const signature = myOfflineSigning(signingPayload);
 

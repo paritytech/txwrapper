@@ -36,5 +36,4 @@
 * ["methods/vesting/vestOther"](modules/_methods_vesting_vestother_.md)
 * ["util/constants"](modules/_util_constants_.md)
 * ["util/options"](modules/_util_options_.md)
-* ["util/registry"](modules/_util_registry_.md)
 * ["util/types"](modules/_util_types_.md)

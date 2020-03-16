@@ -59,7 +59,8 @@ export const defaultOptions = {
 
 /**
  * Sanitize the options that the user pass in. In particular, the second
- * argument can either be a string (the metadata) or an Options object.
+ * argument can either be a string (the metadata) or an Options object. Also
+ * apply defaults for SS58 prefix and registry to Kusama.
  *
  * @param metadataOrOptions
  * @param ss58Format
