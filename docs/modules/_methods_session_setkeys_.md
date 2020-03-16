@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/session/setKeys"](_methods_session_setkeys_.md)
 
-# External module: "methods/session/setKeys"
+# Module: "methods/session/setKeys"
 
 ## Index
 
@@ -18,7 +18,7 @@
 
 ▸ **setKeys**(`args`: [SessionSetKeysArgs](../interfaces/_methods_session_setkeys_.sessionsetkeysargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/session/setKeys.ts:24](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/session/setKeys.ts#L24)*
+*Defined in [src/methods/session/setKeys.ts:24](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/session/setKeys.ts#L24)*
 
 Sets the session key(s) of the function caller to `key`.
 

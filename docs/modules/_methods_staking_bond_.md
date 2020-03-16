@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/staking/bond"](_methods_staking_bond_.md)
 
-# External module: "methods/staking/bond"
+# Module: "methods/staking/bond"
 
 ## Index
 
@@ -18,7 +18,7 @@
 
 ▸ **bond**(`args`: [StakingBondArgs](../interfaces/_methods_staking_bond_.stakingbondargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/bond.ts:28](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/staking/bond.ts#L28)*
+*Defined in [src/methods/staking/bond.ts:28](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/staking/bond.ts#L28)*
 
 Construct a transaction to bond funds and create a Stash account.
 

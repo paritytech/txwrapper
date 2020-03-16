@@ -1,6 +1,6 @@
 [@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["methods/vesting/vest"](_methods_vesting_vest_.md)
 
-# External module: "methods/vesting/vest"
+# Module: "methods/vesting/vest"
 
 ## Index
 
@@ -14,7 +14,7 @@
 
 ▸ **vest**(`args`: object, `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/vesting/vest.ts:8](https://github.com/paritytech/txwrapper/blob/b8a34ea/src/methods/vesting/vest.ts#L8)*
+*Defined in [src/methods/vesting/vest.ts:8](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/vesting/vest.ts#L8)*
 
 Unlock any vested funds of the sender account.
 
