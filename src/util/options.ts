@@ -1,4 +1,4 @@
-import { createType, TypeRegistry } from '@polkadot/types';
+import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types/known';
 
 import { KUSAMA_SS58_FORMAT } from './constants';
@@ -23,8 +23,8 @@ export function getRegistry(
   registry.register(
     getSpecTypes(
       registry,
-      createType(registry, 'Text'), // Unneeded for now
-      createType(registry, 'RuntimeVersion', {
+      registry.createType('Text'), // Value unneeded for now
+      registry.createType('RuntimeVersion', {
         specName,
         specVersion
       })

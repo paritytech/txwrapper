@@ -3,7 +3,7 @@
  */ /** */
 
 import Metadata from '@polkadot/metadata/Decorated';
-import { createType, createTypeUnsafe, TypeRegistry } from '@polkadot/types';
+import { createTypeUnsafe, TypeRegistry } from '@polkadot/types';
 import { Call } from '@polkadot/types/interfaces';
 import { AnyJson } from '@polkadot/types/types';
 import { stringCamelCase } from '@polkadot/util';
@@ -81,21 +81,21 @@ export function createMethod(
   return {
     address: info.address,
     blockHash: info.blockHash,
-    blockNumber: createType(registry, 'BlockNumber', info.blockNumber).toHex(),
-    era: createType(registry, 'ExtrinsicEra', {
-      current: info.blockNumber,
-      period: ONE_SECOND * (info.validityPeriod || DEFAULTS.validityPeriod)
-    }).toHex(),
+    blockNumber: registry.createType('BlockNumber', info.blockNumber).toHex(),
+    era: registry
+      .createType('ExtrinsicEra', {
+        current: info.blockNumber,
+        period: ONE_SECOND * (info.validityPeriod || DEFAULTS.validityPeriod)
+      })
+      .toHex(),
     genesisHash: info.genesisHash,
     metadataRpc: info.metadataRpc,
     method,
-    nonce: createType(registry, 'Compact<Index>', info.nonce).toHex(),
-    specVersion: createType(registry, 'u32', info.specVersion).toHex(),
-    tip: createType(
-      registry,
-      'Compact<Balance>',
-      info.tip || DEFAULTS.tip
-    ).toHex(),
+    nonce: registry.createType('Compact<Index>', info.nonce).toHex(),
+    specVersion: registry.createType('u32', info.specVersion).toHex(),
+    tip: registry
+      .createType('Compact<Balance>', info.tip || DEFAULTS.tip)
+      .toHex(),
     version: EXTRINSIC_VERSION
   };
 }

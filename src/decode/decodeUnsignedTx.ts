@@ -2,7 +2,7 @@
  * @ignore
  */ /** */
 
-import { createType, Metadata } from '@polkadot/types';
+import { Metadata } from '@polkadot/types';
 import { setSS58Format } from '@polkadot/util-crypto';
 
 import {
@@ -55,25 +55,23 @@ export function decodeUnsignedTx(
   registry.setMetadata(new Metadata(registry, metadata));
   setSS58Format(ss58Format);
 
-  const methodCall = createType(registry, 'Call', unsigned.method);
+  const methodCall = registry.createType('Call', unsigned.method);
   const method = toTxMethod(registry, methodCall);
 
   return {
     address: unsigned.address,
     blockHash: unsigned.blockHash,
-    blockNumber: createType(
-      registry,
-      'BlockNumber',
-      unsigned.blockNumber
-    ).toNumber(),
+    blockNumber: registry
+      .createType('BlockNumber', unsigned.blockNumber)
+      .toNumber(),
     genesisHash: unsigned.genesisHash,
     metadataRpc: metadata,
     method,
-    nonce: createType(registry, 'Compact<Index>', unsigned.nonce).toNumber(),
-    specVersion: createType(registry, 'u32', unsigned.specVersion).toNumber(),
-    tip: createType(registry, 'Compact<Balance>', unsigned.tip).toNumber(),
+    nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
+    specVersion: registry.createType('u32', unsigned.specVersion).toNumber(),
+    tip: registry.createType('Compact<Balance>', unsigned.tip).toNumber(),
     validityPeriod:
-      createType(registry, 'MortalEra', unsigned.era).period.toNumber() *
+      registry.createType('MortalEra', unsigned.era).period.toNumber() *
       BLOCKTIME
   };
 }

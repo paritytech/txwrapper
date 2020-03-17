@@ -2,7 +2,7 @@
  * @ignore
  */ /** */
 
-import { createType, Metadata } from '@polkadot/types';
+import { Metadata } from '@polkadot/types';
 import { setSS58Format } from '@polkadot/util-crypto';
 
 import {
@@ -63,10 +63,10 @@ export function decodeSigningPayload(
   registry.setMetadata(new Metadata(registry, metadata));
   setSS58Format(ss58Format);
 
-  const payload = createType(registry, 'ExtrinsicPayload', signingPayload, {
+  const payload = registry.createType('ExtrinsicPayload', signingPayload, {
     version: EXTRINSIC_VERSION
   });
-  const methodCall = createType(registry, 'Call', payload.method);
+  const methodCall = registry.createType('Call', payload.method);
   const method = toTxMethod(registry, methodCall);
 
   return {
