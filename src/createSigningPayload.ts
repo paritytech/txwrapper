@@ -1,5 +1,3 @@
-import { createType } from '@polkadot/types';
-
 import { Options, sanitizeOptions, UnsignedTransaction } from './util';
 
 /**
@@ -17,7 +15,9 @@ export function createSigningPayload(
     ...options
   });
 
-  return createType(registry, 'ExtrinsicPayload', unsigned, {
-    version: unsigned.version
-  }).toHex();
+  return registry
+    .createType('ExtrinsicPayload', unsigned, {
+      version: unsigned.version
+    })
+    .toHex();
 }

@@ -4,7 +4,6 @@
 
 import { Keyring } from '@polkadot/api';
 import metadataRpc from '@polkadot/metadata/Metadata/v11/static';
-import { createType } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
@@ -182,14 +181,11 @@ export async function signWithAlice(signingPayload: string): Promise<string> {
   const keyring = new Keyring({ type: 'ed25519' });
   const alice = keyring.addFromUri('//Alice', { name: 'Alice default' });
 
-  const { signature } = createType(
-    registry,
-    'ExtrinsicPayload',
-    signingPayload,
-    {
+  const { signature } = registry
+    .createType('ExtrinsicPayload', signingPayload, {
       version: TRANSACTION_VERSION
-    }
-  ).sign(alice);
+    })
+    .sign(alice);
 
   return signature;
 }

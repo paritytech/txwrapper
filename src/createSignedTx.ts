@@ -1,4 +1,4 @@
-import { createType, Metadata } from '@polkadot/types';
+import { Metadata } from '@polkadot/types';
 
 import { Options, sanitizeOptions, UnsignedTransaction } from './util';
 
@@ -22,8 +22,7 @@ export function createSignedTx(
   });
   registry.setMetadata(new Metadata(registry, metadata));
 
-  const extrinsic = createType(
-    registry,
+  const extrinsic = registry.createType(
     'Extrinsic',
     { method: unsigned.method },
     { version: unsigned.version }

@@ -1,5 +1,5 @@
 import { Keyring } from '@polkadot/api';
-import { createType, TypeRegistry } from '@polkadot/types';
+import { TypeRegistry } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
@@ -58,14 +58,11 @@ function signWith(
   pair: KeyringPair,
   signingPayload: string
 ): string {
-  const { signature } = createType(
-    registry,
-    'ExtrinsicPayload',
-    signingPayload,
-    {
+  const { signature } = registry
+    .createType('ExtrinsicPayload', signingPayload, {
       version: TRANSACTION_VERSION
-    }
-  ).sign(pair);
+    })
+    .sign(pair);
 
   return signature;
 }
@@ -109,11 +106,9 @@ async function main(): Promise<void> {
     {
       address: deriveAddress(alice.publicKey, 42),
       blockHash,
-      blockNumber: createType(
-        registry,
-        'BlockNumber',
-        block.header.number
-      ).toNumber(),
+      blockNumber: registry
+        .createType('BlockNumber', block.header.number)
+        .toNumber(),
       genesisHash,
       metadataRpc,
       nonce: 1, // Assuming this is Alice's first tx on the chain
