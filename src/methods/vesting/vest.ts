@@ -10,8 +10,8 @@ export function vest(args: {}, info: BaseTxInfo): UnsignedTransaction {
     method: {
       args,
       name: 'vest',
-      pallet: 'vesting'
+      pallet: 'vesting',
     },
-    ...info
+    ...info,
   });
 }

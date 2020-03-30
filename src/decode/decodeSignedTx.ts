@@ -11,7 +11,7 @@ import {
   Options,
   sanitizeOptions,
   toTxMethod,
-  TxInfo
+  TxInfo,
 } from '../util';
 
 export type DecodedSignedTx = Omit<
@@ -59,7 +59,7 @@ export function decodeSignedTx(
   setSS58Format(ss58Format);
 
   const tx = registry.createType('Extrinsic', hexToU8a(signedTx), {
-    isSigned: true
+    isSigned: true,
   });
   const methodCall = registry.createType('Call', tx.method);
   const method = toTxMethod(registry, methodCall);
@@ -70,6 +70,6 @@ export function decodeSignedTx(
     method,
     nonce: tx.nonce.toNumber(),
     tip: tx.tip.toNumber(),
-    validityPeriod: tx.era.asMortalEra.period.toNumber() * BLOCKTIME
+    validityPeriod: tx.era.asMortalEra.period.toNumber() * BLOCKTIME,
   };
 }

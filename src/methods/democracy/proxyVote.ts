@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  UnsignedTransaction
+  UnsignedTransaction,
 } from '../../util';
 import { Vote } from './types';
 
@@ -31,8 +31,8 @@ export function proxyVote(
     method: {
       args,
       name: 'proxyVote',
-      pallet: 'democracy'
+      pallet: 'democracy',
     },
-    ...info
+    ...info,
   });
 }

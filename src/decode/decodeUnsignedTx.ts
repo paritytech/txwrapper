@@ -11,7 +11,7 @@ import {
   sanitizeOptions,
   toTxMethod,
   TxInfo,
-  UnsignedTransaction
+  UnsignedTransaction,
 } from '../util';
 
 export type DecodedUnsignedTx = TxInfo;
@@ -72,6 +72,6 @@ export function decodeUnsignedTx(
     tip: registry.createType('Compact<Balance>', unsigned.tip).toNumber(),
     validityPeriod:
       registry.createType('MortalEra', unsigned.era).period.toNumber() *
-      BLOCKTIME
+      BLOCKTIME,
   };
 }

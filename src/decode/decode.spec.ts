@@ -5,7 +5,7 @@ import {
   metadataRpc,
   signWithAlice,
   TEST_BASE_TX_INFO,
-  TEST_METHOD_ARGS
+  TEST_METHOD_ARGS,
 } from '../util';
 import { decode } from './decode';
 import { decodeBaseTxInfo as decodeSignedBase } from './decodeSignedTx.spec';
@@ -14,7 +14,7 @@ import { decodeBaseTxInfo as decodeSigningBase } from './decodeSigningPayload.sp
 import { decodeBaseTxInfo as decodeUnsignedBase } from './decodeUnsignedTx.spec';
 
 describe('decode', () => {
-  it('should decode signedTx', async done => {
+  it('should decode signedTx', async (done) => {
     const unsigned = balances.transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO
@@ -47,7 +47,7 @@ describe('decode', () => {
     expect(txInfo.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
   });
 
-  it('should decode signing payload', done => {
+  it('should decode signing payload', (done) => {
     const unsigned = balances.transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO

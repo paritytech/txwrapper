@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  UnsignedTransaction
+  UnsignedTransaction,
 } from '../../util';
 import { Vote } from './types';
 
@@ -31,8 +31,8 @@ export function vote(
     method: {
       args,
       name: 'vote',
-      pallet: 'democracy'
+      pallet: 'democracy',
     },
-    ...info
+    ...info,
   });
 }

@@ -12,12 +12,12 @@ export function createSigningPayload(
 ): string {
   const { registry } = sanitizeOptions({
     metadata: unsigned.metadataRpc,
-    ...options
+    ...options,
   });
 
   return registry
     .createType('ExtrinsicPayload', unsigned, {
-      version: unsigned.version
+      version: unsigned.version,
     })
     .toHex();
 }

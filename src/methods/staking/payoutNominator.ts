@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  UnsignedTransaction
+  UnsignedTransaction,
 } from '../../util';
 
 export interface StakingPayoutNominatorArgs extends Args {
@@ -37,8 +37,8 @@ export function payoutNominator(
     method: {
       args,
       name: 'payoutNominator',
-      pallet: 'staking'
+      pallet: 'staking',
     },
-    ...info
+    ...info,
   });
 }

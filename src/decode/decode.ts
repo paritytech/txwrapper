@@ -2,7 +2,7 @@ import { Options, sanitizeOptions, UnsignedTransaction } from '../util';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 import {
   DecodedSigningPayload,
-  decodeSigningPayload
+  decodeSigningPayload,
 } from './decodeSigningPayload';
 import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
 

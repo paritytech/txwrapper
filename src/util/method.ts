@@ -23,7 +23,7 @@ const DEFAULTS = {
   /**
    * Construct a mortal extrinsic of ~5 minutes
    */
-  validityPeriod: 5 * 60
+  validityPeriod: 5 * 60,
 };
 
 export type Args = Record<string, AnyJson>;
@@ -57,13 +57,13 @@ export function createMethod(
 ): UnsignedTransaction {
   const { metadata: metadataRpc, registry } = sanitizeOptions({
     metadata: info.metadataRpc,
-    ...options
+    ...options,
   });
   const metadata = new Metadata(registry, metadataRpc);
 
   const methodFunction = metadata.tx[info.method.pallet][info.method.name];
   const method = methodFunction(
-    ...methodFunction.meta.args.map(arg => {
+    ...methodFunction.meta.args.map((arg) => {
       if (
         info.method.args[stringCamelCase(arg.name.toString())] === undefined
       ) {
@@ -85,7 +85,7 @@ export function createMethod(
     era: registry
       .createType('ExtrinsicEra', {
         current: info.blockNumber,
-        period: ONE_SECOND * (info.validityPeriod || DEFAULTS.validityPeriod)
+        period: ONE_SECOND * (info.validityPeriod || DEFAULTS.validityPeriod),
       })
       .toHex(),
     genesisHash: info.genesisHash,
@@ -96,7 +96,7 @@ export function createMethod(
     tip: registry
       .createType('Compact<Balance>', info.tip || DEFAULTS.tip)
       .toHex(),
-    version: EXTRINSIC_VERSION
+    version: EXTRINSIC_VERSION,
   };
 }
 
@@ -113,7 +113,7 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
   // Mapping of argName->argValue
   const args = Object.keys(argsDef).reduce((accumulator, key, index) => {
     const codec = createTypeUnsafe(registry, argsDef[key], [
-      method.args[index]
+      method.args[index],
     ]);
 
     accumulator[stringCamelCase(key)] = codec.toJSON();
@@ -123,6 +123,6 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
   return {
     args,
     name: method.methodName,
-    pallet: method.sectionName
+    pallet: method.sectionName,
   };
 }

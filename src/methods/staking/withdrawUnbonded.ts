@@ -13,8 +13,8 @@ export function withdrawUnbonded(
     method: {
       args,
       name: 'withdrawUnbonded',
-      pallet: 'staking'
+      pallet: 'staking',
     },
-    ...info
+    ...info,
   });
 }

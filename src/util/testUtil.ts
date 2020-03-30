@@ -27,7 +27,7 @@ export const TEST_BASE_TX_INFO = {
   nonce: 2,
   specVersion: 1019,
   tip: 0,
-  validityPeriod: 240 * 60
+  validityPeriod: 240 * 60,
 };
 
 /**
@@ -36,7 +36,7 @@ export const TEST_BASE_TX_INFO = {
  * @param unsigned - Unsigned transaction to test
  */
 export function testBaseTxInfo(unsigned: UnsignedTransaction): void {
-  (['address', 'blockHash', 'genesisHash'] as const).forEach(key =>
+  (['address', 'blockHash', 'genesisHash'] as const).forEach((key) =>
     expect(unsigned[key]).toBe(TEST_BASE_TX_INFO[key])
   );
   expect(unsigned.blockNumber).toBe('0x0041a58e');
@@ -55,9 +55,9 @@ export function getAllMethods(): [string, string][] {
   return Object.keys(methods)
     .reduce((acc, pallet) => {
       return acc.concat(
-        Object.keys(methods[pallet as keyof typeof methods]).map(name => [
+        Object.keys(methods[pallet as keyof typeof methods]).map((name) => [
           pallet,
-          name
+          name,
         ])
       );
     }, [] as [string, string][])
@@ -80,38 +80,38 @@ export const TEST_METHOD_ARGS = {
   balances: {
     transfer: {
       dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
-      value: 12
+      value: 12,
     },
     transferKeepAlive: {
       dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
-      value: 12
-    }
+      value: 12,
+    },
   },
   democracy: {
     activateProxy: {
-      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
     },
     closeProxy: {},
     deactivateProxy: {
-      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
     },
     openProxy: {
-      target: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+      target: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
     },
     proxyVote: {
       refIndex: 0,
       vote: {
         aye: true,
-        conviction: 'Locked1x'
-      }
+        conviction: 'Locked1x',
+      },
     },
     vote: {
       refIndex: 0,
       vote: {
         aye: true,
-        conviction: 'Locked1x'
-      }
-    }
+        conviction: 'Locked1x',
+      },
+    },
   },
   session: {
     setKeys: {
@@ -120,52 +120,52 @@ export const TEST_METHOD_ARGS = {
         'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
         'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
         'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
-        'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+        'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
       ],
-      proof: '0x'
-    }
+      proof: '0x',
+    },
   },
   staking: {
     bond: {
       controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
       value: 100,
-      payee: 'Staked'
+      payee: 'Staked',
     },
     bondExtra: {
-      maxAdditional: 100
+      maxAdditional: 100,
     },
     chill: {},
     nominate: {
       targets: [
         'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
-        'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
-      ]
+        'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
+      ],
     },
     payoutNominator: {
       era: 100,
       validators: [['FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', 2]] as [
         string,
         number
-      ][]
+      ][],
     },
     payoutValidator: {
-      era: 100
+      era: 100,
     },
     setController: {
-      controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP' // seed "//Bob"
+      controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
     },
     unbond: { value: 100 },
     validate: {
-      prefs: { commission: 5 }
+      prefs: { commission: 5 },
     },
-    withdrawUnbonded: {}
+    withdrawUnbonded: {},
   },
   vesting: {
     vest: {},
     vestOther: {
-      target: 'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P' // seed "//Charlie"
-    }
-  }
+      target: 'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
+    },
+  },
 };
 
 /**
@@ -183,7 +183,7 @@ export async function signWithAlice(signingPayload: string): Promise<string> {
 
   const { signature } = registry
     .createType('ExtrinsicPayload', signingPayload, {
-      version: TRANSACTION_VERSION
+      version: TRANSACTION_VERSION,
     })
     .sign(alice);
 

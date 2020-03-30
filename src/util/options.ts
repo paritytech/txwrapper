@@ -26,7 +26,7 @@ export function getRegistry(
       registry.createType('Text'), // Value unneeded for now
       registry.createType('RuntimeVersion', {
         specName,
-        specVersion
+        specVersion,
       })
     )
   );
@@ -54,7 +54,7 @@ export interface Options {
 
 export const defaultOptions = {
   ss58Format: KUSAMA_SS58_FORMAT,
-  typeRegistry: getRegistry()
+  typeRegistry: getRegistry(),
 };
 
 /**
@@ -75,13 +75,13 @@ export function sanitizeOptions(
     return {
       metadata: metadataOrOptions,
       registry: getRegistry(),
-      ss58Format
+      ss58Format,
     };
   } else {
     return {
       metadata: metadataOrOptions.metadata,
       registry: metadataOrOptions.registry || getRegistry(),
-      ss58Format: metadataOrOptions.ss58Format || KUSAMA_SS58_FORMAT
+      ss58Format: metadataOrOptions.ss58Format || KUSAMA_SS58_FORMAT,
     };
   }
 }
