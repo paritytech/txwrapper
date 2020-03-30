@@ -18,7 +18,7 @@ export function createSignedTx(
 ): string {
   const { metadata, registry } = sanitizeOptions({
     ...options,
-    metadata: unsigned.metadataRpc
+    metadata: unsigned.metadataRpc,
   });
   registry.setMetadata(new Metadata(registry, metadata));
 

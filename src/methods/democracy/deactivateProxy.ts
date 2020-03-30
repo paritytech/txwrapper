@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  UnsignedTransaction
+  UnsignedTransaction,
 } from '../../util';
 
 export interface DemocracyDeactivateProxyArgs extends Args {
@@ -26,8 +26,8 @@ export function deactivateProxy(
     method: {
       args,
       name: 'deactivateProxy',
-      pallet: 'democracy'
+      pallet: 'democracy',
     },
-    ...info
+    ...info,
   });
 }

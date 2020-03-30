@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  UnsignedTransaction
+  UnsignedTransaction,
 } from '../../util';
 
 export interface DemocracyOpenProxyArgs extends Args {
@@ -25,8 +25,8 @@ export function openProxy(
     method: {
       args,
       name: 'openProxy',
-      pallet: 'democracy'
+      pallet: 'democracy',
     },
-    ...info
+    ...info,
   });
 }

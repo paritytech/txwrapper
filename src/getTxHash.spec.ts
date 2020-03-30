@@ -5,11 +5,11 @@ import { balances } from './methods';
 import {
   signWithAlice,
   TEST_BASE_TX_INFO,
-  TEST_METHOD_ARGS
+  TEST_METHOD_ARGS,
 } from './util/testUtil';
 
 describe('createSignedTx', () => {
-  it('should work', async done => {
+  it('should work', async (done) => {
     const unsigned = balances.transferKeepAlive(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO

@@ -11,7 +11,7 @@ import {
   Options,
   sanitizeOptions,
   toTxMethod,
-  TxInfo
+  TxInfo,
 } from '../util';
 
 export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
@@ -64,7 +64,7 @@ export function decodeSigningPayload(
   setSS58Format(ss58Format);
 
   const payload = registry.createType('ExtrinsicPayload', signingPayload, {
-    version: EXTRINSIC_VERSION
+    version: EXTRINSIC_VERSION,
   });
   const methodCall = registry.createType('Call', payload.method);
   const method = toTxMethod(registry, methodCall);
@@ -77,6 +77,6 @@ export function decodeSigningPayload(
     nonce: payload.nonce.toNumber(),
     specVersion: payload.specVersion.toNumber(),
     tip: payload.tip.toNumber(),
-    validityPeriod: payload.era.asMortalEra.period.toNumber() * BLOCKTIME
+    validityPeriod: payload.era.asMortalEra.period.toNumber() * BLOCKTIME,
   };
 }

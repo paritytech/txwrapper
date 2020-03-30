@@ -5,7 +5,7 @@ import {
   metadataRpc,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TxInfo
+  TxInfo,
 } from '../util';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
 
@@ -23,8 +23,10 @@ export function decodeBaseTxInfo(txInfo: TxInfo): void {
     'metadataRpc',
     'nonce',
     'specVersion',
-    'tip'
-  ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key]));
+    'tip',
+  ] as const).forEach((key) =>
+    expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key])
+  );
 
   expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
     TEST_BASE_TX_INFO.validityPeriod
@@ -50,5 +52,5 @@ function testDecodeUnsignedTx(pallet: string, name: string): void {
 }
 
 describe('decodeUnsignedTx', () => {
-  getAllMethods().forEach(method => testDecodeUnsignedTx(...method));
+  getAllMethods().forEach((method) => testDecodeUnsignedTx(...method));
 });

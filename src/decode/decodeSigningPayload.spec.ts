@@ -5,11 +5,11 @@ import {
   KUSAMA_SS58_FORMAT,
   metadataRpc,
   TEST_BASE_TX_INFO,
-  TEST_METHOD_ARGS
+  TEST_METHOD_ARGS,
 } from '../util';
 import {
   DecodedSigningPayload,
-  decodeSigningPayload
+  decodeSigningPayload,
 } from './decodeSigningPayload';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -24,8 +24,10 @@ export function decodeBaseTxInfo(txInfo: DecodedSigningPayload): void {
     'metadataRpc',
     'nonce',
     'specVersion',
-    'tip'
-  ] as const).forEach(key => expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key]));
+    'tip',
+  ] as const).forEach((key) =>
+    expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key])
+  );
 }
 
 /**
@@ -53,5 +55,5 @@ function testDecodeSigningPayload(pallet: string, name: string): void {
 }
 
 describe('decodeSigningPayload', () => {
-  getAllMethods().forEach(method => testDecodeSigningPayload(...method));
+  getAllMethods().forEach((method) => testDecodeSigningPayload(...method));
 });

@@ -10,8 +10,8 @@ export function chill(args: {}, info: BaseTxInfo): UnsignedTransaction {
     method: {
       args,
       name: 'chill',
-      pallet: 'staking'
+      pallet: 'staking',
     },
-    ...info
+    ...info,
   });
 }

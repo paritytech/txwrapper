@@ -7,7 +7,7 @@ import {
   metadataRpc,
   signWithAlice,
   TEST_BASE_TX_INFO,
-  TEST_METHOD_ARGS
+  TEST_METHOD_ARGS,
 } from '../util';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 
@@ -17,7 +17,7 @@ import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
  * Helper function to decode base tx info
  */
 export function decodeBaseTxInfo(txInfo: DecodedSignedTx): void {
-  (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach(key =>
+  (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach((key) =>
     expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key])
   );
   expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
@@ -29,7 +29,7 @@ export function decodeBaseTxInfo(txInfo: DecodedSignedTx): void {
  * Test the [[decodeSignedTx]] function
  */
 function testDecodeSignedTx(pallet: string, name: string): void {
-  it(`should decode ${pallet}::${name}`, async done => {
+  it(`should decode ${pallet}::${name}`, async (done) => {
     const unsigned = (methods as any)[pallet][name](
       (TEST_METHOD_ARGS as any)[pallet][name],
       TEST_BASE_TX_INFO
@@ -51,5 +51,5 @@ function testDecodeSignedTx(pallet: string, name: string): void {
 }
 
 describe('decodeSignedTx', () => {
-  getAllMethods().forEach(method => testDecodeSignedTx(...method));
+  getAllMethods().forEach((method) => testDecodeSignedTx(...method));
 });

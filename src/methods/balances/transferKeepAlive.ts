@@ -16,8 +16,8 @@ export function transferKeepAlive(
     method: {
       args,
       name: 'transferKeepAlive',
-      pallet: 'balances'
+      pallet: 'balances',
     },
-    ...info
+    ...info,
   });
 }

@@ -1,7 +1,7 @@
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  testBaseTxInfo
+  testBaseTxInfo,
 } from '../../util';
 import { activateProxy } from './activateProxy';
 

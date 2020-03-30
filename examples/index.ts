@@ -10,7 +10,7 @@ import {
   deriveAddress,
   getTxHash,
   KeyringPair,
-  methods
+  methods,
 } from '../src';
 
 /**
@@ -30,14 +30,14 @@ function rpcToNode(method: string, params: any[] = []): Promise<any> {
       id: 1,
       jsonrpc: '2.0',
       method,
-      params
+      params,
     }),
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    method: 'POST'
+    method: 'POST',
   })
-    .then(response => response.json())
+    .then((response) => response.json())
     .then(({ error, result }) => {
       if (error) {
         throw new Error(error.message);
@@ -60,7 +60,7 @@ function signWith(
 ): string {
   const { signature } = registry
     .createType('ExtrinsicPayload', signingPayload, {
-      version: TRANSACTION_VERSION
+      version: TRANSACTION_VERSION,
     })
     .sign(pair);
 
@@ -101,7 +101,7 @@ async function main(): Promise<void> {
   const unsigned = methods.balances.transfer(
     {
       value: 12,
-      dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty' // Bob
+      dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty', // Bob
     },
     {
       address: deriveAddress(alice.publicKey, 42),
@@ -114,7 +114,7 @@ async function main(): Promise<void> {
       nonce: 1, // Assuming this is Alice's first tx on the chain
       specVersion,
       tip: 0,
-      validityPeriod: 240
+      validityPeriod: 240,
     }
   );
 
@@ -122,7 +122,7 @@ async function main(): Promise<void> {
   const decodedUnsigned = decode(unsigned, {
     metadata: metadataRpc,
     registry,
-    ss58Format: DEV_CHAIN_SS58_FORMAT
+    ss58Format: DEV_CHAIN_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
@@ -137,7 +137,7 @@ async function main(): Promise<void> {
   const payloadInfo = decode(signingPayload, {
     metadata: metadataRpc,
     registry,
-    ss58Format: DEV_CHAIN_SS58_FORMAT
+    ss58Format: DEV_CHAIN_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
@@ -166,7 +166,7 @@ async function main(): Promise<void> {
   const txInfo = decode(tx, {
     metadata: metadataRpc,
     registry,
-    ss58Format: DEV_CHAIN_SS58_FORMAT
+    ss58Format: DEV_CHAIN_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
@@ -174,4 +174,4 @@ async function main(): Promise<void> {
   );
 }
 
-main().catch(error => console.error(error));
+main().catch((error) => console.error(error));

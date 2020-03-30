@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  UnsignedTransaction
+  UnsignedTransaction,
 } from '../../util';
 
 export interface SessionSetKeysArgs extends Args {
@@ -31,11 +31,11 @@ export function setKeys(
     method: {
       args: {
         keys,
-        proof
+        proof,
       },
       name: 'setKeys',
-      pallet: 'session'
+      pallet: 'session',
     },
-    ...info
+    ...info,
   });
 }

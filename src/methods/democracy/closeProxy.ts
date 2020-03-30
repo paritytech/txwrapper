@@ -10,8 +10,8 @@ export function closeProxy(args: {}, info: BaseTxInfo): UnsignedTransaction {
     method: {
       args,
       name: 'closeProxy',
-      pallet: 'democracy'
+      pallet: 'democracy',
     },
-    ...info
+    ...info,
   });
 }

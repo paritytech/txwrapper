@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  UnsignedTransaction
+  UnsignedTransaction,
 } from '../../util';
 
 export interface BalancesTransferArgs extends Args {
@@ -29,8 +29,8 @@ export function transfer(
     method: {
       args,
       name: 'transfer',
-      pallet: 'balances'
+      pallet: 'balances',
     },
-    ...info
+    ...info,
   });
 }
