@@ -14,7 +14,7 @@ describe('balances::transfer', () => {
 
     testBaseTxInfo(unsigned);
     expect(unsigned.method).toBe(
-      '0x0600ff96074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
+      '0x060096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
     );
   });
 });

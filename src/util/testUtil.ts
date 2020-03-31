@@ -101,15 +101,19 @@ export const TEST_METHOD_ARGS = {
     proxyVote: {
       refIndex: 0,
       vote: {
-        aye: true,
-        conviction: 'Locked1x',
+        Standard: {
+          balance: 1234,
+          vote: { aye: true, conviction: 'Locked1x' },
+        },
       },
     },
     vote: {
       refIndex: 0,
       vote: {
-        aye: true,
-        conviction: 'Locked1x',
+        Standard: {
+          balance: 1234,
+          vote: { aye: true, conviction: 'Locked1x' },
+        },
       },
     },
   },
