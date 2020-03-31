@@ -22,7 +22,7 @@ Runtime-specific options for encoding and decoding transactions.
 
 • **metadata**: *string*
 
-*Defined in [src/util/options.ts:44](https://github.com/paritytech/txwrapper/blob/1b54171/src/util/options.ts#L44)*
+*Defined in [src/util/options.ts:45](https://github.com/paritytech/txwrapper/blob/fa00a43/src/util/options.ts#L45)*
 
 The metadata of the runtime.
 
@@ -32,7 +32,7 @@ ___
 
 • **registry**? : *TypeRegistry*
 
-*Defined in [src/util/options.ts:48](https://github.com/paritytech/txwrapper/blob/1b54171/src/util/options.ts#L48)*
+*Defined in [src/util/options.ts:49](https://github.com/paritytech/txwrapper/blob/fa00a43/src/util/options.ts#L49)*
 
 The type registry of the runtime. Defaults to Kusama's type registry
 
@@ -42,6 +42,6 @@ ___
 
 • **ss58Format**? : *undefined | number*
 
-*Defined in [src/util/options.ts:52](https://github.com/paritytech/txwrapper/blob/1b54171/src/util/options.ts#L52)*
+*Defined in [src/util/options.ts:53](https://github.com/paritytech/txwrapper/blob/fa00a43/src/util/options.ts#L53)*
 
 The SS58 prefix of the chain. Defaults to 2 (Kusama).
