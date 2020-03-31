@@ -18,7 +18,7 @@
 
 ▸ **payoutNominator**(`args`: [StakingPayoutNominatorArgs](../interfaces/_methods_staking_payoutnominator_.stakingpayoutnominatorargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/payoutNominator.ts:32](https://github.com/paritytech/txwrapper/blob/fa00a43/src/methods/staking/payoutNominator.ts#L32)*
+*Defined in [src/methods/staking/payoutNominator.ts:32](https://github.com/paritytech/txwrapper/blob/64624af/src/methods/staking/payoutNominator.ts#L32)*
 
 Make one nominator's payout for one era.
 WARNING: once an era is payed for a validator such validator can't claim the
