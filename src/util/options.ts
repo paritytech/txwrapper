@@ -10,13 +10,14 @@ import { KUSAMA_SS58_FORMAT } from './constants';
  * version's types we wish to use.
  *
  * @see https://github.com/polkadot-js/api/blob/master/packages/types/src/known/overrides.ts
- * @param chain - The chain to create the type registry for.
+ * @param specName - The chain to create the type registry for.
+ * @param specVersion - The spec version of that chain for which we want to
+ * create a type registry.
  */
 export function getRegistry(
-  // FIXME: Cater for Polkadot
-  specName: 'kusama' = 'kusama',
-  // FIXME: Make this hardcoded version user-customizable
-  specVersion = 1042
+  specName: 'kusama' | 'polkadot',
+  // FIXME Now using 9999 so that it's bigger than any Kusama spec version.
+  specVersion = 9999
 ): TypeRegistry {
   const registry = new TypeRegistry();
   // Register types specific to chain/runtimeVersion
@@ -54,7 +55,7 @@ export interface Options {
 
 export const defaultOptions = {
   ss58Format: KUSAMA_SS58_FORMAT,
-  typeRegistry: getRegistry(),
+  typeRegistry: getRegistry('kusama'),
 };
 
 /**
@@ -74,13 +75,13 @@ export function sanitizeOptions(
   if (typeof metadataOrOptions === 'string') {
     return {
       metadata: metadataOrOptions,
-      registry: getRegistry(),
+      registry: getRegistry('kusama'),
       ss58Format,
     };
   } else {
     return {
       metadata: metadataOrOptions.metadata,
-      registry: metadataOrOptions.registry || getRegistry(),
+      registry: metadataOrOptions.registry || getRegistry('kusama'),
       ss58Format: metadataOrOptions.ss58Format || KUSAMA_SS58_FORMAT,
     };
   }
