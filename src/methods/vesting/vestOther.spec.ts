@@ -14,7 +14,7 @@ describe('vesting::vestOther', () => {
 
     testBaseTxInfo(unsigned);
     expect(unsigned.method).toBe(
-      '0x1a01ff90b5ab205c6974c9ea841be688864633dc9ca8a357843eeacf2314649965fe22'
+      '0x1a0190b5ab205c6974c9ea841be688864633dc9ca8a357843eeacf2314649965fe22'
     );
   });
 });

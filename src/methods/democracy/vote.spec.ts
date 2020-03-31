@@ -10,6 +10,8 @@ describe('democracy::vote', () => {
     const unsigned = vote(TEST_METHOD_ARGS.democracy.vote, TEST_BASE_TX_INFO);
 
     testBaseTxInfo(unsigned);
-    expect(unsigned.method).toBe('0x09020081');
+    expect(unsigned.method).toBe(
+      '0x0902000081d2040000000000000000000000000000'
+    );
   });
 });

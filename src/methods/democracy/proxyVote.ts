@@ -4,18 +4,17 @@ import {
   createMethod,
   UnsignedTransaction,
 } from '../../util';
-import { Vote } from './types';
+import { AccountVote } from './types';
 
 export interface DemocracyProxyVoteArgs extends Args {
   /*
-   * Referendum index
+   * Referendum index.
    */
   refIndex: number;
-
   /**
-   * Vote
+   * Vote.
    */
-  vote: Vote;
+  vote: AccountVote;
 }
 
 /**

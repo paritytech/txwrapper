@@ -18,7 +18,7 @@
 
 ▸ **transfer**(`args`: [BalancesTransferArgs](../interfaces/_methods_balances_transfer_.balancestransferargs.md), `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/balances/transfer.ts:24](https://github.com/paritytech/txwrapper/blob/1b54171/src/methods/balances/transfer.ts#L24)*
+*Defined in [src/methods/balances/transfer.ts:24](https://github.com/paritytech/txwrapper/blob/64624af/src/methods/balances/transfer.ts#L24)*
 
 Construct a balance transfer transaction offline.
 

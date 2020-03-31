@@ -8,7 +8,7 @@ import {
   TEST_METHOD_ARGS,
 } from './util/testUtil';
 
-describe('createSignedTx', () => {
+describe('getTxHash', () => {
   it('should work', async (done) => {
     const unsigned = balances.transferKeepAlive(
       TEST_METHOD_ARGS.balances.transfer,
@@ -20,7 +20,7 @@ describe('createSignedTx', () => {
 
     const txHash = getTxHash(signedTx);
     expect(txHash).toBe(
-      '0x0c323ba9dc9579afe025e8f521b94f246499291e815cc2c747dc57ecd221e1e3'
+      '0xf205271d8a94d8a3303bd4e262908e0d85ef45f414af7ef6c603fcf9ed354e41'
     );
 
     done();
