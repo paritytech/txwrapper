@@ -27,7 +27,7 @@ export function getRegistry(
     getSpecTypes(
       registry,
       registry.createType('Text', chain),
-      registry.createType('Text', specName), // Value unneeded for now
+      registry.createType('Text', specName),
       registry.createType('u32', specVersion)
     )
   );
