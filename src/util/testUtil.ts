@@ -180,7 +180,7 @@ export async function signWithAlice(signingPayload: string): Promise<string> {
   // Wait for the promise to resolve async WASM
   await cryptoWaitReady();
 
-  const registry = getRegistry('kusama');
+  const registry = getRegistry('Kusama', 'kusama');
   // Use ed25519 because it has deterministic signatures
   const keyring = new Keyring({ type: 'ed25519' });
   const alice = keyring.addFromUri('//Alice', { name: 'Alice default' });
