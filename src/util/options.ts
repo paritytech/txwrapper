@@ -1,5 +1,5 @@
 import { TypeRegistry } from '@polkadot/types';
-import { getSpecTypes } from '@polkadot/types/known';
+import { getSpecTypes } from '@polkadot/types-known';
 
 import { KUSAMA_SS58_FORMAT } from './constants';
 
@@ -15,8 +15,10 @@ import { KUSAMA_SS58_FORMAT } from './constants';
  * create a type registry.
  */
 export function getRegistry(
-  specName: 'kusama' | 'polkadot',
-  // FIXME Now using 9999 so that it's bigger than any Kusama spec version.
+  chain: 'Kusama' | 'Polkadot' | 'Westend',
+  specName: 'kusama' | 'polkadot' | 'westend',
+  // FIXME Now using 9999 so that it's bigger than any previous spec version,
+  // which will thus use the latest spec version.
   specVersion = 9999
 ): TypeRegistry {
   const registry = new TypeRegistry();
@@ -24,11 +26,9 @@ export function getRegistry(
   registry.register(
     getSpecTypes(
       registry,
-      registry.createType('Text'), // Value unneeded for now
-      registry.createType('RuntimeVersion', {
-        specName,
-        specVersion,
-      })
+      registry.createType('Text', chain),
+      registry.createType('Text', specName),
+      registry.createType('u32', specVersion)
     )
   );
 
@@ -55,7 +55,7 @@ export interface Options {
 
 export const defaultOptions = {
   ss58Format: KUSAMA_SS58_FORMAT,
-  typeRegistry: getRegistry('kusama'),
+  typeRegistry: getRegistry('Kusama', 'kusama'),
 };
 
 /**
@@ -75,13 +75,13 @@ export function sanitizeOptions(
   if (typeof metadataOrOptions === 'string') {
     return {
       metadata: metadataOrOptions,
-      registry: getRegistry('kusama'),
+      registry: getRegistry('Kusama', 'kusama'),
       ss58Format,
     };
   } else {
     return {
       metadata: metadataOrOptions.metadata,
-      registry: metadataOrOptions.registry || getRegistry('kusama'),
+      registry: metadataOrOptions.registry || getRegistry('Kusama', 'kusama'),
       ss58Format: metadataOrOptions.ss58Format || KUSAMA_SS58_FORMAT,
     };
   }

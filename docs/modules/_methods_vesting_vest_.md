@@ -14,7 +14,7 @@
 
 ▸ **vest**(`args`: object, `info`: [BaseTxInfo](../interfaces/_util_types_.basetxinfo.md)): *[UnsignedTransaction](../interfaces/_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/vesting/vest.ts:8](https://github.com/paritytech/txwrapper/blob/64624af/src/methods/vesting/vest.ts#L8)*
+*Defined in [src/methods/vesting/vest.ts:8](https://github.com/paritytech/txwrapper/blob/9438594/src/methods/vesting/vest.ts#L8)*
 
 Unlock any vested funds of the sender account.
 
