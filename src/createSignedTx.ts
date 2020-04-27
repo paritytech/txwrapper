@@ -20,8 +20,10 @@ export function createSignedTx(
   options?: Partial<Options>
 ): string {
   const { metadata, registry } = sanitizeOptions({
-    ...options,
+    // FIXME `options` has a metadata field, `unsigned` has a metadata field,
+    // so which one should take precedence? For now, it's `options`.
     metadata: unsigned.metadataRpc,
+    ...options,
   });
   registry.setMetadata(createMetadata(registry, metadata));
 
