@@ -1,6 +1,9 @@
-import { Metadata } from '@polkadot/types';
-
-import { Options, sanitizeOptions, UnsignedTransaction } from './util';
+import {
+  createMetadata,
+  Options,
+  sanitizeOptions,
+  UnsignedTransaction,
+} from './util';
 
 /**
  * Serialize a signed transaction in a format that can be submitted over the
@@ -20,7 +23,7 @@ export function createSignedTx(
     ...options,
     metadata: unsigned.metadataRpc,
   });
-  registry.setMetadata(new Metadata(registry, metadata));
+  registry.setMetadata(createMetadata(registry, metadata));
 
   const extrinsic = registry.createType(
     'Extrinsic',

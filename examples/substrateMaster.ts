@@ -68,13 +68,10 @@ function signWith(
 }
 
 /**
- * Entry point of the script.
+ * Entry point of the script. This script assumes a Substrate node is running
+ * locally on `ws://localhost:9944`.
  */
 async function main(): Promise<void> {
-  // If you're using your own chain with custom types, add these types here. We
-  // are using a vanilla Substrate chain, so no type overriding is needed.
-  const registry = new TypeRegistry();
-
   // Wait for the promise to resolve async WASM
   await cryptoWaitReady();
   // Create a new keyring, and add an "Alice" account
@@ -95,6 +92,11 @@ async function main(): Promise<void> {
   const metadataRpc = await rpcToNode('state_getMetadata');
   const { specVersion } = await rpcToNode('state_getRuntimeVersion');
 
+  const registry = new TypeRegistry();
+  // If you're using your own chain with custom types, add these types here. We
+  // are using a vanilla Substrate chain, so no type overriding is needed.
+  registry.register({});
+
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
   // if desired.
@@ -104,7 +106,7 @@ async function main(): Promise<void> {
       dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty', // Bob
     },
     {
-      address: deriveAddress(alice.publicKey, 42),
+      address: deriveAddress(alice.publicKey, DEV_CHAIN_SS58_FORMAT),
       blockHash,
       blockNumber: registry
         .createType('BlockNumber', block.header.number)
@@ -115,6 +117,9 @@ async function main(): Promise<void> {
       specVersion,
       tip: 0,
       validityPeriod: 240,
+    },
+    {
+      registry,
     }
   );
 

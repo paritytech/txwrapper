@@ -2,6 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
+  Options,
   UnsignedTransaction,
 } from '../../util';
 
@@ -20,14 +21,18 @@ export interface StakingUnbondArgs extends Args {
  */
 export function unbond(
   args: StakingUnbondArgs,
-  info: BaseTxInfo
+  info: BaseTxInfo,
+  options?: Partial<Options>
 ): UnsignedTransaction {
-  return createMethod({
-    method: {
-      args,
-      name: 'unbond',
-      pallet: 'staking',
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'unbond',
+        pallet: 'staking',
+      },
+      ...info,
     },
-    ...info,
-  });
+    options
+  );
 }

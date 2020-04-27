@@ -2,6 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
+  Options,
   UnsignedTransaction,
 } from '../../util';
 
@@ -27,14 +28,18 @@ export interface StakingBondArgs extends Args {
  */
 export function bond(
   args: StakingBondArgs,
-  info: BaseTxInfo
+  info: BaseTxInfo,
+  options?: Partial<Options>
 ): UnsignedTransaction {
-  return createMethod({
-    method: {
-      args,
-      name: 'bond',
-      pallet: 'staking',
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'bond',
+        pallet: 'staking',
+      },
+      ...info,
     },
-    ...info,
-  });
+    options
+  );
 }

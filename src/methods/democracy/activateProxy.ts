@@ -2,6 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
+  Options,
   UnsignedTransaction,
 } from '../../util';
 
@@ -19,14 +20,18 @@ export interface DemocracyActivateProxyArgs extends Args {
  */
 export function activateProxy(
   args: DemocracyActivateProxyArgs,
-  info: BaseTxInfo
+  info: BaseTxInfo,
+  options?: Partial<Options>
 ): UnsignedTransaction {
-  return createMethod({
-    method: {
-      args,
-      name: 'activateProxy',
-      pallet: 'democracy',
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'activateProxy',
+        pallet: 'democracy',
+      },
+      ...info,
     },
-    ...info,
-  });
+    options
+  );
 }

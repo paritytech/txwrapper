@@ -8,7 +8,7 @@ import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import * as methods from '../methods';
-import { getRegistry } from './options';
+import { getRegistry } from './metadata';
 import { UnsignedTransaction } from './types';
 
 export { metadataRpc };
@@ -70,7 +70,8 @@ export function getAllMethods(): [string, string][] {
             (pallet === 'democracy' && name === 'vote')
           )
         )
-    );
+    )
+    .filter(([_, name]) => name === 'transfer');
 }
 
 /**

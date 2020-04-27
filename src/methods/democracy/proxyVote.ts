@@ -2,6 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
+  Options,
   UnsignedTransaction,
 } from '../../util';
 import { AccountVote } from './types';
@@ -24,14 +25,18 @@ export interface DemocracyProxyVoteArgs extends Args {
  */
 export function proxyVote(
   args: DemocracyProxyVoteArgs,
-  info: BaseTxInfo
+  info: BaseTxInfo,
+  options?: Partial<Options>
 ): UnsignedTransaction {
-  return createMethod({
-    method: {
-      args,
-      name: 'proxyVote',
-      pallet: 'democracy',
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'proxyVote',
+        pallet: 'democracy',
+      },
+      ...info,
     },
-    ...info,
-  });
+    options
+  );
 }

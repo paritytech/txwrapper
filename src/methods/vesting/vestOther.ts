@@ -2,6 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
+  Options,
   UnsignedTransaction,
 } from '../../util';
 
@@ -20,14 +21,18 @@ export interface VestingVestOtherArgs extends Args {
  */
 export function vestOther(
   args: VestingVestOtherArgs,
-  info: BaseTxInfo
+  info: BaseTxInfo,
+  options?: Partial<Options>
 ): UnsignedTransaction {
-  return createMethod({
-    method: {
-      args,
-      name: 'vestOther',
-      pallet: 'vesting',
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'vestOther',
+        pallet: 'vesting',
+      },
+      ...info,
     },
-    ...info,
-  });
+    options
+  );
 }

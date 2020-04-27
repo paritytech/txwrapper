@@ -2,6 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
+  Options,
   UnsignedTransaction,
 } from '../../util';
 
@@ -20,14 +21,18 @@ export interface StakingSetControllerArgs extends Args {
  */
 export function setController(
   args: StakingSetControllerArgs,
-  info: BaseTxInfo
+  info: BaseTxInfo,
+  options?: Partial<Options>
 ): UnsignedTransaction {
-  return createMethod({
-    method: {
-      args,
-      name: 'setController',
-      pallet: 'staking',
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'setController',
+        pallet: 'staking',
+      },
+      ...info,
     },
-    ...info,
-  });
+    options
+  );
 }
