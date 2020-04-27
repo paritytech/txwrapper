@@ -1,3 +1,7 @@
+/**
+ * @ignore
+ */ /** */
+
 import { Keyring } from '@polkadot/api';
 import { TypeRegistry } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';

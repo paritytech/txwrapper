@@ -20,7 +20,7 @@
 
 • **prefs**: *object*
 
-*Defined in [src/methods/staking/validate.ts:13](https://github.com/paritytech/txwrapper/blob/fc81d5b/src/methods/staking/validate.ts#L13)*
+*Defined in [src/methods/staking/validate.ts:13](https://github.com/paritytech/txwrapper/blob/38b3ce8/src/methods/staking/validate.ts#L13)*
 
 Set the desired commission for the validator. Value is Perbill.
 

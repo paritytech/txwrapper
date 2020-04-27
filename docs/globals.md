@@ -6,7 +6,6 @@
 
 ### Modules
 
-* ["examples/substrateMaster"](modules/_examples_substratemaster_.md)
 * ["src/createSignedTx"](modules/_src_createsignedtx_.md)
 * ["src/createSigningPayload"](modules/_src_createsigningpayload_.md)
 * ["src/decode/decode"](modules/_src_decode_decode_.md)

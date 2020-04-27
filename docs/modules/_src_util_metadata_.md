@@ -22,7 +22,7 @@
   length: 2,
 })
 
-*Defined in [src/util/metadata.ts:45](https://github.com/paritytech/txwrapper/blob/fc81d5b/src/util/metadata.ts#L45)*
+*Defined in [src/util/metadata.ts:45](https://github.com/paritytech/txwrapper/blob/38b3ce8/src/util/metadata.ts#L45)*
 
 ## Functions
 
@@ -30,7 +30,7 @@
 
 ▸ **createDecorated**(`registry`: TypeRegistry, `metadata`: string): *Decorated*
 
-*Defined in [src/util/metadata.ts:56](https://github.com/paritytech/txwrapper/blob/fc81d5b/src/util/metadata.ts#L56)*
+*Defined in [src/util/metadata.ts:56](https://github.com/paritytech/txwrapper/blob/38b3ce8/src/util/metadata.ts#L56)*
 
 From a metadata hex string (for example returned by RPC), create a Decorated
 object.
@@ -50,7 +50,7 @@ ___
 
 ▸ **createMetadataUnmemoized**(`registry`: TypeRegistry, `metadata`: string): *Metadata*
 
-*Defined in [src/util/metadata.ts:38](https://github.com/paritytech/txwrapper/blob/fc81d5b/src/util/metadata.ts#L38)*
+*Defined in [src/util/metadata.ts:38](https://github.com/paritytech/txwrapper/blob/38b3ce8/src/util/metadata.ts#L38)*
 
 From a metadata hex string (for example returned by RPC), create a Metadata
 object. Metadata decoding is expensive, so this function is memoized.
@@ -70,7 +70,7 @@ ___
 
 ▸ **getRegistry**(`chainName`: "Kusama" | "Polkadot" | "Westend", `specName`: "kusama" | "polkadot" | "westend", `specVersion`: number): *TypeRegistry*
 
-*Defined in [src/util/metadata.ts:17](https://github.com/paritytech/txwrapper/blob/fc81d5b/src/util/metadata.ts#L17)*
+*Defined in [src/util/metadata.ts:17](https://github.com/paritytech/txwrapper/blob/38b3ce8/src/util/metadata.ts#L17)*
 
 Create a specific TypeRegistry for the current chain. The reason we have
 this is, depending on different runtime versions, we have different types
