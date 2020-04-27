@@ -73,7 +73,7 @@ function signWith(
 
 /**
  * Entry point of the script. This script assumes a Substrate node is running
- * locally on `ws://localhost:9944`.
+ * locally on `http://localhost:9933`.
  */
 async function main(): Promise<void> {
   // Wait for the promise to resolve async WASM
@@ -123,6 +123,7 @@ async function main(): Promise<void> {
       validityPeriod: 240,
     },
     {
+      metadata: metadataRpc,
       registry,
     }
   );
@@ -183,4 +184,7 @@ async function main(): Promise<void> {
   );
 }
 
-main().catch((error) => console.error(error));
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

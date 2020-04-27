@@ -56,6 +56,8 @@ export function createMethod(
   options?: Partial<Options>
 ): UnsignedTransaction {
   const { metadata: metadataRpc, registry } = sanitizeOptions({
+    // FIXME `options` has a metadata field, `info` has a metadata field,
+    // so which one should take precedence? For now, it's `options`.
     metadata: info.metadataRpc,
     ...options,
   });
