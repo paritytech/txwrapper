@@ -1,39 +1,7 @@
 import { TypeRegistry } from '@polkadot/types';
-import { getSpecTypes } from '@polkadot/types-known';
 
 import { KUSAMA_SS58_FORMAT } from './constants';
-
-/**
- * Create a specific TypeRegistry for a current chain. The reason we have this
- * is, depending on different runtime versions, we have different types (e.g.:
- * session keys went from 4 to 5 keys). Here we hardcode which runtime
- * version's types we wish to use.
- *
- * @see https://github.com/polkadot-js/api/blob/master/packages/types/src/known/overrides.ts
- * @param specName - The chain to create the type registry for.
- * @param specVersion - The spec version of that chain for which we want to
- * create a type registry.
- */
-export function getRegistry(
-  chain: 'Kusama' | 'Polkadot' | 'Westend',
-  specName: 'kusama' | 'polkadot' | 'westend',
-  // FIXME Now using 9999 so that it's bigger than any previous spec version,
-  // which will thus use the latest spec version.
-  specVersion = 9999
-): TypeRegistry {
-  const registry = new TypeRegistry();
-  // Register types specific to chain/runtimeVersion
-  registry.register(
-    getSpecTypes(
-      registry,
-      registry.createType('Text', chain),
-      registry.createType('Text', specName),
-      registry.createType('u32', specVersion)
-    )
-  );
-
-  return registry;
-}
+import { getRegistry } from './metadata';
 
 /**
  * Runtime-specific options for encoding and decoding transactions.
@@ -52,11 +20,6 @@ export interface Options {
    */
   ss58Format?: number;
 }
-
-export const defaultOptions = {
-  ss58Format: KUSAMA_SS58_FORMAT,
-  typeRegistry: getRegistry('Kusama', 'kusama'),
-};
 
 /**
  * Sanitize the options that the user pass in. In particular, the second

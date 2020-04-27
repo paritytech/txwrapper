@@ -2,12 +2,12 @@
  * @ignore
  */ /** */
 
-import { Metadata } from '@polkadot/types';
 import { hexToU8a } from '@polkadot/util';
 import { setSS58Format } from '@polkadot/util-crypto';
 
 import {
   BLOCKTIME,
+  createMetadata,
   Options,
   sanitizeOptions,
   toTxMethod,
@@ -55,7 +55,7 @@ export function decodeSignedTx(
     _ss58Format
   );
 
-  registry.setMetadata(new Metadata(registry, metadata));
+  registry.setMetadata(createMetadata(registry, metadata));
   setSS58Format(ss58Format);
 
   const tx = registry.createType('Extrinsic', hexToU8a(signedTx), {

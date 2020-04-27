@@ -1,6 +1,9 @@
-import { Metadata } from '@polkadot/types';
-
-import { Options, sanitizeOptions, UnsignedTransaction } from './util';
+import {
+  createMetadata,
+  Options,
+  sanitizeOptions,
+  UnsignedTransaction,
+} from './util';
 
 /**
  * Serialize a signed transaction in a format that can be submitted over the
@@ -17,10 +20,12 @@ export function createSignedTx(
   options?: Partial<Options>
 ): string {
   const { metadata, registry } = sanitizeOptions({
-    ...options,
+    // FIXME `options` has a metadata field, `unsigned` has a metadata field,
+    // so which one should take precedence? For now, it's `options`.
     metadata: unsigned.metadataRpc,
+    ...options,
   });
-  registry.setMetadata(new Metadata(registry, metadata));
+  registry.setMetadata(createMetadata(registry, metadata));
 
   const extrinsic = registry.createType(
     'Extrinsic',

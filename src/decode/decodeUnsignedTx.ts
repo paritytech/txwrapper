@@ -2,11 +2,11 @@
  * @ignore
  */ /** */
 
-import { Metadata } from '@polkadot/types';
 import { setSS58Format } from '@polkadot/util-crypto';
 
 import {
   BLOCKTIME,
+  createMetadata,
   Options,
   sanitizeOptions,
   toTxMethod,
@@ -52,7 +52,7 @@ export function decodeUnsignedTx(
     _ss58Format
   );
 
-  registry.setMetadata(new Metadata(registry, metadata));
+  registry.setMetadata(createMetadata(registry, metadata));
   setSS58Format(ss58Format);
 
   const methodCall = registry.createType('Call', unsigned.method);

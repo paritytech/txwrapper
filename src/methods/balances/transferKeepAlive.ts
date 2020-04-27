@@ -1,4 +1,9 @@
-import { BaseTxInfo, createMethod, UnsignedTransaction } from '../../util';
+import {
+  BaseTxInfo,
+  createMethod,
+  Options,
+  UnsignedTransaction,
+} from '../../util';
 import { BalancesTransferArgs } from './transfer';
 
 export type BalancesTransferKeepAliveArgs = BalancesTransferArgs;
@@ -10,14 +15,18 @@ export type BalancesTransferKeepAliveArgs = BalancesTransferArgs;
  */
 export function transferKeepAlive(
   args: BalancesTransferKeepAliveArgs,
-  info: BaseTxInfo
+  info: BaseTxInfo,
+  options?: Partial<Options>
 ): UnsignedTransaction {
-  return createMethod({
-    method: {
-      args,
-      name: 'transferKeepAlive',
-      pallet: 'balances',
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'transferKeepAlive',
+        pallet: 'balances',
+      },
+      ...info,
     },
-    ...info,
-  });
+    options
+  );
 }

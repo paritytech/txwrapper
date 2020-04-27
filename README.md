@@ -26,7 +26,7 @@
 yarn add @substrate/txwrapper
 ```
 
-In a JS file:
+In a JS/TS file:
 
 ```typescript
 import {
@@ -53,7 +53,7 @@ const signature = myOfflineSigning(signingPayload);
 const tx = createSignedTx(unsigned, signature);
 ```
 
-Have a look at the [example](https://github.com/paritytech/txwrapper/tree/master/examples/index.ts) to see how you can perform the whole lifecycle of a transaction, from generation to signing to broadcast.
+Have a look at the [example](https://github.com/paritytech/txwrapper/tree/master/examples/substrateMaster.ts) to see how you can perform the whole lifecycle of a transaction, from generation to signing to broadcast.
 
 Go to [documentation](https://github.com/paritytech/txwrapper/tree/master/docs/globals.md) to see all available functions.
 

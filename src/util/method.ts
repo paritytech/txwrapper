@@ -2,13 +2,13 @@
  * @ignore
  */ /** */
 
-import Metadata from '@polkadot/metadata/Decorated';
 import { createTypeUnsafe, TypeRegistry } from '@polkadot/types';
 import { Call } from '@polkadot/types/interfaces';
 import { AnyJson } from '@polkadot/types/types';
 import { stringCamelCase } from '@polkadot/util';
 
 import { EXTRINSIC_VERSION, ONE_SECOND } from './constants';
+import { createDecorated } from './metadata';
 import { Options, sanitizeOptions } from './options';
 import { BaseTxInfo, UnsignedTransaction } from './types';
 
@@ -56,10 +56,12 @@ export function createMethod(
   options?: Partial<Options>
 ): UnsignedTransaction {
   const { metadata: metadataRpc, registry } = sanitizeOptions({
+    // FIXME `options` has a metadata field, `info` has a metadata field,
+    // so which one should take precedence? For now, it's `options`.
     metadata: info.metadataRpc,
     ...options,
   });
-  const metadata = new Metadata(registry, metadataRpc);
+  const metadata = createDecorated(registry, metadataRpc);
 
   const methodFunction = metadata.tx[info.method.pallet][info.method.name];
   const method = methodFunction(

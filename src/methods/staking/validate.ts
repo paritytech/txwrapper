@@ -2,6 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
+  Options,
   UnsignedTransaction,
 } from '../../util';
 
@@ -21,14 +22,18 @@ export interface StakingValidateArgs extends Args {
  */
 export function validate(
   args: StakingValidateArgs,
-  info: BaseTxInfo
+  info: BaseTxInfo,
+  options?: Partial<Options>
 ): UnsignedTransaction {
-  return createMethod({
-    method: {
-      args,
-      name: 'validate',
-      pallet: 'staking',
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'validate',
+        pallet: 'staking',
+      },
+      ...info,
     },
-    ...info,
-  });
+    options
+  );
 }

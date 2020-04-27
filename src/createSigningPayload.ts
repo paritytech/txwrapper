@@ -11,6 +11,8 @@ export function createSigningPayload(
   options?: Partial<Options>
 ): string {
   const { registry } = sanitizeOptions({
+    // FIXME `options` has a metadata field, `unsigned` has a metadata field,
+    // so which one should take precedence? For now, it's `options`.
     metadata: unsigned.metadataRpc,
     ...options,
   });

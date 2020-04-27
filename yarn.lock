@@ -553,121 +553,121 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@polkadot/api-derive@1.11.2":
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/api-derive/-/api-derive-1.11.2.tgz#e9b01b0f08aa25ec7842973b4c884d6b74996bb6"
-  integrity sha512-jwU8oZItbJWKOIF/mJDTjkGV2t8Fz45ZR5WbPPWid7ojzPyswQx+qepVco8j1lGvFs4i+kKG4B01OCJ2KErTzA==
+"@polkadot/api-derive@1.12.0-beta.10":
+  version "1.12.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@polkadot/api-derive/-/api-derive-1.12.0-beta.10.tgz#47ced1ba4fba7e835923c158e313175e38fbd3e0"
+  integrity sha512-PERoNueQaonZ0h3sJ/OVLoIDmOBo/D0VWqQU3vK1882a4kQKxPur5vAP41n//2BHFR6tGidJfiB/3/lnYH2udA==
   dependencies:
     "@babel/runtime" "^7.9.2"
-    "@polkadot/api" "1.11.2"
-    "@polkadot/rpc-core" "1.11.2"
-    "@polkadot/rpc-provider" "1.11.2"
-    "@polkadot/types" "1.11.2"
-    "@polkadot/util" "^2.8.1"
-    "@polkadot/util-crypto" "^2.8.1"
+    "@polkadot/api" "1.12.0-beta.10"
+    "@polkadot/rpc-core" "1.12.0-beta.10"
+    "@polkadot/rpc-provider" "1.12.0-beta.10"
+    "@polkadot/types" "1.12.0-beta.10"
+    "@polkadot/util" "^2.9.0-beta.1"
+    "@polkadot/util-crypto" "^2.9.0-beta.1"
     bn.js "^5.1.1"
     memoizee "^0.4.14"
     rxjs "^6.5.5"
 
-"@polkadot/api@1.11.2", "@polkadot/api@^1.11.1":
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/api/-/api-1.11.2.tgz#f039af0ac06f7a0744e8f7b9d278f85ae2c7c0bf"
-  integrity sha512-SAuPPtEXfCMl3yCGN22sJmuiWKR0epU79KRKEqpp6pvZ2fMw7lIg1pW6KYn/bhaQUSEsS0cUJVSfz7UjKanA2w==
+"@polkadot/api@1.12.0-beta.10", "@polkadot/api@^1.12.0-beta.10":
+  version "1.12.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@polkadot/api/-/api-1.12.0-beta.10.tgz#d6c1f4128e8e6779241449299180ee9599ae057c"
+  integrity sha512-HbZ9KE3nK7IzCvDesMGcMF5Ovkp2g+Qzv6vEFGyugU5xRgo4TVmNC9qXsAf30rls/4RSslCGbmKzlGJw3vynvw==
   dependencies:
     "@babel/runtime" "^7.9.2"
-    "@polkadot/api-derive" "1.11.2"
-    "@polkadot/keyring" "^2.8.1"
-    "@polkadot/metadata" "1.11.2"
-    "@polkadot/rpc-core" "1.11.2"
-    "@polkadot/rpc-provider" "1.11.2"
-    "@polkadot/types" "1.11.2"
-    "@polkadot/types-known" "1.11.2"
-    "@polkadot/util" "^2.8.1"
-    "@polkadot/util-crypto" "^2.8.1"
+    "@polkadot/api-derive" "1.12.0-beta.10"
+    "@polkadot/keyring" "^2.9.0-beta.1"
+    "@polkadot/metadata" "1.12.0-beta.10"
+    "@polkadot/rpc-core" "1.12.0-beta.10"
+    "@polkadot/rpc-provider" "1.12.0-beta.10"
+    "@polkadot/types" "1.12.0-beta.10"
+    "@polkadot/types-known" "1.12.0-beta.10"
+    "@polkadot/util" "^2.9.0-beta.1"
+    "@polkadot/util-crypto" "^2.9.0-beta.1"
     bn.js "^5.1.1"
     eventemitter3 "^4.0.0"
     rxjs "^6.5.5"
 
-"@polkadot/keyring@^2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/keyring/-/keyring-2.8.1.tgz#befc87d262a3c00a70e9b9bde7ed9c89e88ebc46"
-  integrity sha512-VYuFucacGqOB6ZmSN/3/vUvEMFaOg7NmGcWLnjiGY7T5W3Qv8Up/3zGbnt9UspDcQckoQsIumQyfkeLAjcRjoA==
+"@polkadot/keyring@^2.9.0-beta.1":
+  version "2.9.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@polkadot/keyring/-/keyring-2.9.0-beta.3.tgz#c2e3dd9bd3a3fb2a2d733dd8d68e2d35b6613b44"
+  integrity sha512-xOmJ2NsJlOwmfYdaCk18FMfI34t1HP3RmXG2w+Gz7E0zpDbhc7dWuwqX4UEEK/o+Fu65XYBzppTKQbyVfg11+w==
   dependencies:
     "@babel/runtime" "^7.9.2"
-    "@polkadot/util" "2.8.1"
-    "@polkadot/util-crypto" "2.8.1"
+    "@polkadot/util" "2.9.0-beta.3"
+    "@polkadot/util-crypto" "2.9.0-beta.3"
 
-"@polkadot/metadata@1.11.2":
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/metadata/-/metadata-1.11.2.tgz#19c13a02a37de3b7d8076594d755447d2e6fa09b"
-  integrity sha512-GI3c3oa3EBoorUG0HoJrjCYJC+jbnJrMXqchkfuZ5tObCm0f5a7OBfiA89rPJFtxrKrUTPR+4fV1d/UtFHysAw==
+"@polkadot/metadata@1.12.0-beta.10":
+  version "1.12.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@polkadot/metadata/-/metadata-1.12.0-beta.10.tgz#b1173c68cc3638458d36e2f81bf4a5c06619cdd1"
+  integrity sha512-yGy05isuXG01wDqp9ZkqmDQFJnN9LgBHKYqwH3hfhqlTB4Ya5pWmcL0CuS8gHLbdeq4db8VSZRmKQ1nHTymYeg==
   dependencies:
     "@babel/runtime" "^7.9.2"
-    "@polkadot/types" "1.11.2"
-    "@polkadot/types-known" "1.11.2"
-    "@polkadot/util" "^2.8.1"
-    "@polkadot/util-crypto" "^2.8.1"
+    "@polkadot/types" "1.12.0-beta.10"
+    "@polkadot/types-known" "1.12.0-beta.10"
+    "@polkadot/util" "^2.9.0-beta.1"
+    "@polkadot/util-crypto" "^2.9.0-beta.1"
     bn.js "^5.1.1"
 
-"@polkadot/rpc-core@1.11.2":
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/rpc-core/-/rpc-core-1.11.2.tgz#cf345ea13aae7d04e311b4b50540e4f65624c601"
-  integrity sha512-m3TUS67ucNsfE02hbvJBzteEfHjOkmMaM92OB8GOIVKXB+PHU4BHokM53B+8WvLru9oiTYtqDRgC+jpTOwopbg==
+"@polkadot/rpc-core@1.12.0-beta.10":
+  version "1.12.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@polkadot/rpc-core/-/rpc-core-1.12.0-beta.10.tgz#3f20698d8776516087f491db86eb46e1ad11653e"
+  integrity sha512-A90dtnulS2SYzcvGFnbobFz/79JCusdRuO0nXZuIRkorJhZMPt2mmnW7COTGYxiS13H42R5T6g52uiUNd2hEeg==
   dependencies:
     "@babel/runtime" "^7.9.2"
-    "@polkadot/metadata" "1.11.2"
-    "@polkadot/rpc-provider" "1.11.2"
-    "@polkadot/types" "1.11.2"
-    "@polkadot/util" "^2.8.1"
+    "@polkadot/metadata" "1.12.0-beta.10"
+    "@polkadot/rpc-provider" "1.12.0-beta.10"
+    "@polkadot/types" "1.12.0-beta.10"
+    "@polkadot/util" "^2.9.0-beta.1"
     memoizee "^0.4.14"
     rxjs "^6.5.5"
 
-"@polkadot/rpc-provider@1.11.2":
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/rpc-provider/-/rpc-provider-1.11.2.tgz#adcea4fd9e996aa468370e84a431ab159300a27c"
-  integrity sha512-VwcE4vHsVfXck+Cviug5KbHgmFb1u/YOrmsZGS8ZZ979q7QqbxohgtMW0pIGJddS7og2GYpiMelB6JXO3MG70g==
+"@polkadot/rpc-provider@1.12.0-beta.10":
+  version "1.12.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@polkadot/rpc-provider/-/rpc-provider-1.12.0-beta.10.tgz#08b53f5d205f97dd8974ffc25c2bdaa2614afcf3"
+  integrity sha512-JVHMRhAgQcZb9OxstGYD1tsjkeudglljw8jaD7Bc2Ad5HdrZFi2F+DX3Ycy9Bf0EyPUOWOnZWPQmAS0MoBWDbg==
   dependencies:
     "@babel/runtime" "^7.9.2"
-    "@polkadot/metadata" "1.11.2"
-    "@polkadot/types" "1.11.2"
-    "@polkadot/util" "^2.8.1"
-    "@polkadot/util-crypto" "^2.8.1"
+    "@polkadot/metadata" "1.12.0-beta.10"
+    "@polkadot/types" "1.12.0-beta.10"
+    "@polkadot/util" "^2.9.0-beta.1"
+    "@polkadot/util-crypto" "^2.9.0-beta.1"
     bn.js "^5.1.1"
     eventemitter3 "^4.0.0"
     isomorphic-fetch "^2.2.1"
     websocket "^1.0.31"
 
-"@polkadot/types-known@1.11.2":
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/types-known/-/types-known-1.11.2.tgz#f0e2ffae750454b34b1869b6c64c60b59e5f67af"
-  integrity sha512-ShrXGzHKNoZ6Ai6huWuafxVxRFKiV63nt9rM01DqzsgA1ILvPuB7b96ROe7P8tExFplZhuZkY6Wc+ITuAgdCDg==
+"@polkadot/types-known@1.12.0-beta.10":
+  version "1.12.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@polkadot/types-known/-/types-known-1.12.0-beta.10.tgz#00138b2b620dffabf379ceb364dbad181aa7ddc9"
+  integrity sha512-0JfoWDxnoe27DqBc1YLxe1g4P7DFxd2j1tqZ/oX6uHnAwqM92Aof6a0SdJZcGnt6VtWszJ0IDw6gUxW+ynh/0Q==
   dependencies:
     "@babel/runtime" "^7.9.2"
-    "@polkadot/types" "1.11.2"
-    "@polkadot/util" "^2.8.1"
+    "@polkadot/types" "1.12.0-beta.10"
+    "@polkadot/util" "^2.9.0-beta.1"
     bn.js "^5.1.1"
 
-"@polkadot/types@1.11.2":
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/types/-/types-1.11.2.tgz#65c338172ce9bf3406e54db4f945b66056d8a280"
-  integrity sha512-8OKeviT8RcxewvCE27FNiH/j2CRAcwbozaHtys4oVeoNkjcXMPC95YB2ZWv1Q7u7qn8LVFt3sfAyqmKt367aow==
+"@polkadot/types@1.12.0-beta.10":
+  version "1.12.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@polkadot/types/-/types-1.12.0-beta.10.tgz#da703ce5b99709d0cf6ff77bae55a99ff223cdb3"
+  integrity sha512-QDJfxKYVcpJomLRpNLSqZzEab7U219UxBFcc2tAsrYsXZoPOZE1aOzPgsGSWlGZ5pIZM30wI5no/j3JMBqLhbA==
   dependencies:
     "@babel/runtime" "^7.9.2"
-    "@polkadot/metadata" "1.11.2"
-    "@polkadot/util" "^2.8.1"
-    "@polkadot/util-crypto" "^2.8.1"
+    "@polkadot/metadata" "1.12.0-beta.10"
+    "@polkadot/util" "^2.9.0-beta.1"
+    "@polkadot/util-crypto" "^2.9.0-beta.1"
     "@types/bn.js" "^4.11.6"
     bn.js "^5.1.1"
     memoizee "^0.4.14"
     rxjs "^6.5.5"
 
-"@polkadot/util-crypto@2.8.1", "@polkadot/util-crypto@^2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/util-crypto/-/util-crypto-2.8.1.tgz#ae49d5efa79d7f234f7caf57d33bb91993097d72"
-  integrity sha512-vakpc/2PVGvQ3rEaCS3QnZlf74WA5U45MBNqK0Q6Yj4fGAYzTcKPKFGeoxxSenrVr/nKp2N1osXqcIOYsuCzHw==
+"@polkadot/util-crypto@2.9.0-beta.3", "@polkadot/util-crypto@^2.9.0-beta.1":
+  version "2.9.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@polkadot/util-crypto/-/util-crypto-2.9.0-beta.3.tgz#ef6e9d8fcf1b5af2c1036632d7ce9e746ba4524c"
+  integrity sha512-lgBUjy2yiJDwupeMCIh3OFXLCZmvhrWlFuz+1RUp25BFgwoWpox+6TuZE6ek9AszowoVDH2XzLKhNAbM1+Ne0Q==
   dependencies:
     "@babel/runtime" "^7.9.2"
-    "@polkadot/util" "2.8.1"
+    "@polkadot/util" "2.9.0-beta.3"
     "@polkadot/wasm-crypto" "^1.2.1"
     base-x "^3.0.8"
     bip39 "^3.0.2"
@@ -680,10 +680,10 @@
     tweetnacl "^1.0.3"
     xxhashjs "^0.2.2"
 
-"@polkadot/util@2.8.1", "@polkadot/util@^2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-2.8.1.tgz#bc625df27c34193627da9f0db37b757b297858fb"
-  integrity sha512-OUc/Jn41wd1G9D36J8mqjxAr3LBoxenuylQGXxQyf48/9fMVeUMb5i3wrWiVu2bO21OOXh85HhbUyLvX4V6nLw==
+"@polkadot/util@2.9.0-beta.3", "@polkadot/util@^2.9.0-beta.1":
+  version "2.9.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-2.9.0-beta.3.tgz#452d1bbcc90a5c7f654ced4919d96fba6c4f1364"
+  integrity sha512-jUTPC9Mur9QnOzQ0YkwPx8OaXx50fUgFkf/h7qrWbeCW/Ro3aZ8LZvDn2Q/dre5BSv/qvWrcOS+HxJ1nK6jqHQ==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@types/bn.js" "^4.11.6"
@@ -786,6 +786,11 @@
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
+
+"@types/memoizee@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@types/memoizee/-/memoizee-0.4.3.tgz#f48270d19327c1709620132cf54d598650f98492"
+  integrity sha512-N6QT0c9ZbEKl33n1wyoTxZs4cpN+YXjs0Aqy5Qim8ipd9PBNIPqOh/p5Pixc4601tqr5GErsdxUbfqviDfubNw==
 
 "@types/node@*":
   version "12.12.14"
