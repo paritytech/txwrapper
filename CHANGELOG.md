@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.6](https://github.com/paritytech/txwrapper/compare/v1.2.5...v1.2.6) (2020-04-27)
+
+
+### Bug Fixes
+
+* Add options parameter to all methods ([#122](https://github.com/paritytech/txwrapper/issues/122)) ([ee13cb4](https://github.com/paritytech/txwrapper/commit/ee13cb4116625d38cb1c58df32865e79cf3b3da1))
+
 ### [1.2.5](https://github.com/paritytech/txwrapper/compare/v1.2.4...v1.2.5) (2020-04-21)
 
 
