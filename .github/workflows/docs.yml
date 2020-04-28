@@ -1,0 +1,22 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Lint
+        run: |
+          yarn install
+          yarn docs
+          git add .
+          git commit -m "docs: Generate docs"
+          git push
