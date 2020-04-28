@@ -4,6 +4,7 @@
 
 import { Keyring } from '@polkadot/api';
 import { TypeRegistry } from '@polkadot/types';
+import { getSpecTypes } from '@polkadot/types-known';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import {
@@ -12,19 +13,13 @@ import {
   decode,
   deriveAddress,
   getTxHash,
+  KUSAMA_SS58_FORMAT,
   methods,
-  WESTEND_SS58_FORMAT,
 } from '../src';
 import { rpcToNode, signWith } from './util';
 
 /**
- * We're on a generic Substrate chain, default SS58 prefix is 42, which is
- * the same as Westend's prefix.
- */
-const DEV_CHAIN_SS58_FORMAT = WESTEND_SS58_FORMAT;
-
-/**
- * Entry point of the script. This script assumes a Substrate dev node is
+ * Entry point of the script. This script assumes a Kusama dev node is
  * running locally on `http://localhost:9933`.
  */
 async function main(): Promise<void> {
@@ -35,7 +30,7 @@ async function main(): Promise<void> {
   const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
   console.log(
     "Alice's SS58-Encoded Address:",
-    deriveAddress(alice.publicKey, DEV_CHAIN_SS58_FORMAT)
+    deriveAddress(alice.publicKey, KUSAMA_SS58_FORMAT)
   );
 
   // Construct a balance transfer transaction offline.
@@ -50,8 +45,12 @@ async function main(): Promise<void> {
 
   const registry = new TypeRegistry();
   // If you're using your own chain with custom types, add these types here. We
-  // are using a vanilla Substrate chain, so no type overriding is needed.
-  registry.register({});
+  // are using a Kusama chain, and the required overrided types are hardcoded
+  // in `@polkadot/types-known`.
+  // Right now, we hardcode the specVersion to `9999`, to use the always latest
+  // type overrides for Kusama. In real-life, you should use the specVersion
+  // returned by `state_getRuntimeVersion` RPC.
+  registry.register(getSpecTypes(registry, 'Kusama', 'kusama', 9999));
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
@@ -59,10 +58,10 @@ async function main(): Promise<void> {
   const unsigned = methods.balances.transfer(
     {
       value: 12,
-      dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty', // Bob
+      dest: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // Bob
     },
     {
-      address: deriveAddress(alice.publicKey, DEV_CHAIN_SS58_FORMAT),
+      address: deriveAddress(alice.publicKey, KUSAMA_SS58_FORMAT),
       blockHash,
       blockNumber: registry
         .createType('BlockNumber', block.header.number)
@@ -84,7 +83,7 @@ async function main(): Promise<void> {
   const decodedUnsigned = decode(unsigned, {
     metadata: metadataRpc,
     registry,
-    ss58Format: DEV_CHAIN_SS58_FORMAT,
+    ss58Format: KUSAMA_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
@@ -99,7 +98,7 @@ async function main(): Promise<void> {
   const payloadInfo = decode(signingPayload, {
     metadata: metadataRpc,
     registry,
-    ss58Format: DEV_CHAIN_SS58_FORMAT,
+    ss58Format: KUSAMA_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
@@ -128,7 +127,7 @@ async function main(): Promise<void> {
   const txInfo = decode(tx, {
     metadata: metadataRpc,
     registry,
-    ss58Format: DEV_CHAIN_SS58_FORMAT,
+    ss58Format: KUSAMA_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
