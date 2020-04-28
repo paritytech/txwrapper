@@ -1,27 +1,34 @@
 # How to use `txwrapper`
 
-Here's a mini-tutorial on how `txwrapper` can interact with a Substrate chain. We're using a dev chain in this example.
+Here's a mini-tutorial on how `txwrapper` can interact with a Substrate chain. We're using a dev chain, and you can use:
+
+- either a Substrate dev chain (https://github.com/paritytech/substrate)
+- or a Polkadot/Kusama dev chain (https://github.com/paritytech/polkadot/)
 
 ## Get Started
 
-1. Fetch the latest Substrate from https://github.com/paritytech/substrate. Follow instructions to build it, and start a dev chain.
+1. Fetch the latest Substrate or Polkadot/Kusama node from the above links. Follow instructions to build it, and start a dev chain.
 
 ```bash
 substrate --dev
+# or
+polkadot --dev
 ```
 
-2. Run the example script in this folder. It will interact with the Substrate node.
+2. Run the example script in this folder. It will interact with your local node.
 
 ```bash
-./node_module/.bin/ts-node example/index.ts
+./node_module/.bin/ts-node example/substrateMaster.ts
+# or
+./node_module/.bin/ts-node example/kusama.ts
 ```
 
 ## Expected Output
 
-Here's a sample output of the above script. Your payload to sign and signature will of course differ from this example.
+Here's a sample output of the above script, using a Substrate node. Your payload to sign and signature will of course differ from this example.
 
 ```
-SS58-Encoded Address: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+Alice's SS58-Encoded Address: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
 
 Decoded Transaction
   To: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
@@ -48,10 +55,10 @@ Decoded Transaction
 
 ## Offline vs. Online
 
-In `./index.ts`, the `rpcToNode` function is the only function that needs to be called online. Everything else can be performed offline. In particular, this example shows how to perform the following offline:
+In the examples, the `rpcToNode` function is the only function that needs to be called with internet access. Everything else can be performed offline. In particular, this example shows how to perform the following operations offline:
 
-- Generate a tx
-- Create its signing payload
-- Sign the signing payload
-- Derive the tx hash
-- Decode at various levels of the tx lifecycle
+- Generate a tx,
+- Create its signing payload,
+- Sign the signing payload,
+- Derive the tx hash,
+- Decode at various levels of the tx lifecycle.

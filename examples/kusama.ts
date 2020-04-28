@@ -69,8 +69,8 @@ function signWith(
 }
 
 /**
- * Entry point of the script. This script assumes a Substrate node is running
- * locally on `http://localhost:9933`.
+ * Entry point of the script. This script assumes a Kusama dev node is
+ * running locally on `http://localhost:9933`.
  */
 async function main(): Promise<void> {
   // Wait for the promise to resolve async WASM
@@ -79,7 +79,7 @@ async function main(): Promise<void> {
   const keyring = new Keyring();
   const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
   console.log(
-    'SS58-Encoded Address:',
+    "Alice's SS58-Encoded Address:",
     deriveAddress(alice.publicKey, KUSAMA_SS58_FORMAT)
   );
 
@@ -91,14 +91,16 @@ async function main(): Promise<void> {
   const blockHash = await rpcToNode('chain_getBlockHash');
   const genesisHash = await rpcToNode('chain_getBlockHash', [0]);
   const metadataRpc = await rpcToNode('state_getMetadata');
-  const { specName, specVersion } = await rpcToNode('state_getRuntimeVersion');
-  const chainName = await rpcToNode('system_chain');
+  const { specVersion } = await rpcToNode('state_getRuntimeVersion');
 
   const registry = new TypeRegistry();
   // If you're using your own chain with custom types, add these types here. We
-  // are using a Kusama chain, and the overrided types are hardcoded in
-  // `@polkadot/types-known`.
-  registry.register(getSpecTypes(registry, chainName, specName, specVersion));
+  // are using a Kusama chain, and the required overrided types are hardcoded
+  // in `@polkadot/types-known`.
+  // Right now, we hardcode the specVersion to `9999`, to use the always latest
+  // type overrides for Kusama. In real-life, you should use the specVersion
+  // returned by `state_getRuntimeVersion` RPC.
+  registry.register(getSpecTypes(registry, 'Kusama', 'kusama', 9999));
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
@@ -169,7 +171,7 @@ async function main(): Promise<void> {
   // operation should be handled externally. Here, we just send a JSONRPC
   // request directly to the node.
   const actualTxHash = await rpcToNode('author_submitExtrinsic', [tx]);
-  console.log(`\nActual Tx Hash: ${actualTxHash}`);
+  console.log(`Actual Tx Hash: ${actualTxHash}`);
 
   // Decode a signed payload.
   const txInfo = decode(tx, {

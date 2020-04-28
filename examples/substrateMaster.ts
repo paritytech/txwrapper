@@ -15,12 +15,14 @@ import {
   getTxHash,
   KeyringPair,
   methods,
+  WESTEND_SS58_FORMAT,
 } from '../src';
 
 /**
- * We're on a generic Substrate chain, default SS58 prefix is 42.
+ * We're on a generic Substrate chain, default SS58 prefix is 42, which is
+ * Westend's prefix.
  */
-const DEV_CHAIN_SS58_FORMAT = 42;
+const DEV_CHAIN_SS58_FORMAT = WESTEND_SS58_FORMAT;
 
 /**
  * Send a JSONRPC request to the node at http://localhost:9933.
@@ -72,8 +74,8 @@ function signWith(
 }
 
 /**
- * Entry point of the script. This script assumes a Substrate node is running
- * locally on `http://localhost:9933`.
+ * Entry point of the script. This script assumes a Substrate dev node is
+ * running locally on `http://localhost:9933`.
  */
 async function main(): Promise<void> {
   // Wait for the promise to resolve async WASM
@@ -82,7 +84,7 @@ async function main(): Promise<void> {
   const keyring = new Keyring();
   const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
   console.log(
-    'SS58-Encoded Address:',
+    "Alice's SS58-Encoded Address:",
     deriveAddress(alice.publicKey, DEV_CHAIN_SS58_FORMAT)
   );
 
@@ -170,7 +172,7 @@ async function main(): Promise<void> {
   // operation should be handled externally. Here, we just send a JSONRPC
   // request directly to the node.
   const actualTxHash = await rpcToNode('author_submitExtrinsic', [tx]);
-  console.log(`\nActual Tx Hash: ${actualTxHash}`);
+  console.log(`Actual Tx Hash: ${actualTxHash}`);
 
   // Decode a signed payload.
   const txInfo = decode(tx, {
