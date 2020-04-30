@@ -16,6 +16,7 @@ export interface Options {
    */
   registry?: TypeRegistry;
   /**
+   * @deprecated
    * The SS58 prefix of the chain. Defaults to 2 (Kusama).
    */
   ss58Format?: number;
@@ -36,6 +37,10 @@ export function sanitizeOptions(
   // Passing a string as second argument (for metadataRpc) is deprecated. We
   // still add the following check for backwards-compatibility.
   if (typeof metadataOrOptions === 'string') {
+    console.warn(
+      'Passing metadataRpc as string is deprecated. Please pass an object with `metadata` field.'
+    );
+
     return {
       metadata: metadataOrOptions,
       registry: getRegistry('Kusama', 'kusama'),
@@ -44,7 +49,8 @@ export function sanitizeOptions(
   } else {
     return {
       metadata: metadataOrOptions.metadata,
-      registry: metadataOrOptions.registry || getRegistry('Kusama', 'kusama'),
+      registry:
+        metadataOrOptions.registry || getRegistry('Kusama', 'kusama', 9999),
       ss58Format: metadataOrOptions.ss58Format || KUSAMA_SS58_FORMAT,
     };
   }

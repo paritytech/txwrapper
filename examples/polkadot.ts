@@ -3,7 +3,9 @@
  */ /** */
 
 import { Keyring } from '@polkadot/api';
+import metadataV11 from '@polkadot/metadata/Metadata/v11/static.polkadot';
 import { TypeRegistry } from '@polkadot/types';
+import { getSpecTypes } from '@polkadot/types-known';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import {
@@ -13,19 +15,14 @@ import {
   deriveAddress,
   getTxHash,
   methods,
-  WESTEND_SS58_FORMAT,
+  POLKADOT_SS58_FORMAT,
 } from '../src';
-import { rpcToNode, signWith } from './util';
+import { signWith } from './util';
 
 /**
- * We're on a generic Substrate chain, default SS58 prefix is 42, which is
- * the same as Westend's prefix.
- */
-const DEV_CHAIN_SS58_FORMAT = WESTEND_SS58_FORMAT;
-
-/**
- * Entry point of the script. This script assumes a Substrate dev node is
- * running locally on `http://localhost:9933`.
+ * Entry point of the script. This script is not doing anything for now,
+ * because we don't have a Polkadot node to play with yet. For now, it assumes
+ * a Polkadot mainnet chain (SS58, types), but is filled with dummy data.
  */
 async function main(): Promise<void> {
   // Wait for the promise to resolve async WASM
@@ -35,24 +32,46 @@ async function main(): Promise<void> {
   const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
   console.log(
     "Alice's SS58-Encoded Address:",
-    deriveAddress(alice.publicKey, DEV_CHAIN_SS58_FORMAT)
+    deriveAddress(alice.publicKey, POLKADOT_SS58_FORMAT)
   );
 
   // Construct a balance transfer transaction offline.
   // To construct the tx, we need some up-to-date information from the node.
-  // `txwrapper` is offline-only, so does not care how you retrieve this info.
-  // In this tutorial, we simply send RPC requests to the node.
-  const { block } = await rpcToNode('chain_getBlock');
-  const blockHash = await rpcToNode('chain_getBlockHash');
-  const genesisHash = await rpcToNode('chain_getBlockHash', [0]);
-  const metadataRpc = await rpcToNode('state_getMetadata');
-  const { specVersion } = await rpcToNode('state_getRuntimeVersion');
+  // Since we don't have any Polkadot mainnet node yet, for now I'm just
+  // putting some dummy data here.
+  // From RPC `chain_getBlock`
+  const blockNumber = '0x56b';
+  // From RPC `chain_getBlock`
+  const blockHash =
+    '0x95711f74edcb52c518c070f91570f2f01dfa5c80fc926379b34142f287bbb221';
+  // From RPC `chain_getBlock`
+  const genesisHash =
+    '0x22d37976435629a7d027f8113391cfaec285e7c3a63a982aa9f649873afcb82c';
+  // From RPC `chain_getBlock`
+  const metadataRpc = metadataV11;
+  // From RPC `chain_getBlock`
+  const specVersion = 9999;
+  // From RPC `system_properties`
+  const chainProperties = {
+    ss58Format: 1,
+    tokenDecimals: 12,
+    tokenSymbol: 'DOT',
+  };
 
-  // Create Substrate's type registry.
+  // Create Polkadot's type registry.
   const registry = new TypeRegistry();
   // If you're using your own chain with custom types, add these types here. We
-  // are using a vanilla Substrate chain, so no type overriding is needed.
-  registry.register({});
+  // are using a Kusama chain, and the required overrided types are hardcoded
+  // in `@polkadot/types-known`.
+  // Right now, we hardcode the specVersion to `9999`, to use the always latest
+  // type overrides for Kusama. In real-life, you should use the specVersion
+  // returned by `state_getRuntimeVersion` RPC.
+  registry.register(getSpecTypes(registry, 'Polkadot', 'polkadot', 9999));
+  // Let the registry be aware of chain properties, in particular the SS58
+  // prefix for decoding addresses.
+  registry.setChainProperties(
+    registry.createType('ChainProperties', chainProperties)
+  );
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
@@ -60,14 +79,12 @@ async function main(): Promise<void> {
   const unsigned = methods.balances.transfer(
     {
       value: 12,
-      dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty', // Bob
+      dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
     },
     {
-      address: deriveAddress(alice.publicKey, DEV_CHAIN_SS58_FORMAT),
+      address: deriveAddress(alice.publicKey, POLKADOT_SS58_FORMAT),
       blockHash,
-      blockNumber: registry
-        .createType('BlockNumber', block.header.number)
-        .toNumber(),
+      blockNumber: registry.createType('BlockNumber', blockNumber).toNumber(),
       genesisHash,
       metadataRpc,
       nonce: 1, // Assuming this is Alice's first tx on the chain
@@ -116,12 +133,6 @@ async function main(): Promise<void> {
   // Derive the tx hash of a signed transaction offline.
   const exptectedTxHash = getTxHash(tx);
   console.log(`\nExpected Tx Hash: ${exptectedTxHash}`);
-
-  // Send the tx to the node. Again, since `txwrapper` is offline-only, this
-  // operation should be handled externally. Here, we just send a JSONRPC
-  // request directly to the node.
-  const actualTxHash = await rpcToNode('author_submitExtrinsic', [tx]);
-  console.log(`Actual Tx Hash: ${actualTxHash}`);
 
   // Decode a signed payload.
   const txInfo = decode(tx, {
