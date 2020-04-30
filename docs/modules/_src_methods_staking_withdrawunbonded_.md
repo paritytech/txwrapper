@@ -14,7 +14,7 @@
 
 ▸ **withdrawUnbonded**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/withdrawUnbonded.ts:13](https://github.com/paritytech/txwrapper/blob/c52e67f/src/methods/staking/withdrawUnbonded.ts#L13)*
+*Defined in [src/methods/staking/withdrawUnbonded.ts:13](https://github.com/paritytech/txwrapper/blob/d1bfb8b/src/methods/staking/withdrawUnbonded.ts#L13)*
 
 Remove any unlocked chunks from the `unlocking` queue from our management.
 

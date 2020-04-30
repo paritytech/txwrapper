@@ -22,6 +22,8 @@ export interface ChainProperties {
  * Hardcode some chain properties of known chains. These are normally returned
  * by `system_properties` call, but since they don't change much, it's pretty
  * safe to hardcode them.
+ *
+ * @ignore
  */
 const defaultChainProperties: Record<string, ChainProperties> = {
   Kusama: {
@@ -71,6 +73,7 @@ export function getRegistry(
  * From a metadata hex string (for example returned by RPC), create a Metadata
  * object. Metadata decoding is expensive, so this function is memoized.
  *
+ * @ignore
  * @param registry - The registry of the metadata.
  * @param metadata - The metadata as hex string.
  */

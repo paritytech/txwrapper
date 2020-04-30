@@ -18,7 +18,7 @@
 
 ▸ **validate**(`args`: [StakingValidateArgs](../interfaces/_src_methods_staking_validate_.stakingvalidateargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/validate.ts:23](https://github.com/paritytech/txwrapper/blob/c52e67f/src/methods/staking/validate.ts#L23)*
+*Defined in [src/methods/staking/validate.ts:23](https://github.com/paritytech/txwrapper/blob/d1bfb8b/src/methods/staking/validate.ts#L23)*
 
 Declare the desire to validate for the origin controller.
 
