@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.7](https://github.com/paritytech/txwrapper/compare/v1.2.6...v1.2.7) (2020-04-30)
+
+
+### Bug Fixes
+
+* Use ss58 from chain properties ([#125](https://github.com/paritytech/txwrapper/issues/125)) ([34eb150](https://github.com/paritytech/txwrapper/commit/34eb15094273ef60646a53c475712defd9d0539c))
+
 ### [1.2.6](https://github.com/paritytech/txwrapper/compare/v1.2.5...v1.2.6) (2020-04-27)
 
 
