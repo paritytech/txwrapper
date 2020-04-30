@@ -48,6 +48,7 @@ async function main(): Promise<void> {
   const metadataRpc = await rpcToNode('state_getMetadata');
   const { specVersion } = await rpcToNode('state_getRuntimeVersion');
 
+  // Create Substrate's type registry.
   const registry = new TypeRegistry();
   // If you're using your own chain with custom types, add these types here. We
   // are using a vanilla Substrate chain, so no type overriding is needed.
@@ -84,7 +85,6 @@ async function main(): Promise<void> {
   const decodedUnsigned = decode(unsigned, {
     metadata: metadataRpc,
     registry,
-    ss58Format: DEV_CHAIN_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
@@ -99,7 +99,6 @@ async function main(): Promise<void> {
   const payloadInfo = decode(signingPayload, {
     metadata: metadataRpc,
     registry,
-    ss58Format: DEV_CHAIN_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
@@ -128,7 +127,6 @@ async function main(): Promise<void> {
   const txInfo = decode(tx, {
     metadata: metadataRpc,
     registry,
-    ss58Format: DEV_CHAIN_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +

@@ -2,8 +2,6 @@
  * @ignore
  */ /** */
 
-import { setSS58Format } from '@polkadot/util-crypto';
-
 import {
   BLOCKTIME,
   createMetadata,
@@ -55,13 +53,12 @@ export function decodeSigningPayload(
   metadataOrOptions: string | Options,
   _ss58Format?: number
 ): DecodedSigningPayload {
-  const { metadata, registry, ss58Format } = sanitizeOptions(
+  const { metadata, registry } = sanitizeOptions(
     metadataOrOptions,
     _ss58Format
   );
 
   registry.setMetadata(createMetadata(registry, metadata));
-  setSS58Format(ss58Format);
 
   const payload = registry.createType('ExtrinsicPayload', signingPayload, {
     version: EXTRINSIC_VERSION,

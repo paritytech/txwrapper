@@ -18,7 +18,7 @@
 
 ▸ **sanitizeOptions**(`metadataOrOptions`: string | [Options](../interfaces/_src_util_options_.options.md), `ss58Format`: number): *Required‹[Options](../interfaces/_src_util_options_.options.md)›*
 
-*Defined in [src/util/options.ts:32](https://github.com/paritytech/txwrapper/blob/38b3ce8/src/util/options.ts#L32)*
+*Defined in [src/util/options.ts:34](https://github.com/paritytech/txwrapper/blob/d1bfb8b/src/util/options.ts#L34)*
 
 Sanitize the options that the user pass in. In particular, the second
 argument can either be a string (the metadata) or an Options object. Also

@@ -18,7 +18,7 @@
 
 ▸ **setKeys**(`args`: [SessionSetKeysArgs](../interfaces/_src_methods_session_setkeys_.sessionsetkeysargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/session/setKeys.ts:25](https://github.com/paritytech/txwrapper/blob/38b3ce8/src/methods/session/setKeys.ts#L25)*
+*Defined in [src/methods/session/setKeys.ts:25](https://github.com/paritytech/txwrapper/blob/d1bfb8b/src/methods/session/setKeys.ts#L25)*
 
 Sets the session key(s) of the function caller to `key`.
 
