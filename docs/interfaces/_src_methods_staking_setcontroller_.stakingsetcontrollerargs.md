@@ -20,6 +20,6 @@
 
 • **controller**: *string*
 
-*Defined in [src/methods/staking/setController.ts:13](https://github.com/paritytech/txwrapper/blob/38b3ce8/src/methods/staking/setController.ts#L13)*
+*Defined in [src/methods/staking/setController.ts:13](https://github.com/paritytech/txwrapper/blob/c52e67f/src/methods/staking/setController.ts#L13)*
 
 The SS-58 encoded controller address.

@@ -20,6 +20,6 @@
 
 • **value**: *number*
 
-*Defined in [src/methods/staking/unbond.ts:13](https://github.com/paritytech/txwrapper/blob/38b3ce8/src/methods/staking/unbond.ts#L13)*
+*Defined in [src/methods/staking/unbond.ts:13](https://github.com/paritytech/txwrapper/blob/c52e67f/src/methods/staking/unbond.ts#L13)*
 
 The number of tokens to unbond.
