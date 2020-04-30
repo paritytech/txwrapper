@@ -3,8 +3,6 @@
  */ /** */
 
 import { Keyring } from '@polkadot/api';
-import { TypeRegistry } from '@polkadot/types';
-import { getSpecTypes } from '@polkadot/types-known';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import {
@@ -12,6 +10,7 @@ import {
   createSigningPayload,
   decode,
   deriveAddress,
+  getRegistry,
   getTxHash,
   KUSAMA_SS58_FORMAT,
   methods,
@@ -43,14 +42,11 @@ async function main(): Promise<void> {
   const metadataRpc = await rpcToNode('state_getMetadata');
   const { specVersion } = await rpcToNode('state_getRuntimeVersion');
 
-  const registry = new TypeRegistry();
-  // If you're using your own chain with custom types, add these types here. We
-  // are using a Kusama chain, and the required overrided types are hardcoded
-  // in `@polkadot/types-known`.
+  // Create Kusama's type registry.
   // Right now, we hardcode the specVersion to `9999`, to use the always latest
   // type overrides for Kusama. In real-life, you should use the specVersion
   // returned by `state_getRuntimeVersion` RPC.
-  registry.register(getSpecTypes(registry, 'Kusama', 'kusama', 9999));
+  const registry = getRegistry('Kusama', 'kusama', 9999);
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
@@ -83,7 +79,6 @@ async function main(): Promise<void> {
   const decodedUnsigned = decode(unsigned, {
     metadata: metadataRpc,
     registry,
-    ss58Format: KUSAMA_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
@@ -98,7 +93,6 @@ async function main(): Promise<void> {
   const payloadInfo = decode(signingPayload, {
     metadata: metadataRpc,
     registry,
-    ss58Format: KUSAMA_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
@@ -127,7 +121,6 @@ async function main(): Promise<void> {
   const txInfo = decode(tx, {
     metadata: metadataRpc,
     registry,
-    ss58Format: KUSAMA_SS58_FORMAT,
   });
   console.log(
     `\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +

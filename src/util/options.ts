@@ -16,7 +16,8 @@ export interface Options {
    */
   registry?: TypeRegistry;
   /**
-   * @deprecated
+   * @deprecated Please use `registry.setChainProperties()` instead, and pass the correct SS58 prefix in the chain properties.
+   *
    * The SS58 prefix of the chain. Defaults to 2 (Kusama).
    */
   ss58Format?: number;
@@ -43,14 +44,14 @@ export function sanitizeOptions(
 
     return {
       metadata: metadataOrOptions,
-      registry: getRegistry('Kusama', 'kusama'),
+      registry: getRegistry('Kusama', 'kusama', 9999), // Use 9999 to always use latest type overrides by default
       ss58Format,
     };
   } else {
     return {
       metadata: metadataOrOptions.metadata,
       registry:
-        metadataOrOptions.registry || getRegistry('Kusama', 'kusama', 9999),
+        metadataOrOptions.registry || getRegistry('Kusama', 'kusama', 9999), // Use 9999 to always use latest type overrides by default
       ss58Format: metadataOrOptions.ss58Format || KUSAMA_SS58_FORMAT,
     };
   }

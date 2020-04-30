@@ -3,7 +3,6 @@
  */ /** */
 
 import { hexToU8a } from '@polkadot/util';
-import { setSS58Format } from '@polkadot/util-crypto';
 
 import {
   BLOCKTIME,
@@ -50,13 +49,12 @@ export function decodeSignedTx(
   metadataOrOptions: string | Options,
   _ss58Format?: number
 ): DecodedSignedTx {
-  const { metadata, registry, ss58Format } = sanitizeOptions(
+  const { metadata, registry } = sanitizeOptions(
     metadataOrOptions,
     _ss58Format
   );
 
   registry.setMetadata(createMetadata(registry, metadata));
-  setSS58Format(ss58Format);
 
   const tx = registry.createType('Extrinsic', hexToU8a(signedTx), {
     isSigned: true,

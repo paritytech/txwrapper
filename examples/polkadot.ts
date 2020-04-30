@@ -4,8 +4,6 @@
 
 import { Keyring } from '@polkadot/api';
 import metadataV11 from '@polkadot/metadata/Metadata/v11/static.polkadot';
-import { TypeRegistry } from '@polkadot/types';
-import { getSpecTypes } from '@polkadot/types-known';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import {
@@ -13,6 +11,7 @@ import {
   createSigningPayload,
   decode,
   deriveAddress,
+  getRegistry,
   getTxHash,
   methods,
   POLKADOT_SS58_FORMAT,
@@ -41,37 +40,19 @@ async function main(): Promise<void> {
   // putting some dummy data here.
   // From RPC `chain_getBlock`
   const blockNumber = '0x56b';
-  // From RPC `chain_getBlock`
+  // From RPC `chain_getBlockHash`
   const blockHash =
     '0x95711f74edcb52c518c070f91570f2f01dfa5c80fc926379b34142f287bbb221';
-  // From RPC `chain_getBlock`
+  // From RPC `chain_getBlockHash`
   const genesisHash =
     '0x22d37976435629a7d027f8113391cfaec285e7c3a63a982aa9f649873afcb82c';
-  // From RPC `chain_getBlock`
+  // From RPC `state_getMetadata`
   const metadataRpc = metadataV11;
-  // From RPC `chain_getBlock`
+  // From RPC `state_getRuntimeVersion`
   const specVersion = 9999;
-  // From RPC `system_properties`
-  const chainProperties = {
-    ss58Format: 1,
-    tokenDecimals: 12,
-    tokenSymbol: 'DOT',
-  };
 
   // Create Polkadot's type registry.
-  const registry = new TypeRegistry();
-  // If you're using your own chain with custom types, add these types here. We
-  // are using a Kusama chain, and the required overrided types are hardcoded
-  // in `@polkadot/types-known`.
-  // Right now, we hardcode the specVersion to `9999`, to use the always latest
-  // type overrides for Kusama. In real-life, you should use the specVersion
-  // returned by `state_getRuntimeVersion` RPC.
-  registry.register(getSpecTypes(registry, 'Polkadot', 'polkadot', 9999));
-  // Let the registry be aware of chain properties, in particular the SS58
-  // prefix for decoding addresses.
-  registry.setChainProperties(
-    registry.createType('ChainProperties', chainProperties)
-  );
+  const registry = getRegistry('Polkadot', 'polkadot', specVersion);
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline

@@ -3,27 +3,66 @@ import { Metadata, TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
 import memoizee from 'memoizee';
 
+import {
+  KUSAMA_SS58_FORMAT,
+  POLKADOT_SS58_FORMAT,
+  WESTEND_SS58_FORMAT,
+} from './constants';
+
 /**
- * Create a specific TypeRegistry for the current chain. The reason we have
- * this is, depending on different runtime versions, we have different types
- * (e.g.: session keys went from 4 to 5 keys). Here we hardcode which runtime
- * version's types we wish to use.
+ * JSON object of ChainProperties codec from `@polkadot/api`.
+ */
+export interface ChainProperties {
+  ss58Format: number;
+  tokenDecimals: number;
+  tokenSymbol: string;
+}
+
+/**
+ * Hardcode some chain properties of known chains. These are normally returned
+ * by `system_properties` call, but since they don't change much, it's pretty
+ * safe to hardcode them.
+ */
+const defaultChainProperties: Record<string, ChainProperties> = {
+  Kusama: {
+    ss58Format: KUSAMA_SS58_FORMAT,
+    tokenDecimals: 12,
+    tokenSymbol: 'KSM',
+  },
+  Polkadot: {
+    ss58Format: POLKADOT_SS58_FORMAT,
+    tokenDecimals: 12,
+    tokenSymbol: 'DOT',
+  },
+  Westend: {
+    ss58Format: WESTEND_SS58_FORMAT,
+    tokenDecimals: 12,
+    tokenSymbol: 'WND',
+  },
+};
+
+/**
+ * Given a chain name and a spec version, return the corresponding type
+ * registry.
  *
  * @see https://github.com/polkadot-js/api/tree/master/packages/types-known
- * @param specName - The chain to create the type registry for.
+ * @param chainName - The chain to create the type registry for.
+ * @param specName - The name of the runtime spec.
  * @param specVersion - The spec version of that chain for which we want to
  * create a type registry.
  */
 export function getRegistry(
   chainName: 'Kusama' | 'Polkadot' | 'Westend',
   specName: 'kusama' | 'polkadot' | 'westend',
-  // FIXME Now using 9999 so that it's bigger than any previous spec version,
-  // which will thus use the latest spec version.
-  specVersion = 9999
+  specVersion: number
 ): TypeRegistry {
   const registry = new TypeRegistry();
   // Register types specific to chain/runtimeVersion
   registry.register(getSpecTypes(registry, chainName, specName, specVersion));
+  // Register the chain properties for this registry
+  registry.setChainProperties(
+    registry.createType('ChainProperties', defaultChainProperties[chainName])
+  );
 
   return registry;
 }
@@ -42,6 +81,9 @@ function createMetadataUnmemoized(
   return new Metadata(registry, metadata);
 }
 
+/**
+ * @ignore
+ */
 export const createMetadata = memoizee(createMetadataUnmemoized, {
   length: 2,
 });
@@ -50,6 +92,7 @@ export const createMetadata = memoizee(createMetadataUnmemoized, {
  * From a metadata hex string (for example returned by RPC), create a Decorated
  * object.
  *
+ * @ignore
  * @param registry - The registry of the metadata.
  * @param metadata - The metadata as hex string.
  */
