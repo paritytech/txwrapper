@@ -52,6 +52,7 @@ export function sanitizeOptions(
       metadata: metadataOrOptions.metadata,
       registry:
         metadataOrOptions.registry || getRegistry('Kusama', 'kusama', 9999), // Use 9999 to always use latest type overrides by default
+      // We return `ss58Format`, but it's deprecated, and actually never used in the codebase anymore
       ss58Format: metadataOrOptions.ss58Format || KUSAMA_SS58_FORMAT,
     };
   }
