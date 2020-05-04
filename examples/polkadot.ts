@@ -54,7 +54,7 @@ async function main(): Promise<void> {
   const unsigned = methods.balances.transfer(
     {
       value: 12,
-      dest: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // Bob
+      dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
     },
     {
       address: deriveAddress(alice.publicKey, POLKADOT_SS58_FORMAT),
@@ -64,7 +64,7 @@ async function main(): Promise<void> {
         .toNumber(),
       genesisHash,
       metadataRpc,
-      nonce: 1, // Assuming this is Alice's first tx on the chain
+      nonce: 0, // Assuming this is Alice's first tx on the chain
       specVersion,
       tip: 0,
       validityPeriod: 240,
