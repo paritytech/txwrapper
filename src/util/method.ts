@@ -7,7 +7,7 @@ import { Call } from '@polkadot/types/interfaces';
 import { AnyJson } from '@polkadot/types/types';
 import { stringCamelCase } from '@polkadot/util';
 
-import { EXTRINSIC_VERSION, ONE_SECOND } from './constants';
+import { EXTRINSIC_VERSION } from './constants';
 import { createDecorated } from './metadata';
 import { Options, sanitizeOptions } from './options';
 import { BaseTxInfo, UnsignedTransaction } from './types';
@@ -23,7 +23,7 @@ const DEFAULTS = {
   /**
    * Construct a mortal extrinsic of ~5 minutes
    */
-  validityPeriod: 5 * 60,
+  eraPeriod: 50,
 };
 
 export type Args = Record<string, AnyJson>;
@@ -87,7 +87,7 @@ export function createMethod(
     era: registry
       .createType('ExtrinsicEra', {
         current: info.blockNumber,
-        period: ONE_SECOND * (info.validityPeriod || DEFAULTS.validityPeriod),
+        period: info.eraPeriod || DEFAULTS.eraPeriod,
       })
       .toHex(),
     genesisHash: info.genesisHash,

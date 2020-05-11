@@ -5,7 +5,7 @@ describe('createMethod', () => {
   it('should create a default validity period of 5 minutes', () => {
     const txBaseInfo = {
       ...TEST_BASE_TX_INFO,
-      validityPeriod: undefined,
+      eraPeriod: undefined,
     };
     const unsigned = createMethod({
       ...txBaseInfo,

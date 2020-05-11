@@ -3,7 +3,6 @@
  */ /** */
 
 import {
-  BLOCKTIME,
   createMetadata,
   Options,
   sanitizeOptions,
@@ -61,14 +60,12 @@ export function decodeUnsignedTx(
     blockNumber: registry
       .createType('BlockNumber', unsigned.blockNumber)
       .toNumber(),
+    eraPeriod: registry.createType('MortalEra', unsigned.era).period.toNumber(),
     genesisHash: unsigned.genesisHash,
     metadataRpc: metadata,
     method,
     nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
     specVersion: registry.createType('u32', unsigned.specVersion).toNumber(),
     tip: registry.createType('Compact<Balance>', unsigned.tip).toNumber(),
-    validityPeriod:
-      registry.createType('MortalEra', unsigned.era).period.toNumber() *
-      BLOCKTIME,
   };
 }
