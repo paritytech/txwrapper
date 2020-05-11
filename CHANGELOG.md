@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/paritytech/txwrapper/compare/v1.2.8...v1.3.0) (2020-05-11)
+
+
+### Features
+
+* Deprecate `validityPeriod`, use `eraPeriod` in blocks instead ([#137](https://github.com/paritytech/txwrapper/issues/137)) ([22f9dfb](https://github.com/paritytech/txwrapper/commit/22f9dfb10d11ceb375e9b6181c53ea1e31ccf3b3))
+
+
+### Bug Fixes
+
+* **deps:** Update @polkadot/api to v1.13.1 ([#138](https://github.com/paritytech/txwrapper/issues/138)) ([bea59fc](https://github.com/paritytech/txwrapper/commit/bea59fcfc700c4c329408daa4055e1d25559130e))
+* Polkadot formatting on address in example ([#131](https://github.com/paritytech/txwrapper/issues/131)) ([1cdf19a](https://github.com/paritytech/txwrapper/commit/1cdf19a60e4ac4329318e174cb0501e4162ea780))
+
 ### [1.2.8](https://github.com/paritytech/txwrapper/compare/v1.2.7...v1.2.8) (2020-05-04)
 
 
