@@ -29,10 +29,9 @@ export interface BaseTxInfo {
   blockNumber: number;
   /**
    * Describe the longevity of a transaction. It represents the validity from
-   * the `blockHash` field, in number of blocks. Defaults to 50 blocks, which
-   * translates to ~5 minutes.
+   * the `blockHash` field, in number of blocks. Defaults to 64 blocks.
    *
-   * @default 50
+   * @default 64
    */
   eraPeriod?: number;
   /**

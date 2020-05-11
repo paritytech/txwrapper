@@ -68,7 +68,7 @@ async function main(): Promise<void> {
       blockNumber: registry
         .createType('BlockNumber', block.header.number)
         .toNumber(),
-      eraPeriod: 50,
+      eraPeriod: 64,
       genesisHash,
       metadataRpc,
       nonce: 1, // Assuming this is Alice's first tx on the chain

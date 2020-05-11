@@ -17,13 +17,13 @@ import { BaseTxInfo, UnsignedTransaction } from './types';
  */
 const DEFAULTS = {
   /**
-   * Don't add any tip by default
+   * Don't add any tip by default.
    */
   tip: 0,
   /**
-   * Construct a mortal extrinsic of ~5 minutes
+   * Construct a mortal extrinsic of ~6m24s minutes.
    */
-  eraPeriod: 50,
+  eraPeriod: 64,
 };
 
 export type Args = Record<string, AnyJson>;
