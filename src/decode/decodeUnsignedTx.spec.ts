@@ -28,9 +28,9 @@ export function decodeBaseTxInfo(txInfo: TxInfo): void {
     expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key])
   );
 
-  expect(txInfo.validityPeriod).toBeGreaterThanOrEqual(
-    TEST_BASE_TX_INFO.validityPeriod
-  );
+  // The actual period is the smallest power of 2 greater than the input
+  // period.
+  expect(txInfo.eraPeriod).toBeGreaterThanOrEqual(TEST_BASE_TX_INFO.eraPeriod);
 }
 
 /**

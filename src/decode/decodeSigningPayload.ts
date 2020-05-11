@@ -3,7 +3,6 @@
  */ /** */
 
 import {
-  BLOCKTIME,
   createMetadata,
   EXTRINSIC_VERSION,
   Options,
@@ -68,12 +67,12 @@ export function decodeSigningPayload(
 
   return {
     blockHash: payload.blockHash.toHex(),
+    eraPeriod: payload.era.asMortalEra.period.toNumber(),
     genesisHash: payload.genesisHash.toHex(),
     metadataRpc: metadata,
     method,
     nonce: payload.nonce.toNumber(),
     specVersion: payload.specVersion.toNumber(),
     tip: payload.tip.toNumber(),
-    validityPeriod: payload.era.asMortalEra.period.toNumber() * BLOCKTIME,
   };
 }

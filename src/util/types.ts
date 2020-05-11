@@ -28,6 +28,13 @@ export interface BaseTxInfo {
    */
   blockNumber: number;
   /**
+   * Describe the longevity of a transaction. It represents the validity from
+   * the `blockHash` field, in number of blocks. Defaults to 64 blocks.
+   *
+   * @default 64
+   */
+  eraPeriod?: number;
+  /**
    * The genesis hash of the chain, in hex.
    */
   genesisHash: string;
@@ -54,6 +61,7 @@ export interface BaseTxInfo {
    * The amount of time (in second) the transaction is valid for. Will be
    * translated into a mortal era. Defaults to 5 minutes.
    *
+   * @deprecated Please use `eraPeriod` instead.
    * @default 300
    */
   validityPeriod?: number;

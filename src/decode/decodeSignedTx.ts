@@ -5,7 +5,6 @@
 import { hexToU8a } from '@polkadot/util';
 
 import {
-  BLOCKTIME,
   createMetadata,
   Options,
   sanitizeOptions,
@@ -64,10 +63,10 @@ export function decodeSignedTx(
 
   return {
     address: tx.signer.toString(),
+    eraPeriod: tx.era.asMortalEra.period.toNumber(),
     metadataRpc: metadata,
     method,
     nonce: tx.nonce.toNumber(),
     tip: tx.tip.toNumber(),
-    validityPeriod: tx.era.asMortalEra.period.toNumber() * BLOCKTIME,
   };
 }

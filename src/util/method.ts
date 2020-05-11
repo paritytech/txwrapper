@@ -7,7 +7,7 @@ import { Call } from '@polkadot/types/interfaces';
 import { AnyJson } from '@polkadot/types/types';
 import { stringCamelCase } from '@polkadot/util';
 
-import { EXTRINSIC_VERSION, ONE_SECOND } from './constants';
+import { EXTRINSIC_VERSION } from './constants';
 import { createDecorated } from './metadata';
 import { Options, sanitizeOptions } from './options';
 import { BaseTxInfo, UnsignedTransaction } from './types';
@@ -17,13 +17,13 @@ import { BaseTxInfo, UnsignedTransaction } from './types';
  */
 const DEFAULTS = {
   /**
-   * Don't add any tip by default
+   * Don't add any tip by default.
    */
   tip: 0,
   /**
-   * Construct a mortal extrinsic of ~5 minutes
+   * Construct a mortal extrinsic of ~6m24s minutes.
    */
-  validityPeriod: 5 * 60,
+  eraPeriod: 64,
 };
 
 export type Args = Record<string, AnyJson>;
@@ -80,6 +80,22 @@ export function createMethod(
     })
   ).toHex();
 
+  // We were accepting `validityPeriod` field, in seconds, before using
+  // `eraPeriod`, in blocks. This piece of code assures backward-compatibility.
+  if (info.validityPeriod) {
+    console.warn(
+      'The `validityPeriod` field in tx info is now deprecated. Please use `eraPeriod`, the period now being in blocks instead of seconds.'
+    );
+  }
+  const eraPeriod =
+    // If `info.eraPeriod` is set, use it.
+    info.eraPeriod ||
+    // For backwards-compatibility, also see if `info.validityPeriod` is set,
+    // with a block time of 6s.
+    (info.validityPeriod && info.validityPeriod / 6) ||
+    // As last resort, take the default value.
+    DEFAULTS.eraPeriod;
+
   return {
     address: info.address,
     blockHash: info.blockHash,
@@ -87,7 +103,7 @@ export function createMethod(
     era: registry
       .createType('ExtrinsicEra', {
         current: info.blockNumber,
-        period: ONE_SECOND * (info.validityPeriod || DEFAULTS.validityPeriod),
+        period: eraPeriod,
       })
       .toHex(),
     genesisHash: info.genesisHash,

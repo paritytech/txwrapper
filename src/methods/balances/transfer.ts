@@ -14,7 +14,7 @@ export interface BalancesTransferArgs extends Args {
   /**
    * The amount to send.
    */
-  value: number;
+  value: number | string;
 }
 
 /**
