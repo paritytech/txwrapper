@@ -80,6 +80,22 @@ export function createMethod(
     })
   ).toHex();
 
+  // We were accepting `validityPeriod` field, in seconds, before using
+  // `eraPeriod`, in blocks. This piece of code assures backward-compatibility.
+  if (info.validityPeriod) {
+    console.warn(
+      'The `validityPeriod` field in tx info is now deprecated. Please use `eraPeriod`, the period now being in blocks instead of seconds.'
+    );
+  }
+  const eraPeriod =
+    // If `info.eraPeriod` is set, use it.
+    info.eraPeriod ||
+    // For backwards-compatibility, also see if `info.validityPeriod` is set,
+    // with a block time of 6s.
+    (info.validityPeriod && info.validityPeriod / 6) ||
+    // As last resort, take the default value.
+    DEFAULTS.eraPeriod;
+
   return {
     address: info.address,
     blockHash: info.blockHash,
@@ -87,7 +103,7 @@ export function createMethod(
     era: registry
       .createType('ExtrinsicEra', {
         current: info.blockNumber,
-        period: info.eraPeriod || DEFAULTS.eraPeriod,
+        period: eraPeriod,
       })
       .toHex(),
     genesisHash: info.genesisHash,

@@ -16,6 +16,24 @@ describe('createMethod', () => {
       },
     });
 
-    expect(unsigned.era).toBe('0xe500'); // 0x00 means immortal, anything else is mortal
+    expect(unsigned.era).toBe('0xe500');
+  });
+
+  it('should be backwards-compatible with validityPeriod', () => {
+    const txBaseInfo = {
+      ...TEST_BASE_TX_INFO,
+      eraPeriod: undefined,
+      validityPeriod: 7200, // 2h
+    };
+    const unsigned = createMethod({
+      ...txBaseInfo,
+      method: {
+        args: {},
+        name: 'withdrawUnbonded',
+        pallet: 'staking',
+      },
+    });
+
+    expect(unsigned.era).toBe('0xea58');
   });
 });
