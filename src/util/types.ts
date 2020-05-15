@@ -58,6 +58,10 @@ export interface BaseTxInfo {
    */
   tip?: number;
   /**
+   * The current transaction version for the runtime.
+   */
+  transactionVersion: number;
+  /**
    * The amount of time (in second) the transaction is valid for. Will be
    * translated into a mortal era. Defaults to 5 minutes.
    *

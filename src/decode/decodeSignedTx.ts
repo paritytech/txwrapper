@@ -14,7 +14,12 @@ import {
 
 export type DecodedSignedTx = Omit<
   TxInfo,
-  'blockHash' | 'blockNumber' | 'genesisHash' | 'specVersion' | 'version'
+  | 'blockHash'
+  | 'blockNumber'
+  | 'genesisHash'
+  | 'specVersion'
+  | 'transactionVersion'
+  | 'version'
 >;
 
 /**

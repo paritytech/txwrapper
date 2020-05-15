@@ -40,7 +40,9 @@ async function main(): Promise<void> {
   const blockHash = await rpcToNode('chain_getBlockHash');
   const genesisHash = await rpcToNode('chain_getBlockHash', [0]);
   const metadataRpc = await rpcToNode('state_getMetadata');
-  const { specVersion } = await rpcToNode('state_getRuntimeVersion');
+  const { specVersion, transactionVersion } = await rpcToNode(
+    'state_getRuntimeVersion'
+  );
 
   // Create Kusama's type registry.
   // Right now, we hardcode the specVersion to `9999`, to use the always latest
@@ -68,6 +70,7 @@ async function main(): Promise<void> {
       nonce: 1, // Assuming this is Alice's first tx on the chain
       specVersion,
       tip: 0,
+      transactionVersion,
     },
     {
       metadata: metadataRpc,

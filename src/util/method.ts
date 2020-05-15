@@ -110,9 +110,13 @@ export function createMethod(
     metadataRpc: info.metadataRpc,
     method,
     nonce: registry.createType('Compact<Index>', info.nonce).toHex(),
+    signedExtensions: registry.signedExtensions,
     specVersion: registry.createType('u32', info.specVersion).toHex(),
     tip: registry
       .createType('Compact<Balance>', info.tip || DEFAULTS.tip)
+      .toHex(),
+    transactionVersion: registry
+      .createType('u32', info.transactionVersion)
       .toHex(),
     version: EXTRINSIC_VERSION,
   };
