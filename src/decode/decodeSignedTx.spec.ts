@@ -16,7 +16,7 @@ import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
  * Helper function to decode base tx info
  */
 export function decodeBaseTxInfo(txInfo: DecodedSignedTx): void {
-  (['address', 'nonce', 'tip'] as const).forEach((key) =>
+  (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach((key) =>
     expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key])
   );
 

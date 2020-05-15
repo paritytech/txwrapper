@@ -36,6 +36,7 @@ export function decodeSigningPayload(
     blockHash: payload.blockHash.toHex(),
     eraPeriod: payload.era.asMortalEra.period.toNumber(),
     genesisHash: payload.genesisHash.toHex(),
+    metadataRpc,
     method,
     nonce: payload.nonce.toNumber(),
     specVersion: payload.specVersion.toNumber(),

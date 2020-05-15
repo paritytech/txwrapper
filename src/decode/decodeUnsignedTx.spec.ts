@@ -19,6 +19,7 @@ export function decodeBaseTxInfo(txInfo: TxInfo): void {
     'blockHash',
     'blockNumber',
     'genesisHash',
+    'metadataRpc',
     'nonce',
     'specVersion',
     'transactionVersion',

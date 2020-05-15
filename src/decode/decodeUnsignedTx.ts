@@ -37,6 +37,7 @@ export function decodeUnsignedTx(
       .toNumber(),
     eraPeriod: registry.createType('MortalEra', unsigned.era).period.toNumber(),
     genesisHash: unsigned.genesisHash,
+    metadataRpc,
     method,
     nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
     specVersion: registry.createType('u32', unsigned.specVersion).toNumber(),

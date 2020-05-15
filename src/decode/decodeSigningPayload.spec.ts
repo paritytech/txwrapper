@@ -20,6 +20,7 @@ export function decodeBaseTxInfo(txInfo: DecodedSigningPayload): void {
   ([
     'blockHash',
     'genesisHash',
+    'metadataRpc',
     'nonce',
     'specVersion',
     'tip',

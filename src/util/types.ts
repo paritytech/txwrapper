@@ -4,7 +4,13 @@ import { SignerPayloadJSON } from '@polkadot/types/types';
 /**
  * JSON format for an unsigned transaction.
  */
-export type UnsignedTransaction = SignerPayloadJSON;
+export interface UnsignedTransaction extends SignerPayloadJSON {
+  /**
+   * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
+   * call `state_getMetadata`.
+   */
+  metadataRpc: string;
+}
 
 /**
  * JSON format for information that is common to all transactions.
@@ -33,6 +39,11 @@ export interface BaseTxInfo {
    * The genesis hash of the chain, in hex.
    */
   genesisHash: string;
+  /**
+   * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
+   * call `state_getMetadata`.
+   */
+  metadataRpc: string;
   /**
    * The nonce for this transaction.
    */

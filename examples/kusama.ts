@@ -63,6 +63,7 @@ async function main(): Promise<void> {
         .toNumber(),
       eraPeriod: 64,
       genesisHash,
+      metadataRpc,
       nonce: 0, // Assuming this is Alice's first tx on the chain
       specVersion,
       tip: 0,

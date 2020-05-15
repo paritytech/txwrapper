@@ -24,6 +24,7 @@ export const TEST_BASE_TX_INFO = {
   eraPeriod: 2400,
   genesisHash:
     '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
+  metadataRpc,
   nonce: 2,
   specVersion: 1019,
   tip: 0,

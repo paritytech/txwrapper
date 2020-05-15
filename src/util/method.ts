@@ -101,6 +101,7 @@ export function createMethod(
       })
       .toHex(),
     genesisHash: info.genesisHash,
+    metadataRpc,
     method,
     nonce: registry.createType('Compact<Index>', info.nonce).toHex(),
     signedExtensions: registry.signedExtensions,
