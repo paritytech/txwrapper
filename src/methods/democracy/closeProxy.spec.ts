@@ -1,7 +1,7 @@
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { closeProxy } from './closeProxy';
@@ -11,7 +11,7 @@ describe('democracy::closeProxy', () => {
     const unsigned = closeProxy(
       TEST_METHOD_ARGS.democracy.closeProxy,
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

@@ -1,10 +1,9 @@
 import * as methods from '../methods';
 import {
   getAllMethods,
-  metadataRpc,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
   TxInfo,
 } from '../util';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
@@ -20,7 +19,6 @@ export function decodeBaseTxInfo(txInfo: TxInfo): void {
     'blockHash',
     'blockNumber',
     'genesisHash',
-    'metadataRpc',
     'nonce',
     'specVersion',
     'transactionVersion',
@@ -42,12 +40,9 @@ function testDecodeUnsignedTx(pallet: string, name: string): void {
     const unsigned = (methods as any)[pallet][name](
       (TEST_METHOD_ARGS as any)[pallet][name],
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
-    const txInfo = decodeUnsignedTx(unsigned, {
-      metadata: metadataRpc,
-      registry: TEST_REGISTRY,
-    });
+    const txInfo = decodeUnsignedTx(unsigned, TEST_OPTIONS);
 
     decodeBaseTxInfo(txInfo);
     expect(txInfo.method.pallet).toBe(pallet);

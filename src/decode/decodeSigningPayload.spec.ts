@@ -2,10 +2,9 @@ import { createSigningPayload } from '../createSigningPayload';
 import * as methods from '../methods';
 import {
   getAllMethods,
-  metadataRpc,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
 } from '../util';
 import {
   DecodedSigningPayload,
@@ -21,7 +20,6 @@ export function decodeBaseTxInfo(txInfo: DecodedSigningPayload): void {
   ([
     'blockHash',
     'genesisHash',
-    'metadataRpc',
     'nonce',
     'specVersion',
     'tip',
@@ -39,16 +37,11 @@ function testDecodeSigningPayload(pallet: string, name: string): void {
       (methods as any)[pallet][name](
         (TEST_METHOD_ARGS as any)[pallet][name],
         TEST_BASE_TX_INFO,
-        {
-          registry: TEST_REGISTRY,
-        }
+        TEST_OPTIONS
       ),
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
-    const txInfo = decodeSigningPayload(signingPayload, {
-      metadata: metadataRpc,
-      registry: TEST_REGISTRY,
-    });
+    const txInfo = decodeSigningPayload(signingPayload, TEST_OPTIONS);
 
     decodeBaseTxInfo(txInfo);
     expect(txInfo.method.pallet).toBe(pallet);

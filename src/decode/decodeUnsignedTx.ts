@@ -4,7 +4,7 @@
 
 import {
   createMetadata,
-  DecodeOptions,
+  OptionsWithMeta,
   toTxMethod,
   TxInfo,
   UnsignedTransaction,
@@ -20,11 +20,11 @@ export type DecodedUnsignedTx = TxInfo;
  */
 export function decodeUnsignedTx(
   unsigned: UnsignedTransaction,
-  options: DecodeOptions
+  options: OptionsWithMeta
 ): DecodedUnsignedTx {
-  const { metadata, registry } = options;
+  const { metadataRpc, registry } = options;
 
-  registry.setMetadata(createMetadata(registry, metadata));
+  registry.setMetadata(createMetadata(registry, metadataRpc));
 
   const methodCall = registry.createType('Call', unsigned.method);
   const method = toTxMethod(registry, methodCall);
@@ -37,7 +37,6 @@ export function decodeUnsignedTx(
       .toNumber(),
     eraPeriod: registry.createType('MortalEra', unsigned.era).period.toNumber(),
     genesisHash: unsigned.genesisHash,
-    metadataRpc: metadata,
     method,
     nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
     specVersion: registry.createType('u32', unsigned.specVersion).toNumber(),

@@ -1,7 +1,7 @@
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { nominate } from './nominate';
@@ -11,7 +11,7 @@ describe('staking::nominate', () => {
     const unsigned = nominate(
       TEST_METHOD_ARGS.staking.nominate,
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

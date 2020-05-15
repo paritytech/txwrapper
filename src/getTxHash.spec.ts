@@ -6,7 +6,7 @@ import {
   signWithAlice,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
 } from './util/testUtil';
 
 describe('getTxHash', () => {
@@ -14,15 +14,11 @@ describe('getTxHash', () => {
     const unsigned = balances.transferKeepAlive(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
-    const signingPayload = createSigningPayload(unsigned, {
-      registry: TEST_REGISTRY,
-    });
+    const signingPayload = createSigningPayload(unsigned, TEST_OPTIONS);
     const signature = await signWithAlice(signingPayload);
-    const signedTx = createSignedTx(unsigned, signature, {
-      registry: TEST_REGISTRY,
-    });
+    const signedTx = createSignedTx(unsigned, signature, TEST_OPTIONS);
 
     const txHash = getTxHash(signedTx);
     expect(txHash).toBe(

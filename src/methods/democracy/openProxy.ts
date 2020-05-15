@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  EncodeOptions,
+  OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
 
@@ -21,7 +21,7 @@ export interface DemocracyOpenProxyArgs extends Args {
 export function openProxy(
   args: DemocracyOpenProxyArgs,
   info: BaseTxInfo,
-  options: EncodeOptions
+  options: OptionsWithMeta
 ): UnsignedTransaction {
   return createMethod(
     {

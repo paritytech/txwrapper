@@ -1,4 +1,4 @@
-import { DecodeOptions, UnsignedTransaction } from '../util';
+import { OptionsWithMeta, UnsignedTransaction } from '../util';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 import {
   DecodedSigningPayload,
@@ -14,7 +14,7 @@ import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
  */
 export function decode(
   unsignedTx: UnsignedTransaction,
-  options: DecodeOptions
+  options: OptionsWithMeta
 ): DecodedUnsignedTx;
 
 /**
@@ -25,7 +25,7 @@ export function decode(
  */
 export function decode(
   signedTx: string,
-  options: DecodeOptions
+  options: OptionsWithMeta
 ): DecodedSignedTx;
 
 /**
@@ -36,12 +36,12 @@ export function decode(
  */
 export function decode(
   signingPayload: string,
-  options: DecodeOptions
+  options: OptionsWithMeta
 ): DecodedSigningPayload;
 
 export function decode(
   data: string | UnsignedTransaction,
-  options: DecodeOptions
+  options: OptionsWithMeta
 ): DecodedSignedTx | DecodedUnsignedTx | DecodedSigningPayload {
   if (typeof data === 'string') {
     let decodedInfo: DecodedSigningPayload | DecodedSignedTx;

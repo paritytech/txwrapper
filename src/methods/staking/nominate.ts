@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  EncodeOptions,
+  OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
 
@@ -24,7 +24,7 @@ export interface StakingNominateArgs extends Args {
 export function nominate(
   args: StakingNominateArgs,
   info: BaseTxInfo,
-  options: EncodeOptions
+  options: OptionsWithMeta
 ): UnsignedTransaction {
   return createMethod(
     {

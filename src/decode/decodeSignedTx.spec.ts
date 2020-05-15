@@ -3,11 +3,10 @@ import { createSigningPayload } from '../createSigningPayload';
 import * as methods from '../methods';
 import {
   getAllMethods,
-  metadataRpc,
   signWithAlice,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
 } from '../util';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 
@@ -17,7 +16,7 @@ import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
  * Helper function to decode base tx info
  */
 export function decodeBaseTxInfo(txInfo: DecodedSignedTx): void {
-  (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach((key) =>
+  (['address', 'nonce', 'tip'] as const).forEach((key) =>
     expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key])
   );
 
@@ -34,21 +33,14 @@ function testDecodeSignedTx(pallet: string, name: string): void {
     const unsigned = (methods as any)[pallet][name](
       (TEST_METHOD_ARGS as any)[pallet][name],
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
-    const signingPayload = createSigningPayload(unsigned, {
-      registry: TEST_REGISTRY,
-    });
+    const signingPayload = createSigningPayload(unsigned, TEST_OPTIONS);
     const signature = await signWithAlice(signingPayload);
 
-    const signedTx = createSignedTx(unsigned, signature, {
-      registry: TEST_REGISTRY,
-    });
+    const signedTx = createSignedTx(unsigned, signature, TEST_OPTIONS);
 
-    const txInfo = decodeSignedTx(signedTx, {
-      metadata: metadataRpc,
-      registry: TEST_REGISTRY,
-    });
+    const txInfo = decodeSignedTx(signedTx, TEST_OPTIONS);
 
     decodeBaseTxInfo(txInfo);
     expect(txInfo.method.pallet).toBe(pallet);

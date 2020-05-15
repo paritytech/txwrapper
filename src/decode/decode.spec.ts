@@ -2,11 +2,10 @@ import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
 import { balances } from '../methods';
 import {
-  metadataRpc,
   signWithAlice,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
 } from '../util';
 import { decode } from './decode';
 import { decodeBaseTxInfo as decodeSignedBase } from './decodeSignedTx.spec';
@@ -19,21 +18,14 @@ describe('decode', () => {
     const unsigned = balances.transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
-    const signingPayload = createSigningPayload(unsigned, {
-      registry: TEST_REGISTRY,
-    });
+    const signingPayload = createSigningPayload(unsigned, TEST_OPTIONS);
     const signature = await signWithAlice(signingPayload);
 
-    const signedTx = createSignedTx(unsigned, signature, {
-      registry: TEST_REGISTRY,
-    });
+    const signedTx = createSignedTx(unsigned, signature, TEST_OPTIONS);
 
-    const txInfo = decode(signedTx, {
-      metadata: metadataRpc,
-      registry: TEST_REGISTRY,
-    });
+    const txInfo = decode(signedTx, TEST_OPTIONS);
 
     decodeSignedBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
@@ -47,12 +39,9 @@ describe('decode', () => {
     const unsigned = balances.transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
-    const txInfo = decode(unsigned, {
-      metadata: metadataRpc,
-      registry: TEST_REGISTRY,
-    });
+    const txInfo = decode(unsigned, TEST_OPTIONS);
 
     decodeUnsignedBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
@@ -64,16 +53,14 @@ describe('decode', () => {
     const unsigned = balances.transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
-    const signingPayload = createSigningPayload(unsigned, {
-      registry: TEST_REGISTRY,
-    });
+    const signingPayload = createSigningPayload(unsigned, TEST_OPTIONS);
 
-    const txInfo = decode(signingPayload, {
-      metadata: metadataRpc,
-      registry: TEST_REGISTRY,
-    }) as DecodedSigningPayload;
+    const txInfo = decode(
+      signingPayload,
+      TEST_OPTIONS
+    ) as DecodedSigningPayload;
 
     decodeSigningBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');

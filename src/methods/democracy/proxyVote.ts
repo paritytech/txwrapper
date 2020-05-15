@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  EncodeOptions,
+  OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
 import { AccountVote } from './types';
@@ -26,7 +26,7 @@ export interface DemocracyProxyVoteArgs extends Args {
 export function proxyVote(
   args: DemocracyProxyVoteArgs,
   info: BaseTxInfo,
-  options: EncodeOptions
+  options: OptionsWithMeta
 ): UnsignedTransaction {
   return createMethod(
     {

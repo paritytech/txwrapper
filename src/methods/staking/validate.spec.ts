@@ -1,7 +1,7 @@
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { validate } from './validate';
@@ -11,7 +11,7 @@ describe('staking::validate', () => {
     const unsigned = validate(
       TEST_METHOD_ARGS.staking.validate,
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

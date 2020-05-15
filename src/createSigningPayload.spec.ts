@@ -3,7 +3,7 @@ import { balances } from './methods';
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
 } from './util/testUtil';
 
 describe('createSigningPayload', () => {
@@ -12,9 +12,9 @@ describe('createSigningPayload', () => {
       balances.transferKeepAlive(
         TEST_METHOD_ARGS.balances.transfer,
         TEST_BASE_TX_INFO,
-        { registry: TEST_REGISTRY }
+        TEST_OPTIONS
       ),
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
 
     expect(signingPayload).toEqual(

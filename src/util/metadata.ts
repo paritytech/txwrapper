@@ -88,9 +88,9 @@ export function getRegistry(
  */
 function createMetadataUnmemoized(
   registry: TypeRegistry,
-  metadata: string
+  metadataRpc: string
 ): Metadata {
-  return new Metadata(registry, metadata);
+  return new Metadata(registry, metadataRpc);
 }
 
 /**
@@ -110,7 +110,7 @@ export const createMetadata = memoizee(createMetadataUnmemoized, {
  */
 export function createDecorated(
   registry: TypeRegistry,
-  metadata: string
+  metadataRpc: string
 ): Decorated {
-  return new Decorated(registry, createMetadata(registry, metadata));
+  return new Decorated(registry, createMetadata(registry, metadataRpc));
 }

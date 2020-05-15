@@ -1,4 +1,4 @@
-import { EncodeOptions, UnsignedTransaction } from './util';
+import { Options, UnsignedTransaction } from './util';
 
 /**
  * Construct the signing payload from an unsigned transaction and export it to
@@ -8,7 +8,7 @@ import { EncodeOptions, UnsignedTransaction } from './util';
  */
 export function createSigningPayload(
   unsigned: UnsignedTransaction,
-  options: EncodeOptions
+  options: Options
 ): string {
   const { registry } = options;
 

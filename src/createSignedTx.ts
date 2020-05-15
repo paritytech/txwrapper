@@ -1,4 +1,4 @@
-import { createMetadata, EncodeOptions, UnsignedTransaction } from './util';
+import { createMetadata, OptionsWithMeta, UnsignedTransaction } from './util';
 
 /**
  * Serialize a signed transaction in a format that can be submitted over the
@@ -12,11 +12,10 @@ import { createMetadata, EncodeOptions, UnsignedTransaction } from './util';
 export function createSignedTx(
   unsigned: UnsignedTransaction,
   signature: string,
-  options: EncodeOptions
+  options: OptionsWithMeta
 ): string {
-  const { registry } = options;
-  const metadata = options.metadata || unsigned.metadataRpc;
-  registry.setMetadata(createMetadata(registry, metadata));
+  const { metadataRpc, registry } = options;
+  registry.setMetadata(createMetadata(registry, metadataRpc));
 
   const extrinsic = registry.createType(
     'Extrinsic',

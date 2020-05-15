@@ -1,7 +1,7 @@
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_REGISTRY,
+  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { openProxy } from './openProxy';
@@ -11,7 +11,7 @@ describe('democracy::openProxy', () => {
     const unsigned = openProxy(
       TEST_METHOD_ARGS.democracy.openProxy,
       TEST_BASE_TX_INFO,
-      { registry: TEST_REGISTRY }
+      TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

@@ -24,7 +24,6 @@ export const TEST_BASE_TX_INFO = {
   eraPeriod: 2400,
   genesisHash:
     '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
-  metadataRpc,
   nonce: 2,
   specVersion: 1019,
   tip: 0,
@@ -34,7 +33,10 @@ export const TEST_BASE_TX_INFO = {
 /**
  * Use this registry in tests.
  */
-export const TEST_REGISTRY = getRegistry('Kusama', 'kusama', 9999);
+export const TEST_OPTIONS = {
+  metadataRpc,
+  registry: getRegistry('Kusama', 'kusama', 9999),
+};
 
 /**
  * Test helper to test that all base tx information al correctly populated.

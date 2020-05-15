@@ -4,7 +4,7 @@
 
 import { hexToU8a } from '@polkadot/util';
 
-import { createMetadata, DecodeOptions, toTxMethod, TxInfo } from '../util';
+import { createMetadata, OptionsWithMeta, toTxMethod, TxInfo } from '../util';
 
 export type DecodedSignedTx = Omit<
   TxInfo,
@@ -24,11 +24,11 @@ export type DecodedSignedTx = Omit<
  */
 export function decodeSignedTx(
   signedTx: string,
-  options: DecodeOptions
+  options: OptionsWithMeta
 ): DecodedSignedTx {
-  const { metadata, registry } = options;
+  const { metadataRpc, registry } = options;
 
-  registry.setMetadata(createMetadata(registry, metadata));
+  registry.setMetadata(createMetadata(registry, metadataRpc));
 
   const tx = registry.createType('Extrinsic', hexToU8a(signedTx), {
     isSigned: true,
@@ -39,7 +39,6 @@ export function decodeSignedTx(
   return {
     address: tx.signer.toString(),
     eraPeriod: tx.era.asMortalEra.period.toNumber(),
-    metadataRpc: metadata,
     method,
     nonce: tx.nonce.toNumber(),
     tip: tx.tip.toNumber(),

@@ -4,8 +4,8 @@
 
 import {
   createMetadata,
-  DecodeOptions,
   EXTRINSIC_VERSION,
+  OptionsWithMeta,
   toTxMethod,
   TxInfo,
 } from '../util';
@@ -20,11 +20,11 @@ export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
  */
 export function decodeSigningPayload(
   signingPayload: string,
-  options: DecodeOptions
+  options: OptionsWithMeta
 ): DecodedSigningPayload {
-  const { metadata, registry } = options;
+  const { metadataRpc, registry } = options;
 
-  registry.setMetadata(createMetadata(registry, metadata));
+  registry.setMetadata(createMetadata(registry, metadataRpc));
 
   const payload = registry.createType('ExtrinsicPayload', signingPayload, {
     version: EXTRINSIC_VERSION,
@@ -36,7 +36,6 @@ export function decodeSigningPayload(
     blockHash: payload.blockHash.toHex(),
     eraPeriod: payload.era.asMortalEra.period.toNumber(),
     genesisHash: payload.genesisHash.toHex(),
-    metadataRpc: metadata,
     method,
     nonce: payload.nonce.toNumber(),
     specVersion: payload.specVersion.toNumber(),
