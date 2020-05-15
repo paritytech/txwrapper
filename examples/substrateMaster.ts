@@ -52,9 +52,6 @@ async function main(): Promise<void> {
 
   // Create Substrate's type registry.
   const registry = new TypeRegistry();
-  // If you're using your own chain with custom types, add these types here. We
-  // are using a vanilla Substrate chain, so no type overriding is needed.
-  registry.register({});
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline

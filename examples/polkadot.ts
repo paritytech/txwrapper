@@ -45,10 +45,7 @@ async function main(): Promise<void> {
   );
 
   // Create Polkadot's type registry.
-  // Right now, we hardcode the specVersion to `9999`, to use the always latest
-  // type overrides for Polkadot. In real-life, you should use the specVersion
-  // returned by `state_getRuntimeVersion` RPC.
-  const registry = getRegistry('Polkadot', 'polkadot', 9999);
+  const registry = getRegistry('Polkadot', 'polkadot', specVersion);
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
