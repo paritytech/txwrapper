@@ -50,6 +50,7 @@ export function testBaseTxInfo(unsigned: UnsignedTransaction): void {
   expect(unsigned.nonce).toBe('0x00000002');
   expect(unsigned.specVersion).toBe('0x000003fb');
   expect(unsigned.tip).toBe('0x00000000000000000000000000000000');
+  expect(unsigned.transactionVersion).toBe('0x00000006');
   expect(unsigned.version).toBe(4);
 }
 

@@ -23,6 +23,7 @@ export function decodeBaseTxInfo(txInfo: TxInfo): void {
     'metadataRpc',
     'nonce',
     'specVersion',
+    'transactionVersion',
     'tip',
   ] as const).forEach((key) =>
     expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key])
