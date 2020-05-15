@@ -52,9 +52,13 @@ export interface TxInfo extends BaseTxInfo {
  */
 export function createMethod(
   info: TxInfo,
-  { registry }: EncodeOptions
+  options: EncodeOptions
 ): UnsignedTransaction {
-  const metadata = createDecorated(registry, info.metadataRpc);
+  const { registry } = options;
+  const metadata = createDecorated(
+    registry,
+    options.metadata || info.metadataRpc
+  );
 
   const methodFunction = metadata.tx[info.method.pallet][info.method.name];
   const method = methodFunction(
@@ -64,7 +68,7 @@ export function createMethod(
       ) {
         throw new Error(
           `Method ${info.method.pallet}::${
-            info.method.name
+          info.method.name
           } expects argument ${arg.toString()}, but got undefined`
         );
       }

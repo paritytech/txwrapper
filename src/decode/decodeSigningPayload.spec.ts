@@ -38,7 +38,10 @@ function testDecodeSigningPayload(pallet: string, name: string): void {
     const signingPayload = createSigningPayload(
       (methods as any)[pallet][name](
         (TEST_METHOD_ARGS as any)[pallet][name],
-        TEST_BASE_TX_INFO
+        TEST_BASE_TX_INFO,
+        {
+          registry: TEST_REGISTRY,
+        }
       ),
       { registry: TEST_REGISTRY }
     );
