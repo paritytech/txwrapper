@@ -73,7 +73,8 @@ export interface BaseTxInfo {
 }
 
 /**
- * Runtime-specific options for encoding transactions. Pass this object
+ * Runtime-specific options for encoding transactions. Pass these options to
+ * functions that only require registry.
  */
 export interface Options {
   /**
@@ -83,7 +84,8 @@ export interface Options {
 }
 
 /**
- * Runtime-specific options for decocoding transactions.
+ * Runtime-specific options for encoding/decoding transactions. Pass these
+ * options to functions that require registry and metadata.
  */
 export interface OptionsWithMeta extends Options {
   /**
