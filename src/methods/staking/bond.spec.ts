@@ -1,13 +1,16 @@
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
+  TEST_REGISTRY,
   testBaseTxInfo,
 } from '../../util';
 import { bond } from './bond';
 
 describe('staking::bond', () => {
   it('should work', () => {
-    const unsigned = bond(TEST_METHOD_ARGS.staking.bond, TEST_BASE_TX_INFO);
+    const unsigned = bond(TEST_METHOD_ARGS.staking.bond, TEST_BASE_TX_INFO, {
+      registry: TEST_REGISTRY,
+    });
 
     testBaseTxInfo(unsigned);
     expect(unsigned.method).toBe(
@@ -18,11 +21,13 @@ describe('staking::bond', () => {
   it('should take "staked" or "Staked" as payee', () => {
     const unsignedLowerCase = bond(
       { ...TEST_METHOD_ARGS.staking.bond, payee: 'staked' },
-      TEST_BASE_TX_INFO
+      TEST_BASE_TX_INFO,
+      { registry: TEST_REGISTRY }
     );
     const unsignedCapitalized = bond(
       { ...TEST_METHOD_ARGS.staking.bond, payee: 'Staked' },
-      TEST_BASE_TX_INFO
+      TEST_BASE_TX_INFO,
+      { registry: TEST_REGISTRY }
     );
 
     expect(unsignedLowerCase.method).toBe(unsignedCapitalized.method);

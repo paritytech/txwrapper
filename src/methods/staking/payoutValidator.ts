@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  Options,
+  EncodeOptions,
   UnsignedTransaction,
 } from '../../util';
 
@@ -26,7 +26,7 @@ export interface StakingPayoutValidatorArgs extends Args {
 export function payoutValidator(
   args: StakingPayoutValidatorArgs,
   info: BaseTxInfo,
-  options?: Partial<Options>
+  options: EncodeOptions
 ): UnsignedTransaction {
   return createMethod(
     {

@@ -24,6 +24,7 @@ export interface ChainProperties {
  * safe to hardcode them.
  *
  * @ignore
+ * @todo Should we expose this publicly?
  */
 const defaultChainProperties: Record<string, ChainProperties> = {
   Kusama: {
@@ -44,14 +45,21 @@ const defaultChainProperties: Record<string, ChainProperties> = {
 };
 
 /**
- * Given a chain name and a spec version, return the corresponding type
- * registry.
+ * Given a chain name, a spec name, and a spec version, return the
+ * corresponding type registry. This function only returns the correct type
+ * registry for the following chains:
+ * - Kusama,
+ * - Polkadot,
+ * - Westend.
+ * For other chains, please use `@polkadot/api`s `TypeRegistry` directly.
  *
  * @see https://github.com/polkadot-js/api/tree/master/packages/types-known
- * @param chainName - The chain to create the type registry for.
- * @param specName - The name of the runtime spec.
+ * @param chainName - The chain to create the type registry for. Returned by
+ * RPC `system_chain`.
+ * @param specName - The name of the runtime spec. Returned by RPC
+ * `state_getRuntimeVersion`.
  * @param specVersion - The spec version of that chain for which we want to
- * create a type registry.
+ * create a type registry.Returned by RPC `state_getRuntimeVersion`.
  */
 export function getRegistry(
   chainName: 'Kusama' | 'Polkadot' | 'Westend',
@@ -71,7 +79,8 @@ export function getRegistry(
 
 /**
  * From a metadata hex string (for example returned by RPC), create a Metadata
- * object. Metadata decoding is expensive, so this function is memoized.
+ * class instance. Metadata decoding is expensive, so this function is
+ * memoized.
  *
  * @ignore
  * @param registry - The registry of the metadata.

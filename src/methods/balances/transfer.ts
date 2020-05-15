@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  Options,
+  EncodeOptions,
   UnsignedTransaction,
 } from '../../util';
 
@@ -25,7 +25,7 @@ export interface BalancesTransferArgs extends Args {
 export function transfer(
   args: BalancesTransferArgs,
   info: BaseTxInfo,
-  options?: Partial<Options>
+  options: EncodeOptions
 ): UnsignedTransaction {
   return createMethod(
     {

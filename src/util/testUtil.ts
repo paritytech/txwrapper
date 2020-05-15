@@ -28,7 +28,13 @@ export const TEST_BASE_TX_INFO = {
   nonce: 2,
   specVersion: 1019,
   tip: 0,
+  transactionVersion: 6,
 };
+
+/**
+ * Use this registry in tests.
+ */
+export const TEST_REGISTRY = getRegistry('Polkadot', 'polkadot', 9999);
 
 /**
  * Test helper to test that all base tx information al correctly populated.

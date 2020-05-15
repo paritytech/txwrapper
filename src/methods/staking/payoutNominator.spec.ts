@@ -1,6 +1,7 @@
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
+  TEST_REGISTRY,
   testBaseTxInfo,
 } from '../../util';
 import { payoutNominator } from './payoutNominator';
@@ -9,7 +10,8 @@ describe('staking::payoutNominator', () => {
   it('should work', () => {
     const unsigned = payoutNominator(
       TEST_METHOD_ARGS.staking.payoutNominator,
-      TEST_BASE_TX_INFO
+      TEST_BASE_TX_INFO,
+      { registry: TEST_REGISTRY }
     );
 
     testBaseTxInfo(unsigned);

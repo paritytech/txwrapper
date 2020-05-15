@@ -40,13 +40,12 @@ async function main(): Promise<void> {
   const blockHash = await rpcToNode('chain_getBlockHash');
   const genesisHash = await rpcToNode('chain_getBlockHash', [0]);
   const metadataRpc = await rpcToNode('state_getMetadata');
-  const { specVersion } = await rpcToNode('state_getRuntimeVersion');
+  const { specVersion, transactionVersion } = await rpcToNode(
+    'state_getRuntimeVersion'
+  );
 
   // Create Kusama's type registry.
-  // Right now, we hardcode the specVersion to `9999`, to use the always latest
-  // type overrides for Kusama. In real-life, you should use the specVersion
-  // returned by `state_getRuntimeVersion` RPC.
-  const registry = getRegistry('Kusama', 'kusama', 9999);
+  const registry = getRegistry('Kusama', 'kusama', specVersion);
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
@@ -65,9 +64,10 @@ async function main(): Promise<void> {
       eraPeriod: 64,
       genesisHash,
       metadataRpc,
-      nonce: 1, // Assuming this is Alice's first tx on the chain
+      nonce: 0, // Assuming this is Alice's first tx on the chain
       specVersion,
       tip: 0,
+      transactionVersion,
     },
     {
       metadata: metadataRpc,

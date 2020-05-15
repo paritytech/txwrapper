@@ -1,3 +1,4 @@
+import { getRegistry } from './metadata';
 import { createMethod } from './method';
 import { TEST_BASE_TX_INFO } from './testUtil';
 
@@ -7,14 +8,19 @@ describe('createMethod', () => {
       ...TEST_BASE_TX_INFO,
       eraPeriod: undefined,
     };
-    const unsigned = createMethod({
-      ...txBaseInfo,
-      method: {
-        args: {},
-        name: 'withdrawUnbonded',
-        pallet: 'staking',
+    const unsigned = createMethod(
+      {
+        ...txBaseInfo,
+        method: {
+          args: {},
+          name: 'withdrawUnbonded',
+          pallet: 'staking',
+        },
       },
-    });
+      {
+        registry: getRegistry('Polkadot', 'polkadot', 9999),
+      }
+    );
 
     expect(unsigned.era).toBe('0xe500');
   });
@@ -25,14 +31,19 @@ describe('createMethod', () => {
       eraPeriod: undefined,
       validityPeriod: 7200, // 2h
     };
-    const unsigned = createMethod({
-      ...txBaseInfo,
-      method: {
-        args: {},
-        name: 'withdrawUnbonded',
-        pallet: 'staking',
+    const unsigned = createMethod(
+      {
+        ...txBaseInfo,
+        method: {
+          args: {},
+          name: 'withdrawUnbonded',
+          pallet: 'staking',
+        },
       },
-    });
+      {
+        registry: getRegistry('Polkadot', 'polkadot', 9999),
+      }
+    );
 
     expect(unsigned.era).toBe('0xea58');
   });

@@ -1,7 +1,7 @@
 import {
   BaseTxInfo,
   createMethod,
-  Options,
+  EncodeOptions,
   UnsignedTransaction,
 } from '../../util';
 import { BalancesTransferArgs } from './transfer';
@@ -16,7 +16,7 @@ export type BalancesTransferKeepAliveArgs = BalancesTransferArgs;
 export function transferKeepAlive(
   args: BalancesTransferKeepAliveArgs,
   info: BaseTxInfo,
-  options?: Partial<Options>
+  options: EncodeOptions
 ): UnsignedTransaction {
   return createMethod(
     {

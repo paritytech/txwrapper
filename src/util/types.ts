@@ -1,3 +1,4 @@
+import { TypeRegistry } from '@polkadot/types';
 import { SignerPayloadJSON } from '@polkadot/types/types';
 
 /**
@@ -58,6 +59,10 @@ export interface BaseTxInfo {
    */
   tip?: number;
   /**
+   * The current transaction version for the runtime.
+   */
+  transactionVersion: number;
+  /**
    * The amount of time (in second) the transaction is valid for. Will be
    * translated into a mortal era. Defaults to 5 minutes.
    *
@@ -65,4 +70,32 @@ export interface BaseTxInfo {
    * @default 300
    */
   validityPeriod?: number;
+}
+
+/**
+ * Runtime-specific options for encoding transactions. Pass this object
+ */
+export interface EncodeOptions {
+  /**
+   * The metadata of the runtime.
+   */
+  metadata?: string;
+  /**
+   * The type registry of the runtime.
+   */
+  registry: TypeRegistry;
+}
+
+/**
+ * Runtime-specific options for decocoding transactions.
+ */
+export interface DecodeOptions {
+  /**
+   * The metadata of the runtime.
+   */
+  metadata: string;
+  /**
+   * The type registry of the runtime.
+   */
+  registry: TypeRegistry;
 }

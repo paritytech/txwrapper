@@ -4,8 +4,7 @@
 
 import {
   createMetadata,
-  Options,
-  sanitizeOptions,
+  DecodeOptions,
   toTxMethod,
   TxInfo,
   UnsignedTransaction,
@@ -21,33 +20,9 @@ export type DecodedUnsignedTx = TxInfo;
  */
 export function decodeUnsignedTx(
   unsigned: UnsignedTransaction,
-  options: Options
-): DecodedUnsignedTx;
-
-/**
- * Parse the transaction information from an unigned transaction offline.
- *
- * @deprecated Prefer passing an `options` object as second argument.
- * @param unsigned - The JSON representing the unsigned transaction.
- * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
- * retrieved via the RPC call `state_getMetadata`.
- * @param ss58Format - The SS-58 address encoding to return.
- */
-export function decodeUnsignedTx(
-  unsigned: UnsignedTransaction,
-  metadataRpc: string,
-  ss58Format: number
-): DecodedUnsignedTx;
-
-export function decodeUnsignedTx(
-  unsigned: UnsignedTransaction,
-  metadataOrOptions: string | Options,
-  _ss58Format?: number
+  options: DecodeOptions
 ): DecodedUnsignedTx {
-  const { metadata, registry } = sanitizeOptions(
-    metadataOrOptions,
-    _ss58Format
-  );
+  const { metadata, registry } = options;
 
   registry.setMetadata(createMetadata(registry, metadata));
 
@@ -67,5 +42,8 @@ export function decodeUnsignedTx(
     nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
     specVersion: registry.createType('u32', unsigned.specVersion).toNumber(),
     tip: registry.createType('Compact<Balance>', unsigned.tip).toNumber(),
+    transactionVersion: registry
+      .createType('u32', unsigned.transactionVersion)
+      .toNumber(),
   };
 }

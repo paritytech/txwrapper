@@ -1,9 +1,4 @@
-import {
-  createMetadata,
-  Options,
-  sanitizeOptions,
-  UnsignedTransaction,
-} from './util';
+import { createMetadata, EncodeOptions, UnsignedTransaction } from './util';
 
 /**
  * Serialize a signed transaction in a format that can be submitted over the
@@ -17,14 +12,10 @@ import {
 export function createSignedTx(
   unsigned: UnsignedTransaction,
   signature: string,
-  options?: Partial<Options>
+  options: EncodeOptions
 ): string {
-  const { metadata, registry } = sanitizeOptions({
-    // FIXME `options` has a metadata field, `unsigned` has a metadata field,
-    // so which one should take precedence? For now, it's `options`.
-    metadata: unsigned.metadataRpc,
-    ...options,
-  });
+  const { registry } = options;
+  const metadata = options.metadata || unsigned.metadataRpc;
   registry.setMetadata(createMetadata(registry, metadata));
 
   const extrinsic = registry.createType(
