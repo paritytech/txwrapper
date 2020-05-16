@@ -14,7 +14,7 @@
 
 ▸ **createSigningPayload**(`unsigned`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `options`: [Options](../interfaces/_src_util_types_.options.md)): *string*
 
-*Defined in [src/createSigningPayload.ts:9](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/createSigningPayload.ts#L9)*
+*Defined in [src/createSigningPayload.ts:9](https://github.com/paritytech/txwrapper/blob/840775d/src/createSigningPayload.ts#L9)*
 
 Construct the signing payload from an unsigned transaction and export it to
 a remote signer (this is often called "detached signing").

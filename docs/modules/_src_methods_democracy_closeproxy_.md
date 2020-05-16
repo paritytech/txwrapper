@@ -14,7 +14,7 @@
 
 ▸ **closeProxy**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/closeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/democracy/closeProxy.ts#L13)*
+*Defined in [src/methods/democracy/closeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/840775d/src/methods/democracy/closeProxy.ts#L13)*
 
 Clear the proxy. Called by the proxy.
 
