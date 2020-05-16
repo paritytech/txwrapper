@@ -50,7 +50,8 @@ async function main(): Promise<void> {
     'state_getRuntimeVersion'
   );
 
-  // Create Substrate's type registry.
+  // Create Substrate's type registry. If you're using a custom chain, you can
+  // also put your own types here.
   const registry = new TypeRegistry();
 
   // Now we can create our `balances.transfer` unsigned tx. The following

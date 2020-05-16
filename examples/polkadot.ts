@@ -18,8 +18,8 @@ import {
 import { rpcToNode, signWith } from './util';
 
 /**
- * Entry point of the script. This script assumes a Polkadot dev node is
- * running locally on `http://localhost:9933`.
+ * Entry point of the script. This script assumes a Polkadot node is running
+ * locally on `http://localhost:9933`.
  */
 async function main(): Promise<void> {
   // Wait for the promise to resolve async WASM

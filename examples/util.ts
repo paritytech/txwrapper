@@ -29,7 +29,7 @@ export function rpcToNode(method: string, params: any[] = []): Promise<any> {
     .then((response) => response.json())
     .then(({ error, result }) => {
       if (error) {
-        throw new Error(error.message);
+        throw new Error(`${error.code} ${error.message}: ${error.data}`);
       }
 
       return result;
