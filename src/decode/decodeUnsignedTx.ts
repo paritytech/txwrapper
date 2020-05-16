@@ -42,8 +42,5 @@ export function decodeUnsignedTx(
     nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
     specVersion: registry.createType('u32', unsigned.specVersion).toNumber(),
     tip: registry.createType('Compact<Balance>', unsigned.tip).toNumber(),
-    transactionVersion: registry
-      .createType('u32', unsigned.transactionVersion)
-      .toNumber(),
   };
 }

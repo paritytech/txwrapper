@@ -109,9 +109,7 @@ export function createMethod(
     tip: registry
       .createType('Compact<Balance>', info.tip || DEFAULTS.tip)
       .toHex(),
-    transactionVersion: registry
-      .createType('u32', info.transactionVersion)
-      .toHex(),
+    transactionVersion: 'ununsed, only here for api typings compatibility',
     version: EXTRINSIC_VERSION,
   };
 }

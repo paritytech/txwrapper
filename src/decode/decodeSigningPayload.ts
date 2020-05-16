@@ -41,6 +41,5 @@ export function decodeSigningPayload(
     nonce: payload.nonce.toNumber(),
     specVersion: payload.specVersion.toNumber(),
     tip: payload.tip.toNumber(),
-    transactionVersion: -1, // FIXME https://github.com/polkadot-js/api/pull/2287
   };
 }

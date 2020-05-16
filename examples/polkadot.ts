@@ -40,9 +40,7 @@ async function main(): Promise<void> {
   const blockHash = await rpcToNode('chain_getBlockHash');
   const genesisHash = await rpcToNode('chain_getBlockHash', [0]);
   const metadataRpc = await rpcToNode('state_getMetadata');
-  const { specVersion, transactionVersion } = await rpcToNode(
-    'state_getRuntimeVersion'
-  );
+  const { specVersion } = await rpcToNode('state_getRuntimeVersion');
 
   // Create Polkadot's type registry.
   const registry = getRegistry('Polkadot', 'polkadot', specVersion);
@@ -67,7 +65,6 @@ async function main(): Promise<void> {
       nonce: 0, // Assuming this is Alice's first tx on the chain
       specVersion,
       tip: 0,
-      transactionVersion,
     },
     {
       metadataRpc,
