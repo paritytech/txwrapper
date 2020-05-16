@@ -1,7 +1,7 @@
 import {
   BaseTxInfo,
   createMethod,
-  Options,
+  OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
 
@@ -13,7 +13,7 @@ import {
 export function vest(
   args: {},
   info: BaseTxInfo,
-  options?: Partial<Options>
+  options: OptionsWithMeta
 ): UnsignedTransaction {
   return createMethod(
     {

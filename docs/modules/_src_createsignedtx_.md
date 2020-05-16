@@ -12,9 +12,9 @@
 
 ###  createSignedTx
 
-▸ **createSignedTx**(`unsigned`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `signature`: string, `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *string*
+▸ **createSignedTx**(`unsigned`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `signature`: string, `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *string*
 
-*Defined in [src/createSignedTx.ts:17](https://github.com/paritytech/txwrapper/blob/9698841/src/createSignedTx.ts#L17)*
+*Defined in [src/createSignedTx.ts:12](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/createSignedTx.ts#L12)*
 
 Serialize a signed transaction in a format that can be submitted over the
 Node RPC Interface from the signing payload and signature produced by the
@@ -26,6 +26,6 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `unsigned` | [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md) | The JSON representing the unsigned transaction. |
 `signature` | string | Signature of the signing payload produced by the remote signer.  |
-`options?` | Partial‹[Options](../interfaces/_src_util_options_.options.md)› | - |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
 
 **Returns:** *string*

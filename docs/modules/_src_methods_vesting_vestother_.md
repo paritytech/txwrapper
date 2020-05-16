@@ -16,9 +16,9 @@
 
 ###  vestOther
 
-▸ **vestOther**(`args`: [VestingVestOtherArgs](../interfaces/_src_methods_vesting_vestother_.vestingvestotherargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **vestOther**(`args`: [VestingVestOtherArgs](../interfaces/_src_methods_vesting_vestother_.vestingvestotherargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/vesting/vestOther.ts:22](https://github.com/paritytech/txwrapper/blob/9698841/src/methods/vesting/vestOther.ts#L22)*
+*Defined in [src/methods/vesting/vestOther.ts:22](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/vesting/vestOther.ts#L22)*
 
 Unlock any vested funds of a `target` account.
 
@@ -28,6 +28,6 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `args` | [VestingVestOtherArgs](../interfaces/_src_methods_vesting_vestother_.vestingvestotherargs.md) | - |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options?` | Partial‹[Options](../interfaces/_src_util_options_.options.md)› | - |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

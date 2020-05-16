@@ -2,7 +2,7 @@ import {
   Args,
   BaseTxInfo,
   createMethod,
-  Options,
+  OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
 
@@ -25,7 +25,7 @@ export interface SessionSetKeysArgs extends Args {
 export function setKeys(
   args: SessionSetKeysArgs,
   info: BaseTxInfo,
-  options?: Partial<Options>
+  options: OptionsWithMeta
 ): UnsignedTransaction {
   const { keys, proof = '0x' } = args;
 

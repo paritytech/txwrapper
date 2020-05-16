@@ -1,4 +1,4 @@
-import { Options, sanitizeOptions, UnsignedTransaction } from './util';
+import { Options, UnsignedTransaction } from './util';
 
 /**
  * Construct the signing payload from an unsigned transaction and export it to
@@ -8,14 +8,9 @@ import { Options, sanitizeOptions, UnsignedTransaction } from './util';
  */
 export function createSigningPayload(
   unsigned: UnsignedTransaction,
-  options?: Partial<Options>
+  options: Options
 ): string {
-  const { registry } = sanitizeOptions({
-    // FIXME `options` has a metadata field, `unsigned` has a metadata field,
-    // so which one should take precedence? For now, it's `options`.
-    metadata: unsigned.metadataRpc,
-    ...options,
-  });
+  const { registry } = options;
 
   return registry
     .createType('ExtrinsicPayload', unsigned, {

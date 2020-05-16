@@ -3,11 +3,10 @@ import { createSigningPayload } from '../createSigningPayload';
 import * as methods from '../methods';
 import {
   getAllMethods,
-  KUSAMA_SS58_FORMAT,
-  metadataRpc,
   signWithAlice,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
+  TEST_OPTIONS,
 } from '../util';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 
@@ -33,14 +32,15 @@ function testDecodeSignedTx(pallet: string, name: string): void {
   it(`should decode ${pallet}::${name}`, async (done) => {
     const unsigned = (methods as any)[pallet][name](
       (TEST_METHOD_ARGS as any)[pallet][name],
-      TEST_BASE_TX_INFO
+      TEST_BASE_TX_INFO,
+      TEST_OPTIONS
     );
-    const signingPayload = createSigningPayload(unsigned);
+    const signingPayload = createSigningPayload(unsigned, TEST_OPTIONS);
     const signature = await signWithAlice(signingPayload);
 
-    const signedTx = createSignedTx(unsigned, signature);
+    const signedTx = createSignedTx(unsigned, signature, TEST_OPTIONS);
 
-    const txInfo = decodeSignedTx(signedTx, metadataRpc, KUSAMA_SS58_FORMAT);
+    const txInfo = decodeSignedTx(signedTx, TEST_OPTIONS);
 
     decodeBaseTxInfo(txInfo);
     expect(txInfo.method.pallet).toBe(pallet);

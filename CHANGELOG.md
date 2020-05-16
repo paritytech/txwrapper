@@ -2,6 +2,61 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/paritytech/txwrapper/compare/v1.3.0...v2.0.0) (2020-05-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* This refactor breaks compatibility with v1, as all functions now require a `{ metadataRpc?, registry }` last argument.
+
+#### Rationale
+
+In v1, by not passing any last argument, we implicitly used Kusama's most recent TypeRegistry. This was a handy shortcut, but might create hard-to-debug issues down the road (e.g. using another chain, or using Kusama with an incompatible spec version).
+
+In v2, we never default to Kusama anymore, and always require the user passing the registry (and sometimes the metadata too, if needed, see docs for details).
+
+Example 1:
+
+```diff
++ // Get Kusama's registry at `specVersion`
++ const registry = getRegistry('Kusama', 'kusama', specVersion);
+
+const unsigned = methods.balances.transfer(
+  { dest: '1F...', value: 23 },
+  {
+    // other info about tx
+-    metadataRpc: metadataRpc,
+- }
++  }, {
++    metadataRpc: metadataRpc,
++    registry: registry
++  }
+);
+```
+
+Example 2:
+
+```diff
+const unsigned = {...};
+const signature = '...';
+
++ // Get Kusama's registry at `specVersion`
++ const registry = getRegistry('Kusama', 'kusama', unsigned.specVersion);
+
+- const signed = createSigned(unsigned, signature);
++ const signed = createSigned(unsigned, signature, {
++    metadataRpc: unsigned.metadata,
++    registry,
++ });
+```
+
+Here is the full list of breaking changes:
+- `decode` function taking 3 arguments was deprecated in v1, in favor or 2 arguments. In v2, `decode` takes exactly 2 arguments.
+- `createSigningPayload`, `createSignedTx`, `methods.*.*` functions all take a mandatory last argument `{ metadataRpc?, registry }`. Note that the `metadata` field has been renamed to `metadataRpc`. Whether a function needs `metadataRpc` is documented for each function.
+- `deriveAddress`'s 2nd argument `ss58Format` is now mandatory, and does not default to Kusama's prefix anymore.
+
+* Pass mandatory registry everywhere ([#141](https://github.com/paritytech/txwrapper/issues/141)) ([bd14e84](https://github.com/paritytech/txwrapper/commit/bd14e848ac0573c121c50a669b8b43213ff6a8ab))
+
 ## [1.3.0](https://github.com/paritytech/txwrapper/compare/v1.2.8...v1.3.0) (2020-05-11)
 
 
