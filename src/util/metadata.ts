@@ -59,7 +59,7 @@ const defaultChainProperties: Record<string, ChainProperties> = {
  * @param specName - The name of the runtime spec. Returned by RPC
  * `state_getRuntimeVersion`.
  * @param specVersion - The spec version of that chain for which we want to
- * create a type registry.Returned by RPC `state_getRuntimeVersion`.
+ * create a type registry. Returned by RPC `state_getRuntimeVersion`.
  */
 export function getRegistry(
   chainName: 'Kusama' | 'Polkadot' | 'Westend',
