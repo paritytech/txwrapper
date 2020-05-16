@@ -16,9 +16,9 @@
 
 ###  bond
 
-▸ **bond**(`args`: [StakingBondArgs](../interfaces/_src_methods_staking_bond_.stakingbondargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **bond**(`args`: [StakingBondArgs](../interfaces/_src_methods_staking_bond_.stakingbondargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/bond.ts:29](https://github.com/paritytech/txwrapper/blob/9698841/src/methods/staking/bond.ts#L29)*
+*Defined in [src/methods/staking/bond.ts:29](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/staking/bond.ts#L29)*
 
 Construct a transaction to bond funds and create a Stash account.
 
@@ -28,6 +28,6 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `args` | [StakingBondArgs](../interfaces/_src_methods_staking_bond_.stakingbondargs.md) | - |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options?` | Partial‹[Options](../interfaces/_src_util_options_.options.md)› | - |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

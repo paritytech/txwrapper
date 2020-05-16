@@ -16,9 +16,9 @@
 
 ###  activateProxy
 
-▸ **activateProxy**(`args`: [DemocracyActivateProxyArgs](../interfaces/_src_methods_democracy_activateproxy_.democracyactivateproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **activateProxy**(`args`: [DemocracyActivateProxyArgs](../interfaces/_src_methods_democracy_activateproxy_.democracyactivateproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/activateProxy.ts:21](https://github.com/paritytech/txwrapper/blob/9698841/src/methods/democracy/activateProxy.ts#L21)*
+*Defined in [src/methods/democracy/activateProxy.ts:21](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/democracy/activateProxy.ts#L21)*
 
 Specify a proxy that is already open to us. Called by the stash.
 
@@ -28,6 +28,6 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `args` | [DemocracyActivateProxyArgs](../interfaces/_src_methods_democracy_activateproxy_.democracyactivateproxyargs.md) | - |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options?` | Partial‹[Options](../interfaces/_src_util_options_.options.md)› | - |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

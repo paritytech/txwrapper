@@ -12,9 +12,9 @@
 
 ###  closeProxy
 
-▸ **closeProxy**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **closeProxy**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/closeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/9698841/src/methods/democracy/closeProxy.ts#L13)*
+*Defined in [src/methods/democracy/closeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/democracy/closeProxy.ts#L13)*
 
 Clear the proxy. Called by the proxy.
 
@@ -24,6 +24,6 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `args` | object | - |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options?` | Partial‹[Options](../interfaces/_src_util_options_.options.md)› | - |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

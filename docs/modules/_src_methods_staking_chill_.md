@@ -12,9 +12,9 @@
 
 ###  chill
 
-▸ **chill**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **chill**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/chill.ts:13](https://github.com/paritytech/txwrapper/blob/9698841/src/methods/staking/chill.ts#L13)*
+*Defined in [src/methods/staking/chill.ts:13](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/staking/chill.ts#L13)*
 
 Declare the desire to cease validating or nominating. Does not unbond funds.
 
@@ -24,6 +24,6 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `args` | object | - |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options?` | Partial‹[Options](../interfaces/_src_util_options_.options.md)› | - |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
