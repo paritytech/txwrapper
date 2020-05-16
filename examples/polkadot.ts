@@ -18,8 +18,8 @@ import {
 import { rpcToNode, signWith } from './util';
 
 /**
- * Entry point of the script. This script assumes a Polkadot dev node is
- * running locally on `http://localhost:9933`.
+ * Entry point of the script. This script assumes a Polkadot node is running
+ * locally on `http://localhost:9933`.
  */
 async function main(): Promise<void> {
   // Wait for the promise to resolve async WASM
@@ -43,10 +43,7 @@ async function main(): Promise<void> {
   const { specVersion } = await rpcToNode('state_getRuntimeVersion');
 
   // Create Polkadot's type registry.
-  // Right now, we hardcode the specVersion to `9999`, to use the always latest
-  // type overrides for Polkadot. In real-life, you should use the specVersion
-  // returned by `state_getRuntimeVersion` RPC.
-  const registry = getRegistry('Polkadot', 'polkadot', 9999);
+  const registry = getRegistry('Polkadot', 'polkadot', specVersion);
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
@@ -70,14 +67,14 @@ async function main(): Promise<void> {
       tip: 0,
     },
     {
-      metadata: metadataRpc,
+      metadataRpc,
       registry,
     }
   );
 
   // Decode an unsigned transaction.
   const decodedUnsigned = decode(unsigned, {
-    metadata: metadataRpc,
+    metadataRpc,
     registry,
   });
   console.log(
@@ -91,7 +88,7 @@ async function main(): Promise<void> {
 
   // Decode the information from a signing payload.
   const payloadInfo = decode(signingPayload, {
-    metadata: metadataRpc,
+    metadataRpc,
     registry,
   });
   console.log(
@@ -104,7 +101,7 @@ async function main(): Promise<void> {
   console.log(`\nSignature: ${signature}`);
 
   // Serialize a signed transaction.
-  const tx = createSignedTx(unsigned, signature, { registry });
+  const tx = createSignedTx(unsigned, signature, { metadataRpc, registry });
   console.log(`\nTransaction to Submit: ${tx}`);
 
   // Derive the tx hash of a signed transaction offline.
@@ -119,7 +116,7 @@ async function main(): Promise<void> {
 
   // Decode a signed payload.
   const txInfo = decode(tx, {
-    metadata: metadataRpc,
+    metadataRpc,
     registry,
   });
   console.log(

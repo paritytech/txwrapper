@@ -4,13 +4,7 @@
 
 import { hexToU8a } from '@polkadot/util';
 
-import {
-  createMetadata,
-  Options,
-  sanitizeOptions,
-  toTxMethod,
-  TxInfo,
-} from '../util';
+import { createMetadata, OptionsWithMeta, toTxMethod, TxInfo } from '../util';
 
 export type DecodedSignedTx = Omit<
   TxInfo,
@@ -25,35 +19,11 @@ export type DecodedSignedTx = Omit<
  */
 export function decodeSignedTx(
   signedTx: string,
-  options: Options
-): DecodedSignedTx;
-
-/**
- * Parse the transaction information from a signed transaction offline.
- *
- * @deprecated Prefer passing an `options` object as second argument.
- * @param unsigned - The JSON representing the unsigned transaction.
- * @param metadataRpc - The SCALE-encoded metadata, as a hex string. Can be
- * retrieved via the RPC call `state_getMetadata`.
- * @param ss58Format - The SS-58 address encoding to return.
- */
-export function decodeSignedTx(
-  signedTx: string,
-  metadataRpc: string,
-  ss58Format?: number
-): DecodedSignedTx;
-
-export function decodeSignedTx(
-  signedTx: string,
-  metadataOrOptions: string | Options,
-  _ss58Format?: number
+  options: OptionsWithMeta
 ): DecodedSignedTx {
-  const { metadata, registry } = sanitizeOptions(
-    metadataOrOptions,
-    _ss58Format
-  );
+  const { metadataRpc, registry } = options;
 
-  registry.setMetadata(createMetadata(registry, metadata));
+  registry.setMetadata(createMetadata(registry, metadataRpc));
 
   const tx = registry.createType('Extrinsic', hexToU8a(signedTx), {
     isSigned: true,
@@ -64,7 +34,7 @@ export function decodeSignedTx(
   return {
     address: tx.signer.toString(),
     eraPeriod: tx.era.asMortalEra.period.toNumber(),
-    metadataRpc: metadata,
+    metadataRpc,
     method,
     nonce: tx.nonce.toNumber(),
     tip: tx.tip.toNumber(),

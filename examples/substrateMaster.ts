@@ -48,11 +48,9 @@ async function main(): Promise<void> {
   const metadataRpc = await rpcToNode('state_getMetadata');
   const { specVersion } = await rpcToNode('state_getRuntimeVersion');
 
-  // Create Substrate's type registry.
+  // Create Substrate's type registry. If you're using a custom chain, you can
+  // also put your own types here.
   const registry = new TypeRegistry();
-  // If you're using your own chain with custom types, add these types here. We
-  // are using a vanilla Substrate chain, so no type overriding is needed.
-  registry.register({});
 
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
@@ -71,19 +69,19 @@ async function main(): Promise<void> {
       eraPeriod: 64,
       genesisHash,
       metadataRpc,
-      nonce: 1, // Assuming this is Alice's first tx on the chain
+      nonce: 0, // Assuming this is Alice's first tx on the chain
       specVersion,
       tip: 0,
     },
     {
-      metadata: metadataRpc,
+      metadataRpc,
       registry,
     }
   );
 
   // Decode an unsigned transaction.
   const decodedUnsigned = decode(unsigned, {
-    metadata: metadataRpc,
+    metadataRpc,
     registry,
   });
   console.log(
@@ -97,7 +95,7 @@ async function main(): Promise<void> {
 
   // Decode the information from a signing payload.
   const payloadInfo = decode(signingPayload, {
-    metadata: metadataRpc,
+    metadataRpc,
     registry,
   });
   console.log(
@@ -110,7 +108,7 @@ async function main(): Promise<void> {
   console.log(`\nSignature: ${signature}`);
 
   // Serialize a signed transaction.
-  const tx = createSignedTx(unsigned, signature, { registry });
+  const tx = createSignedTx(unsigned, signature, { metadataRpc, registry });
   console.log(`\nTransaction to Submit: ${tx}`);
 
   // Derive the tx hash of a signed transaction offline.
@@ -125,7 +123,7 @@ async function main(): Promise<void> {
 
   // Decode a signed payload.
   const txInfo = decode(tx, {
-    metadata: metadataRpc,
+    metadataRpc,
     registry,
   });
   console.log(

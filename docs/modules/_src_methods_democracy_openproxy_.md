@@ -16,9 +16,9 @@
 
 ###  openProxy
 
-▸ **openProxy**(`args`: [DemocracyOpenProxyArgs](../interfaces/_src_methods_democracy_openproxy_.democracyopenproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options?`: Partial‹[Options](../interfaces/_src_util_options_.options.md)›): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **openProxy**(`args`: [DemocracyOpenProxyArgs](../interfaces/_src_methods_democracy_openproxy_.democracyopenproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/openProxy.ts:21](https://github.com/paritytech/txwrapper/blob/9698841/src/methods/democracy/openProxy.ts#L21)*
+*Defined in [src/methods/democracy/openProxy.ts:21](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/democracy/openProxy.ts#L21)*
 
 Become a proxy. This must be called prior to a later `activateProxy`.
 
@@ -28,6 +28,6 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `args` | [DemocracyOpenProxyArgs](../interfaces/_src_methods_democracy_openproxy_.democracyopenproxyargs.md) | - |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options?` | Partial‹[Options](../interfaces/_src_util_options_.options.md)› | - |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

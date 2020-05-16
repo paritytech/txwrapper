@@ -6,17 +6,19 @@ import {
   signWithAlice,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
+  TEST_OPTIONS,
 } from './util/testUtil';
 
 describe('getTxHash', () => {
   it('should work', async (done) => {
     const unsigned = balances.transferKeepAlive(
       TEST_METHOD_ARGS.balances.transfer,
-      TEST_BASE_TX_INFO
+      TEST_BASE_TX_INFO,
+      TEST_OPTIONS
     );
-    const signingPayload = createSigningPayload(unsigned);
+    const signingPayload = createSigningPayload(unsigned, TEST_OPTIONS);
     const signature = await signWithAlice(signingPayload);
-    const signedTx = createSignedTx(unsigned, signature);
+    const signedTx = createSignedTx(unsigned, signature, TEST_OPTIONS);
 
     const txHash = getTxHash(signedTx);
     expect(txHash).toBe(

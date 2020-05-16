@@ -1,6 +1,7 @@
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
+  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { setController } from './setController';
@@ -9,7 +10,8 @@ describe('staking::setController', () => {
   it('should work', () => {
     const unsigned = setController(
       TEST_METHOD_ARGS.staking.setController,
-      TEST_BASE_TX_INFO
+      TEST_BASE_TX_INFO,
+      TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

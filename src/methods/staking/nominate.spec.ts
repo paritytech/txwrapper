@@ -1,6 +1,7 @@
 import {
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
+  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { nominate } from './nominate';
@@ -9,7 +10,8 @@ describe('staking::nominate', () => {
   it('should work', () => {
     const unsigned = nominate(
       TEST_METHOD_ARGS.staking.nominate,
-      TEST_BASE_TX_INFO
+      TEST_BASE_TX_INFO,
+      TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

@@ -1,10 +1,9 @@
 import * as methods from '../methods';
 import {
   getAllMethods,
-  KUSAMA_SS58_FORMAT,
-  metadataRpc,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
+  TEST_OPTIONS,
   TxInfo,
 } from '../util';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
@@ -40,9 +39,10 @@ function testDecodeUnsignedTx(pallet: string, name: string): void {
   it(`should decode ${pallet}::${name}`, () => {
     const unsigned = (methods as any)[pallet][name](
       (TEST_METHOD_ARGS as any)[pallet][name],
-      TEST_BASE_TX_INFO
+      TEST_BASE_TX_INFO,
+      TEST_OPTIONS
     );
-    const txInfo = decodeUnsignedTx(unsigned, metadataRpc, KUSAMA_SS58_FORMAT);
+    const txInfo = decodeUnsignedTx(unsigned, TEST_OPTIONS);
 
     decodeBaseTxInfo(txInfo);
     expect(txInfo.method.pallet).toBe(pallet);

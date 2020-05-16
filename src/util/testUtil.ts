@@ -31,6 +31,14 @@ export const TEST_BASE_TX_INFO = {
 };
 
 /**
+ * Use this registry in tests.
+ */
+export const TEST_OPTIONS = {
+  metadataRpc,
+  registry: getRegistry('Kusama', 'kusama', 9999),
+};
+
+/**
  * Test helper to test that all base tx information al correctly populated.
  *
  * @param unsigned - Unsigned transaction to test

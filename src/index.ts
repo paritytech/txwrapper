@@ -14,7 +14,6 @@ export {
 } from './util/constants';
 export { getRegistry } from './util/metadata';
 export { Args, TxMethod, TxInfo } from './util/method';
-export * from './util/options';
 export * from './util/types';
 
 export { methods };

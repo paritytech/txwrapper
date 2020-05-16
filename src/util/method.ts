@@ -9,8 +9,7 @@ import { stringCamelCase } from '@polkadot/util';
 
 import { EXTRINSIC_VERSION } from './constants';
 import { createDecorated } from './metadata';
-import { Options, sanitizeOptions } from './options';
-import { BaseTxInfo, UnsignedTransaction } from './types';
+import { BaseTxInfo, OptionsWithMeta, UnsignedTransaction } from './types';
 
 /**
  * Default values for tx info, if the user doesn't specify any
@@ -53,14 +52,9 @@ export interface TxInfo extends BaseTxInfo {
  */
 export function createMethod(
   info: TxInfo,
-  options?: Partial<Options>
+  options: OptionsWithMeta
 ): UnsignedTransaction {
-  const { metadata: metadataRpc, registry } = sanitizeOptions({
-    // FIXME `options` has a metadata field, `info` has a metadata field,
-    // so which one should take precedence? For now, it's `options`.
-    metadata: info.metadataRpc,
-    ...options,
-  });
+  const { metadataRpc, registry } = options;
   const metadata = createDecorated(registry, metadataRpc);
 
   const methodFunction = metadata.tx[info.method.pallet][info.method.name];
@@ -107,7 +101,7 @@ export function createMethod(
       })
       .toHex(),
     genesisHash: info.genesisHash,
-    metadataRpc: info.metadataRpc,
+    metadataRpc,
     method,
     nonce: registry.createType('Compact<Index>', info.nonce).toHex(),
     specVersion: registry.createType('u32', info.specVersion).toHex(),
