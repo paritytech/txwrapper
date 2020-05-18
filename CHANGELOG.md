@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/paritytech/txwrapper/compare/v2.0.0...v3.0.0) (2020-05-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* `BaseTxInfo` now takes an additional `transactionVersion` field.
+
+### Features
+
+* Add transactionVersion to input ([#140](https://github.com/paritytech/txwrapper/issues/140)) ([c4c22f2](https://github.com/paritytech/txwrapper/commit/c4c22f212fd01b93ce432d1a27732ae687e9cd59))
+
 ## [2.0.0](https://github.com/paritytech/txwrapper/compare/v1.3.0...v2.0.0) (2020-05-16)
 
 
