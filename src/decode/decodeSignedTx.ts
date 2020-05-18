@@ -8,7 +8,12 @@ import { createMetadata, OptionsWithMeta, toTxMethod, TxInfo } from '../util';
 
 export type DecodedSignedTx = Omit<
   TxInfo,
-  'blockHash' | 'blockNumber' | 'genesisHash' | 'specVersion' | 'version'
+  | 'blockHash'
+  | 'blockNumber'
+  | 'genesisHash'
+  | 'specVersion'
+  | 'transactionVersion'
+  | 'version'
 >;
 
 /**

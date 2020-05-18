@@ -8,7 +8,7 @@ import { AnyJson } from '@polkadot/types/types';
 import { stringCamelCase } from '@polkadot/util';
 
 import { EXTRINSIC_VERSION } from './constants';
-import { createDecorated } from './metadata';
+import { createDecorated, createMetadata } from './metadata';
 import { BaseTxInfo, OptionsWithMeta, UnsignedTransaction } from './types';
 
 /**
@@ -55,6 +55,7 @@ export function createMethod(
   options: OptionsWithMeta
 ): UnsignedTransaction {
   const { metadataRpc, registry } = options;
+  registry.setMetadata(createMetadata(registry, metadataRpc));
   const metadata = createDecorated(registry, metadataRpc);
 
   const methodFunction = metadata.tx[info.method.pallet][info.method.name];
@@ -104,9 +105,13 @@ export function createMethod(
     metadataRpc,
     method,
     nonce: registry.createType('Compact<Index>', info.nonce).toHex(),
+    signedExtensions: registry.signedExtensions,
     specVersion: registry.createType('u32', info.specVersion).toHex(),
     tip: registry
       .createType('Compact<Balance>', info.tip || DEFAULTS.tip)
+      .toHex(),
+    transactionVersion: registry
+      .createType('u32', info.transactionVersion)
       .toHex(),
     version: EXTRINSIC_VERSION,
   };

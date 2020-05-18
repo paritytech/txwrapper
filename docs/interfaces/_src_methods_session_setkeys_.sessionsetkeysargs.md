@@ -21,7 +21,7 @@
 
 • **keys**: *string[]*
 
-*Defined in [src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/session/setKeys.ts#L13)*
+*Defined in [src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper/blob/840775d/src/methods/session/setKeys.ts#L13)*
 
 The 5 keys to set.
 
@@ -31,6 +31,6 @@ ___
 
 • **proof**? : *undefined | string*
 
-*Defined in [src/methods/session/setKeys.ts:17](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/session/setKeys.ts#L17)*
+*Defined in [src/methods/session/setKeys.ts:17](https://github.com/paritytech/txwrapper/blob/840775d/src/methods/session/setKeys.ts#L17)*
 
 Proof (unused for now).

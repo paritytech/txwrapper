@@ -22,8 +22,10 @@ JSON format for an unsigned transaction.
 * [metadataRpc](_src_util_types_.unsignedtransaction.md#metadatarpc)
 * [method](_src_util_types_.unsignedtransaction.md#method)
 * [nonce](_src_util_types_.unsignedtransaction.md#nonce)
+* [signedExtensions](_src_util_types_.unsignedtransaction.md#signedextensions)
 * [specVersion](_src_util_types_.unsignedtransaction.md#specversion)
 * [tip](_src_util_types_.unsignedtransaction.md#tip)
+* [transactionVersion](_src_util_types_.unsignedtransaction.md#transactionversion)
 * [version](_src_util_types_.unsignedtransaction.md#version)
 
 ## Properties
@@ -34,7 +36,7 @@ JSON format for an unsigned transaction.
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[address](_src_util_types_.unsignedtransaction.md#address)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:99
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:101
 
 **`description`** The ss-58 encoded address
 
@@ -46,7 +48,7 @@ ___
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[blockHash](_src_util_types_.unsignedtransaction.md#blockhash)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:103
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:105
 
 **`description`** The checkpoint hash of the block, in hex
 
@@ -58,7 +60,7 @@ ___
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[blockNumber](_src_util_types_.unsignedtransaction.md#blocknumber)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:107
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:109
 
 **`description`** The checkpoint block number, in hex
 
@@ -70,7 +72,7 @@ ___
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[era](_src_util_types_.unsignedtransaction.md#era)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:111
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:113
 
 **`description`** The era for this transaction, in hex
 
@@ -82,7 +84,7 @@ ___
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[genesisHash](_src_util_types_.unsignedtransaction.md#genesishash)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:115
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:117
 
 **`description`** The genesis hash of the chain, in hex
 
@@ -92,7 +94,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/util/types.ts:12](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/util/types.ts#L12)*
+*Defined in [src/util/types.ts:12](https://github.com/paritytech/txwrapper/blob/840775d/src/util/types.ts#L12)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
@@ -105,7 +107,7 @@ ___
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[method](_src_util_types_.unsignedtransaction.md#method)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:119
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:121
 
 **`description`** The encoded method (with arguments) in hex
 
@@ -117,9 +119,21 @@ ___
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[nonce](_src_util_types_.unsignedtransaction.md#nonce)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:123
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:125
 
 **`description`** The nonce for this transaction, in hex
+
+___
+
+###  signedExtensions
+
+• **signedExtensions**: *string[]*
+
+*Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[signedExtensions](_src_util_types_.unsignedtransaction.md#signedextensions)*
+
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:141
+
+**`description`** The applicable signed extensions for this runtime
 
 ___
 
@@ -129,9 +143,9 @@ ___
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[specVersion](_src_util_types_.unsignedtransaction.md#specversion)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:127
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:129
 
-**`description`** The current spec version for  the runtime
+**`description`** The current spec version for the runtime
 
 ___
 
@@ -141,9 +155,21 @@ ___
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[tip](_src_util_types_.unsignedtransaction.md#tip)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:131
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:133
 
 **`description`** The tip for this transaction, in hex
+
+___
+
+###  transactionVersion
+
+• **transactionVersion**: *string*
+
+*Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[transactionVersion](_src_util_types_.unsignedtransaction.md#transactionversion)*
+
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:137
+
+**`description`** The current transaction version for the runtime
 
 ___
 
@@ -153,6 +179,6 @@ ___
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[version](_src_util_types_.unsignedtransaction.md#version)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:135
+Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:145
 
 **`description`** The version of the extrinsic we are dealing with

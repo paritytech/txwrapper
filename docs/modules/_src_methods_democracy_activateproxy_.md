@@ -18,7 +18,7 @@
 
 ▸ **activateProxy**(`args`: [DemocracyActivateProxyArgs](../interfaces/_src_methods_democracy_activateproxy_.democracyactivateproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/activateProxy.ts:21](https://github.com/paritytech/txwrapper/blob/2ba8a31/src/methods/democracy/activateProxy.ts#L21)*
+*Defined in [src/methods/democracy/activateProxy.ts:21](https://github.com/paritytech/txwrapper/blob/840775d/src/methods/democracy/activateProxy.ts#L21)*
 
 Specify a proxy that is already open to us. Called by the stash.
 
