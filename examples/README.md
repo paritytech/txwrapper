@@ -20,7 +20,7 @@ polkadot --dev
 ```bash
 ./node_modules/.bin/ts-node examples/substrateMaster.ts
 # or
-./node_modules/.bin/ts-node examples/kusama.ts
+./node_modules/.bin/ts-node examples/polkadot.ts
 ```
 
 ## Expected Output
