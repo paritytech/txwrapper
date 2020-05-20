@@ -49,9 +49,11 @@ const defaultChainProperties: Record<string, ChainProperties> = {
  * corresponding type registry. This function only returns the correct type
  * registry for the following chains:
  * - Kusama,
- * - Polkadot,
+ * - Polkadot (incl. when running a dev node),
  * - Westend.
- * For other chains, please use `@polkadot/api`s `TypeRegistry` directly.
+ * For other chains, please use `@polkadot/api`s `TypeRegistry` directly:
+ * `const registry = new TypeRegistry()`. If needed, you should also register
+ * your chain's custom types using `registry.register()`.
  *
  * @see https://github.com/polkadot-js/api/tree/master/packages/types-known
  * @param chainName - The chain to create the type registry for. Returned by

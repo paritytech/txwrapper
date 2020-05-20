@@ -15,7 +15,7 @@
 
 Ƭ **AccountVote**: *object | object*
 
-*Defined in [src/methods/democracy/types.ts:26](https://github.com/paritytech/txwrapper/blob/840775d/src/methods/democracy/types.ts#L26)*
+*Defined in [src/methods/democracy/types.ts:26](https://github.com/paritytech/txwrapper/blob/7569e9a/src/methods/democracy/types.ts#L26)*
 
 A vote in a referendum. Can be one of:
 - Standard: A standard vote, one-way (approve or reject) with a given amount
@@ -29,7 +29,7 @@ ___
 
 Ƭ **Vote**: *object*
 
-*Defined in [src/methods/democracy/types.ts:7](https://github.com/paritytech/txwrapper/blob/840775d/src/methods/democracy/types.ts#L7)*
+*Defined in [src/methods/democracy/types.ts:7](https://github.com/paritytech/txwrapper/blob/7569e9a/src/methods/democracy/types.ts#L7)*
 
 A vote in a referendum
 
