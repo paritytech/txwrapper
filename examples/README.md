@@ -18,9 +18,9 @@ polkadot --dev
 2. Run the example script in this folder. It will interact with your local node.
 
 ```bash
-./node_module/.bin/ts-node example/substrateMaster.ts
+./node_modules/.bin/ts-node examples/substrateMaster.ts
 # or
-./node_module/.bin/ts-node example/kusama.ts
+./node_modules/.bin/ts-node examples/polkadot.ts
 ```
 
 ## Expected Output
