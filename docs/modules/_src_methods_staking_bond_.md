@@ -18,7 +18,7 @@
 
 ▸ **bond**(`args`: [StakingBondArgs](../interfaces/_src_methods_staking_bond_.stakingbondargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/bond.ts:29](https://github.com/paritytech/txwrapper/blob/840775d/src/methods/staking/bond.ts#L29)*
+*Defined in [src/methods/staking/bond.ts:29](https://github.com/paritytech/txwrapper/blob/7569e9a/src/methods/staking/bond.ts#L29)*
 
 Construct a transaction to bond funds and create a Stash account.
 

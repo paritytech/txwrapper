@@ -18,15 +18,17 @@
 
 ▸ **getRegistry**(`chainName`: "Kusama" | "Polkadot" | "Westend", `specName`: "kusama" | "polkadot" | "westend", `specVersion`: number): *TypeRegistry*
 
-*Defined in [src/util/metadata.ts:64](https://github.com/paritytech/txwrapper/blob/840775d/src/util/metadata.ts#L64)*
+*Defined in [src/util/metadata.ts:66](https://github.com/paritytech/txwrapper/blob/7569e9a/src/util/metadata.ts#L66)*
 
 Given a chain name, a spec name, and a spec version, return the
 corresponding type registry. This function only returns the correct type
 registry for the following chains:
 - Kusama,
-- Polkadot,
+- Polkadot (incl. when running a dev node),
 - Westend.
-For other chains, please use `@polkadot/api`s `TypeRegistry` directly.
+For other chains, please use `@polkadot/api`s `TypeRegistry` directly:
+`const registry = new TypeRegistry()`. If needed, you should also register
+your chain's custom types using `registry.register()`.
 
 **`see`** https://github.com/polkadot-js/api/tree/master/packages/types-known
 
