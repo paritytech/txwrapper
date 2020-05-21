@@ -12,7 +12,7 @@ describe('createMethod', () => {
         ...txBaseInfo,
         method: {
           args: {},
-          name: 'withdrawUnbonded',
+          name: 'chill',
           pallet: 'staking',
         },
       },
@@ -33,7 +33,7 @@ describe('createMethod', () => {
         ...txBaseInfo,
         method: {
           args: {},
-          name: 'withdrawUnbonded',
+          name: 'chill',
           pallet: 'staking',
         },
       },

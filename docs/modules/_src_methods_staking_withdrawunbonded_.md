@@ -4,6 +4,10 @@
 
 ## Index
 
+### Interfaces
+
+* [StakingWithdrawUnbondedArgs](../interfaces/_src_methods_staking_withdrawunbonded_.stakingwithdrawunbondedargs.md)
+
 ### Functions
 
 * [withdrawUnbonded](_src_methods_staking_withdrawunbonded_.md#withdrawunbonded)
@@ -12,9 +16,9 @@
 
 ###  withdrawUnbonded
 
-▸ **withdrawUnbonded**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **withdrawUnbonded**(`args`: [StakingWithdrawUnbondedArgs](../interfaces/_src_methods_staking_withdrawunbonded_.stakingwithdrawunbondedargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/withdrawUnbonded.ts:13](https://github.com/paritytech/txwrapper/blob/7569e9a/src/methods/staking/withdrawUnbonded.ts#L13)*
+*Defined in [src/methods/staking/withdrawUnbonded.ts:18](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/staking/withdrawUnbonded.ts#L18)*
 
 Remove any unlocked chunks from the `unlocking` queue from our management.
 
@@ -22,7 +26,7 @@ Remove any unlocked chunks from the `unlocking` queue from our management.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | object | - |
+`args` | [StakingWithdrawUnbondedArgs](../interfaces/_src_methods_staking_withdrawunbonded_.stakingwithdrawunbondedargs.md) | - |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
 

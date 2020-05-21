@@ -173,7 +173,7 @@ export const TEST_METHOD_ARGS = {
     validate: {
       prefs: { commission: 5 },
     },
-    withdrawUnbonded: {},
+    withdrawUnbonded: { numSlashingSpans: 11 },
   },
   vesting: {
     vest: {},
