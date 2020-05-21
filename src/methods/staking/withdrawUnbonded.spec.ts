@@ -15,6 +15,6 @@ describe('staking::withdrawUnbonded', () => {
     );
 
     testBaseTxInfo(unsigned);
-    expect(unsigned.method).toBe('0x0703');
+    expect(unsigned.method).toBe('0x07030b000000');
   });
 });

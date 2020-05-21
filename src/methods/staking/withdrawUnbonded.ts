@@ -1,9 +1,14 @@
 import {
+  Args,
   BaseTxInfo,
   createMethod,
   OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
+
+export interface StakingWithdrawUnbondedArgs extends Args {
+  numSlashingSpans: number;
+}
 
 /**
  * Remove any unlocked chunks from the `unlocking` queue from our management.
@@ -11,7 +16,7 @@ import {
  * @param info - Information required to construct the transaction.
  */
 export function withdrawUnbonded(
-  args: {},
+  args: StakingWithdrawUnbondedArgs,
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {
