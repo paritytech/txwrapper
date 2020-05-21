@@ -18,7 +18,7 @@
 
 Ƭ **BalancesTransferKeepAliveArgs**: *[BalancesTransferArgs](../interfaces/_src_methods_balances_transfer_.balancestransferargs.md)*
 
-*Defined in [src/methods/balances/transferKeepAlive.ts:9](https://github.com/paritytech/txwrapper/blob/7569e9a/src/methods/balances/transferKeepAlive.ts#L9)*
+*Defined in [src/methods/balances/transferKeepAlive.ts:9](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/balances/transferKeepAlive.ts#L9)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **transferKeepAlive**(`args`: [BalancesTransferKeepAliveArgs](_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/balances/transferKeepAlive.ts:16](https://github.com/paritytech/txwrapper/blob/7569e9a/src/methods/balances/transferKeepAlive.ts#L16)*
+*Defined in [src/methods/balances/transferKeepAlive.ts:16](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/balances/transferKeepAlive.ts#L16)*
 
 Construct a balance transfer transaction offline.
 
