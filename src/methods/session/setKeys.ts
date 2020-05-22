@@ -20,7 +20,9 @@ export interface SessionSetKeysArgs extends Args {
 /**
  * Sets the session key(s) of the function caller to `key`.
  *
+ * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
+ * @param options - Registry and metadata used for constructing the method.
  */
 export function setKeys(
   args: SessionSetKeysArgs,

@@ -6,22 +6,22 @@ import {
   UnsignedTransaction,
 } from '../../util';
 
-export interface DemocracyActivateProxyArgs extends Args {
+export interface SystemRemarkArgs extends Args {
   /**
-   * Address to set as proxy, SS-58 encoded.
+   * The remark to set on chain, in hex or bytes.
    */
-  proxy: string;
+  remark: string;
 }
 
 /**
- * Specify a proxy that is already open to us. Called by the stash.
+ * Make some on-chain remark.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function activateProxy(
-  args: DemocracyActivateProxyArgs,
+export function remark(
+  args: SystemRemarkArgs,
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -29,8 +29,8 @@ export function activateProxy(
     {
       method: {
         args,
-        name: 'activateProxy',
-        pallet: 'democracy',
+        name: 'remark',
+        pallet: 'system',
       },
       ...info,
     },

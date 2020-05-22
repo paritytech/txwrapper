@@ -19,7 +19,9 @@ export interface StakingNominateArgs extends Args {
 /**
  * Construct a transaction to nominate. This must be called by the _Controller_ account.
  *
+ * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
+ * @param options - Registry and metadata used for constructing the method.
  */
 export function nominate(
   args: StakingNominateArgs,

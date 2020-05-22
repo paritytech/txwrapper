@@ -13,7 +13,9 @@ export interface StakingWithdrawUnbondedArgs extends Args {
 /**
  * Remove any unlocked chunks from the `unlocking` queue from our management.
  *
+ * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
+ * @param options - Registry and metadata used for constructing the method.
  */
 export function withdrawUnbonded(
   args: StakingWithdrawUnbondedArgs,
