@@ -18,7 +18,7 @@
 
 ▸ **proxyVote**(`args`: [DemocracyProxyVoteArgs](../interfaces/_src_methods_democracy_proxyvote_.democracyproxyvoteargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/proxyVote.ts:26](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/democracy/proxyVote.ts#L26)*
+*Defined in [src/methods/democracy/proxyVote.ts:28](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/democracy/proxyVote.ts#L28)*
 
 Vote in a referendum on behalf of a stash.
 
@@ -26,8 +26,8 @@ Vote in a referendum on behalf of a stash.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | [DemocracyProxyVoteArgs](../interfaces/_src_methods_democracy_proxyvote_.democracyproxyvoteargs.md) | - |
-`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
+`args` | [DemocracyProxyVoteArgs](../interfaces/_src_methods_democracy_proxyvote_.democracyproxyvoteargs.md) | Arguments specific to this method. |
+`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

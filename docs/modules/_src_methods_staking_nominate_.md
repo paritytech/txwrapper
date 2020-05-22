@@ -18,7 +18,7 @@
 
 ▸ **nominate**(`args`: [StakingNominateArgs](../interfaces/_src_methods_staking_nominate_.stakingnominateargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/nominate.ts:24](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/staking/nominate.ts#L24)*
+*Defined in [src/methods/staking/nominate.ts:26](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/staking/nominate.ts#L26)*
 
 Construct a transaction to nominate. This must be called by the _Controller_ account.
 
@@ -26,8 +26,8 @@ Construct a transaction to nominate. This must be called by the _Controller_ acc
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | [StakingNominateArgs](../interfaces/_src_methods_staking_nominate_.stakingnominateargs.md) | - |
-`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
+`args` | [StakingNominateArgs](../interfaces/_src_methods_staking_nominate_.stakingnominateargs.md) | Arguments specific to this method. |
+`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

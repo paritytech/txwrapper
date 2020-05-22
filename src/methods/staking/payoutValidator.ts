@@ -21,7 +21,9 @@ export interface StakingPayoutValidatorArgs extends Args {
  * payout of previous era.
  * WARNING: Incorrect arguments here can result in loss of payout. Be very careful.
  *
+ * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
+ * @param options - Registry and metadata used for constructing the method.
  */
 export function payoutValidator(
   args: StakingPayoutValidatorArgs,

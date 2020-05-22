@@ -17,7 +17,9 @@ export interface VestingVestOtherArgs extends Args {
 /**
  * Unlock any vested funds of a `target` account.
  *
+ * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
+ * @param options - Registry and metadata used for constructing the method.
  */
 export function vestOther(
   args: VestingVestOtherArgs,

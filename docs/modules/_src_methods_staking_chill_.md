@@ -14,7 +14,7 @@
 
 ▸ **chill**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/chill.ts:13](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/staking/chill.ts#L13)*
+*Defined in [src/methods/staking/chill.ts:15](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/staking/chill.ts#L15)*
 
 Declare the desire to cease validating or nominating. Does not unbond funds.
 
@@ -22,8 +22,8 @@ Declare the desire to cease validating or nominating. Does not unbond funds.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | object | - |
-`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
+`args` | object | Arguments specific to this method. |
+`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

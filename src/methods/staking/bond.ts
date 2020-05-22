@@ -24,7 +24,9 @@ export interface StakingBondArgs extends Args {
 /**
  * Construct a transaction to bond funds and create a Stash account.
  *
+ * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
+ * @param options - Registry and metadata used for constructing the method.
  */
 export function bond(
   args: StakingBondArgs,

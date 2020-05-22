@@ -18,7 +18,7 @@
 
 ▸ **openProxy**(`args`: [DemocracyOpenProxyArgs](../interfaces/_src_methods_democracy_openproxy_.democracyopenproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/openProxy.ts:21](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/democracy/openProxy.ts#L21)*
+*Defined in [src/methods/democracy/openProxy.ts:23](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/democracy/openProxy.ts#L23)*
 
 Become a proxy. This must be called prior to a later `activateProxy`.
 
@@ -26,8 +26,8 @@ Become a proxy. This must be called prior to a later `activateProxy`.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | [DemocracyOpenProxyArgs](../interfaces/_src_methods_democracy_openproxy_.democracyopenproxyargs.md) | - |
-`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
+`args` | [DemocracyOpenProxyArgs](../interfaces/_src_methods_democracy_openproxy_.democracyopenproxyargs.md) | Arguments specific to this method. |
+`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

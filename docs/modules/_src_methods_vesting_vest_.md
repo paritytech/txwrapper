@@ -14,7 +14,7 @@
 
 ▸ **vest**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/vesting/vest.ts:13](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/vesting/vest.ts#L13)*
+*Defined in [src/methods/vesting/vest.ts:15](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/vesting/vest.ts#L15)*
 
 Unlock any vested funds of the sender account.
 
@@ -22,8 +22,8 @@ Unlock any vested funds of the sender account.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | object | - |
-`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
+`args` | object | Arguments specific to this method. |
+`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
