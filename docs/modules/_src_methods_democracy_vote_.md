@@ -18,7 +18,7 @@
 
 ▸ **vote**(`args`: [DemocracyVoteArgs](../interfaces/_src_methods_democracy_vote_.democracyvoteargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/vote.ts:26](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/democracy/vote.ts#L26)*
+*Defined in [src/methods/democracy/vote.ts:28](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/democracy/vote.ts#L28)*
 
 Vote in a referendum.
 
@@ -26,8 +26,8 @@ Vote in a referendum.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | [DemocracyVoteArgs](../interfaces/_src_methods_democracy_vote_.democracyvoteargs.md) | - |
-`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
+`args` | [DemocracyVoteArgs](../interfaces/_src_methods_democracy_vote_.democracyvoteargs.md) | Arguments specific to this method. |
+`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

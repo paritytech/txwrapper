@@ -18,7 +18,7 @@
 
 ▸ **transfer**(`args`: [BalancesTransferArgs](../interfaces/_src_methods_balances_transfer_.balancestransferargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/balances/transfer.ts:25](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/balances/transfer.ts#L25)*
+*Defined in [src/methods/balances/transfer.ts:27](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/balances/transfer.ts#L27)*
 
 Construct a balance transfer transaction offline.
 
@@ -26,8 +26,8 @@ Construct a balance transfer transaction offline.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | [BalancesTransferArgs](../interfaces/_src_methods_balances_transfer_.balancestransferargs.md) | - |
-`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
+`args` | [BalancesTransferArgs](../interfaces/_src_methods_balances_transfer_.balancestransferargs.md) | Arguments specific to this method. |
+`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

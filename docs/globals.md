@@ -32,6 +32,7 @@
 * ["src/methods/staking/unbond"](modules/_src_methods_staking_unbond_.md)
 * ["src/methods/staking/validate"](modules/_src_methods_staking_validate_.md)
 * ["src/methods/staking/withdrawUnbonded"](modules/_src_methods_staking_withdrawunbonded_.md)
+* ["src/methods/system/remark"](modules/_src_methods_system_remark_.md)
 * ["src/methods/vesting/vest"](modules/_src_methods_vesting_vest_.md)
 * ["src/methods/vesting/vestOther"](modules/_src_methods_vesting_vestother_.md)
 * ["src/util/constants"](modules/_src_util_constants_.md)

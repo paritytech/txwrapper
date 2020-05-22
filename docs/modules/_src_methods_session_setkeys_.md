@@ -18,7 +18,7 @@
 
 ▸ **setKeys**(`args`: [SessionSetKeysArgs](../interfaces/_src_methods_session_setkeys_.sessionsetkeysargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/session/setKeys.ts:25](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/session/setKeys.ts#L25)*
+*Defined in [src/methods/session/setKeys.ts:27](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/session/setKeys.ts#L27)*
 
 Sets the session key(s) of the function caller to `key`.
 
@@ -26,8 +26,8 @@ Sets the session key(s) of the function caller to `key`.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | [SessionSetKeysArgs](../interfaces/_src_methods_session_setkeys_.sessionsetkeysargs.md) | - |
-`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
+`args` | [SessionSetKeysArgs](../interfaces/_src_methods_session_setkeys_.sessionsetkeysargs.md) | Arguments specific to this method. |
+`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

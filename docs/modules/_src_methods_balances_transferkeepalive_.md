@@ -18,7 +18,7 @@
 
 Ƭ **BalancesTransferKeepAliveArgs**: *[BalancesTransferArgs](../interfaces/_src_methods_balances_transfer_.balancestransferargs.md)*
 
-*Defined in [src/methods/balances/transferKeepAlive.ts:9](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/balances/transferKeepAlive.ts#L9)*
+*Defined in [src/methods/balances/transferKeepAlive.ts:9](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/balances/transferKeepAlive.ts#L9)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **transferKeepAlive**(`args`: [BalancesTransferKeepAliveArgs](_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/balances/transferKeepAlive.ts:16](https://github.com/paritytech/txwrapper/blob/cf846c2/src/methods/balances/transferKeepAlive.ts#L16)*
+*Defined in [src/methods/balances/transferKeepAlive.ts:18](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/balances/transferKeepAlive.ts#L18)*
 
 Construct a balance transfer transaction offline.
 
@@ -34,8 +34,8 @@ Construct a balance transfer transaction offline.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | [BalancesTransferKeepAliveArgs](_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs) | - |
-`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction.  |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | - |
+`args` | [BalancesTransferKeepAliveArgs](_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs) | Arguments specific to this method. |
+`info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
