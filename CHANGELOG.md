@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/paritytech/txwrapper/compare/v3.0.1...v3.0.2) (2020-05-22)
+
+
+### Features
+
+* Add system.remark ([#150](https://github.com/paritytech/txwrapper/issues/150)) ([9d1d225](https://github.com/paritytech/txwrapper/commit/9d1d225610ac468bb27ba2e78aca38987a818419))
+
 ### [3.0.1](https://github.com/paritytech/txwrapper/compare/v3.0.0...v3.0.1) (2020-05-21)
 
 
