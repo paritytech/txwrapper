@@ -7,6 +7,7 @@ export * from './deriveAddress';
 export * from './getTxHash';
 export * from './importPrivateKey';
 export * from './methods'; // We can remove this export, since we export `methods`
+export * from './util/claims';
 export {
   KUSAMA_SS58_FORMAT,
   POLKADOT_SS58_FORMAT,
