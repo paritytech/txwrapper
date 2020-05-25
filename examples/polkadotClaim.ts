@@ -4,6 +4,7 @@
 
 import {
   decode,
+  encodeUnsignedTransaction,
   getEthereumPayload,
   getPolkadotStatement,
   getRegistry,
@@ -80,24 +81,12 @@ async function main(): Promise<void> {
   );
 
   // Create an extrinsic, but don't add any signature to it.
-  const tx = registry.createType(
-    'Extrinsic',
-    { method: unsigned.method },
-    { version: unsigned.version }
-  );
-  console.log(`\nEncoded tx: ${tx.toHex()}`);
-  console.log(`Is tx signed: ${tx.isSigned}.`);
+  const tx = encodeUnsignedTransaction(unsigned, { registry });
+  console.log(`Encoded Tx: ${tx}`);
 
   // Derive the tx hash of a signed transaction offline.
-  const expectedTxHash = getTxHash(tx.toHex());
+  const expectedTxHash = getTxHash(tx);
   console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
-
-  // Decode the extrinsic.
-  console.log(
-    `\nDecoded Transaction\n  Statement: ${
-      JSON.parse(tx.toString()).method.args.statement
-    }`
-  );
 
   // Send the tx to the node. Again, since `txwrapper` is offline-only, this
   // operation should be handled externally. Here, we just send a JSONRPC
