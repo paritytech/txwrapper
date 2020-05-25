@@ -20,6 +20,6 @@
 
 • **target**: *string*
 
-*Defined in [src/methods/democracy/openProxy.ts:13](https://github.com/paritytech/txwrapper/blob/9a03411/src/methods/democracy/openProxy.ts#L13)*
+*Defined in [src/methods/democracy/openProxy.ts:13](https://github.com/paritytech/txwrapper/blob/7ad8b09/src/methods/democracy/openProxy.ts#L13)*
 
 The address of the proxy to remove, SS-58 encoded.
