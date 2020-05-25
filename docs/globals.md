@@ -39,5 +39,6 @@
 * ["src/methods/vesting/vestOther"](modules/_src_methods_vesting_vestother_.md)
 * ["src/util/claims"](modules/_src_util_claims_.md)
 * ["src/util/constants"](modules/_src_util_constants_.md)
+* ["src/util/encodeUnsignedTx"](modules/_src_util_encodeunsignedtx_.md)
 * ["src/util/metadata"](modules/_src_util_metadata_.md)
 * ["src/util/types"](modules/_src_util_types_.md)
