@@ -14,6 +14,8 @@
 * ["src/importPrivateKey"](modules/_src_importprivatekey_.md)
 * ["src/methods/balances/transfer"](modules/_src_methods_balances_transfer_.md)
 * ["src/methods/balances/transferKeepAlive"](modules/_src_methods_balances_transferkeepalive_.md)
+* ["src/methods/claims/attest"](modules/_src_methods_claims_attest_.md)
+* ["src/methods/claims/claimAttest"](modules/_src_methods_claims_claimattest_.md)
 * ["src/methods/democracy/activateProxy"](modules/_src_methods_democracy_activateproxy_.md)
 * ["src/methods/democracy/closeProxy"](modules/_src_methods_democracy_closeproxy_.md)
 * ["src/methods/democracy/deactivateProxy"](modules/_src_methods_democracy_deactivateproxy_.md)

@@ -18,7 +18,7 @@
 
 ▸ **getRegistry**(`chainName`: "Kusama" | "Polkadot" | "Westend", `specName`: "kusama" | "polkadot" | "westend", `specVersion`: number): *TypeRegistry*
 
-*Defined in [src/util/metadata.ts:66](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/util/metadata.ts#L66)*
+*Defined in [src/util/metadata.ts:66](https://github.com/paritytech/txwrapper/blob/9a03411/src/util/metadata.ts#L66)*
 
 Given a chain name, a spec name, and a spec version, return the
 corresponding type registry. This function only returns the correct type
