@@ -89,8 +89,8 @@ async function main(): Promise<void> {
   console.log(`Is tx signed: ${tx.isSigned}.`);
 
   // Derive the tx hash of a signed transaction offline.
-  const exptectedTxHash = getTxHash(tx.toHex());
-  console.log(`\nExpected Tx Hash: ${exptectedTxHash}`);
+  const expectedTxHash = getTxHash(tx.toHex());
+  console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
 
   // Decode the extrinsic.
   console.log(
