@@ -98,6 +98,16 @@ export const TEST_METHOD_ARGS = {
       value: 12,
     },
   },
+  claims: {
+    attest: {
+      statement: 'I hereby agree with this statement',
+    },
+    claimAttest: {
+      dest: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+      ethereumSignature: '0x1234',
+      statement: 'I hereby agree with this statement',
+    },
+  },
   democracy: {
     activateProxy: {
       proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
