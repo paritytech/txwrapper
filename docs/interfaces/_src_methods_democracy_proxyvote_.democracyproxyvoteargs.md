@@ -21,7 +21,7 @@
 
 • **refIndex**: *number*
 
-*Defined in [src/methods/democracy/proxyVote.ts:14](https://github.com/paritytech/txwrapper/blob/7ad8b09/src/methods/democracy/proxyVote.ts#L14)*
+*Defined in [src/methods/democracy/proxyVote.ts:14](https://github.com/paritytech/txwrapper/blob/9b4a752/src/methods/democracy/proxyVote.ts#L14)*
 
 ___
 
@@ -29,6 +29,6 @@ ___
 
 • **vote**: *[AccountVote](../modules/_src_methods_democracy_types_.md#accountvote)*
 
-*Defined in [src/methods/democracy/proxyVote.ts:18](https://github.com/paritytech/txwrapper/blob/7ad8b09/src/methods/democracy/proxyVote.ts#L18)*
+*Defined in [src/methods/democracy/proxyVote.ts:18](https://github.com/paritytech/txwrapper/blob/9b4a752/src/methods/democracy/proxyVote.ts#L18)*
 
 Vote.

@@ -37,6 +37,7 @@
 * ["src/methods/system/remark"](modules/_src_methods_system_remark_.md)
 * ["src/methods/vesting/vest"](modules/_src_methods_vesting_vest_.md)
 * ["src/methods/vesting/vestOther"](modules/_src_methods_vesting_vestother_.md)
+* ["src/util/claims"](modules/_src_util_claims_.md)
 * ["src/util/constants"](modules/_src_util_constants_.md)
 * ["src/util/metadata"](modules/_src_util_metadata_.md)
 * ["src/util/types"](modules/_src_util_types_.md)

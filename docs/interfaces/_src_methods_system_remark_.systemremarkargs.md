@@ -20,6 +20,6 @@
 
 • **remark**: *string*
 
-*Defined in [src/methods/system/remark.ts:13](https://github.com/paritytech/txwrapper/blob/7ad8b09/src/methods/system/remark.ts#L13)*
+*Defined in [src/methods/system/remark.ts:13](https://github.com/paritytech/txwrapper/blob/9b4a752/src/methods/system/remark.ts#L13)*
 
 The remark to set on chain, in hex or bytes.
