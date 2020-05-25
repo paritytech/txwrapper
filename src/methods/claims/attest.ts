@@ -8,7 +8,7 @@ import {
 
 export interface ClaimsAttestArgs extends Args {
   /**
-   * The identity of the statement which is being attested to in the signature.
+   * The identity of the statement that is being attested to in the signature.
    */
   statement: string;
 }

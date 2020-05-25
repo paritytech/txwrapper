@@ -8,17 +8,17 @@ import {
 
 export interface ClaimsClaimAttestArgs extends Args {
   /**
-   * The destination account to payout the claim. This method is only available
-   * on Polkadot.
+   * The destination account to which to pay out the claim. This method is only
+   * available on Polkadot.
    */
   dest: string;
   /**
-   * The signature of an ethereum signed message matching the format described
+   * The signature of an Ethereum signed message matching the format described
    * above.
    */
   ethereumSignature: string;
   /**
-   * The identity of the statement which is being attested to in the signature.
+   * The identity of the statement that is being attested to in the signature.
    */
   statement: string;
 }
