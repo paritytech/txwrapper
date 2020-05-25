@@ -98,18 +98,6 @@ export const TEST_METHOD_ARGS = {
       value: 12,
     },
   },
-  claims: {
-    // Untested for now.
-    attest: {
-      statement: 'I hereby agree with this statement',
-    },
-    // Untested for now.
-    claimAttest: {
-      dest: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
-      ethereumSignature: '0x1234',
-      statement: 'I hereby agree with this statement',
-    },
-  },
   democracy: {
     activateProxy: {
       proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
