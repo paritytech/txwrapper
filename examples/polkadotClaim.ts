@@ -1,6 +1,7 @@
 /**
  * @ignore Don't show this file in documentation.
  */ /** */
+
 import {
   decode,
   getEthereumPayload,
@@ -78,20 +79,24 @@ async function main(): Promise<void> {
     `\nDecoded Transaction\n  Statement: ${decodedUnsigned.method.args.statement}`
   );
 
-  // HELP! This needs to be encoded.
-  const tx = `${polkadotAddress}${ethSignature}${statementSentence.sentence}`;
+  // Create an extrinsic, but don't add any signature to it.
+  const tx = registry.createType(
+    'Extrinsic',
+    { method: unsigned.method },
+    { version: unsigned.version }
+  );
+  console.log(`\nEncoded tx: ${tx.toHex()}`);
+  console.log(`Is tx signed: ${tx.isSigned}.`);
 
   // Derive the tx hash of a signed transaction offline.
-  const exptectedTxHash = getTxHash(tx);
+  const exptectedTxHash = getTxHash(tx.toHex());
   console.log(`\nExpected Tx Hash: ${exptectedTxHash}`);
 
-  // Decode a signed payload.
-  const txInfo = decode(tx, {
-    metadataRpc,
-    registry,
-  });
+  // Decode the extrinsic.
   console.log(
-    `\nDecoded Transaction\n  Statement: ${txInfo.method.args.statement}`
+    `\nDecoded Transaction\n  Statement: ${
+      JSON.parse(tx.toString()).method.args.statement
+    }`
   );
 
   // Send the tx to the node. Again, since `txwrapper` is offline-only, this
