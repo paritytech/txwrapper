@@ -33,7 +33,7 @@ describe('getEthereumPayload', () => {
         }
       )
     ).toBe(
-      'Pay DOTs to the Polkadot account:5ee71967c3c6212607d983cdbdb4a18f63b84510310edd7a592b77d926246f43I hereby agree to the terms of the statement whose SHA-256 multihash is Qmawwbu1KeZ46peRspbsTUot8Lq6KcHutuiUKJ142N4Reg. (This may be found at the URL: https://statement.polkadot.network/saft.html)'
+      'Pay DOTs to the Polkadot account:5ee71967c3c6212607d983cdbdb4a18f63b84510310edd7a592b77d926246f43I hereby agree to the terms of the statement whose SHA-256 multihash is QmXEkMahfhHJPzT3RjkXiZVFi77ZeVeuxtAjhojGRNYckz. (This may be found at the URL: https://statement.polkadot.network/saft.html)'
     );
   });
 });
