@@ -99,9 +99,11 @@ export const TEST_METHOD_ARGS = {
     },
   },
   claims: {
+    // Untested for now.
     attest: {
       statement: 'I hereby agree with this statement',
     },
+    // Untested for now.
     claimAttest: {
       dest: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
       ethereumSignature: '0x1234',
