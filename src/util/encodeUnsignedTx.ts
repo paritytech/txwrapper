@@ -15,5 +15,5 @@ export function encodeUnsignedTransaction(
     { method: unsigned.method },
     { version: unsigned.version }
   );
-  return `${tx.toHex()}`;
+  return tx.toHex();
 }
