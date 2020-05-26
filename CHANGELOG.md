@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/paritytech/txwrapper/compare/v3.0.2...v3.1.0) (2020-05-26)
+
+
+### Features
+
+* Add helper functions for claiming and attesting ([#154](https://github.com/paritytech/txwrapper/issues/154)) ([16eac1a](https://github.com/paritytech/txwrapper/commit/16eac1aefa7733607c0231c27c3cac444896266a)), closes [#155](https://github.com/paritytech/txwrapper/issues/155)
+
 ### [3.0.2](https://github.com/paritytech/txwrapper/compare/v3.0.1...v3.0.2) (2020-05-22)
 
 
