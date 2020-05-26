@@ -21,7 +21,7 @@
 
 • **era**: *number*
 
-*Defined in [src/methods/staking/payoutNominator.ts:15](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/staking/payoutNominator.ts#L15)*
+*Defined in [src/methods/staking/payoutNominator.ts:15](https://github.com/paritytech/txwrapper/blob/f7acf81/src/methods/staking/payoutNominator.ts#L15)*
 
 May not be lower than one following the most recently paid era. If it is
 higher, then it indicates an instruction to skip the payout of all
@@ -33,7 +33,7 @@ ___
 
 • **validators**: *[string, number][]*
 
-*Defined in [src/methods/staking/payoutNominator.ts:22](https://github.com/paritytech/txwrapper/blob/3f5f77f/src/methods/staking/payoutNominator.ts#L22)*
+*Defined in [src/methods/staking/payoutNominator.ts:22](https://github.com/paritytech/txwrapper/blob/f7acf81/src/methods/staking/payoutNominator.ts#L22)*
 
 List of all validators that `who` had exposure to during `era` alongside
 the index of the `who` in the clipped exposure of the validator. i.e. each

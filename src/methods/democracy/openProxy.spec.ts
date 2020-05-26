@@ -16,7 +16,7 @@ describe('democracy::openProxy', () => {
 
     testBaseTxInfo(unsigned);
     expect(unsigned.method).toBe(
-      '0x09168eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48'
+      '0x09188eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48'
     );
   });
 });

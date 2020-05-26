@@ -108,8 +108,8 @@ async function main(): Promise<void> {
   console.log(`\nTransaction to Submit: ${tx}`);
 
   // Derive the tx hash of a signed transaction offline.
-  const exptectedTxHash = getTxHash(tx);
-  console.log(`\nExpected Tx Hash: ${exptectedTxHash}`);
+  const expectedTxHash = getTxHash(tx);
+  console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
 
   // Send the tx to the node. Again, since `txwrapper` is offline-only, this
   // operation should be handled externally. Here, we just send a JSONRPC
