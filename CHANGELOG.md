@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/paritytech/txwrapper/compare/v3.1.1...v3.1.2) (2020-05-28)
+
+
+### Bug Fixes
+
+* **deps:** Update to @polkadot/api@1.17.0-beta.5 ([#157](https://github.com/paritytech/txwrapper/issues/157)) ([da60015](https://github.com/paritytech/txwrapper/commit/da6001505174f2d6a793a30bf79e8c639b8b9f58))
+
 ### [3.1.1](https://github.com/paritytech/txwrapper/compare/v3.1.0...v3.1.1) (2020-05-26)
 
 
