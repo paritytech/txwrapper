@@ -1,4 +1,4 @@
-import { Options, UnsignedTransaction } from './util';
+import { createMetadata, OptionsWithMeta, UnsignedTransaction } from './util';
 
 /**
  * Construct the signing payload from an unsigned transaction and export it to
@@ -8,9 +8,10 @@ import { Options, UnsignedTransaction } from './util';
  */
 export function createSigningPayload(
   unsigned: UnsignedTransaction,
-  options: Options
+  options: OptionsWithMeta
 ): string {
   const { registry } = options;
+  registry.setMetadata(createMetadata(registry, options.metadataRpc));
 
   return registry
     .createType('ExtrinsicPayload', unsigned, {
