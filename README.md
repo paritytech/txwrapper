@@ -30,24 +30,24 @@ In a JS/TS file:
 
 ```typescript
 import {
-	createSignedTx,
-	createSigningPayload,
-	methods,
+  createSignedTx,
+  createSigningPayload,
+  methods,
 } from '@substrate/txwrapper';
 
 const unsigned = methods.balance.transfer(
-	{
-		dest: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP',
-		value: 100,
-	},
-	{
-		// Additional information needed to construct the transaction offline.
-	}
+  {
+    dest: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP',
+    value: 100,
+  },
+  {
+    // Additional information needed to construct the transaction offline.
+  }
 );
 
 const signingPayload = createSigningPayload(unsigned, {
-	metadataRpc,
-	registry,
+  metadataRpc,
+  registry,
 });
 // On your offline device, sign the payload.
 const signature = myOfflineSigning(signingPayload);
@@ -64,9 +64,9 @@ Go to [documentation](https://github.com/paritytech/txwrapper/tree/master/docs/g
 
 We welcome contributions. Before submitting your PR, make sure to run the following commands:
 
--   `yarn docs`: Will generate docs based on code comments.
--   `yarn test`: Make sure all tests pass.
--   `yarn lint`: Make sure your code follows our linting rules. You can also run `yarn lint --fix` to automatically fix some of those errors.
+- `yarn docs`: Will generate docs based on code comments.
+- `yarn test`: Make sure all tests pass.
+- `yarn lint`: Make sure your code follows our linting rules. You can also run `yarn lint --fix` to automatically fix some of those errors.
 
 ### Note for Maintainers
 
