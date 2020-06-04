@@ -8,6 +8,7 @@ import { createMetadata, OptionsWithMeta, UnsignedTransaction } from './util';
  * @param unsigned - The JSON representing the unsigned transaction.
  * @param signature - Signature of the signing payload produced by the remote
  * signer.
+ * @param options - Registry and metadata used for constructing the method.
  */
 export function createSignedTx(
   unsigned: UnsignedTransaction,
