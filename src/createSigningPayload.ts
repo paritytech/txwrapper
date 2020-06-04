@@ -30,7 +30,8 @@ import { createMetadata, OptionsWithMeta, UnsignedTransaction } from './util';
  * const actualPayload = extrinsicPayload.toU8a({ method: true });
  * // You can now sign `actualPayload` with you private key.
  *
- * // Alternatively, call the `.sign()` method on the `ExtrinsicPayload` class.
+ * // Alternatively, call the `.sign()` method directly on the
+ * `ExtrinsicPayload` class.
  * const { signature } = extrinsicPayload.sign(myKeyPair);
  * ```
  */
