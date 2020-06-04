@@ -2,10 +2,10 @@
  * @ignore Don't show this file in documentation.
  */ /** */
 
-import { TypeRegistry } from '@polkadot/types';
 import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 
-import { KeyringPair } from '../src';
+import { KeyringPair, OptionsWithMeta } from '../src';
+import { createMetadata } from '../src/util';
 
 /**
  * Send a JSONRPC request to the node at http://localhost:9933.
@@ -45,10 +45,13 @@ export function rpcToNode(method: string, params: any[] = []): Promise<any> {
  * @param signingPayload - Payload to sign.
  */
 export function signWith(
-  registry: TypeRegistry,
   pair: KeyringPair,
-  signingPayload: string
+  signingPayload: string,
+  options: OptionsWithMeta
 ): string {
+  const { registry, metadataRpc } = options;
+  registry.setMetadata(createMetadata(registry, metadataRpc));
+
   const { signature } = registry
     .createType('ExtrinsicPayload', signingPayload, {
       version: TRANSACTION_VERSION,
