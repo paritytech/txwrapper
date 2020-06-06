@@ -22,7 +22,7 @@ Object representing a Polkadot statement.
 
 • **hash**: *string*
 
-*Defined in [src/util/claims.ts:15](https://github.com/paritytech/txwrapper/blob/f7acf81/src/util/claims.ts#L15)*
+*Defined in [src/util/claims.ts:15](https://github.com/paritytech/txwrapper/blob/7851003/src/util/claims.ts#L15)*
 
 The statement's SHA-256 multihash.
 
@@ -32,7 +32,7 @@ ___
 
 • **sentence**: *string*
 
-*Defined in [src/util/claims.ts:19](https://github.com/paritytech/txwrapper/blob/f7acf81/src/util/claims.ts#L19)*
+*Defined in [src/util/claims.ts:19](https://github.com/paritytech/txwrapper/blob/7851003/src/util/claims.ts#L19)*
 
 The English human-readable sentence to sign.
 
@@ -42,6 +42,6 @@ ___
 
 • **url**: *string*
 
-*Defined in [src/util/claims.ts:23](https://github.com/paritytech/txwrapper/blob/f7acf81/src/util/claims.ts#L23)*
+*Defined in [src/util/claims.ts:23](https://github.com/paritytech/txwrapper/blob/7851003/src/util/claims.ts#L23)*
 
 The url at which the statement is hosted.

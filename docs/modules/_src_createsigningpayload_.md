@@ -14,16 +14,48 @@
 
 ▸ **createSigningPayload**(`unsigned`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `options`: [Options](../interfaces/_src_util_types_.options.md)): *string*
 
-*Defined in [src/createSigningPayload.ts:9](https://github.com/paritytech/txwrapper/blob/f7acf81/src/createSigningPayload.ts#L9)*
+*Defined in [src/createSigningPayload.ts:42](https://github.com/paritytech/txwrapper/blob/7851003/src/createSigningPayload.ts#L42)*
 
 Construct the signing payload from an unsigned transaction and export it to
 a remote signer (this is often called "detached signing").
+
+**Important!** The registry needs to be passed into the `options` argument.
+This registry needs to be updated with latest metadata, so before calling
+this function, make sure to run `registry.setMetadata(metadata)` first.
+
+**Important!** The return value of this function is **NOT** the actual
+payload to sign: the actual payload to sign includes `method` which should
+not be length-prefixed. To construct the actual payload to sign, see the
+example.
+
+**`example`** 
+```ts
+// Serialized signing payload.
+const signingPayload = createSigningPayload(unsigned, {
+  metadataRpc,
+  registry
+});
+
+// Construct an `ExtrinsicPayload` class.
+const extrinsicPayload = registry
+  .createType('ExtrinsicPayload', unsigned, {
+    version: unsigned.version,
+ });
+
+// With the `ExtrinsicPayload` class, construct the actual payload to sign.
+const actualPayload = extrinsicPayload.toU8a({ method: true });
+// You can now sign `actualPayload` with you private key.
+
+// Alternatively, call the `.sign()` method directly on the
+`ExtrinsicPayload` class.
+const { signature } = extrinsicPayload.sign(myKeyPair);
+```
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`unsigned` | [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md) | The JSON representing the unsigned transaction.  |
-`options` | [Options](../interfaces/_src_util_types_.options.md) | - |
+`unsigned` | [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md) | The JSON representing the unsigned transaction. |
+`options` | [Options](../interfaces/_src_util_types_.options.md) | Registry and metadata used for constructing the method.  |
 
 **Returns:** *string*
