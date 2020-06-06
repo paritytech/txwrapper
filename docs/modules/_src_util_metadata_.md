@@ -16,9 +16,9 @@
 
 ###  getRegistry
 
-▸ **getRegistry**(`chainName`: "Kusama" | "Polkadot" | "Westend", `specName`: "kusama" | "polkadot" | "westend", `specVersion`: number): *TypeRegistry*
+▸ **getRegistry**(`chainName`: "Kusama" | "Polkadot" | "Polkadot CC1" | "Westend", `specName`: "kusama" | "polkadot" | "westend", `specVersion`: number, `metadataRpc?`: undefined | string): *TypeRegistry*
 
-*Defined in [src/util/metadata.ts:66](https://github.com/paritytech/txwrapper/blob/f7acf81/src/util/metadata.ts#L66)*
+*Defined in [src/util/metadata.ts:112](https://github.com/paritytech/txwrapper/blob/2c5feb3/src/util/metadata.ts#L112)*
 
 Given a chain name, a spec name, and a spec version, return the
 corresponding type registry. This function only returns the correct type
@@ -36,8 +36,9 @@ your chain's custom types using `registry.register()`.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`chainName` | "Kusama" &#124; "Polkadot" &#124; "Westend" | The chain to create the type registry for. Returned by RPC `system_chain`. |
+`chainName` | "Kusama" &#124; "Polkadot" &#124; "Polkadot CC1" &#124; "Westend" | The chain to create the type registry for. Returned by RPC `system_chain`. |
 `specName` | "kusama" &#124; "polkadot" &#124; "westend" | The name of the runtime spec. Returned by RPC `state_getRuntimeVersion`. |
-`specVersion` | number | The spec version of that chain for which we want to create a type registry. Returned by RPC `state_getRuntimeVersion`.  |
+`specVersion` | number | The spec version of that chain for which we want to create a type registry. Returned by RPC `state_getRuntimeVersion`. |
+`metadataRpc?` | undefined &#124; string | If you pass the optional `metadataRpc` argument, then this function will run `registry.setMetadata()`. **Important!** If you don't pass this argument, make sure to call `registry.setMetadata()` yourself!  |
 
 **Returns:** *TypeRegistry*

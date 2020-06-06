@@ -32,25 +32,25 @@ In a JS/TS file:
 import {
   createSignedTx,
   createSigningPayload,
-  methods
+  methods,
 } from '@substrate/txwrapper';
 
 const unsigned = methods.balance.transfer(
   {
     dest: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP',
-    value: 100
+    value: 100,
   },
   {
     // Additional information needed to construct the transaction offline.
   }
 );
 
-const signingPayload = createSigningPayload(unsigned);
+const signingPayload = createSigningPayload(unsigned, { registry });
 // On your offline device, sign the payload.
 const signature = myOfflineSigning(signingPayload);
 
 // `tx` is ready to be broadcasted.
-const tx = createSignedTx(unsigned, signature);
+const tx = createSignedTx(unsigned, signature, { metadataRpc, registry });
 ```
 
 Have a look at the [examples](https://github.com/paritytech/txwrapper/tree/master/examples) to see how you can perform the whole lifecycle of a transaction, from generation to signing to broadcast.

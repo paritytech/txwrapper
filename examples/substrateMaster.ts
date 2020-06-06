@@ -93,7 +93,9 @@ async function main(): Promise<void> {
   );
 
   // Construct the signing payload from an unsigned transaction.
-  const signingPayload = createSigningPayload(unsigned, { registry });
+  const signingPayload = createSigningPayload(unsigned, {
+    registry,
+  });
   console.log(`\nPayload to Sign: ${signingPayload}`);
 
   // Decode the information from a signing payload.
@@ -107,7 +109,10 @@ async function main(): Promise<void> {
   );
 
   // Sign a payload. This operation should be performed on an offline device.
-  const signature = signWith(registry, alice, signingPayload);
+  const signature = signWith(alice, signingPayload, {
+    metadataRpc,
+    registry,
+  });
   console.log(`\nSignature: ${signature}`);
 
   // Serialize a signed transaction.
