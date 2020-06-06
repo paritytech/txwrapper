@@ -1,8 +1,12 @@
-import { createMetadata, OptionsWithMeta, UnsignedTransaction } from './util';
+import { Options, UnsignedTransaction } from './util';
 
 /**
  * Construct the signing payload from an unsigned transaction and export it to
  * a remote signer (this is often called "detached signing").
+ *
+ * **Important!** The registry needs to be passed into the `options` argument.
+ * This registry needs to be updated with latest metadata, so before calling
+ * this function, make sure to run `registry.setMetadata(metadata)` first.
  *
  * **Important!** The return value of this function is **NOT** the actual
  * payload to sign: the actual payload to sign includes `method` which should
@@ -37,10 +41,9 @@ import { createMetadata, OptionsWithMeta, UnsignedTransaction } from './util';
  */
 export function createSigningPayload(
   unsigned: UnsignedTransaction,
-  options: OptionsWithMeta
+  options: Options
 ): string {
   const { registry } = options;
-  registry.setMetadata(createMetadata(registry, options.metadataRpc));
 
   return registry
     .createType('ExtrinsicPayload', unsigned, {
