@@ -45,10 +45,7 @@ const unsigned = methods.balance.transfer(
   }
 );
 
-const signingPayload = createSigningPayload(unsigned, {
-  metadataRpc,
-  registry,
-});
+const signingPayload = createSigningPayload(unsigned, { registry });
 // On your offline device, sign the payload.
 const signature = myOfflineSigning(signingPayload);
 
