@@ -109,9 +109,6 @@ async function main(): Promise<void> {
   );
 
   // Sign a payload. This operation should be performed on an offline device.
-  // Important! The registry needs to be passed into the signing function. It
-  // needs to be updated with latest metadata, so before calling this function,
-  // make sure to run `registry.setMetadata(metadata)` first.
   const signature = signWith(alice, signingPayload, {
     metadataRpc,
     registry,

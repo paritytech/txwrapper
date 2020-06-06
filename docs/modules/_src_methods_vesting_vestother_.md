@@ -18,7 +18,7 @@
 
 ▸ **vestOther**(`args`: [VestingVestOtherArgs](../interfaces/_src_methods_vesting_vestother_.vestingvestotherargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/vesting/vestOther.ts:24](https://github.com/paritytech/txwrapper/blob/7851003/src/methods/vesting/vestOther.ts#L24)*
+*Defined in [src/methods/vesting/vestOther.ts:24](https://github.com/paritytech/txwrapper/blob/2c5feb3/src/methods/vesting/vestOther.ts#L24)*
 
 Unlock any vested funds of a `target` account.
 

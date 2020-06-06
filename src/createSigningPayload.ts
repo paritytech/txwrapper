@@ -24,7 +24,10 @@ import { Options, UnsignedTransaction } from './util';
  *   registry
  * });
  *
- * // Construct an `ExtrinsicPayload` class.
+ * // Construct an `ExtrinsicPayload` class. Careful, the `version` here is the
+ * // `TRANSACTION_VERSION` format version, and **NOT** the
+ * // `transaction_version` field from the `state_getRuntimeVersion` RPC
+ * // endpoint.
  * const extrinsicPayload = registry
  *   .createType('ExtrinsicPayload', unsigned, {
  *     version: unsigned.version,

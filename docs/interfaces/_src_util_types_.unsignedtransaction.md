@@ -94,7 +94,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/util/types.ts:12](https://github.com/paritytech/txwrapper/blob/7851003/src/util/types.ts#L12)*
+*Defined in [src/util/types.ts:12](https://github.com/paritytech/txwrapper/blob/2c5feb3/src/util/types.ts#L12)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
