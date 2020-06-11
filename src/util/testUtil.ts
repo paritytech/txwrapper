@@ -39,6 +39,26 @@ export const TEST_OPTIONS = {
   registry: getRegistry('Kusama', 'kusama', 9999),
 };
 
+export const CC1_TEST_BASE_TX_INFO = {
+  address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+  blockHash:
+    '0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
+  blockNumber: 4302222,
+  eraPeriod: 2400,
+  genesisHash:
+    '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
+  metadataRpc,
+  nonce: 2,
+  specVersion: 6,
+  tip: 0,
+  transactionVersion: 6,
+};
+
+export const CC1_TEST_OPTIONS = {
+  metadataRpc,
+  registry: getRegistry('Polkadot CC1', 'polkadot', 6, metadataRpc),
+};
+
 /**
  * Test helper to test that all base tx information al correctly populated.
  *
@@ -126,6 +146,12 @@ export const TEST_METHOD_ARGS = {
           vote: { aye: true, conviction: 'Locked1x' },
         },
       },
+    },
+  },
+  proxy: {
+    addProxy: {
+      proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob",
+      proxyType: 'Any',
     },
   },
   session: {

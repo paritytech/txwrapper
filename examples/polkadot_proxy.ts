@@ -16,7 +16,6 @@ import {
   POLKADOT_SS58_FORMAT,
 } from '../src';
 import { rpcToNode, signWith } from './util';
-
 /**
  * Entry point of the script. This script assumes a Polkadot node is running
  * locally on `http://localhost:9933`.
@@ -26,6 +25,7 @@ async function main(): Promise<void> {
   await cryptoWaitReady();
   // Create a new keyring, and add an "Alice" account
   const keyring = new Keyring();
+  const bob = keyring.addFromUri('//Bob', { name: 'Bob' }, 'sr25519');
   const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
   console.log(
     "Alice's SS58-Encoded Address:",
@@ -45,15 +45,18 @@ async function main(): Promise<void> {
   );
 
   // Create Polkadot's type registry.
-  const registry = getRegistry('Polkadot', 'polkadot', specVersion);
+  const registry = getRegistry(
+    'Polkadot CC1',
+    'polkadot',
+    specVersion,
+    metadataRpc
+  );
 
-  // Now we can create our `balances.transfer` unsigned tx. The following
-  // function takes the above data as arguments, so can be performed offline
-  // if desired.
-  const unsigned = methods.balances.transfer(
+  // A transfer to dave
+  const transfer = methods.balances.transfer(
     {
-      value: 12,
-      dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
+      dest: '5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy', // Dave
+      value: '4321',
     },
     {
       address: deriveAddress(alice.publicKey, POLKADOT_SS58_FORMAT),
@@ -64,7 +67,35 @@ async function main(): Promise<void> {
       eraPeriod: 64,
       genesisHash,
       metadataRpc,
-      nonce: 0, // Assuming this is Alice's first tx on the chain
+      nonce: 1, // Remember to change
+      specVersion,
+      tip: 0,
+      transactionVersion,
+    },
+    {
+      metadataRpc,
+      registry,
+    }
+  );
+
+  // Assume Bob is a proxy for Alice, so this will call the above transaction
+  // and transfer money from Alice to Dave
+  const unsigned = methods.proxy.proxy(
+    {
+      real: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY', // Alice,
+      forceProxyType: 'Any',
+      call: transfer.method,
+    },
+    {
+      address: deriveAddress(bob.publicKey, POLKADOT_SS58_FORMAT),
+      blockHash,
+      blockNumber: registry
+        .createType('BlockNumber', block.header.number)
+        .toNumber(),
+      eraPeriod: 64,
+      genesisHash,
+      metadataRpc,
+      nonce: 2, // Remember to change
       specVersion,
       tip: 0,
       transactionVersion,
@@ -81,10 +112,10 @@ async function main(): Promise<void> {
     registry,
   });
   console.log(
-    `\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
-      `  Amount: ${decodedUnsigned.method.args.value}`
+    `\nDecoded Transaction\n  Real: ${decodedUnsigned.method.args.real}\n` +
+      `  forceProxyType: ${decodedUnsigned.method.args.forceProxyType}\n` +
+      `  call: ${decodedUnsigned.method.args.call}`
   );
-
   // Construct the signing payload from an unsigned transaction.
   const signingPayload = createSigningPayload(unsigned, { registry });
   console.log(`\nPayload to Sign: ${signingPayload}`);
@@ -95,12 +126,13 @@ async function main(): Promise<void> {
     registry,
   });
   console.log(
-    `\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
-      `  Amount: ${payloadInfo.method.args.value}`
+    `\nDecoded Transaction\n  Real: ${payloadInfo.method.args.real}\n` +
+      `  forceProxyType: ${payloadInfo.method.args.forceProxyType}\n` +
+      `  call: ${payloadInfo.method.args.call}`
   );
 
   // Sign a payload. This operation should be performed on an offline device.
-  const signature = signWith(alice, signingPayload, {
+  const signature = signWith(bob, signingPayload, {
     metadataRpc,
     registry,
   });
@@ -126,8 +158,9 @@ async function main(): Promise<void> {
     registry,
   });
   console.log(
-    `\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
-      `  Amount: ${txInfo.method.args.value}\n`
+    `\nDecoded Transaction\n  Real: ${txInfo.method.args.real}\n` +
+      `  forceProxyType: ${txInfo.method.args.forceProxyType}\n` +
+      `  call: ${txInfo.method.args.call}`
   );
 }
 
