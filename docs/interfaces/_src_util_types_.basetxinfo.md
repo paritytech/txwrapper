@@ -30,7 +30,7 @@ JSON format for information that is common to all transactions.
 
 • **address**: *string*
 
-*Defined in [src/util/types.ts:22](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L22)*
+*Defined in [src/util/types.ts:22](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L22)*
 
 The ss-58 encoded address of the sending account.
 
@@ -40,7 +40,7 @@ ___
 
 • **blockHash**: *string*
 
-*Defined in [src/util/types.ts:26](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L26)*
+*Defined in [src/util/types.ts:26](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L26)*
 
 The checkpoint hash of the block, in hex.
 
@@ -50,7 +50,7 @@ ___
 
 • **blockNumber**: *number*
 
-*Defined in [src/util/types.ts:30](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L30)*
+*Defined in [src/util/types.ts:30](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L30)*
 
 The checkpoint block number (u32), in hex.
 
@@ -60,7 +60,7 @@ ___
 
 • **eraPeriod**? : *undefined | number*
 
-*Defined in [src/util/types.ts:37](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L37)*
+*Defined in [src/util/types.ts:37](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L37)*
 
 Describe the longevity of a transaction. It represents the validity from
 the `blockHash` field, in number of blocks. Defaults to 64 blocks.
@@ -73,7 +73,7 @@ ___
 
 • **genesisHash**: *string*
 
-*Defined in [src/util/types.ts:41](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L41)*
+*Defined in [src/util/types.ts:41](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L41)*
 
 The genesis hash of the chain, in hex.
 
@@ -83,7 +83,7 @@ ___
 
 • **metadataRpc**: *string*
 
-*Defined in [src/util/types.ts:46](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L46)*
+*Defined in [src/util/types.ts:46](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L46)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
@@ -94,7 +94,7 @@ ___
 
 • **nonce**: *number*
 
-*Defined in [src/util/types.ts:50](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L50)*
+*Defined in [src/util/types.ts:50](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L50)*
 
 The nonce for this transaction.
 
@@ -104,7 +104,7 @@ ___
 
 • **specVersion**: *number*
 
-*Defined in [src/util/types.ts:54](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L54)*
+*Defined in [src/util/types.ts:54](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L54)*
 
 The current spec version for the runtime.
 
@@ -114,7 +114,7 @@ ___
 
 • **tip**? : *undefined | number*
 
-*Defined in [src/util/types.ts:60](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L60)*
+*Defined in [src/util/types.ts:60](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L60)*
 
 The tip for this transaction, in hex.
 
@@ -126,7 +126,7 @@ ___
 
 • **transactionVersion**: *number*
 
-*Defined in [src/util/types.ts:64](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L64)*
+*Defined in [src/util/types.ts:64](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L64)*
 
 The current transaction version for the runtime.
 
@@ -136,7 +136,7 @@ ___
 
 • **validityPeriod**? : *undefined | number*
 
-*Defined in [src/util/types.ts:72](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/util/types.ts#L72)*
+*Defined in [src/util/types.ts:72](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/types.ts#L72)*
 
 The amount of time (in second) the transaction is valid for. Will be
 translated into a mortal era. Defaults to 5 minutes.

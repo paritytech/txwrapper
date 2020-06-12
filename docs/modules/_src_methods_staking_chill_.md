@@ -14,9 +14,11 @@
 
 ▸ **chill**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/chill.ts:15](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/methods/staking/chill.ts#L15)*
+*Defined in [src/methods/staking/chill.ts:17](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/methods/staking/chill.ts#L17)*
 
 Declare the desire to cease validating or nominating. Does not unbond funds.
+
+Can only be called when `EraElectionStatus` is `Closed`.
 
 **Parameters:**
 

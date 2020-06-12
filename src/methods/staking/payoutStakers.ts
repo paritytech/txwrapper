@@ -25,7 +25,7 @@ export interface StakingPayoutStakersArgs extends Args {
  *
  * Any account can call this function, even if it is not one of the stakers.
  *
- * This can only be called when `EraElectionStatus` is `Closed`.
+ * Can only be called when `EraElectionStatus` is `Closed`.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.

@@ -18,13 +18,13 @@
 
 ▸ **payoutStakers**(`args`: [StakingPayoutStakersArgs](../interfaces/_src_methods_staking_payoutstakers_.stakingpayoutstakersargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/payoutStakers.ts:33](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/methods/staking/payoutStakers.ts#L33)*
+*Defined in [src/methods/staking/payoutStakers.ts:34](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/methods/staking/payoutStakers.ts#L34)*
 
 Pay out all the stakers behind a single validator for a single era.
 
 Any account can call this function, even if it is not one of the stakers.
 
-This can only be called when `EraElectionStatus` is `Closed`.
+Can only be called when `EraElectionStatus` is `Closed`.
 
 **Parameters:**
 

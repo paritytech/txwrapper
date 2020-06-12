@@ -21,9 +21,10 @@
 
 • **era**: *number | string*
 
-*Defined in [src/methods/staking/payoutStakers.ts:18](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/methods/staking/payoutStakers.ts#L18)*
+*Defined in [src/methods/staking/payoutStakers.ts:19](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/methods/staking/payoutStakers.ts#L19)*
 
-May be any era between `[current_era - history_depth; current_era]`. Substrate only
+May be any era between `[current_era - history_depth; current_era]`. Substrate only.
+Retains up to `history_depth` eras of reward information.
 
 ___
 
@@ -31,7 +32,7 @@ ___
 
 • **validatorStash**: *string*
 
-*Defined in [src/methods/staking/payoutStakers.ts:14](https://github.com/paritytech/txwrapper/blob/8c6ea2d/src/methods/staking/payoutStakers.ts#L14)*
+*Defined in [src/methods/staking/payoutStakers.ts:14](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/methods/staking/payoutStakers.ts#L14)*
 
 The Stash account of a _validator._ Their nominators, up to, the maximum
-`T::MaxNominatorRewardedPerValidator`, will also receive their rewards.
+`MaxNominatorRewardedPerValidator`, will also receive their rewards.
