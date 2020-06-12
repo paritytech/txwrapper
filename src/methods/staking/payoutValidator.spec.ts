@@ -4,17 +4,17 @@ import {
   TEST_METHOD_ARGS,
   testBaseTxInfo,
 } from '../../util';
-import { closeProxy } from './closeProxy';
+import { payoutValidator } from './payoutValidator';
 
-describe('democracy::closeProxy', () => {
+describe('staking::payoutValidator', () => {
   it('should work', () => {
-    const unsigned = closeProxy(
-      TEST_METHOD_ARGS.democracy.closeProxy,
+    const unsigned = payoutValidator(
+      TEST_METHOD_ARGS.staking.payoutValidator,
       TEST_BASE_TX_INFO,
       API_V1_17_2_TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);
-    expect(unsigned.method).toBe('0x090d');
+    expect(unsigned.method).toBe('0x071164000000');
   });
 });

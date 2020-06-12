@@ -1,5 +1,5 @@
 import {
-  DEMOCRACY_TEST_OPTIONS,
+  API_V1_17_2_TEST_OPTIONS,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
   testBaseTxInfo,
@@ -11,7 +11,7 @@ describe('democracy::deactivateProxy', () => {
     const unsigned = deactivateProxy(
       TEST_METHOD_ARGS.democracy.deactivateProxy,
       TEST_BASE_TX_INFO,
-      DEMOCRACY_TEST_OPTIONS
+      API_V1_17_2_TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

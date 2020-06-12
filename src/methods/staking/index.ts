@@ -6,4 +6,6 @@ export * from './setController';
 export * from './unbond';
 export * from './validate';
 export * from './withdrawUnbonded';
+export * from './payoutNominator';
+export * from './payoutValidator';
 export * from './payoutStakers';
