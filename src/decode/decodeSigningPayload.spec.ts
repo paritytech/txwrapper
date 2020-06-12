@@ -2,9 +2,9 @@ import { createSigningPayload } from '../createSigningPayload';
 import * as methods from '../methods';
 import {
   getAllMethods,
+  KUSAMA_TEST_OPTIONS,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_OPTIONS,
 } from '../util';
 import {
   DecodedSigningPayload,
@@ -38,11 +38,11 @@ function testDecodeSigningPayload(pallet: string, name: string): void {
       (methods as any)[pallet][name](
         (TEST_METHOD_ARGS as any)[pallet][name],
         TEST_BASE_TX_INFO,
-        TEST_OPTIONS
+        KUSAMA_TEST_OPTIONS
       ),
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
-    const txInfo = decodeSigningPayload(signingPayload, TEST_OPTIONS);
+    const txInfo = decodeSigningPayload(signingPayload, KUSAMA_TEST_OPTIONS);
 
     decodeBaseTxInfo(txInfo);
     expect(txInfo.method.pallet).toBe(pallet);

@@ -35,7 +35,7 @@ export const TEST_BASE_TX_INFO = {
 /**
  * Use this registry in tests.
  */
-export const TEST_OPTIONS = {
+export const KUSAMA_TEST_OPTIONS = {
   metadataRpc,
   registry: getRegistry('Kusama', 'kusama', 9999),
 };

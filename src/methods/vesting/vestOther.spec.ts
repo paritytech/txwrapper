@@ -1,7 +1,7 @@
 import {
+  KUSAMA_TEST_OPTIONS,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { vestOther } from './vestOther';
@@ -11,7 +11,7 @@ describe('vesting::vestOther', () => {
     const unsigned = vestOther(
       TEST_METHOD_ARGS.vesting.vestOther,
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

@@ -1,7 +1,7 @@
 import {
+  KUSAMA_TEST_OPTIONS,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { setController } from './setController';
@@ -11,7 +11,7 @@ describe('staking::setController', () => {
     const unsigned = setController(
       TEST_METHOD_ARGS.staking.setController,
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

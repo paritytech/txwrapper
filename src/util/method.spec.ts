@@ -1,5 +1,5 @@
 import { createMethod } from './method';
-import { TEST_BASE_TX_INFO, TEST_OPTIONS } from './testUtil';
+import { KUSAMA_TEST_OPTIONS, TEST_BASE_TX_INFO } from './testUtil';
 
 describe('createMethod', () => {
   it('should create a default validity period of 5 minutes', () => {
@@ -16,7 +16,7 @@ describe('createMethod', () => {
           pallet: 'staking',
         },
       },
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
 
     expect(unsigned.era).toBe('0xe500');
@@ -37,7 +37,7 @@ describe('createMethod', () => {
           pallet: 'staking',
         },
       },
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
 
     expect(unsigned.era).toBe('0xea58');
