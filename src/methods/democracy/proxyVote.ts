@@ -30,6 +30,10 @@ export function proxyVote(
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {
+  console.warn(
+    '`democracy.proxyVote` is now deprecated. ' +
+      'Update to the latest version of Substrate to use the proxy pallet.'
+  );
   return createMethod(
     {
       method: {

@@ -17,6 +17,10 @@ export function closeProxy(
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {
+  console.warn(
+    '`democracy.closeProxy` is now deprecated. ' +
+      'Update to the latest version of Substrate to use the proxy pallet.'
+  );
   return createMethod(
     {
       method: {
