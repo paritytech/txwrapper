@@ -12,7 +12,7 @@ export interface ProxyRemoveProxy extends Args {
    */
   proxy: string;
   /**
-   * The permissions currently enabled for the removed proxy account.
+   * The permissions currently enabled for the target proxy account.
    */
   proxyType: string;
 }

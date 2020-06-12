@@ -9,11 +9,12 @@ import {
 export interface StakingPayoutStakersArgs extends Args {
   /**
    * The Stash account of a _validator._ Their nominators, up to, the maximum
-   * `T::MaxNominatorRewardedPerValidator`, will also receive their rewards.
+   * `MaxNominatorRewardedPerValidator`, will also receive their rewards.
    */
   validatorStash: string;
   /**
-   * May be any era between `[current_era - history_depth; current_era]`. Substrate only
+   * May be any era between `[current_era - history_depth; current_era]`. Substrate only.
+   * Retains up to `history_depth` eras of reward information.
    */
   era: number | string;
 }
