@@ -6,24 +6,21 @@ import {
   UnsignedTransaction,
 } from '../../util';
 
-// enum ProxyType { // Would this be helpful?
-//   Any = 'Any',
-//   NonTransfer = 'NonTransfer',
-//   Governance = 'Governance',
-//   Staking = 'Staking',
-//   SudoBalances = 'SudoBalances',
-// }
-
 export interface ProxyAddProxy extends Args {
   /**
-   * The account that the `caller` would like to make a proxy
+   * The account that the `caller` would like to make a proxy.
    */
   proxy: string;
   /**
-   * The permissions allowed for this proxy account.
-   * As of Polkadot v7 types are (Any, NonTransfer, Governance, Staking, SudoBalances).
+   * The permissions for this proxy account. See the runtime for the `call` filters.
+   * Current known types (Polkadot v8, Kusama v2008, Westend v28):
+   *   - 'Any'
+   *   - 'NonTransfer'
+   *   - 'Governance'
+   *   - 'Staking'
+   *   - 'SudoBalances' (only relevant if sender is `sudo`)
    */
-  proxyType: string; //TODO does this need to be an enum
+  proxyType: string;
 }
 
 /**

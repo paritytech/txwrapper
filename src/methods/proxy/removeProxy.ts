@@ -1,10 +1,21 @@
 import {
+  Args,
   BaseTxInfo,
   createMethod,
   OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
-import { ProxyAddProxy } from './addProxy';
+
+export interface ProxyRemoveProxy extends Args {
+  /**
+   * The account that the `caller` would like to make a proxy
+   */
+  proxy: string;
+  /**
+   * The permissions currently enabled for the removed proxy account.
+   */
+  proxyType: string;
+}
 
 /**
  * Unregister a proxy account for the sender.
@@ -15,7 +26,7 @@ import { ProxyAddProxy } from './addProxy';
  */
 
 export function removeProxy(
-  args: ProxyAddProxy,
+  args: ProxyRemoveProxy,
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {

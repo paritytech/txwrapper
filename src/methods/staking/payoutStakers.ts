@@ -8,24 +8,23 @@ import {
 
 export interface StakingPayoutStakersArgs extends Args {
   /**
-   * The stash account of the validator. Their nominators, up to,
+   * The Stash account of a _validator._ Their nominators, up to, the maximum
    * `T::MaxNominatorRewardedPerValidator`, will also receive their rewards.
    */
   validatorStash: string;
   /**
-   * May be any era between `[current_era - history_depth; current_era]`.
+   * May be any era between `[current_era - history_depth; current_era]`. Substrate only
    */
-  era: number;
+  era: number | string;
 }
 
 /**
  *
  * Pay out all the stakers behind a single validator for a single era.
  *
- * The origin of this call must be _Signed_. Any account can call this function,
- *  even if it is not one of the stakers.
+ * Any account can call this function, even if it is not one of the stakers.
  *
- * This can only be called when [`EraElectionStatus`] is `Closed`.
+ * This can only be called when `EraElectionStatus` is `Closed`.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.

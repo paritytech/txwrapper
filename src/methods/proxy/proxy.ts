@@ -14,7 +14,6 @@ export interface ProxyProxy extends Args {
   real: string;
   /**
    * Specify the exact proxy type to be used and checked for this call.
-   * As of Polkadot v7 types are (Any, NonTransfer, Governance, Staking, SudoBalances).
    */
   forceProxyType: string;
   /**
