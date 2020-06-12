@@ -14,8 +14,10 @@ export interface StakingUnbondArgs extends Args {
 }
 
 /**
- * Construct a transaction to unbond funds from a Stash account. This must be called
- * by the _Controller_ account.
+ * Construct a transaction to unbond funds from a Stash account. This must be
+ * called by the _Controller_ account.
+ *
+ * Can only be called when `EraElectionStatus` is `Closed`.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.

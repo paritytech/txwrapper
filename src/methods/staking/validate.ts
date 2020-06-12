@@ -18,6 +18,8 @@ export interface StakingValidateArgs extends Args {
 /**
  * Declare the desire to validate for the origin controller.
  *
+ * Can only be called when `EraElectionStatus` is `Closed`.
+ *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.

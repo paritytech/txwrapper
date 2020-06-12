@@ -8,7 +8,7 @@ import {
 
 export interface ProxyProxy extends Args {
   /**
-   * Dispatch the given `call` from an account that the sender is authorised for
+   * Dispatch the given `call` from an account that the sender is authorized for
    *  through, `add_proxy`.
    */
   real: string;
