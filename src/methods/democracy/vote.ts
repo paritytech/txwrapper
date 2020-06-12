@@ -1,19 +1,32 @@
 import {
+  Args,
   BaseTxInfo,
   createMethod,
   OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
+import { AccountVote } from './types';
+
+export interface DemocracyVoteArgs extends Args {
+  /*
+   * Referendum index.
+   */
+  refIndex: number;
+  /**
+   * Vote.
+   */
+  vote: AccountVote;
+}
 
 /**
- * Register a proxy account for the sender that is able to make calls on its behalf.
+ * Vote in a referendum.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function removeProxies(
-  args: {},
+export function vote(
+  args: DemocracyVoteArgs,
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -21,8 +34,8 @@ export function removeProxies(
     {
       method: {
         args,
-        name: 'removeProxies',
-        pallet: 'proxy',
+        name: 'vote',
+        pallet: 'democracy',
       },
       ...info,
     },

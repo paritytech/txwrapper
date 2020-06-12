@@ -6,13 +6,13 @@ import {
 } from '../../util';
 
 /**
- * Register a proxy account for the sender that is able to make calls on its behalf.
+ * Clear the proxy. Called by the proxy.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function removeProxies(
+export function closeProxy(
   args: {},
   info: BaseTxInfo,
   options: OptionsWithMeta
@@ -21,8 +21,8 @@ export function removeProxies(
     {
       method: {
         args,
-        name: 'removeProxies',
-        pallet: 'proxy',
+        name: 'closeProxy',
+        pallet: 'democracy',
       },
       ...info,
     },

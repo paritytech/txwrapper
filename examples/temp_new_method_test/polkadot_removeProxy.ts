@@ -14,8 +14,8 @@ import {
   getTxHash,
   methods,
   POLKADOT_SS58_FORMAT,
-} from '../src';
-import { rpcToNode, signWith } from './util';
+} from '../../src';
+import { rpcToNode, signWith } from '../util';
 /**
  * Entry point of the script. This script assumes a Polkadot node is running
  * locally on `http://localhost:9933`.
@@ -51,10 +51,10 @@ async function main(): Promise<void> {
     metadataRpc
   );
 
-  // Alice add bob as a proxy
-  const unsigned = methods.proxy.addProxy(
+  // Alice removing bob as her proxy
+  const unsigned = methods.proxy.removeProxy(
     {
-      proxy: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty', // Bob,
+      proxy: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob,
       proxyType: 'Any',
     },
     {
@@ -66,7 +66,7 @@ async function main(): Promise<void> {
       eraPeriod: 64,
       genesisHash,
       metadataRpc,
-      nonce: 0, // Remember to change
+      nonce: 1, // Remember to change
       specVersion,
       tip: 0,
       transactionVersion,

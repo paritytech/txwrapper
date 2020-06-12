@@ -1,19 +1,27 @@
 import {
+  Args,
   BaseTxInfo,
   createMethod,
   OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
 
+export interface DemocracyOpenProxyArgs extends Args {
+  /**
+   * The address of the proxy to remove, SS-58 encoded.
+   */
+  target: string;
+}
+
 /**
- * Register a proxy account for the sender that is able to make calls on its behalf.
+ * Become a proxy. This must be called prior to a later `activateProxy`.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function removeProxies(
-  args: {},
+export function openProxy(
+  args: DemocracyOpenProxyArgs,
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -21,8 +29,8 @@ export function removeProxies(
     {
       method: {
         args,
-        name: 'removeProxies',
-        pallet: 'proxy',
+        name: 'openProxy',
+        pallet: 'democracy',
       },
       ...info,
     },

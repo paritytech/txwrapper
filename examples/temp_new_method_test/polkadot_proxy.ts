@@ -14,8 +14,8 @@ import {
   getTxHash,
   methods,
   POLKADOT_SS58_FORMAT,
-} from '../src';
-import { rpcToNode, signWith } from './util';
+} from '../../src';
+import { rpcToNode, signWith } from '../util';
 /**
  * Entry point of the script. This script assumes a Polkadot node is running
  * locally on `http://localhost:9933`.
@@ -32,7 +32,7 @@ async function main(): Promise<void> {
     deriveAddress(alice.publicKey, POLKADOT_SS58_FORMAT)
   );
 
-  // Construct a balance transfer transaction offline.
+  // Construct a proxy balance transfer transaction offline.
   // To construct the tx, we need some up-to-date information from the node.
   // `txwrapper` is offline-only, so does not care how you retrieve this info.
   // In this tutorial, we simply send RPC requests to the node.
@@ -56,7 +56,7 @@ async function main(): Promise<void> {
   const transfer = methods.balances.transfer(
     {
       dest: '5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy', // Dave
-      value: '4321',
+      value: '43210000000000000',
     },
     {
       address: deriveAddress(alice.publicKey, POLKADOT_SS58_FORMAT),
@@ -78,6 +78,8 @@ async function main(): Promise<void> {
     }
   );
 
+  console.log('Unsigned transfer: ', transfer.method);
+
   // Assume Bob is a proxy for Alice, so this will call the above transaction
   // and transfer money from Alice to Dave
   const unsigned = methods.proxy.proxy(
@@ -95,7 +97,7 @@ async function main(): Promise<void> {
       eraPeriod: 64,
       genesisHash,
       metadataRpc,
-      nonce: 2, // Remember to change
+      nonce: 1, // Remember to change
       specVersion,
       tip: 0,
       transactionVersion,

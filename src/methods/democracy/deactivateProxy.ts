@@ -1,19 +1,28 @@
 import {
+  Args,
   BaseTxInfo,
   createMethod,
   OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
 
+export interface DemocracyDeactivateProxyArgs extends Args {
+  /**
+   * The address of the proxy to remove, SS-58 encoded.
+   */
+  proxy: string;
+}
+
 /**
- * Register a proxy account for the sender that is able to make calls on its behalf.
+ * Deactivate the proxy, but leave open to this account. Called by the stash.
+ * The proxy must already be active.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function removeProxies(
-  args: {},
+export function deactivateProxy(
+  args: DemocracyDeactivateProxyArgs,
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -21,8 +30,8 @@ export function removeProxies(
     {
       method: {
         args,
-        name: 'removeProxies',
-        pallet: 'proxy',
+        name: 'deactivateProxy',
+        pallet: 'democracy',
       },
       ...info,
     },

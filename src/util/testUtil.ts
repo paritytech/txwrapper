@@ -9,6 +9,7 @@ import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import * as methods from '../methods';
 import { getRegistry } from './metadata';
+import democracyMetadataRpc from './metadataStaticWithDemocracy';
 import { UnsignedTransaction } from './types';
 
 export { metadataRpc };
@@ -39,6 +40,11 @@ export const TEST_OPTIONS = {
   registry: getRegistry('Kusama', 'kusama', 9999),
 };
 
+export const DEMOCRACY_TEST_OPTIONS = {
+  metadataRpc: democracyMetadataRpc,
+  registry: getRegistry('Kusama', 'kusama', 9999),
+};
+
 export const CC1_TEST_BASE_TX_INFO = {
   address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
   blockHash:
@@ -60,7 +66,7 @@ export const CC1_TEST_OPTIONS = {
 };
 
 /**
- * Test helper to test that all base tx information al correctly populated.
+ * Test helper to test that all base tx information is correctly populated.
  *
  * @param unsigned - Unsigned transaction to test
  */
@@ -72,6 +78,24 @@ export function testBaseTxInfo(unsigned: UnsignedTransaction): void {
   expect(unsigned.era).toBe('0xeb58');
   expect(unsigned.nonce).toBe('0x00000002');
   expect(unsigned.specVersion).toBe('0x000003fb');
+  expect(unsigned.tip).toBe('0x00000000000000000000000000000000');
+  expect(unsigned.transactionVersion).toBe('0x00000006');
+  expect(unsigned.version).toBe(4);
+}
+
+/**
+ * Test helper to test that all base CC1 tx information is correctly populated.
+ *
+ * @param unsigned - Unsigned transaction to test
+ */
+export function cC1TestBaseTxInfo(unsigned: UnsignedTransaction): void {
+  (['address', 'blockHash', 'genesisHash'] as const).forEach((key) =>
+    expect(unsigned[key]).toBe(TEST_BASE_TX_INFO[key])
+  );
+  expect(unsigned.blockNumber).toBe('0x0041a58e');
+  expect(unsigned.era).toBe('0xeb58');
+  expect(unsigned.nonce).toBe('0x00000002');
+  expect(unsigned.specVersion).toBe('0x00000006');
   expect(unsigned.tip).toBe('0x00000000000000000000000000000000');
   expect(unsigned.transactionVersion).toBe('0x00000006');
   expect(unsigned.version).toBe(4);
@@ -153,6 +177,13 @@ export const TEST_METHOD_ARGS = {
       proxy: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob",
       proxyType: 'Any',
     },
+    proxy: {
+      real: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob",
+      forceProxyType: 'Any',
+      call:
+        '0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
+    },
+    removeProxies: {},
   },
   session: {
     setKeys: {
@@ -190,6 +221,10 @@ export const TEST_METHOD_ARGS = {
       ][],
     },
     payoutValidator: {
+      era: 100,
+    },
+    payoutStakers: {
+      validatorStash: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
       era: 100,
     },
     setController: {
