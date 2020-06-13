@@ -13,8 +13,8 @@ export interface StakingPayoutStakersArgs extends Args {
    */
   validatorStash: string;
   /**
-   * May be any era between `[current_era - history_depth; current_era]`. Substrate only.
-   * Retains up to `history_depth` eras of reward information.
+   * May be any era between `[current_era - history_depth; current_era]`. Substrate only
+   * retains up to `history_depth` eras of reward information.
    */
   era: number | string;
 }
