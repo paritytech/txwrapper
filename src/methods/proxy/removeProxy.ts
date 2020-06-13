@@ -8,7 +8,7 @@ import {
 
 export interface ProxyRemoveProxy extends Args {
   /**
-   * The account that the `caller` would like to make a proxy
+   * The account that the `caller` would like to unregister.
    */
   proxy: string;
   /**
