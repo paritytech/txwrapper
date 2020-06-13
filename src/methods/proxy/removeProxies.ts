@@ -6,7 +6,7 @@ import {
 } from '../../util';
 
 /**
- * Register a proxy account for the sender that is able to make calls on its behalf.
+ * Unregister all proxy accounts for the sender.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
