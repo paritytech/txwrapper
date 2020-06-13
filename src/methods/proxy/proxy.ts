@@ -24,7 +24,7 @@ export interface ProxyProxy extends Args {
 }
 
 /**
- * Register a proxy account for the sender that is able to make calls on its behalf.
+ * Dispatch the given `call` from an account for which the sender is authorized.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
