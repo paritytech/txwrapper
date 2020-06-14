@@ -14,9 +14,9 @@
 
 ▸ **removeProxies**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/proxy/removeProxies.ts:15](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/methods/proxy/removeProxies.ts#L15)*
+*Defined in [src/methods/proxy/removeProxies.ts:15](https://github.com/paritytech/txwrapper/blob/ccdcd52/src/methods/proxy/removeProxies.ts#L15)*
 
-Register a proxy account for the sender that is able to make calls on its behalf.
+Unregister all proxy accounts for the sender.
 
 **Parameters:**
 

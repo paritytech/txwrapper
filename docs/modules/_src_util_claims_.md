@@ -19,7 +19,7 @@
 
 ▸ **getEthereumPayload**(`dest`: string, `statement`: [PolkadotStatement](../interfaces/_src_util_claims_.polkadotstatement.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *string*
 
-*Defined in [src/util/claims.ts:61](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/claims.ts#L61)*
+*Defined in [src/util/claims.ts:61](https://github.com/paritytech/txwrapper/blob/ccdcd52/src/util/claims.ts#L61)*
 
 Generate the payload that needs to be signed with the Ethereum key that made
 a claim. The returned signature is needed as argument for
@@ -41,7 +41,7 @@ ___
 
 ▸ **getPolkadotStatement**(`statementKind`: StatementKind | "Regular" | "Saft"): *[PolkadotStatement](../interfaces/_src_util_claims_.polkadotstatement.md)*
 
-*Defined in [src/util/claims.ts:32](https://github.com/paritytech/txwrapper/blob/bcc9b73/src/util/claims.ts#L32)*
+*Defined in [src/util/claims.ts:32](https://github.com/paritytech/txwrapper/blob/ccdcd52/src/util/claims.ts#L32)*
 
 Retrieve the statements to sign with `claims.claimAttest` and
 `claims.attest`. These statements are hardcoded in txwrapper.
