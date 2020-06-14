@@ -50,7 +50,7 @@ export const API_V1_17_2_TEST_OPTIONS = {
 };
 
 export const CC1_TEST_BASE_TX_INFO = {
-	address: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
+  address: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
   blockHash:
     '0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
   blockNumber: 4302222,
