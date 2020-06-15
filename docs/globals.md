@@ -46,5 +46,4 @@
 * ["src/util/constants"](modules/_src_util_constants_.md)
 * ["src/util/encodeUnsignedTx"](modules/_src_util_encodeunsignedtx_.md)
 * ["src/util/metadata"](modules/_src_util_metadata_.md)
-* ["src/util/metadataStatic_api_v1_17_2"](modules/_src_util_metadatastatic_api_v1_17_2_.md)
 * ["src/util/types"](modules/_src_util_types_.md)
