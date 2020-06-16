@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/paritytech/txwrapper/compare/v3.1.4...v3.2.0) (2020-06-16)
+
+
+### Features
+
+* Add proxy methods and `staking.payoutStakers` ([#172](https://github.com/paritytech/txwrapper/issues/172)) ([51e5d77](https://github.com/paritytech/txwrapper/commit/51e5d775e85ee7a13830725d5b404d24dad2e48d))
+
 ### [3.1.4](https://github.com/paritytech/txwrapper/compare/v3.1.2...v3.1.4) (2020-06-08)
 
 
