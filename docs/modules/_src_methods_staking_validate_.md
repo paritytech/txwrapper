@@ -18,9 +18,11 @@
 
 ▸ **validate**(`args`: [StakingValidateArgs](../interfaces/_src_methods_staking_validate_.stakingvalidateargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/validate.ts:25](https://github.com/paritytech/txwrapper/blob/2c5feb3/src/methods/staking/validate.ts#L25)*
+*Defined in [src/methods/staking/validate.ts:27](https://github.com/paritytech/txwrapper/blob/7cf4bc5/src/methods/staking/validate.ts#L27)*
 
 Declare the desire to validate for the origin controller.
+
+Can only be called when `EraElectionStatus` is `Closed`.
 
 **Parameters:**
 

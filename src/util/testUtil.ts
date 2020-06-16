@@ -9,6 +9,9 @@ import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import * as methods from '../methods';
 import { getRegistry } from './metadata';
+// Static metadata from @polkadot/api v1.17.2. Useful for testing deprecated methods.
+// eslint-disable-next-line @typescript-eslint/camelcase
+import apiV1_17_2MetadataRpc from './metadataStatic_api_v1_17_2';
 import { UnsignedTransaction } from './types';
 
 export { metadataRpc };
@@ -32,15 +35,60 @@ export const TEST_BASE_TX_INFO = {
 };
 
 /**
+ * Same as TEXT_BASE_TX_INFO except that the SS58 encoding is polkadot specific.
+ */
+export const CC1_BASE_TX_INFO = {
+  address: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
+  blockHash:
+    '0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
+  blockNumber: 4302222,
+  eraPeriod: 2400,
+  genesisHash:
+    '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
+  metadataRpc,
+  nonce: 2,
+  specVersion: 1019,
+  tip: 0,
+  transactionVersion: 6,
+};
+
+/**
  * Use this registry in tests.
  */
-export const TEST_OPTIONS = {
+export const KUSAMA_TEST_OPTIONS = {
   metadataRpc,
   registry: getRegistry('Kusama', 'kusama', 9999),
 };
 
+// Test options using the static metadata from @polkadot/api v1.17.2
+export const API_V1_17_2_TEST_OPTIONS = {
+  // eslint-disable-next-line @typescript-eslint/camelcase
+  metadataRpc: apiV1_17_2MetadataRpc,
+  registry: getRegistry('Kusama', 'kusama', 9999),
+};
+
+export const CC1_TEST_BASE_TX_INFO = {
+  address: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
+  blockHash:
+    '0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
+  blockNumber: 4302222,
+  eraPeriod: 2400,
+  genesisHash:
+    '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
+  metadataRpc,
+  nonce: 2,
+  specVersion: 6,
+  tip: 0,
+  transactionVersion: 6,
+};
+
+export const CC1_TEST_OPTIONS = {
+  metadataRpc,
+  registry: getRegistry('Polkadot CC1', 'polkadot', 6, metadataRpc),
+};
+
 /**
- * Test helper to test that all base tx information al correctly populated.
+ * Test helper to test that all base tx information is correctly populated.
  *
  * @param unsigned - Unsigned transaction to test
  */
@@ -52,6 +100,24 @@ export function testBaseTxInfo(unsigned: UnsignedTransaction): void {
   expect(unsigned.era).toBe('0xeb58');
   expect(unsigned.nonce).toBe('0x00000002');
   expect(unsigned.specVersion).toBe('0x000003fb');
+  expect(unsigned.tip).toBe('0x00000000000000000000000000000000');
+  expect(unsigned.transactionVersion).toBe('0x00000006');
+  expect(unsigned.version).toBe(4);
+}
+
+/**
+ * Test helper to test that all base CC1 tx information is correctly populated.
+ *
+ * @param unsigned - Unsigned transaction to test
+ */
+export function cC1TestBaseTxInfo(unsigned: UnsignedTransaction): void {
+  (['address', 'blockHash', 'genesisHash'] as const).forEach((key) =>
+    expect(unsigned[key]).toBe(CC1_TEST_BASE_TX_INFO[key])
+  );
+  expect(unsigned.blockNumber).toBe('0x0041a58e');
+  expect(unsigned.era).toBe('0xeb58');
+  expect(unsigned.nonce).toBe('0x00000002');
+  expect(unsigned.specVersion).toBe('0x00000006');
   expect(unsigned.tip).toBe('0x00000000000000000000000000000000');
   expect(unsigned.transactionVersion).toBe('0x00000006');
   expect(unsigned.version).toBe(4);
@@ -128,6 +194,19 @@ export const TEST_METHOD_ARGS = {
       },
     },
   },
+  proxy: {
+    addProxy: {
+      proxy: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob",
+      proxyType: 'Any',
+    },
+    proxy: {
+      real: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob",
+      forceProxyType: 'Any',
+      call:
+        '0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
+    },
+    removeProxies: {},
+  },
   session: {
     setKeys: {
       keys: [
@@ -164,6 +243,10 @@ export const TEST_METHOD_ARGS = {
       ][],
     },
     payoutValidator: {
+      era: 100,
+    },
+    payoutStakers: {
+      validatorStash: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
       era: 100,
     },
     setController: {

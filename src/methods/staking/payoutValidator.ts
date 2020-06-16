@@ -24,12 +24,17 @@ export interface StakingPayoutValidatorArgs extends Args {
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
+ * @deprecated Update to the latest version of Substrate to use `staking.payoutStakers` instead.
  */
 export function payoutValidator(
   args: StakingPayoutValidatorArgs,
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {
+  console.warn(
+    '`staking.payoutValidator` is now deprecated. ' +
+      'Update to the latest version of Substrate to use `staking.payoutStakers` instead.'
+  );
   return createMethod(
     {
       method: {

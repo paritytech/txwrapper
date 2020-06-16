@@ -18,9 +18,11 @@
 
 ▸ **withdrawUnbonded**(`args`: [StakingWithdrawUnbondedArgs](../interfaces/_src_methods_staking_withdrawunbonded_.stakingwithdrawunbondedargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/withdrawUnbonded.ts:20](https://github.com/paritytech/txwrapper/blob/2c5feb3/src/methods/staking/withdrawUnbonded.ts#L20)*
+*Defined in [src/methods/staking/withdrawUnbonded.ts:22](https://github.com/paritytech/txwrapper/blob/7cf4bc5/src/methods/staking/withdrawUnbonded.ts#L22)*
 
 Remove any unlocked chunks from the `unlocking` queue from our management.
+
+Can only be called when `EraElectionStatus` is `Closed`.
 
 **Parameters:**
 

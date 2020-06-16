@@ -18,9 +18,11 @@
 
 ▸ **activateProxy**(`args`: [DemocracyActivateProxyArgs](../interfaces/_src_methods_democracy_activateproxy_.democracyactivateproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/activateProxy.ts:23](https://github.com/paritytech/txwrapper/blob/2c5feb3/src/methods/democracy/activateProxy.ts#L23)*
+*Defined in [src/methods/democracy/activateProxy.ts:24](https://github.com/paritytech/txwrapper/blob/7cf4bc5/src/methods/democracy/activateProxy.ts#L24)*
 
 Specify a proxy that is already open to us. Called by the stash.
+
+**`deprecated`** Update to the latest version of Substrate to use the proxy pallet.
 
 **Parameters:**
 
@@ -28,6 +30,6 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `args` | [DemocracyActivateProxyArgs](../interfaces/_src_methods_democracy_activateproxy_.democracyactivateproxyargs.md) | Arguments specific to this method. |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method. |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

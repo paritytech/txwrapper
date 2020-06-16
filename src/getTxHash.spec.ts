@@ -3,10 +3,10 @@ import { createSigningPayload } from './createSigningPayload';
 import { getTxHash } from './getTxHash';
 import { balances } from './methods';
 import {
+  KUSAMA_TEST_OPTIONS,
   signWithAlice,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_OPTIONS,
 } from './util/testUtil';
 
 describe('getTxHash', () => {
@@ -14,11 +14,11 @@ describe('getTxHash', () => {
     const unsigned = balances.transferKeepAlive(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
-    const signingPayload = createSigningPayload(unsigned, TEST_OPTIONS);
+    const signingPayload = createSigningPayload(unsigned, KUSAMA_TEST_OPTIONS);
     const signature = await signWithAlice(signingPayload);
-    const signedTx = createSignedTx(unsigned, signature, TEST_OPTIONS);
+    const signedTx = createSignedTx(unsigned, signature, KUSAMA_TEST_OPTIONS);
 
     const txHash = getTxHash(signedTx);
     expect(txHash).toBe(

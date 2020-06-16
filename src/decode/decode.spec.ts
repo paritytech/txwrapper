@@ -2,10 +2,10 @@ import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
 import { balances } from '../methods';
 import {
+  KUSAMA_TEST_OPTIONS,
   signWithAlice,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_OPTIONS,
 } from '../util';
 import { decode } from './decode';
 import { decodeBaseTxInfo as decodeSignedBase } from './decodeSignedTx.spec';
@@ -18,14 +18,14 @@ describe('decode', () => {
     const unsigned = balances.transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
-    const signingPayload = createSigningPayload(unsigned, TEST_OPTIONS);
+    const signingPayload = createSigningPayload(unsigned, KUSAMA_TEST_OPTIONS);
     const signature = await signWithAlice(signingPayload);
 
-    const signedTx = createSignedTx(unsigned, signature, TEST_OPTIONS);
+    const signedTx = createSignedTx(unsigned, signature, KUSAMA_TEST_OPTIONS);
 
-    const txInfo = decode(signedTx, TEST_OPTIONS);
+    const txInfo = decode(signedTx, KUSAMA_TEST_OPTIONS);
 
     decodeSignedBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
@@ -39,9 +39,9 @@ describe('decode', () => {
     const unsigned = balances.transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
-    const txInfo = decode(unsigned, TEST_OPTIONS);
+    const txInfo = decode(unsigned, KUSAMA_TEST_OPTIONS);
 
     decodeUnsignedBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
@@ -53,13 +53,13 @@ describe('decode', () => {
     const unsigned = balances.transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
-    const signingPayload = createSigningPayload(unsigned, TEST_OPTIONS);
+    const signingPayload = createSigningPayload(unsigned, KUSAMA_TEST_OPTIONS);
 
     const txInfo = decode(
       signingPayload,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     ) as DecodedSigningPayload;
 
     decodeSigningBase(txInfo);

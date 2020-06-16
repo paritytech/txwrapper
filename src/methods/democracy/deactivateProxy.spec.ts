@@ -1,7 +1,7 @@
 import {
+  API_V1_17_2_TEST_OPTIONS,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { deactivateProxy } from './deactivateProxy';
@@ -11,7 +11,7 @@ describe('democracy::deactivateProxy', () => {
     const unsigned = deactivateProxy(
       TEST_METHOD_ARGS.democracy.deactivateProxy,
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      API_V1_17_2_TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);

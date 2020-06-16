@@ -1,9 +1,9 @@
 import { createSigningPayload } from './createSigningPayload';
 import { balances } from './methods';
 import {
+  KUSAMA_TEST_OPTIONS,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_OPTIONS,
 } from './util/testUtil';
 
 describe('createSigningPayload', () => {
@@ -12,9 +12,9 @@ describe('createSigningPayload', () => {
       balances.transferKeepAlive(
         TEST_METHOD_ARGS.balances.transfer,
         TEST_BASE_TX_INFO,
-        TEST_OPTIONS
+        KUSAMA_TEST_OPTIONS
       ),
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
 
     expect(signingPayload).toEqual(

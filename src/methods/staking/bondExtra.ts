@@ -17,6 +17,8 @@ export interface StakingBondExtraArgs extends Args {
  * Add some extra amount that have appeared in the stash `free_balance` into
  * the balance up for staking.
  *
+ * Can only be called when `EraElectionStatus` is `Closed`.
+ *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.

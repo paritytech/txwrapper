@@ -14,9 +14,11 @@
 
 ▸ **closeProxy**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/closeProxy.ts:15](https://github.com/paritytech/txwrapper/blob/2c5feb3/src/methods/democracy/closeProxy.ts#L15)*
+*Defined in [src/methods/democracy/closeProxy.ts:16](https://github.com/paritytech/txwrapper/blob/7cf4bc5/src/methods/democracy/closeProxy.ts#L16)*
 
 Clear the proxy. Called by the proxy.
+
+**`deprecated`** Update to the latest version of Substrate to use the proxy pallet.
 
 **Parameters:**
 
@@ -24,6 +26,6 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `args` | object | Arguments specific to this method. |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
-`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
+`options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method. |
 
 **Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*

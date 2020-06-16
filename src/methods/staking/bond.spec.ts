@@ -1,7 +1,7 @@
 import {
+  KUSAMA_TEST_OPTIONS,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { bond } from './bond';
@@ -11,7 +11,7 @@ describe('staking::bond', () => {
     const unsigned = bond(
       TEST_METHOD_ARGS.staking.bond,
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);
@@ -24,12 +24,12 @@ describe('staking::bond', () => {
     const unsignedLowerCase = bond(
       { ...TEST_METHOD_ARGS.staking.bond, payee: 'staked' },
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
     const unsignedCapitalized = bond(
       { ...TEST_METHOD_ARGS.staking.bond, payee: 'Staked' },
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
 
     expect(unsignedLowerCase.method).toBe(unsignedCapitalized.method);

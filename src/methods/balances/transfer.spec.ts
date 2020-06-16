@@ -1,7 +1,7 @@
 import {
+  KUSAMA_TEST_OPTIONS,
   TEST_BASE_TX_INFO,
   TEST_METHOD_ARGS,
-  TEST_OPTIONS,
   testBaseTxInfo,
 } from '../../util';
 import { transfer } from './transfer';
@@ -11,7 +11,7 @@ describe('balances::transfer', () => {
     const unsigned = transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);
@@ -27,7 +27,7 @@ describe('balances::transfer', () => {
         value: '9007199254740996', // MAX_SAFE_INTEGER + 5
       },
       TEST_BASE_TX_INFO,
-      TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS
     );
 
     testBaseTxInfo(unsigned);
