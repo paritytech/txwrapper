@@ -36,6 +36,7 @@
 * ["src/methods/staking/payoutStakers"](modules/_src_methods_staking_payoutstakers_.md)
 * ["src/methods/staking/payoutValidator"](modules/_src_methods_staking_payoutvalidator_.md)
 * ["src/methods/staking/setController"](modules/_src_methods_staking_setcontroller_.md)
+* ["src/methods/staking/setPayee"](modules/_src_methods_staking_setpayee_.md)
 * ["src/methods/staking/unbond"](modules/_src_methods_staking_unbond_.md)
 * ["src/methods/staking/validate"](modules/_src_methods_staking_validate_.md)
 * ["src/methods/staking/withdrawUnbonded"](modules/_src_methods_staking_withdrawunbonded_.md)

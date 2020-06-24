@@ -18,7 +18,7 @@
 
 ▸ **payoutStakers**(`args`: [StakingPayoutStakersArgs](../interfaces/_src_methods_staking_payoutstakers_.stakingpayoutstakersargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/payoutStakers.ts:34](https://github.com/paritytech/txwrapper/blob/7cf4bc5/src/methods/staking/payoutStakers.ts#L34)*
+*Defined in [src/methods/staking/payoutStakers.ts:34](https://github.com/paritytech/txwrapper/blob/ef571f4/src/methods/staking/payoutStakers.ts#L34)*
 
 Pay out all the stakers behind a single validator for a single era.
 

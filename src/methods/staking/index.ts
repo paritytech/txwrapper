@@ -3,6 +3,7 @@ export * from './bondExtra';
 export * from './chill';
 export * from './nominate';
 export * from './setController';
+export * from './setPayee';
 export * from './unbond';
 export * from './validate';
 export * from './withdrawUnbonded';
