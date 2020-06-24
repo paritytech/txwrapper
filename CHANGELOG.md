@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/paritytech/txwrapper/compare/v3.2.0...v3.3.0) (2020-06-24)
+
+
+### Features
+
+* Add `staking.setPayee` ([#176](https://github.com/paritytech/txwrapper/issues/176)) ([3e5273a](https://github.com/paritytech/txwrapper/commit/3e5273a57610cc82374e0cc917e8ebc32d639675))
+
 ## [3.2.0](https://github.com/paritytech/txwrapper/compare/v3.1.4...v3.2.0) (2020-06-16)
 
 
