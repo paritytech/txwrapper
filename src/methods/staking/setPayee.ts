@@ -14,7 +14,7 @@ export interface StakingSetPayeeArgs extends Args {
 }
 
 /**
- * (Re-)set the payment target for a controller.
+ * (Re-)set the payment target for staking rewards.
  *
  * Effects will be felt at the beginning of the next era.
  *
