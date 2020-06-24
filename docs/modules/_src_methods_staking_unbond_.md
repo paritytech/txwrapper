@@ -18,7 +18,7 @@
 
 ▸ **unbond**(`args`: [StakingUnbondArgs](../interfaces/_src_methods_staking_unbond_.stakingunbondargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/unbond.ts:26](https://github.com/paritytech/txwrapper/blob/7cf4bc5/src/methods/staking/unbond.ts#L26)*
+*Defined in [src/methods/staking/unbond.ts:26](https://github.com/paritytech/txwrapper/blob/ef571f4/src/methods/staking/unbond.ts#L26)*
 
 Construct a transaction to unbond funds from a Stash account. This must be
 called by the _Controller_ account.

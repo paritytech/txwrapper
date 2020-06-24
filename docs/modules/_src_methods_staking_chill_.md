@@ -14,7 +14,7 @@
 
 ▸ **chill**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/staking/chill.ts:17](https://github.com/paritytech/txwrapper/blob/7cf4bc5/src/methods/staking/chill.ts#L17)*
+*Defined in [src/methods/staking/chill.ts:17](https://github.com/paritytech/txwrapper/blob/ef571f4/src/methods/staking/chill.ts#L17)*
 
 Declare the desire to cease validating or nominating. Does not unbond funds.
 

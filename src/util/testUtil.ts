@@ -252,6 +252,9 @@ export const TEST_METHOD_ARGS = {
     setController: {
       controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
     },
+    setPayee: {
+      payee: 'Staked',
+    },
     unbond: { value: 100 },
     validate: {
       prefs: { commission: 5 },
