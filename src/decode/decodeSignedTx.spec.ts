@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { createSignedTx } from '../createSignedTx';
 import { createSigningPayload } from '../createSigningPayload';
 import * as methods from '../methods';
@@ -9,8 +13,6 @@ import {
   TEST_METHOD_ARGS,
 } from '../util';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
 
 /**
  * Helper function to decode base tx info

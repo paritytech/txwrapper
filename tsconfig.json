@@ -3,7 +3,8 @@
     "declaration": true,
     "module": "CommonJS",
     "target": "ES2015",
-    "outDir": "lib"
-  },
-  "extends": "./node_modules/@amaurymartiny/tsconfig/tsconfig"
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "strict": true
+  }
 }

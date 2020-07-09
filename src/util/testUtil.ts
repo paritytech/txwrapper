@@ -10,7 +10,6 @@ import { cryptoWaitReady } from '@polkadot/util-crypto';
 import * as methods from '../methods';
 import { getRegistry } from './metadata';
 // Static metadata from @polkadot/api v1.17.2. Useful for testing deprecated methods.
-// eslint-disable-next-line @typescript-eslint/camelcase
 import apiV1_17_2MetadataRpc from './metadataStatic_api_v1_17_2';
 import { UnsignedTransaction } from './types';
 
@@ -62,7 +61,6 @@ export const KUSAMA_TEST_OPTIONS = {
 
 // Test options using the static metadata from @polkadot/api v1.17.2
 export const API_V1_17_2_TEST_OPTIONS = {
-  // eslint-disable-next-line @typescript-eslint/camelcase
   metadataRpc: apiV1_17_2MetadataRpc,
   registry: getRegistry('Kusama', 'kusama', 9999),
 };

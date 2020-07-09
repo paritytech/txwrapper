@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /**
  * @ignore
  */ /** */
@@ -126,6 +127,7 @@ export function createMethod(
  */
 export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
   // Mapping of argName->argType
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const argsDef = JSON.parse(method.Type.args);
   // Mapping of argName->argValue
   const args = Object.keys(argsDef).reduce((accumulator, key, index) => {
