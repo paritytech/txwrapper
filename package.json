@@ -24,7 +24,7 @@
     "@types/memoizee": "^0.4.3"
   },
   "devDependencies": {
-    "@amaurymartiny/config": "^1.0.10",
+    "@amaurymartiny/config": "1.0.10",
     "@types/jest": "^26.0.0",
     "jest": "^25.1.0",
     "standard-version": "^8.0.0",
