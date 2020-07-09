@@ -1,8 +1,8 @@
 import {
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 
 /**
@@ -14,23 +14,23 @@ import {
  * @deprecated Update to the latest version of Substrate to use the proxy pallet.
  */
 export function closeProxy(
-  args: {},
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: {},
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  console.warn(
-    '`democracy.closeProxy` is now deprecated. ' +
-      'Update to the latest version of Substrate to use the proxy pallet.'
-  );
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'closeProxy',
-        pallet: 'democracy',
-      },
-      ...info,
-    },
-    options
-  );
+	console.warn(
+		'`democracy.closeProxy` is now deprecated. ' +
+			'Update to the latest version of Substrate to use the proxy pallet.'
+	);
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'closeProxy',
+				pallet: 'democracy',
+			},
+			...info,
+		},
+		options
+	);
 }

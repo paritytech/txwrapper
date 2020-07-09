@@ -1,26 +1,26 @@
 import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 
 export interface ProxyAddProxy extends Args {
-  /**
-   * The account that the `caller` would like to make a proxy.
-   */
-  proxy: string;
-  /**
-   * The permissions for this proxy account. See the runtime for the `call` filters.
-   * Current known types (Polkadot v8, Kusama v2008, Westend v28):
-   *   - 'Any'
-   *   - 'NonTransfer'
-   *   - 'Governance'
-   *   - 'Staking'
-   *   - 'SudoBalances' (only relevant if sender is `sudo`)
-   */
-  proxyType: string;
+	/**
+	 * The account that the `caller` would like to make a proxy.
+	 */
+	proxy: string;
+	/**
+	 * The permissions for this proxy account. See the runtime for the `call` filters.
+	 * Current known types (Polkadot v8, Kusama v2008, Westend v28):
+	 *   - 'Any'
+	 *   - 'NonTransfer'
+	 *   - 'Governance'
+	 *   - 'Staking'
+	 *   - 'SudoBalances' (only relevant if sender is `sudo`)
+	 */
+	proxyType: string;
 }
 
 /**
@@ -31,19 +31,19 @@ export interface ProxyAddProxy extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function addProxy(
-  args: ProxyAddProxy,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: ProxyAddProxy,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'addProxy',
-        pallet: 'proxy',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'addProxy',
+				pallet: 'proxy',
+			},
+			...info,
+		},
+		options
+	);
 }

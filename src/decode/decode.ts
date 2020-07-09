@@ -1,8 +1,8 @@
 import { OptionsWithMeta, UnsignedTransaction } from '../util';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 import {
-  DecodedSigningPayload,
-  decodeSigningPayload,
+	DecodedSigningPayload,
+	decodeSigningPayload,
 } from './decodeSigningPayload';
 import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
 
@@ -13,8 +13,8 @@ import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
  * @param options - Runtime-specific data used for decoding the transaction.
  */
 export function decode(
-  unsignedTx: UnsignedTransaction,
-  options: OptionsWithMeta
+	unsignedTx: UnsignedTransaction,
+	options: OptionsWithMeta
 ): DecodedUnsignedTx;
 
 /**
@@ -24,8 +24,8 @@ export function decode(
  * @param options - Runtime-specific data used for decoding the transaction.
  */
 export function decode(
-  signedTx: string,
-  options: OptionsWithMeta
+	signedTx: string,
+	options: OptionsWithMeta
 ): DecodedSignedTx;
 
 /**
@@ -35,23 +35,23 @@ export function decode(
  * @param options - Runtime-specific data used for decoding the transaction.
  */
 export function decode(
-  signingPayload: string,
-  options: OptionsWithMeta
+	signingPayload: string,
+	options: OptionsWithMeta
 ): DecodedSigningPayload;
 
 export function decode(
-  data: string | UnsignedTransaction,
-  options: OptionsWithMeta
+	data: string | UnsignedTransaction,
+	options: OptionsWithMeta
 ): DecodedSignedTx | DecodedUnsignedTx | DecodedSigningPayload {
-  if (typeof data === 'string') {
-    let decodedInfo: DecodedSigningPayload | DecodedSignedTx;
-    try {
-      decodedInfo = decodeSigningPayload(data, options);
-    } catch {
-      decodedInfo = decodeSignedTx(data, options);
-    }
-    return decodedInfo;
-  }
+	if (typeof data === 'string') {
+		let decodedInfo: DecodedSigningPayload | DecodedSignedTx;
+		try {
+			decodedInfo = decodeSigningPayload(data, options);
+		} catch {
+			decodedInfo = decodeSignedTx(data, options);
+		}
+		return decodedInfo;
+	}
 
-  return decodeUnsignedTx(data, options);
+	return decodeUnsignedTx(data, options);
 }

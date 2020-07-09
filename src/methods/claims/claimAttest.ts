@@ -1,26 +1,26 @@
 import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 
 export interface ClaimsClaimAttestArgs extends Args {
-  /**
-   * The destination account to which to pay out the claim. This method is only
-   * available on Polkadot.
-   */
-  dest: string;
-  /**
-   * The signature of an Ethereum signed message matching the format described
-   * above.
-   */
-  ethereumSignature: string;
-  /**
-   * The identity of the statement that is being attested to in the signature.
-   */
-  statement: string;
+	/**
+	 * The destination account to which to pay out the claim. This method is only
+	 * available on Polkadot.
+	 */
+	dest: string;
+	/**
+	 * The signature of an Ethereum signed message matching the format described
+	 * above.
+	 */
+	ethereumSignature: string;
+	/**
+	 * The identity of the statement that is being attested to in the signature.
+	 */
+	statement: string;
 }
 
 /**
@@ -33,19 +33,19 @@ export interface ClaimsClaimAttestArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function claimAttest(
-  args: ClaimsClaimAttestArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: ClaimsClaimAttestArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'claimAttest',
-        pallet: 'claims',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'claimAttest',
+				pallet: 'claims',
+			},
+			...info,
+		},
+		options
+	);
 }
