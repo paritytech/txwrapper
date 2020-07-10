@@ -15,6 +15,6 @@ describe('staking::rebond', () => {
     );
 
     cC1TestBaseTxInfo(unsigned);
-    expect(unsigned.method).toBe('0x07029101');
+    expect(unsigned.method).toBe('0x07139101');
   });
 });

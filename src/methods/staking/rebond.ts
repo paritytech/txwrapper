@@ -29,7 +29,7 @@ export function rebond(
     {
       method: {
         args,
-        name: 'unbond',
+        name: 'rebond',
         pallet: 'staking',
       },
       ...info,
