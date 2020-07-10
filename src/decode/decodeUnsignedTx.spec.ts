@@ -8,8 +8,6 @@ import {
 } from '../util';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 /**
  * Helper function to decode base tx info
  */
@@ -38,11 +36,13 @@ export function decodeBaseTxInfo(txInfo: TxInfo): void {
  */
 function testDecodeUnsignedTx(pallet: string, name: string): void {
   it(`should decode ${pallet}::${name}`, () => {
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-explicit-any */
     const unsigned = (methods as any)[pallet][name](
       (TEST_METHOD_ARGS as any)[pallet][name],
       TEST_BASE_TX_INFO,
       KUSAMA_TEST_OPTIONS
     );
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-explicit-any */
     const txInfo = decodeUnsignedTx(unsigned, KUSAMA_TEST_OPTIONS);
 
     decodeBaseTxInfo(txInfo);
