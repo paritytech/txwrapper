@@ -61,8 +61,8 @@ export const KUSAMA_TEST_OPTIONS = {
 
 // Test options using the static metadata from @polkadot/api v1.17.2
 export const API_V1_17_2_TEST_OPTIONS = {
-	metadataRpc: apiV1_17_2MetadataRpc,
-	registry: getRegistry('Kusama', 'kusama', 9999),
+  metadataRpc: apiV1_17_2MetadataRpc,
+  registry: getRegistry('Kusama', 'kusama', 9999),
 };
 
 export const CC1_TEST_BASE_TX_INFO = {
