@@ -1,8 +1,8 @@
 import {
-	BaseTxInfo,
-	createMethod,
-	OptionsWithMeta,
-	UnsignedTransaction,
+  BaseTxInfo,
+  createMethod,
+  OptionsWithMeta,
+  UnsignedTransaction,
 } from '../../util';
 
 /**
@@ -13,19 +13,19 @@ import {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function removeProxies(
-	args: {},
-	info: BaseTxInfo,
-	options: OptionsWithMeta
+  args: {},
+  info: BaseTxInfo,
+  options: OptionsWithMeta
 ): UnsignedTransaction {
-	return createMethod(
-		{
-			method: {
-				args,
-				name: 'removeProxies',
-				pallet: 'proxy',
-			},
-			...info,
-		},
-		options
-	);
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'removeProxies',
+        pallet: 'proxy',
+      },
+      ...info,
+    },
+    options
+  );
 }

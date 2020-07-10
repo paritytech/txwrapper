@@ -1,18 +1,18 @@
 import {
-	Args,
-	BaseTxInfo,
-	createMethod,
-	OptionsWithMeta,
-	UnsignedTransaction,
+  Args,
+  BaseTxInfo,
+  createMethod,
+  OptionsWithMeta,
+  UnsignedTransaction,
 } from '../../util';
 
 export interface StakingValidateArgs extends Args {
-	/**
-	 * Set the desired commission for the validator. Value is Perbill.
-	 */
-	prefs: {
-		commission: number;
-	};
+  /**
+   * Set the desired commission for the validator. Value is Perbill.
+   */
+  prefs: {
+    commission: number;
+  };
 }
 
 /**
@@ -25,19 +25,19 @@ export interface StakingValidateArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function validate(
-	args: StakingValidateArgs,
-	info: BaseTxInfo,
-	options: OptionsWithMeta
+  args: StakingValidateArgs,
+  info: BaseTxInfo,
+  options: OptionsWithMeta
 ): UnsignedTransaction {
-	return createMethod(
-		{
-			method: {
-				args,
-				name: 'validate',
-				pallet: 'staking',
-			},
-			...info,
-		},
-		options
-	);
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'validate',
+        pallet: 'staking',
+      },
+      ...info,
+    },
+    options
+  );
 }

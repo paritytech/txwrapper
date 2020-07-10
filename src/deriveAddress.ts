@@ -7,8 +7,8 @@ import { encodeAddress } from '@polkadot/keyring';
  * @param ss58Format - The SS58 format to use.
  */
 export function deriveAddress(
-	publicKey: string | Uint8Array,
-	ss58Format: number
+  publicKey: string | Uint8Array,
+  ss58Format: number
 ): string {
-	return encodeAddress(publicKey, ss58Format);
+  return encodeAddress(publicKey, ss58Format);
 }

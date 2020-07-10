@@ -8,12 +8,12 @@ import * as system from './system';
 import * as vesting from './vesting';
 
 export {
-	balances,
-	claims,
-	democracy,
-	proxy,
-	session,
-	staking,
-	system,
-	vesting,
+  balances,
+  claims,
+  democracy,
+  proxy,
+  session,
+  staking,
+  system,
+  vesting,
 };

@@ -10,9 +10,9 @@ export * from './methods'; // We can remove this export, since we export `method
 export * from './util/claims';
 export * from './util/encodeUnsignedTx';
 export {
-	KUSAMA_SS58_FORMAT,
-	POLKADOT_SS58_FORMAT,
-	WESTEND_SS58_FORMAT,
+  KUSAMA_SS58_FORMAT,
+  POLKADOT_SS58_FORMAT,
+  WESTEND_SS58_FORMAT,
 } from './util/constants';
 export { getRegistry } from './util/metadata';
 export { Args, TxMethod, TxInfo } from './util/method';

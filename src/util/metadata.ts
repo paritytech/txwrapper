@@ -4,18 +4,18 @@ import { getSpecTypes } from '@polkadot/types-known';
 import memoizee from 'memoizee';
 
 import {
-	KUSAMA_SS58_FORMAT,
-	POLKADOT_SS58_FORMAT,
-	WESTEND_SS58_FORMAT,
+  KUSAMA_SS58_FORMAT,
+  POLKADOT_SS58_FORMAT,
+  WESTEND_SS58_FORMAT,
 } from './constants';
 
 /**
  * JSON object of ChainProperties codec from `@polkadot/api`.
  */
 export interface ChainProperties {
-	ss58Format: number;
-	tokenDecimals: number;
-	tokenSymbol: string;
+  ss58Format: number;
+  tokenDecimals: number;
+  tokenSymbol: string;
 }
 
 /**
@@ -27,26 +27,26 @@ export interface ChainProperties {
  * @todo Should we expose this publicly?
  */
 const defaultChainProperties: Record<string, ChainProperties> = {
-	Kusama: {
-		ss58Format: KUSAMA_SS58_FORMAT,
-		tokenDecimals: 12,
-		tokenSymbol: 'KSM',
-	},
-	Polkadot: {
-		ss58Format: POLKADOT_SS58_FORMAT,
-		tokenDecimals: 12,
-		tokenSymbol: 'DOT',
-	},
-	'Polkadot CC1': {
-		ss58Format: POLKADOT_SS58_FORMAT,
-		tokenDecimals: 12,
-		tokenSymbol: 'DOT',
-	},
-	Westend: {
-		ss58Format: WESTEND_SS58_FORMAT,
-		tokenDecimals: 12,
-		tokenSymbol: 'WND',
-	},
+  Kusama: {
+    ss58Format: KUSAMA_SS58_FORMAT,
+    tokenDecimals: 12,
+    tokenSymbol: 'KSM',
+  },
+  Polkadot: {
+    ss58Format: POLKADOT_SS58_FORMAT,
+    tokenDecimals: 12,
+    tokenSymbol: 'DOT',
+  },
+  'Polkadot CC1': {
+    ss58Format: POLKADOT_SS58_FORMAT,
+    tokenDecimals: 12,
+    tokenSymbol: 'DOT',
+  },
+  Westend: {
+    ss58Format: WESTEND_SS58_FORMAT,
+    tokenDecimals: 12,
+    tokenSymbol: 'WND',
+  },
 };
 
 /**
@@ -59,17 +59,17 @@ const defaultChainProperties: Record<string, ChainProperties> = {
  * @param metadata - The metadata as hex string.
  */
 function createMetadataUnmemoized(
-	registry: TypeRegistry,
-	metadataRpc: string
+  registry: TypeRegistry,
+  metadataRpc: string
 ): Metadata {
-	return new Metadata(registry, metadataRpc);
+  return new Metadata(registry, metadataRpc);
 }
 
 /**
  * @ignore
  */
 export const createMetadata = memoizee(createMetadataUnmemoized, {
-	length: 2,
+  length: 2,
 });
 
 /**
@@ -81,10 +81,10 @@ export const createMetadata = memoizee(createMetadataUnmemoized, {
  * @param metadata - The metadata as hex string.
  */
 export function createDecorated(
-	registry: TypeRegistry,
-	metadataRpc: string
+  registry: TypeRegistry,
+  metadataRpc: string
 ): Decorated {
-	return new Decorated(registry, createMetadata(registry, metadataRpc));
+  return new Decorated(registry, createMetadata(registry, metadataRpc));
 }
 
 /**
@@ -110,21 +110,21 @@ export function createDecorated(
  * pass this argument, make sure to call `registry.setMetadata()` yourself!
  */
 export function getRegistry(
-	chainName: 'Kusama' | 'Polkadot' | 'Polkadot CC1' | 'Westend',
-	specName: 'kusama' | 'polkadot' | 'westend',
-	specVersion: number,
-	metadataRpc?: string
+  chainName: 'Kusama' | 'Polkadot' | 'Polkadot CC1' | 'Westend',
+  specName: 'kusama' | 'polkadot' | 'westend',
+  specVersion: number,
+  metadataRpc?: string
 ): TypeRegistry {
-	const registry = new TypeRegistry();
-	// Register types specific to chain/runtimeVersion
-	registry.register(getSpecTypes(registry, chainName, specName, specVersion));
-	// Register the chain properties for this registry
-	registry.setChainProperties(
-		registry.createType('ChainProperties', defaultChainProperties[chainName])
-	);
-	if (metadataRpc) {
-		registry.setMetadata(createMetadata(registry, metadataRpc));
-	}
+  const registry = new TypeRegistry();
+  // Register types specific to chain/runtimeVersion
+  registry.register(getSpecTypes(registry, chainName, specName, specVersion));
+  // Register the chain properties for this registry
+  registry.setChainProperties(
+    registry.createType('ChainProperties', defaultChainProperties[chainName])
+  );
+  if (metadataRpc) {
+    registry.setMetadata(createMetadata(registry, metadataRpc));
+  }
 
-	return registry;
+  return registry;
 }

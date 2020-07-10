@@ -16,15 +16,15 @@ export type KeyringPair = KeyringPairBase; // eslint-disable-line @typescript-es
  * @param ss58Format - The SS58 encoding of the address.
  */
 export function importPrivateKey(
-	privateKey: string | Uint8Array,
-	ss58Format: number = KUSAMA_SS58_FORMAT
+  privateKey: string | Uint8Array,
+  ss58Format: number = KUSAMA_SS58_FORMAT
 ): KeyringPair {
-	const keyring = new Keyring({ type: 'ed25519' });
-	keyring.setSS58Format(ss58Format);
+  const keyring = new Keyring({ type: 'ed25519' });
+  keyring.setSS58Format(ss58Format);
 
-	if (typeof privateKey === 'string') {
-		return keyring.addFromSeed(hexToU8a(privateKey));
-	}
+  if (typeof privateKey === 'string') {
+    return keyring.addFromSeed(hexToU8a(privateKey));
+  }
 
-	return keyring.addFromSeed(privateKey);
+  return keyring.addFromSeed(privateKey);
 }

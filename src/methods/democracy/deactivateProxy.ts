@@ -1,16 +1,16 @@
 import {
-	Args,
-	BaseTxInfo,
-	createMethod,
-	OptionsWithMeta,
-	UnsignedTransaction,
+  Args,
+  BaseTxInfo,
+  createMethod,
+  OptionsWithMeta,
+  UnsignedTransaction,
 } from '../../util';
 
 export interface DemocracyDeactivateProxyArgs extends Args {
-	/**
-	 * The address of the proxy to remove, SS-58 encoded.
-	 */
-	proxy: string;
+  /**
+   * The address of the proxy to remove, SS-58 encoded.
+   */
+  proxy: string;
 }
 
 /**
@@ -23,23 +23,23 @@ export interface DemocracyDeactivateProxyArgs extends Args {
  * @deprecated Update to the latest version of Substrate to use the proxy pallet.
  */
 export function deactivateProxy(
-	args: DemocracyDeactivateProxyArgs,
-	info: BaseTxInfo,
-	options: OptionsWithMeta
+  args: DemocracyDeactivateProxyArgs,
+  info: BaseTxInfo,
+  options: OptionsWithMeta
 ): UnsignedTransaction {
-	console.warn(
-		'`democracy.deactivateProxy` is now deprecated. ' +
-			'Update to the latest version of Substrate to use the proxy pallet.'
-	);
-	return createMethod(
-		{
-			method: {
-				args,
-				name: 'deactivateProxy',
-				pallet: 'democracy',
-			},
-			...info,
-		},
-		options
-	);
+  console.warn(
+    '`democracy.deactivateProxy` is now deprecated. ' +
+      'Update to the latest version of Substrate to use the proxy pallet.'
+  );
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'deactivateProxy',
+        pallet: 'democracy',
+      },
+      ...info,
+    },
+    options
+  );
 }

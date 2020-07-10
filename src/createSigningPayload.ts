@@ -43,14 +43,14 @@ import { Options, UnsignedTransaction } from './util';
  * ```
  */
 export function createSigningPayload(
-	unsigned: UnsignedTransaction,
-	options: Options
+  unsigned: UnsignedTransaction,
+  options: Options
 ): string {
-	const { registry } = options;
+  const { registry } = options;
 
-	return registry
-		.createType('ExtrinsicPayload', unsigned, {
-			version: unsigned.version,
-		})
-		.toHex();
+  return registry
+    .createType('ExtrinsicPayload', unsigned, {
+      version: unsigned.version,
+    })
+    .toHex();
 }
