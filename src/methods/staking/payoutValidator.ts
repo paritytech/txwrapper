@@ -1,18 +1,18 @@
 import {
-	Args,
-	BaseTxInfo,
-	createMethod,
-	OptionsWithMeta,
-	UnsignedTransaction,
+  Args,
+  BaseTxInfo,
+  createMethod,
+  OptionsWithMeta,
+  UnsignedTransaction,
 } from '../../util';
 
 export interface StakingPayoutValidatorArgs extends Args {
-	/**
-	 * May not be lower than one following the most recently paid era. If it is
-	 * higher, then it indicates an instruction to skip the payout of all
-	 * previous eras.
-	 */
-	era: number;
+  /**
+   * May not be lower than one following the most recently paid era. If it is
+   * higher, then it indicates an instruction to skip the payout of all
+   * previous eras.
+   */
+  era: number;
 }
 
 /**
@@ -27,23 +27,23 @@ export interface StakingPayoutValidatorArgs extends Args {
  * @deprecated Update to the latest version of Substrate to use `staking.payoutStakers` instead.
  */
 export function payoutValidator(
-	args: StakingPayoutValidatorArgs,
-	info: BaseTxInfo,
-	options: OptionsWithMeta
+  args: StakingPayoutValidatorArgs,
+  info: BaseTxInfo,
+  options: OptionsWithMeta
 ): UnsignedTransaction {
-	console.warn(
-		'`staking.payoutValidator` is now deprecated. ' +
-			'Update to the latest version of Substrate to use `staking.payoutStakers` instead.'
-	);
-	return createMethod(
-		{
-			method: {
-				args,
-				name: 'payoutValidator',
-				pallet: 'staking',
-			},
-			...info,
-		},
-		options
-	);
+  console.warn(
+    '`staking.payoutValidator` is now deprecated. ' +
+      'Update to the latest version of Substrate to use `staking.payoutStakers` instead.'
+  );
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'payoutValidator',
+        pallet: 'staking',
+      },
+      ...info,
+    },
+    options
+  );
 }

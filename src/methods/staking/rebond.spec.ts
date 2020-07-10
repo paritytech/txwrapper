@@ -4,18 +4,17 @@ import {
   cC1TestBaseTxInfo,
   TEST_METHOD_ARGS,
 } from '../../util';
-import { removeProxies } from './removeProxies';
+import { rebond } from './rebond';
 
-describe('proxy::removeProxy', () => {
+describe('staking::rebond', () => {
   it('should work', () => {
-    const unsigned = removeProxies(
-      TEST_METHOD_ARGS.proxy.removeProxies,
+    const unsigned = rebond(
+      TEST_METHOD_ARGS.staking.rebond,
       CC1_TEST_BASE_TX_INFO,
       CC1_TEST_OPTIONS
     );
 
     cC1TestBaseTxInfo(unsigned);
-
-    expect(unsigned.method).toBe('0x1c03');
+    expect(unsigned.method).toBe('0x07029101');
   });
 });

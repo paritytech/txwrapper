@@ -1,20 +1,20 @@
 import {
-	Args,
-	BaseTxInfo,
-	createMethod,
-	OptionsWithMeta,
-	UnsignedTransaction,
+  Args,
+  BaseTxInfo,
+  createMethod,
+  OptionsWithMeta,
+  UnsignedTransaction,
 } from '../../util';
 
 export interface BalancesTransferArgs extends Args {
-	/**
-	 * The recipient address, SS-58 encoded.
-	 */
-	dest: string;
-	/**
-	 * The amount to send.
-	 */
-	value: number | string;
+  /**
+   * The recipient address, SS-58 encoded.
+   */
+  dest: string;
+  /**
+   * The amount to send.
+   */
+  value: number | string;
 }
 
 /**
@@ -25,19 +25,19 @@ export interface BalancesTransferArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function transfer(
-	args: BalancesTransferArgs,
-	info: BaseTxInfo,
-	options: OptionsWithMeta
+  args: BalancesTransferArgs,
+  info: BaseTxInfo,
+  options: OptionsWithMeta
 ): UnsignedTransaction {
-	return createMethod(
-		{
-			method: {
-				args,
-				name: 'transfer',
-				pallet: 'balances',
-			},
-			...info,
-		},
-		options
-	);
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'transfer',
+        pallet: 'balances',
+      },
+      ...info,
+    },
+    options
+  );
 }

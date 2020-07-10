@@ -10,3 +10,4 @@ export * from './withdrawUnbonded';
 export * from './payoutNominator';
 export * from './payoutValidator';
 export * from './payoutStakers';
+export * from './rebond';

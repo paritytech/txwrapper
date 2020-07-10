@@ -1,20 +1,20 @@
 import {
-	Args,
-	BaseTxInfo,
-	createMethod,
-	OptionsWithMeta,
-	UnsignedTransaction,
+  Args,
+  BaseTxInfo,
+  createMethod,
+  OptionsWithMeta,
+  UnsignedTransaction,
 } from '../../util';
 
 export interface SessionSetKeysArgs extends Args {
-	/**
-	 * The 5 keys to set.
-	 */
-	keys: string[];
-	/**
-	 * Proof (unused for now).
-	 */
-	proof?: string;
+  /**
+   * The 5 keys to set.
+   */
+  keys: string[];
+  /**
+   * Proof (unused for now).
+   */
+  proof?: string;
 }
 
 /**
@@ -25,24 +25,24 @@ export interface SessionSetKeysArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function setKeys(
-	args: SessionSetKeysArgs,
-	info: BaseTxInfo,
-	options: OptionsWithMeta
+  args: SessionSetKeysArgs,
+  info: BaseTxInfo,
+  options: OptionsWithMeta
 ): UnsignedTransaction {
-	const { keys, proof = '0x' } = args;
+  const { keys, proof = '0x' } = args;
 
-	return createMethod(
-		{
-			method: {
-				args: {
-					keys,
-					proof,
-				},
-				name: 'setKeys',
-				pallet: 'session',
-			},
-			...info,
-		},
-		options
-	);
+  return createMethod(
+    {
+      method: {
+        args: {
+          keys,
+          proof,
+        },
+        name: 'setKeys',
+        pallet: 'session',
+      },
+      ...info,
+    },
+    options
+  );
 }

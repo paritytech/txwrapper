@@ -1,16 +1,16 @@
 import {
-	Args,
-	BaseTxInfo,
-	createMethod,
-	OptionsWithMeta,
-	UnsignedTransaction,
+  Args,
+  BaseTxInfo,
+  createMethod,
+  OptionsWithMeta,
+  UnsignedTransaction,
 } from '../../util';
 
 export interface DemocracyOpenProxyArgs extends Args {
-	/**
-	 * The address of the proxy to remove, SS-58 encoded.
-	 */
-	target: string;
+  /**
+   * The address of the proxy to remove, SS-58 encoded.
+   */
+  target: string;
 }
 
 /**
@@ -22,23 +22,23 @@ export interface DemocracyOpenProxyArgs extends Args {
  * @deprecated Update to the latest version of Substrate to use the proxy pallet.
  */
 export function openProxy(
-	args: DemocracyOpenProxyArgs,
-	info: BaseTxInfo,
-	options: OptionsWithMeta
+  args: DemocracyOpenProxyArgs,
+  info: BaseTxInfo,
+  options: OptionsWithMeta
 ): UnsignedTransaction {
-	console.warn(
-		'`democracy.openProxy` is now deprecated. ' +
-			'Update to the latest version of Substrate to use the proxy pallet.'
-	);
-	return createMethod(
-		{
-			method: {
-				args,
-				name: 'openProxy',
-				pallet: 'democracy',
-			},
-			...info,
-		},
-		options
-	);
+  console.warn(
+    '`democracy.openProxy` is now deprecated. ' +
+      'Update to the latest version of Substrate to use the proxy pallet.'
+  );
+  return createMethod(
+    {
+      method: {
+        args,
+        name: 'openProxy',
+        pallet: 'democracy',
+      },
+      ...info,
+    },
+    options
+  );
 }
