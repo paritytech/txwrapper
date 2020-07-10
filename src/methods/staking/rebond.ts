@@ -12,6 +12,7 @@ export interface StakingRebondArgs extends Args {
    */
   value: number | string;
 }
+
 /**
  * Rebond a portion of the stash scheduled to be unlocked.
  *
