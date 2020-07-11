@@ -247,6 +247,9 @@ export const TEST_METHOD_ARGS = {
       validatorStash: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
       era: 100,
     },
+    rebond: {
+      value: 100,
+    },
     setController: {
       controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
     },
