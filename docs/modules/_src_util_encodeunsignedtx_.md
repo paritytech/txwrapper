@@ -14,7 +14,7 @@
 
 ▸ **encodeUnsignedTransaction**(`unsigned`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `options`: [Options](../interfaces/_src_util_types_.options.md)): *string*
 
-*Defined in [src/util/encodeUnsignedTx.ts:9](https://github.com/paritytech/txwrapper/blob/ef571f4/src/util/encodeUnsignedTx.ts#L9)*
+*Defined in [src/util/encodeUnsignedTx.ts:9](https://github.com/paritytech/txwrapper/blob/1ac58f6/src/util/encodeUnsignedTx.ts#L9)*
 
 Encode an unsigned transaction to submit.
 

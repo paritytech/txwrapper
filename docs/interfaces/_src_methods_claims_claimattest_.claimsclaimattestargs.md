@@ -22,7 +22,7 @@
 
 • **dest**: *string*
 
-*Defined in [src/methods/claims/claimAttest.ts:14](https://github.com/paritytech/txwrapper/blob/ef571f4/src/methods/claims/claimAttest.ts#L14)*
+*Defined in [src/methods/claims/claimAttest.ts:14](https://github.com/paritytech/txwrapper/blob/1ac58f6/src/methods/claims/claimAttest.ts#L14)*
 
 The destination account to which to pay out the claim. This method is only
 available on Polkadot.
@@ -33,7 +33,7 @@ ___
 
 • **ethereumSignature**: *string*
 
-*Defined in [src/methods/claims/claimAttest.ts:19](https://github.com/paritytech/txwrapper/blob/ef571f4/src/methods/claims/claimAttest.ts#L19)*
+*Defined in [src/methods/claims/claimAttest.ts:19](https://github.com/paritytech/txwrapper/blob/1ac58f6/src/methods/claims/claimAttest.ts#L19)*
 
 The signature of an Ethereum signed message matching the format described
 above.
@@ -44,6 +44,6 @@ ___
 
 • **statement**: *string*
 
-*Defined in [src/methods/claims/claimAttest.ts:23](https://github.com/paritytech/txwrapper/blob/ef571f4/src/methods/claims/claimAttest.ts#L23)*
+*Defined in [src/methods/claims/claimAttest.ts:23](https://github.com/paritytech/txwrapper/blob/1ac58f6/src/methods/claims/claimAttest.ts#L23)*
 
 The identity of the statement that is being attested to in the signature.

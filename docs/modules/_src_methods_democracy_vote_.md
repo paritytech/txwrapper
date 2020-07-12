@@ -18,7 +18,7 @@
 
 ▸ **vote**(`args`: [DemocracyVoteArgs](../interfaces/_src_methods_democracy_vote_.democracyvoteargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/democracy/vote.ts:28](https://github.com/paritytech/txwrapper/blob/ef571f4/src/methods/democracy/vote.ts#L28)*
+*Defined in [src/methods/democracy/vote.ts:28](https://github.com/paritytech/txwrapper/blob/1ac58f6/src/methods/democracy/vote.ts#L28)*
 
 Vote in a referendum.
 
