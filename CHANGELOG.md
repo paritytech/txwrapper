@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/paritytech/txwrapper/compare/v3.4.0...v3.5.0) (2020-07-14)
+
+### Features
+
+* Add `poll.vote` ([#187](https://github.com/paritytech/txwrapper/pull/187)) ([013027c](https://github.com/paritytech/txwrapper/commit/013027c92bc09a68ae0042c2c4ce29fdedbcd16f))
+
 ## [3.4.0](https://github.com/paritytech/txwrapper/compare/v3.3.0...v3.4.0) (2020-07-12)
 
 
