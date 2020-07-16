@@ -6,7 +6,7 @@ import {
   UnsignedTransaction,
 } from '../../util';
 
-interface PollVoteArgs extends Args {
+export interface PollVoteArgs extends Args {
   /**
    * The options to vote for. Must be a boolean array of length 4.
    */
