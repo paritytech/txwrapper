@@ -20,7 +20,7 @@
 
 • **target**: *string*
 
-*Defined in [src/methods/vesting/vestOther.ts:14](https://github.com/paritytech/txwrapper/blob/1ac58f6/src/methods/vesting/vestOther.ts#L14)*
+*Defined in [src/methods/vesting/vestOther.ts:14](https://github.com/paritytech/txwrapper/blob/e82a68c/src/methods/vesting/vestOther.ts#L14)*
 
 The account whose vested funds should be unlocked. Must have funds still
 locked under this module.

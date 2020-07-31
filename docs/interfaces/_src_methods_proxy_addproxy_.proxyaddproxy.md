@@ -21,7 +21,7 @@
 
 • **proxy**: *string*
 
-*Defined in [src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper/blob/1ac58f6/src/methods/proxy/addProxy.ts#L13)*
+*Defined in [src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper/blob/e82a68c/src/methods/proxy/addProxy.ts#L13)*
 
 The account that the `caller` would like to make a proxy.
 
@@ -31,7 +31,7 @@ ___
 
 • **proxyType**: *string*
 
-*Defined in [src/methods/proxy/addProxy.ts:23](https://github.com/paritytech/txwrapper/blob/1ac58f6/src/methods/proxy/addProxy.ts#L23)*
+*Defined in [src/methods/proxy/addProxy.ts:23](https://github.com/paritytech/txwrapper/blob/e82a68c/src/methods/proxy/addProxy.ts#L23)*
 
 The permissions for this proxy account. See the runtime for the `call` filters.
 Current known types (Polkadot v8, Kusama v2008, Westend v28):

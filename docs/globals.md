@@ -23,6 +23,7 @@
 * ["src/methods/democracy/proxyVote"](modules/_src_methods_democracy_proxyvote_.md)
 * ["src/methods/democracy/types"](modules/_src_methods_democracy_types_.md)
 * ["src/methods/democracy/vote"](modules/_src_methods_democracy_vote_.md)
+* ["src/methods/poll/vote"](modules/_src_methods_poll_vote_.md)
 * ["src/methods/proxy/addProxy"](modules/_src_methods_proxy_addproxy_.md)
 * ["src/methods/proxy/proxy"](modules/_src_methods_proxy_proxy_.md)
 * ["src/methods/proxy/removeProxies"](modules/_src_methods_proxy_removeproxies_.md)
