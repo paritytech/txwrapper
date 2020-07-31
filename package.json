@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper",
-  "version": "3.4.0",
+  "version": "3.5.1",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Helper funtions for offline transaction generation.",
   "files": [
@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@polkadot/api": "^1.21.1",
+    "@polkadot/api": "^1.24.1",
     "@types/memoizee": "^0.4.3",
     "acorn": ">=7.1.1"
   },
@@ -44,6 +44,7 @@
   "resolutions": {
     "acorn": ">=7.1.1",
     "kind-of": ">=6.0.3",
-    "minimist": ">=1.2.2"
+    "minimist": ">=1.2.2",
+    "dot-prop": "^5.1.1"
   }
 }
