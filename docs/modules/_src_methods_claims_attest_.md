@@ -18,7 +18,7 @@
 
 ▸ **attest**(`args`: [ClaimsAttestArgs](../interfaces/_src_methods_claims_attest_.claimsattestargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/claims/attest.ts:24](https://github.com/paritytech/txwrapper/blob/ef571f4/src/methods/claims/attest.ts#L24)*
+*Defined in [src/methods/claims/attest.ts:24](https://github.com/paritytech/txwrapper/blob/e82a68c/src/methods/claims/attest.ts#L24)*
 
 Attest to a statement, needed to finalize the claims process. This method is
 only available on Polkadot.
