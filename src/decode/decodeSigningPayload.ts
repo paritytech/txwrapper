@@ -20,7 +20,8 @@ export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
  */
 export function decodeSigningPayload(
   signingPayload: string,
-  options: OptionsWithMeta
+  options: OptionsWithMeta,
+  toInt = false
 ): DecodedSigningPayload {
   const { metadataRpc, registry } = options;
 
@@ -30,7 +31,7 @@ export function decodeSigningPayload(
     version: EXTRINSIC_VERSION,
   });
   const methodCall = registry.createType('Call', payload.method);
-  const method = toTxMethod(registry, methodCall);
+  const method = toTxMethod(registry, methodCall, toInt);
 
   return {
     blockHash: payload.blockHash.toHex(),

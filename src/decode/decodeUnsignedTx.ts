@@ -20,14 +20,15 @@ export type DecodedUnsignedTx = TxInfo;
  */
 export function decodeUnsignedTx(
   unsigned: UnsignedTransaction,
-  options: OptionsWithMeta
+  options: OptionsWithMeta,
+  toInt = false
 ): DecodedUnsignedTx {
   const { metadataRpc, registry } = options;
 
   registry.setMetadata(createMetadata(registry, metadataRpc));
 
   const methodCall = registry.createType('Call', unsigned.method);
-  const method = toTxMethod(registry, methodCall);
+  const method = toTxMethod(registry, methodCall, toInt);
 
   return {
     address: unsigned.address,
