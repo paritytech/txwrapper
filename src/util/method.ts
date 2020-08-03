@@ -125,7 +125,7 @@ export function createMethod(
  *
  * @param registry - The type registry
  * @param method - The method to serialize
- * @param toInt - Wether or not to forcibly serialize integers in the call args
+ * @param toInt - Whether or not to forcibly serialize integers in the call args
  * to base-10 strings. If false, integers will either be a number or hex.
  * Defaults to false
  */

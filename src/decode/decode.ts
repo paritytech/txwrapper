@@ -11,7 +11,7 @@ import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
  *
  * @param unsignedTx - The data to parse, as an unsigned tx.
  * @param options - Runtime-specific data used for decoding the transaction.
- * @param toInt - Wether or not to forcibly serialize integers in the call args
+ * @param toInt - Whether or not to forcibly serialize integers in the call args
  * to base-10 strings. If false, integers will either be a number or hex.
  * Defaults to false
  */
@@ -26,7 +26,7 @@ export function decode(
  *
  * @param signedTx - The data to parse, as a signed tx hex string.
  * @param options - Runtime-specific data used for decoding the transaction.
- * @param toInt - Wether or not to forcibly serialize integers in the call args
+ * @param toInt - Whether or not to forcibly serialize integers in the call args
  * to base-10 strings. If false, integers will either be a number or hex.
  * Defaults to false
  */
@@ -41,7 +41,7 @@ export function decode(
  *
  * @param signingPayload - The data to parse, as a signing payload hex string.
  * @param options - Runtime-specific data used for decoding the transaction.
- * @param toInt - Wether or not to forcibly serialize integers in the call args
+ * @param toInt - Whether or not to forcibly serialize integers in the call args
  * to base-10 strings. If false, integers will either be a number or hex.
  * Defaults to false
  */
