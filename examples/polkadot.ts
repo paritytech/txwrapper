@@ -55,7 +55,7 @@ async function main(): Promise<void> {
   // if desired.
   const unsigned = methods.balances.transfer(
     {
-      value: 12,
+      value: '90071992547409910',
       dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
     },
     {
@@ -79,10 +79,14 @@ async function main(): Promise<void> {
   );
 
   // Decode an unsigned transaction.
-  const decodedUnsigned = decode(unsigned, {
-    metadataRpc,
-    registry,
-  });
+  const decodedUnsigned = decode(
+    unsigned,
+    {
+      metadataRpc,
+      registry,
+    },
+    true
+  );
   console.log(
     `\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
       `  Amount: ${decodedUnsigned.method.args.value}`
@@ -93,10 +97,14 @@ async function main(): Promise<void> {
   console.log(`\nPayload to Sign: ${signingPayload}`);
 
   // Decode the information from a signing payload.
-  const payloadInfo = decode(signingPayload, {
-    metadataRpc,
-    registry,
-  });
+  const payloadInfo = decode(
+    signingPayload,
+    {
+      metadataRpc,
+      registry,
+    },
+    true
+  );
   console.log(
     `\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
       `  Amount: ${payloadInfo.method.args.value}`
@@ -124,10 +132,14 @@ async function main(): Promise<void> {
   console.log(`Actual Tx Hash: ${actualTxHash}`);
 
   // Decode a signed payload.
-  const txInfo = decode(tx, {
-    metadataRpc,
-    registry,
-  });
+  const txInfo = decode(
+    tx,
+    {
+      metadataRpc,
+      registry,
+    },
+    true
+  );
   console.log(
     `\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
       `  Amount: ${txInfo.method.args.value}\n`

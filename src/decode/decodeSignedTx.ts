@@ -24,7 +24,8 @@ export type DecodedSignedTx = Omit<
  */
 export function decodeSignedTx(
   signedTx: string,
-  options: OptionsWithMeta
+  options: OptionsWithMeta,
+  toInt = false
 ): DecodedSignedTx {
   const { metadataRpc, registry } = options;
 
@@ -34,7 +35,7 @@ export function decodeSignedTx(
     isSigned: true,
   });
   const methodCall = registry.createType('Call', tx.method);
-  const method = toTxMethod(registry, methodCall);
+  const method = toTxMethod(registry, methodCall, toInt);
 
   return {
     address: tx.signer.toString(),

@@ -18,7 +18,7 @@
 
 ▸ **vote**(`args`: [PollVoteArgs](../interfaces/_src_methods_poll_vote_.pollvoteargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/poll/vote.ts:23](https://github.com/paritytech/txwrapper/blob/e82a68c/src/methods/poll/vote.ts#L23)*
+*Defined in [src/methods/poll/vote.ts:23](https://github.com/paritytech/txwrapper/blob/2e195b6/src/methods/poll/vote.ts#L23)*
 
 Cast a vote on the poll.
 

@@ -18,7 +18,7 @@
 
 ▸ **batch**(`args`: [UtilityBatch](../interfaces/_src_methods_utility_batch_.utilitybatch.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper/blob/e82a68c/src/methods/utility/batch.ts#L18)*
+*Defined in [src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper/blob/2e195b6/src/methods/utility/batch.ts#L18)*
 
 **Parameters:**
 
