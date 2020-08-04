@@ -146,7 +146,7 @@ export function toTxMethod(
       codec = codec.unwrap() as Codec;
     }
 
-    // Forcibly serialize all integers to strings
+    // Forcibly serialize all integers to strings if toInt is true
     const jsonArg =
       toInt && codec instanceof AbstractInt
         ? codec.toString(10)
