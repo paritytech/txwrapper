@@ -141,7 +141,7 @@ export function toTxMethod(
   const args = Object.keys(argsDef).reduce((accumulator, key, index) => {
     let codec = createTypeUnsafe(registry, argsDef[key], [method.args[index]]);
 
-    if (codec instanceof Compact) {
+    if (toInt && codec instanceof Compact) {
       // Unwrap the compact so we can check the interior type
       codec = codec.unwrap() as Codec;
     }
