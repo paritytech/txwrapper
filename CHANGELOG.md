@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/paritytech/txwrapper/compare/v3.5.1...v3.6.0) (2020-08-04)
+
+
+### Features
+
+* Add optional `toInt` flag on decode methods ([#207](https://github.com/paritytech/txwrapper/issues/207)) ([b94a727](https://github.com/paritytech/txwrapper/commit/b94a72734548f1015201b5e3610781a1e290d00b))
+
+
+### Bug Fixes
+
+* bump dot-prop above vulnerable version ([#200](https://github.com/paritytech/txwrapper/issues/200)) ([dd422a9](https://github.com/paritytech/txwrapper/commit/dd422a982cb50d4b1d667e04637cf8e0ce56f6a2))
+
 ### [3.5.1](https://github.com/paritytech/txwrapper/compare/v3.5.0...v3.5.1) (2020-07-14)
 
 ## [3.5.0](https://github.com/paritytech/txwrapper/compare/v3.4.0...v3.5.0) (2020-07-14)
