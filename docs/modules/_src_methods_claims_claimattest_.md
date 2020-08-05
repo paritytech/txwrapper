@@ -18,7 +18,7 @@
 
 ▸ **claimAttest**(`args`: [ClaimsClaimAttestArgs](../interfaces/_src_methods_claims_claimattest_.claimsclaimattestargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/claims/claimAttest.ts:35](https://github.com/paritytech/txwrapper/blob/2e195b6/src/methods/claims/claimAttest.ts#L35)*
+*Defined in [src/methods/claims/claimAttest.ts:35](https://github.com/paritytech/txwrapper/blob/682850e/src/methods/claims/claimAttest.ts#L35)*
 
 Make a claim to collect your DOTs by signing a statement.
 
