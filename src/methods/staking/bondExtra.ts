@@ -10,7 +10,7 @@ export interface StakingBondExtraArgs extends Args {
   /**
    * The maximum amount to bond.
    */
-  maxAdditional: number;
+  maxAdditional: number | string;
 }
 
 /**

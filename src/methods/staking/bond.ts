@@ -14,7 +14,7 @@ export interface StakingBondArgs extends Args {
   /**
    * The number of tokens to bond.
    */
-  value: number;
+  value: number | string;
   /**
    * The rewards destination. Can be "Stash", "Staked", or "Controller".
    */
