@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.6.1](https://github.com/paritytech/txwrapper/compare/v3.6.0...v3.6.1) (2020-08-05)
+
+
+### Bug Fixes
+
+* bond and bondExtra value type number or string ([#209](https://github.com/paritytech/txwrapper/issues/209)) ([682850e](https://github.com/paritytech/txwrapper/commit/682850e97278ddcb01fbebf18b46bf3290bcbd64))
+
 ## [3.6.0](https://github.com/paritytech/txwrapper/compare/v3.5.1...v3.6.0) (2020-08-04)
 
 
