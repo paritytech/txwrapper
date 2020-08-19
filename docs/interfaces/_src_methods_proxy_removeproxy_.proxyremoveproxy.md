@@ -21,7 +21,7 @@
 
 • **proxy**: *string*
 
-*Defined in [src/methods/proxy/removeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/682850e/src/methods/proxy/removeProxy.ts#L13)*
+*Defined in [src/methods/proxy/removeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/proxy/removeProxy.ts#L13)*
 
 The account that the `caller` would like to unregister.
 
@@ -31,6 +31,6 @@ ___
 
 • **proxyType**: *string*
 
-*Defined in [src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper/blob/682850e/src/methods/proxy/removeProxy.ts#L17)*
+*Defined in [src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/proxy/removeProxy.ts#L17)*
 
 The permissions currently enabled for the target proxy account.

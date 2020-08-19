@@ -18,7 +18,7 @@
 
 ▸ **remark**(`args`: [SystemRemarkArgs](../interfaces/_src_methods_system_remark_.systemremarkargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/system/remark.ts:23](https://github.com/paritytech/txwrapper/blob/682850e/src/methods/system/remark.ts#L23)*
+*Defined in [src/methods/system/remark.ts:23](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/system/remark.ts#L23)*
 
 Make some on-chain remark.
 
