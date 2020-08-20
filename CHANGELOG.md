@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/paritytech/txwrapper/compare/v3.6.1...v3.7.0) (2020-08-20)
+
+
+### Features
+
+* Add string type for `staking.unbond` `value` ([#223](https://github.com/paritytech/txwrapper/issues/223)) ([305412c](https://github.com/paritytech/txwrapper/commit/305412c58556380502134a94d8b61187dd4fc163))
+
 ### [3.6.1](https://github.com/paritytech/txwrapper/compare/v3.6.0...v3.6.1) (2020-08-05)
 
 
