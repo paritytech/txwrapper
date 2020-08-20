@@ -10,7 +10,7 @@ export interface StakingUnbondArgs extends Args {
   /**
    * The number of tokens to unbond.
    */
-  value: number;
+  value: number | string;
 }
 
 /**
