@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@polkadot/api": "^1.27.1",
+    "@polkadot/api": "^1.31.2",
     "@types/memoizee": "^0.4.3",
     "acorn": ">=7.4.0"
   },
