@@ -10,17 +10,21 @@ export interface ProxyAddProxy extends Args {
   /**
    * The account that the `caller` would like to make a proxy.
    */
-  proxy: string;
+  delegate: string;
   /**
    * The permissions for this proxy account. See the runtime for the `call` filters.
-   * Current known types (Polkadot v8, Kusama v2008, Westend v28):
+   * Current known types:
    *   - 'Any'
    *   - 'NonTransfer'
    *   - 'Governance'
    *   - 'Staking'
-   *   - 'SudoBalances' (only relevant if sender is `sudo`)
    */
   proxyType: string;
+  /**
+   * The number of blocks that an announcement must be in place for before the corresponding call
+   * may be dispatched. If zero, then no announcement is needed.
+   */
+  delay: number | string;
 }
 
 /**

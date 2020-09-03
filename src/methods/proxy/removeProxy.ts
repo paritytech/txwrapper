@@ -10,11 +10,15 @@ export interface ProxyRemoveProxy extends Args {
   /**
    * The account that the `caller` would like to unregister.
    */
-  proxy: string;
+  delegate: string;
   /**
    * The permissions currently enabled for the target proxy account.
    */
   proxyType: string;
+  /**
+   * The delay of the proxy to remove.
+   */
+  delay: string | number;
 }
 
 /**
