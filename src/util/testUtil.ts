@@ -215,6 +215,11 @@ export const TEST_METHOD_ARGS = {
         '0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
     },
     removeProxies: {},
+    rejectAnnouncement: {
+      delegate: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob",
+      callHash:
+        '0x474235772ae94433aee7d1befac0bfcc35fd0b5dfcf0cfc14bba7d5bbe35b778',
+    },
   },
   poll: {
     vote: {
