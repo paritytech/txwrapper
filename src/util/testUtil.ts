@@ -90,13 +90,8 @@ export const CC1_TEST_OPTIONS = {
   registry: getRegistry('Polkadot CC1', 'polkadot', 6, metadataRpc),
 };
 
-// export const DOT_23_TEST_OPTIONS = {
-//   metadataRpc: polkadot23MetadataRpc,
-//   registry: getRegistry('Polkadot', 'polkadot', 23, polkadot23MetadataRpc),
-// };
-
 export const DOT_23_TEST_OPTIONS = {
-  metadataRpc,
+  metadataRpc: polkadot23MetadataRpc,
   registry: getRegistry('Polkadot', 'polkadot', 23, polkadot23MetadataRpc),
 };
 
