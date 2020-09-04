@@ -18,7 +18,7 @@
 
 ▸ **addProxy**(`args`: [ProxyAddProxy](../interfaces/_src_methods_proxy_addproxy_.proxyaddproxy.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
 
-*Defined in [src/methods/proxy/addProxy.ts:33](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/proxy/addProxy.ts#L33)*
+*Defined in [src/methods/proxy/addProxy.ts:37](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/addProxy.ts#L37)*
 
 Register a proxy account for the sender that is able to make calls on its behalf.
 

@@ -6,31 +6,26 @@ import {
   UnsignedTransaction,
 } from '../../util';
 
-export interface ProxyRemoveProxy extends Args {
+export interface ProxyRejectAnnouncementArgs extends Args {
   /**
-   * The account that the `caller` would like to unregister.
+   * The account that previously announced the call.
    */
   delegate: string;
   /**
-   * The permissions currently enabled for the target proxy account.
+   * The hash of the call that the proxy wants to execute.
    */
-  proxyType: string;
-  /**
-   * The delay of the proxy to remove.
-   */
-  delay: string | number;
+  callHash: string;
 }
 
 /**
- * Unregister a proxy account for the sender.
+ * Remove the given announcement of a delegate and return the deposit. Made by the proxied account.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-
-export function removeProxy(
-  args: ProxyRemoveProxy,
+export function rejectAnnouncement(
+  args: ProxyRejectAnnouncementArgs,
   info: BaseTxInfo,
   options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -38,7 +33,7 @@ export function removeProxy(
     {
       method: {
         args,
-        name: 'removeProxy',
+        name: 'rejectAnnouncement',
         pallet: 'proxy',
       },
       ...info,

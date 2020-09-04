@@ -26,6 +26,7 @@
 * ["src/methods/poll/vote"](modules/_src_methods_poll_vote_.md)
 * ["src/methods/proxy/addProxy"](modules/_src_methods_proxy_addproxy_.md)
 * ["src/methods/proxy/proxy"](modules/_src_methods_proxy_proxy_.md)
+* ["src/methods/proxy/rejectAnnouncement"](modules/_src_methods_proxy_rejectannouncement_.md)
 * ["src/methods/proxy/removeProxies"](modules/_src_methods_proxy_removeproxies_.md)
 * ["src/methods/proxy/removeProxy"](modules/_src_methods_proxy_removeproxy_.md)
 * ["src/methods/session/setKeys"](modules/_src_methods_session_setkeys_.md)
@@ -50,4 +51,5 @@
 * ["src/util/constants"](modules/_src_util_constants_.md)
 * ["src/util/encodeUnsignedTx"](modules/_src_util_encodeunsignedtx_.md)
 * ["src/util/metadata"](modules/_src_util_metadata_.md)
+* ["src/util/metadataStaticPolkadot23"](modules/_src_util_metadatastaticpolkadot23_.md)
 * ["src/util/types"](modules/_src_util_types_.md)

@@ -20,6 +20,6 @@
 
 • **value**: *number | string*
 
-*Defined in [src/methods/staking/rebond.ts:13](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/staking/rebond.ts#L13)*
+*Defined in [src/methods/staking/rebond.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/staking/rebond.ts#L13)*
 
 The number of tokens to rebond.

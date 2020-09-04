@@ -12,16 +12,28 @@
 
 ### Properties
 
-* [proxy](_src_methods_proxy_addproxy_.proxyaddproxy.md#proxy)
+* [delay](_src_methods_proxy_addproxy_.proxyaddproxy.md#delay)
+* [delegate](_src_methods_proxy_addproxy_.proxyaddproxy.md#delegate)
 * [proxyType](_src_methods_proxy_addproxy_.proxyaddproxy.md#proxytype)
 
 ## Properties
 
-###  proxy
+###  delay
 
-• **proxy**: *string*
+• **delay**: *number | string*
 
-*Defined in [src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/proxy/addProxy.ts#L13)*
+*Defined in [src/methods/proxy/addProxy.ts:27](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/addProxy.ts#L27)*
+
+The number of blocks that an announcement must be in place for before the corresponding call
+may be dispatched. If zero, then no announcement is needed.
+
+___
+
+###  delegate
+
+• **delegate**: *string*
+
+*Defined in [src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/addProxy.ts#L13)*
 
 The account that the `caller` would like to make a proxy.
 
@@ -31,12 +43,11 @@ ___
 
 • **proxyType**: *string*
 
-*Defined in [src/methods/proxy/addProxy.ts:23](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/proxy/addProxy.ts#L23)*
+*Defined in [src/methods/proxy/addProxy.ts:22](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/addProxy.ts#L22)*
 
 The permissions for this proxy account. See the runtime for the `call` filters.
-Current known types (Polkadot v8, Kusama v2008, Westend v28):
+Current known types:
   - 'Any'
   - 'NonTransfer'
   - 'Governance'
   - 'Staking'
-  - 'SudoBalances' (only relevant if sender is `sudo`)

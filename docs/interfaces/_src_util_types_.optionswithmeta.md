@@ -24,7 +24,7 @@ options to functions that require registry and metadata.
 
 • **metadataRpc**: *string*
 
-*Defined in [src/util/types.ts:94](https://github.com/paritytech/txwrapper/blob/5aca21f/src/util/types.ts#L94)*
+*Defined in [src/util/types.ts:94](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/types.ts#L94)*
 
 The metadata of the runtime.
 
@@ -36,6 +36,6 @@ ___
 
 *Inherited from [Options](_src_util_types_.options.md).[registry](_src_util_types_.options.md#registry)*
 
-*Defined in [src/util/types.ts:83](https://github.com/paritytech/txwrapper/blob/5aca21f/src/util/types.ts#L83)*
+*Defined in [src/util/types.ts:83](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/types.ts#L83)*
 
 The type registry of the runtime.

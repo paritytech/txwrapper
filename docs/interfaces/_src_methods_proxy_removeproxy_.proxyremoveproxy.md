@@ -12,16 +12,27 @@
 
 ### Properties
 
-* [proxy](_src_methods_proxy_removeproxy_.proxyremoveproxy.md#proxy)
+* [delay](_src_methods_proxy_removeproxy_.proxyremoveproxy.md#delay)
+* [delegate](_src_methods_proxy_removeproxy_.proxyremoveproxy.md#delegate)
 * [proxyType](_src_methods_proxy_removeproxy_.proxyremoveproxy.md#proxytype)
 
 ## Properties
 
-###  proxy
+###  delay
 
-• **proxy**: *string*
+• **delay**: *string | number*
 
-*Defined in [src/methods/proxy/removeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/proxy/removeProxy.ts#L13)*
+*Defined in [src/methods/proxy/removeProxy.ts:21](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/removeProxy.ts#L21)*
+
+The delay of the proxy to remove.
+
+___
+
+###  delegate
+
+• **delegate**: *string*
+
+*Defined in [src/methods/proxy/removeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/removeProxy.ts#L13)*
 
 The account that the `caller` would like to unregister.
 
@@ -31,6 +42,6 @@ ___
 
 • **proxyType**: *string*
 
-*Defined in [src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/proxy/removeProxy.ts#L17)*
+*Defined in [src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/removeProxy.ts#L17)*
 
 The permissions currently enabled for the target proxy account.
