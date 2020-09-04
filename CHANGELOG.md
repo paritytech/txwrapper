@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/paritytech/txwrapper/compare/v3.7.0...v3.8.0) (2020-09-04)
+
+
+### Features
+
+* Add `proxy.rejectAnnouncement`; Update `proxy.addProxy` and `proxy.removeProxy` ([#237](https://github.com/paritytech/txwrapper/issues/237)) ([15bb86c](https://github.com/paritytech/txwrapper/commit/15bb86c91b45ff2e948bdfff5a540fba23d5589f))
+
 ## [3.7.0](https://github.com/paritytech/txwrapper/compare/v3.6.1...v3.7.0) (2020-08-20)
 
 
