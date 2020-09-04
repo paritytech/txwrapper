@@ -20,7 +20,7 @@
 
 • **calls**: *(string | object)[]*
 
-*Defined in [src/methods/utility/batch.ts:15](https://github.com/paritytech/txwrapper/blob/5aca21f/src/methods/utility/batch.ts#L15)*
+*Defined in [src/methods/utility/batch.ts:15](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/utility/batch.ts#L15)*
 
 The calls to be dispatched from the same origin.
 To take advantage of txwrapper methods, this could be an array of

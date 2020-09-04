@@ -14,7 +14,7 @@
 
 ▸ **decode**(`unsignedTx`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md), `toInt?`: undefined | false | true): *DecodedUnsignedTx*
 
-*Defined in [src/decode/decode.ts:18](https://github.com/paritytech/txwrapper/blob/5aca21f/src/decode/decode.ts#L18)*
+*Defined in [src/decode/decode.ts:18](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/decode/decode.ts#L18)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 
@@ -30,7 +30,7 @@ Name | Type | Description |
 
 ▸ **decode**(`signedTx`: string, `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md), `toInt?`: undefined | false | true): *DecodedSignedTx*
 
-*Defined in [src/decode/decode.ts:33](https://github.com/paritytech/txwrapper/blob/5aca21f/src/decode/decode.ts#L33)*
+*Defined in [src/decode/decode.ts:33](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/decode/decode.ts#L33)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 
@@ -46,7 +46,7 @@ Name | Type | Description |
 
 ▸ **decode**(`signingPayload`: string, `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md), `toInt?`: undefined | false | true): *DecodedSigningPayload*
 
-*Defined in [src/decode/decode.ts:48](https://github.com/paritytech/txwrapper/blob/5aca21f/src/decode/decode.ts#L48)*
+*Defined in [src/decode/decode.ts:48](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/decode/decode.ts#L48)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 
