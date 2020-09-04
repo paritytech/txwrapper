@@ -12,13 +12,13 @@ export interface ProxyRejectAnnouncementArgs extends Args {
    */
   delegate: string;
   /**
-   * The hash of the call to be made.
+   * The hash of the call that the proxy wants to execute.
    */
   callHash: string;
 }
 
 /**
- * Remove the given announcement of a delegate.
+ * Remove the given announcement of a delegate and return the deposit. Made by the proxied account.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
