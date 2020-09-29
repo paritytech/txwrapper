@@ -7,6 +7,7 @@
  */ /** */
 
 import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
+import fetch from 'node-fetch';
 
 import { KeyringPair, OptionsWithMeta } from '../src';
 import { createMetadata } from '../src/util';
