@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.9.0](https://github.com/paritytech/txwrapper/compare/v3.8.1...v3.9.0) (2020-09-29)
+
+
+### Features
+
+* **types:** Add support for new treasury types so latest metadata decorates correctly ([#259](https://github.com/paritytech/txwrapper/issues/259)) ([632b227](https://github.com/paritytech/txwrapper/commit/632b227bc091d58effb688bc7c6e7bf4dd022bec))
+
 ### [3.8.1](https://github.com/paritytech/txwrapper/compare/v3.8.0...v3.8.1) (2020-09-29)
 
 ## [3.8.0](https://github.com/paritytech/txwrapper/compare/v3.7.0...v3.8.0) (2020-09-04)
