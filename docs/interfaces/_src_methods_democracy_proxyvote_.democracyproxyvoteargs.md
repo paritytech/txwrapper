@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/democracy/proxyVote"](../modules/_src_methods_democracy_proxyvote_.md) › [DemocracyProxyVoteArgs](_src_methods_democracy_proxyvote_.democracyproxyvoteargs.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/democracy/proxyVote"](../modules/_src_methods_democracy_proxyvote_.md) / DemocracyProxyVoteArgs
 
 # Interface: DemocracyProxyVoteArgs
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **DemocracyProxyVoteArgs**
 
@@ -17,18 +19,18 @@
 
 ## Properties
 
-###  refIndex
+### refIndex
 
-• **refIndex**: *number*
+•  **refIndex**: number
 
-*Defined in [src/methods/democracy/proxyVote.ts:14](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/democracy/proxyVote.ts#L14)*
+*Defined in [src/methods/democracy/proxyVote.ts:14](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/democracy/proxyVote.ts#L14)*
 
 ___
 
-###  vote
+### vote
 
-• **vote**: *[AccountVote](../modules/_src_methods_democracy_types_.md#accountvote)*
+•  **vote**: [AccountVote](../modules/_src_methods_democracy_types_.md#accountvote)
 
-*Defined in [src/methods/democracy/proxyVote.ts:18](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/democracy/proxyVote.ts#L18)*
+*Defined in [src/methods/democracy/proxyVote.ts:18](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/democracy/proxyVote.ts#L18)*
 
 Vote.

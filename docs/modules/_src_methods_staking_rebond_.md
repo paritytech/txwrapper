@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/staking/rebond"](_src_methods_staking_rebond_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/staking/rebond"
 
 # Module: "src/methods/staking/rebond"
 
@@ -14,18 +16,18 @@
 
 ## Functions
 
-###  rebond
+### rebond
 
-▸ **rebond**(`args`: [StakingRebondArgs](../interfaces/_src_methods_staking_rebond_.stakingrebondargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **rebond**(`args`: [StakingRebondArgs](../interfaces/_src_methods_staking_rebond_.stakingrebondargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/staking/rebond.ts:23](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/staking/rebond.ts#L23)*
+*Defined in [src/methods/staking/rebond.ts:23](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/staking/rebond.ts#L23)*
 
 Rebond a portion of the stash scheduled to be unlocked.
 
 The dispatch origin must be signed by the controller, and it can be only called when
 `EraElectionStatus` is `Closed`.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type |
 ------ | ------ |
@@ -33,4 +35,4 @@ Name | Type |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

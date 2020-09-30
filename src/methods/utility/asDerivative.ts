@@ -19,6 +19,25 @@ export interface UtilityAsDerivativeArgs extends Args {
   call: { callIndex?: string; args?: string } | string;
 }
 
+/**
+ * Send a call through an indexed pseudonym of the sender.
+ *
+ * Filter from origin are passed along. The call will be dispatched with an origin which
+ * use the same filter as the origin of this call.
+ *
+ * NOTE: If you need to ensure that any account-based filtering is not honored (i.e.
+ * because you expect `proxy` to have been used prior in the call stack and you do not want
+ * the call restrictions to apply to any sub-accounts), then use `as_multi_threshold_1`
+ * in the Multisig pallet instead.
+ *
+ * NOTE: Prior to version *12, this was called `as_limited_sub`.
+ *
+ * The dispatch origin for this call must be _Signed_.
+ *
+ * @param args
+ * @param info
+ * @param options
+ */
 export function asDerivative(
   args: UtilityAsDerivativeArgs,
   info: BaseTxInfo,

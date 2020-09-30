@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/util/constants"](_src_util_constants_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/util/constants"
 
 # Module: "src/util/constants"
 
@@ -6,48 +8,48 @@
 
 ### Variables
 
-* [EXTRINSIC_VERSION](_src_util_constants_.md#const-extrinsic_version)
-* [KUSAMA_SS58_FORMAT](_src_util_constants_.md#const-kusama_ss58_format)
-* [POLKADOT_SS58_FORMAT](_src_util_constants_.md#const-polkadot_ss58_format)
-* [WESTEND_SS58_FORMAT](_src_util_constants_.md#const-westend_ss58_format)
+* [EXTRINSIC\_VERSION](_src_util_constants_.md#extrinsic_version)
+* [KUSAMA\_SS58\_FORMAT](_src_util_constants_.md#kusama_ss58_format)
+* [POLKADOT\_SS58\_FORMAT](_src_util_constants_.md#polkadot_ss58_format)
+* [WESTEND\_SS58\_FORMAT](_src_util_constants_.md#westend_ss58_format)
 
 ## Variables
 
-### `Const` EXTRINSIC_VERSION
+### EXTRINSIC\_VERSION
 
-• **EXTRINSIC_VERSION**: *4* = 4
+• `Const` **EXTRINSIC\_VERSION**: 4 = 4
 
-*Defined in [src/util/constants.ts:18](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/constants.ts#L18)*
+*Defined in [src/util/constants.ts:18](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/util/constants.ts#L18)*
 
 Latest extrinsic version.
 
 ___
 
-### `Const` KUSAMA_SS58_FORMAT
+### KUSAMA\_SS58\_FORMAT
 
-• **KUSAMA_SS58_FORMAT**: *2* = 2
+• `Const` **KUSAMA\_SS58\_FORMAT**: 2 = 2
 
-*Defined in [src/util/constants.ts:4](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/constants.ts#L4)*
+*Defined in [src/util/constants.ts:4](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/util/constants.ts#L4)*
 
 Prefix for SS58-encoded addresses on Kusama.
 
 ___
 
-### `Const` POLKADOT_SS58_FORMAT
+### POLKADOT\_SS58\_FORMAT
 
-• **POLKADOT_SS58_FORMAT**: *0* = 0
+• `Const` **POLKADOT\_SS58\_FORMAT**: 0 = 0
 
-*Defined in [src/util/constants.ts:8](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/constants.ts#L8)*
+*Defined in [src/util/constants.ts:8](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/util/constants.ts#L8)*
 
 Prefix for SS58-encoded addresses on Polkadot.
 
 ___
 
-### `Const` WESTEND_SS58_FORMAT
+### WESTEND\_SS58\_FORMAT
 
-• **WESTEND_SS58_FORMAT**: *42* = 42
+• `Const` **WESTEND\_SS58\_FORMAT**: 42 = 42
 
-*Defined in [src/util/constants.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/constants.ts#L13)*
+*Defined in [src/util/constants.ts:13](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/util/constants.ts#L13)*
 
 Prefix for SS58-encoded addresses on Westend.
 Also the default for Substrate-based chains.

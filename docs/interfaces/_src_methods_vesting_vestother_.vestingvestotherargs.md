@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/vesting/vestOther"](../modules/_src_methods_vesting_vestother_.md) › [VestingVestOtherArgs](_src_methods_vesting_vestother_.vestingvestotherargs.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/vesting/vestOther"](../modules/_src_methods_vesting_vestother_.md) / VestingVestOtherArgs
 
 # Interface: VestingVestOtherArgs
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **VestingVestOtherArgs**
 
@@ -16,11 +18,11 @@
 
 ## Properties
 
-###  target
+### target
 
-• **target**: *string*
+•  **target**: string
 
-*Defined in [src/methods/vesting/vestOther.ts:14](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/vesting/vestOther.ts#L14)*
+*Defined in [src/methods/vesting/vestOther.ts:14](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/vesting/vestOther.ts#L14)*
 
 The account whose vested funds should be unlocked. Must have funds still
 locked under this module.

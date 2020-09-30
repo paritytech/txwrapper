@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/poll/vote"](../modules/_src_methods_poll_vote_.md) › [PollVoteArgs](_src_methods_poll_vote_.pollvoteargs.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/poll/vote"](../modules/_src_methods_poll_vote_.md) / PollVoteArgs
 
 # Interface: PollVoteArgs
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **PollVoteArgs**
 
@@ -16,10 +18,10 @@
 
 ## Properties
 
-###  approvals
+### approvals
 
-• **approvals**: *boolean[]*
+•  **approvals**: boolean[]
 
-*Defined in [src/methods/poll/vote.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/poll/vote.ts#L13)*
+*Defined in [src/methods/poll/vote.ts:13](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/poll/vote.ts#L13)*
 
 The options to vote for. Must be a boolean array of length 4.

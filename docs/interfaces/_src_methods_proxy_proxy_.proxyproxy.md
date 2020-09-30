@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/proxy/proxy"](../modules/_src_methods_proxy_proxy_.md) › [ProxyProxy](_src_methods_proxy_proxy_.proxyproxy.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/proxy/proxy"](../modules/_src_methods_proxy_proxy_.md) / ProxyProxy
 
 # Interface: ProxyProxy
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **ProxyProxy**
 
@@ -18,32 +20,32 @@
 
 ## Properties
 
-###  call
+### call
 
-• **call**: *object | string*
+•  **call**: { args?: undefined \| string ; callIndex?: undefined \| string  } \| string
 
-*Defined in [src/methods/proxy/proxy.ts:23](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/proxy.ts#L23)*
+*Defined in [src/methods/proxy/proxy.ts:23](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/proxy/proxy.ts#L23)*
 
 The call to be made by the `real` account.
 To take advantage of txwrapper methods, this could be UnsignedTransaction.method.
 
 ___
 
-###  forceProxyType
+### forceProxyType
 
-• **forceProxyType**: *string*
+•  **forceProxyType**: string
 
-*Defined in [src/methods/proxy/proxy.ts:18](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/proxy.ts#L18)*
+*Defined in [src/methods/proxy/proxy.ts:18](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/proxy/proxy.ts#L18)*
 
 Specify the exact proxy type to be used and checked for this call.
 
 ___
 
-###  real
+### real
 
-• **real**: *string*
+•  **real**: string
 
-*Defined in [src/methods/proxy/proxy.ts:14](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/proxy.ts#L14)*
+*Defined in [src/methods/proxy/proxy.ts:14](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/proxy/proxy.ts#L14)*
 
 Dispatch the given `call` from an account that the sender is authorized for
  through, `add_proxy`.

@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/system/remark"](_src_methods_system_remark_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/system/remark"
 
 # Module: "src/methods/system/remark"
 
@@ -14,15 +16,15 @@
 
 ## Functions
 
-###  remark
+### remark
 
-▸ **remark**(`args`: [SystemRemarkArgs](../interfaces/_src_methods_system_remark_.systemremarkargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **remark**(`args`: [SystemRemarkArgs](../interfaces/_src_methods_system_remark_.systemremarkargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/system/remark.ts:23](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/system/remark.ts#L23)*
+*Defined in [src/methods/system/remark.ts:23](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/system/remark.ts#L23)*
 
 Make some on-chain remark.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -30,4 +32,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

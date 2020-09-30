@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/vesting/vest"](_src_methods_vesting_vest_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/vesting/vest"
 
 # Module: "src/methods/vesting/vest"
 
@@ -10,20 +12,20 @@
 
 ## Functions
 
-###  vest
+### vest
 
-▸ **vest**(`args`: object, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **vest**(`args`: {}, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/vesting/vest.ts:15](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/vesting/vest.ts#L15)*
+*Defined in [src/methods/vesting/vest.ts:15](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/vesting/vest.ts#L15)*
 
 Unlock any vested funds of the sender account.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`args` | object | Arguments specific to this method. |
+`args` | {} | Arguments specific to this method. |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

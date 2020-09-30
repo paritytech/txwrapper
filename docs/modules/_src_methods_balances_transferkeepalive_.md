@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/balances/transferKeepAlive"](_src_methods_balances_transferkeepalive_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/balances/transferKeepAlive"
 
 # Module: "src/methods/balances/transferKeepAlive"
 
@@ -14,23 +16,23 @@
 
 ## Type aliases
 
-###  BalancesTransferKeepAliveArgs
+### BalancesTransferKeepAliveArgs
 
-Ƭ **BalancesTransferKeepAliveArgs**: *[BalancesTransferArgs](../interfaces/_src_methods_balances_transfer_.balancestransferargs.md)*
+Ƭ  **BalancesTransferKeepAliveArgs**: [BalancesTransferArgs](../interfaces/_src_methods_balances_transfer_.balancestransferargs.md)
 
-*Defined in [src/methods/balances/transferKeepAlive.ts:9](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/balances/transferKeepAlive.ts#L9)*
+*Defined in [src/methods/balances/transferKeepAlive.ts:9](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/balances/transferKeepAlive.ts#L9)*
 
 ## Functions
 
-###  transferKeepAlive
+### transferKeepAlive
 
-▸ **transferKeepAlive**(`args`: [BalancesTransferKeepAliveArgs](_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **transferKeepAlive**(`args`: [BalancesTransferKeepAliveArgs](_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/balances/transferKeepAlive.ts:18](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/balances/transferKeepAlive.ts#L18)*
+*Defined in [src/methods/balances/transferKeepAlive.ts:18](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/balances/transferKeepAlive.ts#L18)*
 
 Construct a balance transfer transaction offline.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -38,4 +40,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

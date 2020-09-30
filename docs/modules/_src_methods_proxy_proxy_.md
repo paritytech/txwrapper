@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/proxy/proxy"](_src_methods_proxy_proxy_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/proxy/proxy"
 
 # Module: "src/methods/proxy/proxy"
 
@@ -14,15 +16,15 @@
 
 ## Functions
 
-###  proxy
+### proxy
 
-▸ **proxy**(`args`: [ProxyProxy](../interfaces/_src_methods_proxy_proxy_.proxyproxy.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **proxy**(`args`: [ProxyProxy](../interfaces/_src_methods_proxy_proxy_.proxyproxy.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/proxy.ts#L33)*
+*Defined in [src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/proxy/proxy.ts#L33)*
 
 Dispatch the given `call` from an account for which the sender is authorized.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -30,4 +32,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

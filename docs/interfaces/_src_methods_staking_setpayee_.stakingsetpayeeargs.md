@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/staking/setPayee"](../modules/_src_methods_staking_setpayee_.md) › [StakingSetPayeeArgs](_src_methods_staking_setpayee_.stakingsetpayeeargs.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/staking/setPayee"](../modules/_src_methods_staking_setpayee_.md) / StakingSetPayeeArgs
 
 # Interface: StakingSetPayeeArgs
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **StakingSetPayeeArgs**
 
@@ -16,10 +18,10 @@
 
 ## Properties
 
-###  payee
+### payee
 
-• **payee**: *string*
+•  **payee**: string
 
-*Defined in [src/methods/staking/setPayee.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/staking/setPayee.ts#L13)*
+*Defined in [src/methods/staking/setPayee.ts:13](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/staking/setPayee.ts#L13)*
 
 The `RewardDestination`. It can be one of 'Staking', 'Stash', or 'Controller'.

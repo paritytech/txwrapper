@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/democracy/vote"](_src_methods_democracy_vote_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/democracy/vote"
 
 # Module: "src/methods/democracy/vote"
 
@@ -14,15 +16,15 @@
 
 ## Functions
 
-###  vote
+### vote
 
-▸ **vote**(`args`: [DemocracyVoteArgs](../interfaces/_src_methods_democracy_vote_.democracyvoteargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **vote**(`args`: [DemocracyVoteArgs](../interfaces/_src_methods_democracy_vote_.democracyvoteargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/democracy/vote.ts:28](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/democracy/vote.ts#L28)*
+*Defined in [src/methods/democracy/vote.ts:28](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/democracy/vote.ts#L28)*
 
 Vote in a referendum.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -30,4 +32,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

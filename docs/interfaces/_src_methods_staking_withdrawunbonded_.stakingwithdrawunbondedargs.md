@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/staking/withdrawUnbonded"](../modules/_src_methods_staking_withdrawunbonded_.md) › [StakingWithdrawUnbondedArgs](_src_methods_staking_withdrawunbonded_.stakingwithdrawunbondedargs.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/staking/withdrawUnbonded"](../modules/_src_methods_staking_withdrawunbonded_.md) / StakingWithdrawUnbondedArgs
 
 # Interface: StakingWithdrawUnbondedArgs
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **StakingWithdrawUnbondedArgs**
 
@@ -16,8 +18,8 @@
 
 ## Properties
 
-###  numSlashingSpans
+### numSlashingSpans
 
-• **numSlashingSpans**: *number*
+•  **numSlashingSpans**: number
 
-*Defined in [src/methods/staking/withdrawUnbonded.ts:10](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/staking/withdrawUnbonded.ts#L10)*
+*Defined in [src/methods/staking/withdrawUnbonded.ts:10](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/staking/withdrawUnbonded.ts#L10)*

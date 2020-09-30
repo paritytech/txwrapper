@@ -26,6 +26,18 @@ export interface ProxyProxyAnnouncedArgs extends Args {
   call: { callIndex?: string; args?: string } | string;
 }
 
+/**
+ * Dispatch the given `call` from an account that the sender is authorised for through
+ * `add_proxy`.
+ *
+ * Removes any corresponding announcement(s).
+ *
+ * The dispatch origin for this call must be _Signed_.
+ *
+ * @param args
+ * @param info
+ * @param options
+ */
 export function proxyAnnounced(
   args: ProxyProxyAnnouncedArgs,
   info: BaseTxInfo,

@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/staking/payoutStakers"](_src_methods_staking_payoutstakers_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/staking/payoutStakers"
 
 # Module: "src/methods/staking/payoutStakers"
 
@@ -14,11 +16,11 @@
 
 ## Functions
 
-###  payoutStakers
+### payoutStakers
 
-▸ **payoutStakers**(`args`: [StakingPayoutStakersArgs](../interfaces/_src_methods_staking_payoutstakers_.stakingpayoutstakersargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **payoutStakers**(`args`: [StakingPayoutStakersArgs](../interfaces/_src_methods_staking_payoutstakers_.stakingpayoutstakersargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/staking/payoutStakers.ts:34](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/staking/payoutStakers.ts#L34)*
+*Defined in [src/methods/staking/payoutStakers.ts:34](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/staking/payoutStakers.ts#L34)*
 
 Pay out all the stakers behind a single validator for a single era.
 
@@ -26,7 +28,7 @@ Any account can call this function, even if it is not one of the stakers.
 
 Can only be called when `EraElectionStatus` is `Closed`.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -34,4 +36,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

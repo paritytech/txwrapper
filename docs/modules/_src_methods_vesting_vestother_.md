@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/vesting/vestOther"](_src_methods_vesting_vestother_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/vesting/vestOther"
 
 # Module: "src/methods/vesting/vestOther"
 
@@ -14,15 +16,15 @@
 
 ## Functions
 
-###  vestOther
+### vestOther
 
-▸ **vestOther**(`args`: [VestingVestOtherArgs](../interfaces/_src_methods_vesting_vestother_.vestingvestotherargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **vestOther**(`args`: [VestingVestOtherArgs](../interfaces/_src_methods_vesting_vestother_.vestingvestotherargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/vesting/vestOther.ts:24](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/vesting/vestOther.ts#L24)*
+*Defined in [src/methods/vesting/vestOther.ts:24](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/vesting/vestOther.ts#L24)*
 
 Unlock any vested funds of a `target` account.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -30,4 +32,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

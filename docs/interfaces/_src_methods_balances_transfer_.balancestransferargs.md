@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/balances/transfer"](../modules/_src_methods_balances_transfer_.md) › [BalancesTransferArgs](_src_methods_balances_transfer_.balancestransferargs.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/balances/transfer"](../modules/_src_methods_balances_transfer_.md) / BalancesTransferArgs
 
 # Interface: BalancesTransferArgs
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **BalancesTransferArgs**
 
@@ -17,20 +19,20 @@
 
 ## Properties
 
-###  dest
+### dest
 
-• **dest**: *string*
+•  **dest**: string
 
-*Defined in [src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/balances/transfer.ts#L13)*
+*Defined in [src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/balances/transfer.ts#L13)*
 
 The recipient address, SS-58 encoded.
 
 ___
 
-###  value
+### value
 
-• **value**: *number | string*
+•  **value**: number \| string
 
-*Defined in [src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/balances/transfer.ts#L17)*
+*Defined in [src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/balances/transfer.ts#L17)*
 
 The amount to send.

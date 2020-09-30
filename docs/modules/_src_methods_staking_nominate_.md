@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/staking/nominate"](_src_methods_staking_nominate_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/staking/nominate"
 
 # Module: "src/methods/staking/nominate"
 
@@ -14,17 +16,17 @@
 
 ## Functions
 
-###  nominate
+### nominate
 
-▸ **nominate**(`args`: [StakingNominateArgs](../interfaces/_src_methods_staking_nominate_.stakingnominateargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **nominate**(`args`: [StakingNominateArgs](../interfaces/_src_methods_staking_nominate_.stakingnominateargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/staking/nominate.ts:28](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/staking/nominate.ts#L28)*
+*Defined in [src/methods/staking/nominate.ts:28](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/staking/nominate.ts#L28)*
 
 Construct a transaction to nominate. This must be called by the _Controller_ account.
 
 Can only be called when `EraElectionStatus` is `Closed`.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -32,4 +34,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

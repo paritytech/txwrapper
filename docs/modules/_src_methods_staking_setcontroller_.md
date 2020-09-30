@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/staking/setController"](_src_methods_staking_setcontroller_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/staking/setController"
 
 # Module: "src/methods/staking/setController"
 
@@ -14,16 +16,16 @@
 
 ## Functions
 
-###  setController
+### setController
 
-▸ **setController**(`args`: [StakingSetControllerArgs](../interfaces/_src_methods_staking_setcontroller_.stakingsetcontrollerargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **setController**(`args`: [StakingSetControllerArgs](../interfaces/_src_methods_staking_setcontroller_.stakingsetcontrollerargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/staking/setController.ts:24](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/staking/setController.ts#L24)*
+*Defined in [src/methods/staking/setController.ts:24](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/staking/setController.ts#L24)*
 
 (Re-)set the controller of a stash. Effects will be felt at the beginning of
 the next era.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -31,4 +33,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

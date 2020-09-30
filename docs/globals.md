@@ -1,4 +1,6 @@
-[@substrate/txwrapper](README.md) › [Globals](globals.md)
+**@substrate/txwrapper**
+
+> [README](README.md) / Globals
 
 # @substrate/txwrapper
 
@@ -25,7 +27,9 @@
 * ["src/methods/democracy/vote"](modules/_src_methods_democracy_vote_.md)
 * ["src/methods/poll/vote"](modules/_src_methods_poll_vote_.md)
 * ["src/methods/proxy/addProxy"](modules/_src_methods_proxy_addproxy_.md)
+* ["src/methods/proxy/announce"](modules/_src_methods_proxy_announce_.md)
 * ["src/methods/proxy/proxy"](modules/_src_methods_proxy_proxy_.md)
+* ["src/methods/proxy/proxyAnnounced"](modules/_src_methods_proxy_proxyannounced_.md)
 * ["src/methods/proxy/rejectAnnouncement"](modules/_src_methods_proxy_rejectannouncement_.md)
 * ["src/methods/proxy/removeProxies"](modules/_src_methods_proxy_removeproxies_.md)
 * ["src/methods/proxy/removeProxy"](modules/_src_methods_proxy_removeproxy_.md)
@@ -44,6 +48,7 @@
 * ["src/methods/staking/validate"](modules/_src_methods_staking_validate_.md)
 * ["src/methods/staking/withdrawUnbonded"](modules/_src_methods_staking_withdrawunbonded_.md)
 * ["src/methods/system/remark"](modules/_src_methods_system_remark_.md)
+* ["src/methods/utility/asDerivative"](modules/_src_methods_utility_asderivative_.md)
 * ["src/methods/utility/batch"](modules/_src_methods_utility_batch_.md)
 * ["src/methods/vesting/vest"](modules/_src_methods_vesting_vest_.md)
 * ["src/methods/vesting/vestOther"](modules/_src_methods_vesting_vestother_.md)

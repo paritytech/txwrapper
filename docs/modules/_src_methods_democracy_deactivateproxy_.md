@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/democracy/deactivateProxy"](_src_methods_democracy_deactivateproxy_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/democracy/deactivateProxy"
 
 # Module: "src/methods/democracy/deactivateProxy"
 
@@ -14,18 +16,18 @@
 
 ## Functions
 
-###  deactivateProxy
+### deactivateProxy
 
-▸ **deactivateProxy**(`args`: [DemocracyDeactivateProxyArgs](../interfaces/_src_methods_democracy_deactivateproxy_.democracydeactivateproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **deactivateProxy**(`args`: [DemocracyDeactivateProxyArgs](../interfaces/_src_methods_democracy_deactivateproxy_.democracydeactivateproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/democracy/deactivateProxy.ts:25](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/democracy/deactivateProxy.ts#L25)*
+*Defined in [src/methods/democracy/deactivateProxy.ts:25](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/democracy/deactivateProxy.ts#L25)*
 
 Deactivate the proxy, but leave open to this account. Called by the stash.
 The proxy must already be active.
 
 **`deprecated`** Update to the latest version of Substrate to use the proxy pallet.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -33,4 +35,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method. |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

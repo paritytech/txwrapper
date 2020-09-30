@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/session/setKeys"](../modules/_src_methods_session_setkeys_.md) › [SessionSetKeysArgs](_src_methods_session_setkeys_.sessionsetkeysargs.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/session/setKeys"](../modules/_src_methods_session_setkeys_.md) / SessionSetKeysArgs
 
 # Interface: SessionSetKeysArgs
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **SessionSetKeysArgs**
 
@@ -13,24 +15,24 @@
 ### Properties
 
 * [keys](_src_methods_session_setkeys_.sessionsetkeysargs.md#keys)
-* [proof](_src_methods_session_setkeys_.sessionsetkeysargs.md#optional-proof)
+* [proof](_src_methods_session_setkeys_.sessionsetkeysargs.md#proof)
 
 ## Properties
 
-###  keys
+### keys
 
-• **keys**: *string[]*
+•  **keys**: string[]
 
-*Defined in [src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/session/setKeys.ts#L13)*
+*Defined in [src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/session/setKeys.ts#L13)*
 
 The 5 keys to set.
 
 ___
 
-### `Optional` proof
+### proof
 
-• **proof**? : *undefined | string*
+• `Optional` **proof**: undefined \| string
 
-*Defined in [src/methods/session/setKeys.ts:17](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/session/setKeys.ts#L17)*
+*Defined in [src/methods/session/setKeys.ts:17](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/session/setKeys.ts#L17)*
 
 Proof (unused for now).

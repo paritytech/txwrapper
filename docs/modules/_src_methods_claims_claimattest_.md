@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/claims/claimAttest"](_src_methods_claims_claimattest_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/claims/claimAttest"
 
 # Module: "src/methods/claims/claimAttest"
 
@@ -14,17 +16,17 @@
 
 ## Functions
 
-###  claimAttest
+### claimAttest
 
-▸ **claimAttest**(`args`: [ClaimsClaimAttestArgs](../interfaces/_src_methods_claims_claimattest_.claimsclaimattestargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **claimAttest**(`args`: [ClaimsClaimAttestArgs](../interfaces/_src_methods_claims_claimattest_.claimsclaimattestargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/claims/claimAttest.ts:35](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/claims/claimAttest.ts#L35)*
+*Defined in [src/methods/claims/claimAttest.ts:35](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/claims/claimAttest.ts#L35)*
 
 Make a claim to collect your DOTs by signing a statement.
 
 The dispatch origin for this call must be _None_.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -32,4 +34,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

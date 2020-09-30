@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/democracy/vote"](../modules/_src_methods_democracy_vote_.md) › [DemocracyVoteArgs](_src_methods_democracy_vote_.democracyvoteargs.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/democracy/vote"](../modules/_src_methods_democracy_vote_.md) / DemocracyVoteArgs
 
 # Interface: DemocracyVoteArgs
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **DemocracyVoteArgs**
 
@@ -17,18 +19,18 @@
 
 ## Properties
 
-###  refIndex
+### refIndex
 
-• **refIndex**: *number*
+•  **refIndex**: number
 
-*Defined in [src/methods/democracy/vote.ts:14](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/democracy/vote.ts#L14)*
+*Defined in [src/methods/democracy/vote.ts:14](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/democracy/vote.ts#L14)*
 
 ___
 
-###  vote
+### vote
 
-• **vote**: *[AccountVote](../modules/_src_methods_democracy_types_.md#accountvote)*
+•  **vote**: [AccountVote](../modules/_src_methods_democracy_types_.md#accountvote)
 
-*Defined in [src/methods/democracy/vote.ts:18](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/democracy/vote.ts#L18)*
+*Defined in [src/methods/democracy/vote.ts:18](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/democracy/vote.ts#L18)*
 
 Vote.

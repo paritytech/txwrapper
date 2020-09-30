@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/staking/setController"](../modules/_src_methods_staking_setcontroller_.md) › [StakingSetControllerArgs](_src_methods_staking_setcontroller_.stakingsetcontrollerargs.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/staking/setController"](../modules/_src_methods_staking_setcontroller_.md) / StakingSetControllerArgs
 
 # Interface: StakingSetControllerArgs
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **StakingSetControllerArgs**
 
@@ -16,10 +18,10 @@
 
 ## Properties
 
-###  controller
+### controller
 
-• **controller**: *string*
+•  **controller**: string
 
-*Defined in [src/methods/staking/setController.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/staking/setController.ts#L13)*
+*Defined in [src/methods/staking/setController.ts:13](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/staking/setController.ts#L13)*
 
 The SS-58 encoded controller address.

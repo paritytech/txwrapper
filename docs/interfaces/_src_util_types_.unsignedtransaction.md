@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/util/types"](../modules/_src_util_types_.md) › [UnsignedTransaction](_src_util_types_.unsignedtransaction.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/util/types"](../modules/_src_util_types_.md) / UnsignedTransaction
 
 # Interface: UnsignedTransaction
 
@@ -30,155 +32,155 @@ JSON format for an unsigned transaction.
 
 ## Properties
 
-###  address
+### address
 
-• **address**: *string*
+•  **address**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[address](_src_util_types_.unsignedtransaction.md#address)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:101
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:24*
 
 **`description`** The ss-58 encoded address
 
 ___
 
-###  blockHash
+### blockHash
 
-• **blockHash**: *string*
+•  **blockHash**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[blockHash](_src_util_types_.unsignedtransaction.md#blockhash)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:105
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:28*
 
 **`description`** The checkpoint hash of the block, in hex
 
 ___
 
-###  blockNumber
+### blockNumber
 
-• **blockNumber**: *string*
+•  **blockNumber**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[blockNumber](_src_util_types_.unsignedtransaction.md#blocknumber)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:109
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:32*
 
 **`description`** The checkpoint block number, in hex
 
 ___
 
-###  era
+### era
 
-• **era**: *string*
+•  **era**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[era](_src_util_types_.unsignedtransaction.md#era)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:113
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:36*
 
 **`description`** The era for this transaction, in hex
 
 ___
 
-###  genesisHash
+### genesisHash
 
-• **genesisHash**: *string*
+•  **genesisHash**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[genesisHash](_src_util_types_.unsignedtransaction.md#genesishash)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:117
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:40*
 
 **`description`** The genesis hash of the chain, in hex
 
 ___
 
-###  metadataRpc
+### metadataRpc
 
-• **metadataRpc**: *string*
+•  **metadataRpc**: string
 
-*Defined in [src/util/types.ts:12](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/types.ts#L12)*
+*Defined in [src/util/types.ts:12](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/util/types.ts#L12)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
 
 ___
 
-###  method
+### method
 
-• **method**: *string*
+•  **method**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[method](_src_util_types_.unsignedtransaction.md#method)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:121
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:44*
 
 **`description`** The encoded method (with arguments) in hex
 
 ___
 
-###  nonce
+### nonce
 
-• **nonce**: *string*
+•  **nonce**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[nonce](_src_util_types_.unsignedtransaction.md#nonce)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:125
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:48*
 
 **`description`** The nonce for this transaction, in hex
 
 ___
 
-###  signedExtensions
+### signedExtensions
 
-• **signedExtensions**: *string[]*
+•  **signedExtensions**: string[]
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[signedExtensions](_src_util_types_.unsignedtransaction.md#signedextensions)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:141
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:64*
 
 **`description`** The applicable signed extensions for this runtime
 
 ___
 
-###  specVersion
+### specVersion
 
-• **specVersion**: *string*
+•  **specVersion**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[specVersion](_src_util_types_.unsignedtransaction.md#specversion)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:129
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:52*
 
 **`description`** The current spec version for the runtime
 
 ___
 
-###  tip
+### tip
 
-• **tip**: *string*
+•  **tip**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[tip](_src_util_types_.unsignedtransaction.md#tip)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:133
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:56*
 
 **`description`** The tip for this transaction, in hex
 
 ___
 
-###  transactionVersion
+### transactionVersion
 
-• **transactionVersion**: *string*
+•  **transactionVersion**: string
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[transactionVersion](_src_util_types_.unsignedtransaction.md#transactionversion)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:137
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:60*
 
 **`description`** The current transaction version for the runtime
 
 ___
 
-###  version
+### version
 
-• **version**: *number*
+•  **version**: number
 
 *Inherited from [UnsignedTransaction](_src_util_types_.unsignedtransaction.md).[version](_src_util_types_.unsignedtransaction.md#version)*
 
-Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:145
+*Defined in node_modules/@polkadot/types/types/extrinsic.d.ts:68*
 
 **`description`** The version of the extrinsic we are dealing with
