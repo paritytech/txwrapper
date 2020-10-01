@@ -8,7 +8,7 @@ import { transfer } from '../balances/transfer';
 import { asDerivative } from './asDerivative';
 
 describe('utility::asDerivative', () => {
-  it('should workd', () => {
+  it('should work', () => {
     const unsignedBalancesTransfer = transfer(
       TEST_METHOD_ARGS.balances.transfer,
       TEST_BASE_TX_INFO,
