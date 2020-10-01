@@ -23,7 +23,7 @@
 
 •  **dest**: string
 
-*Defined in [src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/balances/transfer.ts#L13)*
+*Defined in [src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/balances/transfer.ts#L13)*
 
 The recipient address, SS-58 encoded.
 
@@ -33,6 +33,6 @@ ___
 
 •  **value**: number \| string
 
-*Defined in [src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/balances/transfer.ts#L17)*
+*Defined in [src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/balances/transfer.ts#L17)*
 
 The amount to send.

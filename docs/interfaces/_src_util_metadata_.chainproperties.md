@@ -24,7 +24,7 @@ JSON object of ChainProperties codec from `@polkadot/api`.
 
 •  **ss58Format**: number
 
-*Defined in [src/util/metadata.ts:16](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/util/metadata.ts#L16)*
+*Defined in [src/util/metadata.ts:16](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/metadata.ts#L16)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 •  **tokenDecimals**: number
 
-*Defined in [src/util/metadata.ts:17](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/util/metadata.ts#L17)*
+*Defined in [src/util/metadata.ts:17](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/metadata.ts#L17)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 •  **tokenSymbol**: string
 
-*Defined in [src/util/metadata.ts:18](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/util/metadata.ts#L18)*
+*Defined in [src/util/metadata.ts:18](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/metadata.ts#L18)*

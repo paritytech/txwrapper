@@ -20,14 +20,17 @@
 
 ▸ **announce**(`args`: [ProxyAnnounceArgs](../interfaces/_src_methods_proxy_announce_.proxyannounceargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/proxy/announce.ts:37](https://github.com/paritytech/txwrapper/blob/5c4d9c5/src/methods/proxy/announce.ts#L37)*
+*Defined in [src/methods/proxy/announce.ts:40](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/proxy/announce.ts#L40)*
 
 Publish the hash of a proxy-call that will be made in the future.
 
-This must be called some number of blocks before the corresponding `proxy` is attempted
-if the delay associated with the proxy relationship is greater than zero.
+This must be called `ProxyDefinition.delay` blocks before the corresponding
+`proxy` is attempted if the delay associated with the proxy relationship is
+greater than zero. When a `ProxyDefinition.delay` is 0 `announce` is not neccesary
+and `proxy` can be called at any time.
 
-No more than `MaxPending` announcements may be made at any one time.
+No more than `MaxPending` announcements may be made at any one time. On Kusama and Polkadot
+`MaxPending` is set to 32.
 
 This will take a deposit of `AnnouncementDepositFactor` as well as
 `AnnouncementDepositBase` if there are no other pending announcements.
