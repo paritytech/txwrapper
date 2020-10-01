@@ -23,7 +23,7 @@ export interface UtilityAsDerivativeArgs extends Args {
  * Send a call through an indexed pseudonym of the sender.
  *
  * Proxy filters from the origin are passed along. The call will be dispatched
- * with an origin which uses the same proxy filter as the origin of this call.
+ * with an origin which uses the same proxy filters as the origin of this call.
  *
  * NOTE: If you need to ensure that any account-based filtering is not honored (i.e.
  * because you expect `proxy` to have been used prior in the call stack and you do not want
