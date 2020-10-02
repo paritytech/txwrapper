@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/util/types"](../modules/_src_util_types_.md) › [OptionsWithMeta](_src_util_types_.optionswithmeta.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/util/types"](../modules/_src_util_types_.md) / OptionsWithMeta
 
 # Interface: OptionsWithMeta
 
@@ -20,22 +22,22 @@ options to functions that require registry and metadata.
 
 ## Properties
 
-###  metadataRpc
+### metadataRpc
 
-• **metadataRpc**: *string*
+•  **metadataRpc**: string
 
-*Defined in [src/util/types.ts:94](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/types.ts#L94)*
+*Defined in [src/util/types.ts:94](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/types.ts#L94)*
 
 The metadata of the runtime.
 
 ___
 
-###  registry
+### registry
 
-• **registry**: *TypeRegistry*
+•  **registry**: TypeRegistry
 
 *Inherited from [Options](_src_util_types_.options.md).[registry](_src_util_types_.options.md#registry)*
 
-*Defined in [src/util/types.ts:83](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/types.ts#L83)*
+*Defined in [src/util/types.ts:83](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/types.ts#L83)*
 
 The type registry of the runtime.

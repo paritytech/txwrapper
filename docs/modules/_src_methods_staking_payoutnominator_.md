@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/staking/payoutNominator"](_src_methods_staking_payoutnominator_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/staking/payoutNominator"
 
 # Module: "src/methods/staking/payoutNominator"
 
@@ -14,11 +16,11 @@
 
 ## Functions
 
-###  payoutNominator
+### payoutNominator
 
-▸ **payoutNominator**(`args`: [StakingPayoutNominatorArgs](../interfaces/_src_methods_staking_payoutnominator_.stakingpayoutnominatorargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **payoutNominator**(`args`: [StakingPayoutNominatorArgs](../interfaces/_src_methods_staking_payoutnominator_.stakingpayoutnominatorargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/staking/payoutNominator.ts:36](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/staking/payoutNominator.ts#L36)*
+*Defined in [src/methods/staking/payoutNominator.ts:36](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/staking/payoutNominator.ts#L36)*
 
 Make one nominator's payout for one era.
 WARNING: once an era is payed for a validator such validator can't claim the
@@ -27,7 +29,7 @@ WARNING: Incorrect arguments here can result in loss of payout. Be very careful.
 
 **`deprecated`** Update to the latest version of Substrate to use `staking.payoutStakers` instead.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -35,4 +37,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method. |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

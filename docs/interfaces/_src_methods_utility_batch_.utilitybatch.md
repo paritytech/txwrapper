@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/utility/batch"](../modules/_src_methods_utility_batch_.md) › [UtilityBatch](_src_methods_utility_batch_.utilitybatch.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/utility/batch"](../modules/_src_methods_utility_batch_.md) / UtilityBatch
 
 # Interface: UtilityBatch
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **UtilityBatch**
 
@@ -16,11 +18,11 @@
 
 ## Properties
 
-###  calls
+### calls
 
-• **calls**: *(string | object)[]*
+•  **calls**: ({ args?: undefined \| string ; callIndex?: undefined \| string  } \| string)[]
 
-*Defined in [src/methods/utility/batch.ts:15](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/utility/batch.ts#L15)*
+*Defined in [src/methods/utility/batch.ts:15](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/utility/batch.ts#L15)*
 
 The calls to be dispatched from the same origin.
 To take advantage of txwrapper methods, this could be an array of

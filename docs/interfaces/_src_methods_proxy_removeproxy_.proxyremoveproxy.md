@@ -1,10 +1,12 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/proxy/removeProxy"](../modules/_src_methods_proxy_removeproxy_.md) › [ProxyRemoveProxy](_src_methods_proxy_removeproxy_.proxyremoveproxy.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/methods/proxy/removeProxy"](../modules/_src_methods_proxy_removeproxy_.md) / ProxyRemoveProxy
 
 # Interface: ProxyRemoveProxy
 
 ## Hierarchy
 
-* object
+* {}
 
   ↳ **ProxyRemoveProxy**
 
@@ -18,30 +20,30 @@
 
 ## Properties
 
-###  delay
+### delay
 
-• **delay**: *string | number*
+•  **delay**: string \| number
 
-*Defined in [src/methods/proxy/removeProxy.ts:21](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/removeProxy.ts#L21)*
+*Defined in [src/methods/proxy/removeProxy.ts:21](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/proxy/removeProxy.ts#L21)*
 
 The delay of the proxy to remove.
 
 ___
 
-###  delegate
+### delegate
 
-• **delegate**: *string*
+•  **delegate**: string
 
-*Defined in [src/methods/proxy/removeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/removeProxy.ts#L13)*
+*Defined in [src/methods/proxy/removeProxy.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/proxy/removeProxy.ts#L13)*
 
 The account that the `caller` would like to unregister.
 
 ___
 
-###  proxyType
+### proxyType
 
-• **proxyType**: *string*
+•  **proxyType**: string
 
-*Defined in [src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/proxy/removeProxy.ts#L17)*
+*Defined in [src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/proxy/removeProxy.ts#L17)*
 
 The permissions currently enabled for the target proxy account.

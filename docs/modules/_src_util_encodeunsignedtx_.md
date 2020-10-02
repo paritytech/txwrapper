@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/util/encodeUnsignedTx"](_src_util_encodeunsignedtx_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/util/encodeUnsignedTx"
 
 # Module: "src/util/encodeUnsignedTx"
 
@@ -10,19 +12,19 @@
 
 ## Functions
 
-###  encodeUnsignedTransaction
+### encodeUnsignedTransaction
 
-▸ **encodeUnsignedTransaction**(`unsigned`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `options`: [Options](../interfaces/_src_util_types_.options.md)): *string*
+▸ **encodeUnsignedTransaction**(`unsigned`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `options`: [Options](../interfaces/_src_util_types_.options.md)): string
 
-*Defined in [src/util/encodeUnsignedTx.ts:9](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/encodeUnsignedTx.ts#L9)*
+*Defined in [src/util/encodeUnsignedTx.ts:9](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/encodeUnsignedTx.ts#L9)*
 
 Encode an unsigned transaction to submit.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
 `unsigned` | [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md) | An Unsigned Transaction that will be encoded. |
 `options` | [Options](../interfaces/_src_util_types_.options.md) | Registry used for constructing the payload.  |
 
-**Returns:** *string*
+**Returns:** string

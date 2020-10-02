@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/util/metadata"](../modules/_src_util_metadata_.md) › [ChainProperties](_src_util_metadata_.chainproperties.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / ["src/util/metadata"](../modules/_src_util_metadata_.md) / ChainProperties
 
 # Interface: ChainProperties
 
@@ -18,24 +20,24 @@ JSON object of ChainProperties codec from `@polkadot/api`.
 
 ## Properties
 
-###  ss58Format
+### ss58Format
 
-• **ss58Format**: *number*
+•  **ss58Format**: number
 
-*Defined in [src/util/metadata.ts:16](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/metadata.ts#L16)*
-
-___
-
-###  tokenDecimals
-
-• **tokenDecimals**: *number*
-
-*Defined in [src/util/metadata.ts:17](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/metadata.ts#L17)*
+*Defined in [src/util/metadata.ts:16](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/metadata.ts#L16)*
 
 ___
 
-###  tokenSymbol
+### tokenDecimals
 
-• **tokenSymbol**: *string*
+•  **tokenDecimals**: number
 
-*Defined in [src/util/metadata.ts:18](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/util/metadata.ts#L18)*
+*Defined in [src/util/metadata.ts:17](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/metadata.ts#L17)*
+
+___
+
+### tokenSymbol
+
+•  **tokenSymbol**: string
+
+*Defined in [src/util/metadata.ts:18](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/metadata.ts#L18)*

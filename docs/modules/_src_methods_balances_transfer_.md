@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/balances/transfer"](_src_methods_balances_transfer_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/balances/transfer"
 
 # Module: "src/methods/balances/transfer"
 
@@ -14,15 +16,15 @@
 
 ## Functions
 
-###  transfer
+### transfer
 
-▸ **transfer**(`args`: [BalancesTransferArgs](../interfaces/_src_methods_balances_transfer_.balancestransferargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **transfer**(`args`: [BalancesTransferArgs](../interfaces/_src_methods_balances_transfer_.balancestransferargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/balances/transfer.ts:27](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/balances/transfer.ts#L27)*
+*Defined in [src/methods/balances/transfer.ts:27](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/balances/transfer.ts#L27)*
 
 Construct a balance transfer transaction offline.
 
-**Parameters:**
+#### Parameters:
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -30,4 +32,4 @@ Name | Type | Description |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) | Information required to construct the transaction. |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)

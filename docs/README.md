@@ -1,6 +1,6 @@
-[@substrate/txwrapper](README.md) › [Globals](globals.md)
+**@substrate/txwrapper**
 
-# @substrate/txwrapper
+> README / [Globals](globals.md)
 
 <br /><br />
 

@@ -1,4 +1,6 @@
-[@substrate/txwrapper](../README.md) › [Globals](../globals.md) › ["src/methods/utility/batch"](_src_methods_utility_batch_.md)
+**@substrate/txwrapper**
+
+> [README](../README.md) / [Globals](../globals.md) / "src/methods/utility/batch"
 
 # Module: "src/methods/utility/batch"
 
@@ -14,13 +16,13 @@
 
 ## Functions
 
-###  batch
+### batch
 
-▸ **batch**(`args`: [UtilityBatch](../interfaces/_src_methods_utility_batch_.utilitybatch.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+▸ **batch**(`args`: [UtilityBatch](../interfaces/_src_methods_utility_batch_.utilitybatch.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper/blob/6ef1ba4/src/methods/utility/batch.ts#L18)*
+*Defined in [src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/utility/batch.ts#L18)*
 
-**Parameters:**
+#### Parameters:
 
 Name | Type |
 ------ | ------ |
@@ -28,4 +30,4 @@ Name | Type |
 `info` | [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md) |
 `options` | [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md) |
 
-**Returns:** *[UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)*
+**Returns:** [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
