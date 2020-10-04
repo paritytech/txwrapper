@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.10.0](https://github.com/paritytech/txwrapper/compare/v3.9.0...v3.10.0) (2020-10-04)
+
+
+### Features
+
+* Add `proxy.{proxyAnnounced, announce}`, `utility.asDerivative` ([#260](https://github.com/paritytech/txwrapper/issues/260)) ([360aa2e](https://github.com/paritytech/txwrapper/commit/360aa2ecc03ce5ada33f9557a2190d96840ca19d))
+
 ## [3.9.0](https://github.com/paritytech/txwrapper/compare/v3.8.1...v3.9.0) (2020-09-29)
 
 
