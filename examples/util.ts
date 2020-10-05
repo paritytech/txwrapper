@@ -6,7 +6,7 @@
  * @ignore Don't show this file in documentation.
  */ /** */
 
-import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
+import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import fetch from 'node-fetch';
 
 import { KeyringPair, OptionsWithMeta } from '../src';
@@ -61,7 +61,7 @@ export function signWith(
 
   const { signature } = registry
     .createType('ExtrinsicPayload', signingPayload, {
-      version: TRANSACTION_VERSION,
+      version: EXTRINSIC_VERSION,
     })
     .sign(pair);
 
