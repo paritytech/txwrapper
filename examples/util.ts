@@ -6,7 +6,7 @@
  * @ignore Don't show this file in documentation.
  */ /** */
 
-import { TRANSACTION_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
+import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import fetch from 'node-fetch';
 
 import { KeyringPair, OptionsWithMeta } from '../src';
@@ -19,7 +19,8 @@ import { createMetadata } from '../src/util';
  * @param params - The JSONRPC request params.
  */
 export function rpcToNode(method: string, params: any[] = []): Promise<any> {
-  return fetch('http://localhost:9933', {
+  // return fetch('http://localhost:9933', {
+  return fetch('http://localhost:2266', {
     body: JSON.stringify({
       id: 1,
       jsonrpc: '2.0',
@@ -61,7 +62,7 @@ export function signWith(
 
   const { signature } = registry
     .createType('ExtrinsicPayload', signingPayload, {
-      version: TRANSACTION_VERSION,
+      version: EXTRINSIC_VERSION,
     })
     .sign(pair);
 
