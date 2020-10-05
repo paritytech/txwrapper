@@ -19,8 +19,7 @@ import { createMetadata } from '../src/util';
  * @param params - The JSONRPC request params.
  */
 export function rpcToNode(method: string, params: any[] = []): Promise<any> {
-  // return fetch('http://localhost:9933', {
-  return fetch('http://localhost:2266', {
+  return fetch('http://localhost:9933', {
     body: JSON.stringify({
       id: 1,
       jsonrpc: '2.0',

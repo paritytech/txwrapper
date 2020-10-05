@@ -67,7 +67,7 @@ async function main(): Promise<void> {
       eraPeriod: 64,
       genesisHash,
       metadataRpc,
-      nonce: 4, // Assuming this is Alice's first tx on the chain
+      nonce: 0, // Assuming this is Alice's first tx on the chain
       specVersion,
       tip: 0,
       transactionVersion,
