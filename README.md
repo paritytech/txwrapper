@@ -67,13 +67,18 @@ We welcome contributions. Before submitting your PR, make sure to run the follow
 
 ### Note for Maintainers
 
-All the commits in this repo follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) spec. When merging a PR, make sure 1/ to use squash merge and 2/ that the title of the PR follows the Conventional Commits spec. This will make squash the PR into one conventional commit.
+All the commits in this repo follow the [Conventional Commits spec](https://www.conventionalcommits.org/en/v1.0.0/#summary). When merging a PR, make sure 1/ to
+use squash merge and 2/ that the title of the PR follows the Conventional Commits spec.
 
-The history of commits will be used to generate the [CHANGELOG](./CHANGELOG). To do so, run `yarn deploy` **on the master branch**. This command will look at all the commits since the latest tag, bump the package version according to semver rules, and generate a new CHANGELOG.
+The history of commits will be used to generate the `CHANGELOG`. To do so, run `yarn deploy` on the master
+branch. This command will look at all the commits since the latest tag, bump the package version according
+to semver rules, and generate a new `CHANGELOG`.
 
-There might be special cases where you don't want to follow semver. In this case, run `yarn deploy -r {major,minor,patch}`.
+If you don't want to follow semver or need to do a dry run, consult the [`standard-version` CLI usage](https://github.com/conventional-changelog/standard-version#cli-usag)
+docs. Flags for `standard-version` can be passed to `yarn deploy`.
 
-The above command, which only does local operations and doesn't push anything, will output more or less the following lines:
+`yarn deploy`, which only does local operations and doesn't push anything, will output more or
+less the following lines:
 
 ```bash
 $ yarn deploy
@@ -87,4 +92,20 @@ $ rimraf lib/ && tsc
 ℹ Run `git push --follow-tags origin master && npm publish` to publish
 ```
 
-To publish the new package, just follow the instructions: `git push --follow-tags origin master && npm publish`. You must have access to the `@substrate` organization on npm to be able to publish.
+To publish the new package, just follow the instructions: `git push --follow-tags origin master && npm publish.`
+You must have access to the @substrate organization on npm to publish.
+
+### Roadmap
+
+- API revamp to make it more clear how to handle `registry` and `metadataRpc`.
+
+#### Parachain support
+
+- Factor out utility functions and types (such as `decode`, `getRegistry`, `createMethod` etc) into an sdk for parachain
+teams that will allow them to release and maintain txwrapper libraries specific to their parachains. This could be called
+`@substrate/txwrapper-sdk`. Ideally this sdk will allow a parachain team to setup an offline signing library with unit tests
+quickly and painlessly while allowing users access to a `txwrapper` like API across parachains.
+- While core utility will be factored out to its own dependency, dispatchables from generic substrate methods
+will be published in a package `@substrate/txwrapper-substrate` and polkadot/kusama specific dispatchables will be available in
+`@substrate/txwrapper-polkadot`. (This could be in a mono repo, but separate packages.) Parachains could then create
+there own txwrapper lib using the sdk and publish it as `@{parachain-name}/txwrapper`.
