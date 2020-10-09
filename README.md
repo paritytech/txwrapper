@@ -97,7 +97,7 @@ You must have access to the @substrate organization on npm to publish.
 
 ### Roadmap
 
-- API revamp to make it more clear how to handle `registry` and `metadataRpc`.
+- API revamp to clarify handling of `registry` and `metadataRpc`.
 
 #### Parachain support
 
