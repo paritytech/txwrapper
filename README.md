@@ -103,9 +103,9 @@ You must have access to the @substrate organization on npm to publish.
 
 - Factor out utility functions and types (such as `decode`, `getRegistry`, `createMethod` etc) into a library for parachain
 teams that allows them to release and maintain txwrapper libraries specific to their parachains. This could be called
-`@substrate/txwrapper-core`. This sdk will allow a parachain team to setup an offline signing library with unit tests
-quickly and painlessly while allowing users access to a `txwrapper` like API across parachains.
+`@substrate/txwrapper-core`. This library will allow a parachain team to setup an offline signing library with unit tests
+quickly and painlessly while allowing users access to a consistent `txwrapper` API across parachains.
 - While the core utility will be factored out to its own dependency, dispatchables from generic substrate methods
 will be published in a package `@substrate/txwrapper-substrate` and polkadot/kusama specific dispatchables will be available in
 `@substrate/txwrapper-polkadot`. (This could be in a mono repo, but separate packages.) Parachains then create
-their own txwrapper lib using the sdk and publish it as `@{parachain-name}/txwrapper`.
+their own txwrapper lib using the `txwrapper-core` and publish it as `@{parachain-name}/txwrapper`.
