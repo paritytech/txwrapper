@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.10.1](https://github.com/paritytech/txwrapper/compare/v3.10.0...v3.10.1) (2020-10-13)
+
+
+### Bug Fixes
+
+* Update from TRANSACTION_VERSION to EXTRINSIC_VERSION; Bump polkadot-js/api to v2.1.1 ([#267](https://github.com/paritytech/txwrapper/issues/267)) ([78c691c](https://github.com/paritytech/txwrapper/commit/78c691cc7657d70337c7cca3a6e51b0a141d6113))
+
 ## [3.10.0](https://github.com/paritytech/txwrapper/compare/v3.9.0...v3.10.0) (2020-10-04)
 
 
