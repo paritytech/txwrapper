@@ -2,7 +2,7 @@ import { StatementKind } from '@polkadot/types/interfaces';
 import { u8aToHex, u8aToString } from '@polkadot/util';
 import { decodeAddress } from '@polkadot/util-crypto';
 
-import { createDecoratedConststants } from './metadata';
+import { createDecoratedConstants } from './metadata';
 import { OptionsWithMeta } from './types';
 
 /**
@@ -63,7 +63,7 @@ export function getEthereumPayload(
   statement: PolkadotStatement,
   options: OptionsWithMeta
 ): string {
-  const constants = createDecoratedConststants(
+  const constants = createDecoratedConstants(
     options.registry,
     options.metadataRpc
   );

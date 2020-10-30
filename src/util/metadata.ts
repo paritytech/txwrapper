@@ -99,7 +99,7 @@ export function createDecoratedTx(
  * @param registry - The registry of the metadata.
  * @param metadata - The metadata as hex string.
  */
-export function createDecoratedConststants(
+export function createDecoratedConstants(
   registry: TypeRegistry,
   metadataRpc: string
 ): Constants {
