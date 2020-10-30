@@ -3,7 +3,7 @@
  */ /** */
 
 import { Keyring } from '@polkadot/api';
-import metadataRpc from '@polkadot/metadata/Metadata/v11/static';
+import metadataRpc from '@polkadot/metadata/v11/static';
 import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
