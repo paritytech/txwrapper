@@ -2,7 +2,7 @@ import { StatementKind } from '@polkadot/types/interfaces';
 import { u8aToHex, u8aToString } from '@polkadot/util';
 import { decodeAddress } from '@polkadot/util-crypto';
 
-import { createDecorated } from './metadata';
+import { createDecoratedConstants } from './metadata';
 import { OptionsWithMeta } from './types';
 
 /**
@@ -63,8 +63,11 @@ export function getEthereumPayload(
   statement: PolkadotStatement,
   options: OptionsWithMeta
 ): string {
-  const decorated = createDecorated(options.registry, options.metadataRpc);
-  const prefix = u8aToString(decorated.consts.claims.prefix.toU8a(true));
+  const constants = createDecoratedConstants(
+    options.registry,
+    options.metadataRpc
+  );
+  const prefix = u8aToString(constants.claims.prefix.toU8a(true));
 
   return `${prefix}${u8aToHex(decodeAddress(dest), -1, false)}${
     statement.sentence
