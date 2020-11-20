@@ -1,11 +1,12 @@
+import { Metadata } from '@polkadot/metadata';
 import {
   constantsFromMeta,
   extrinsicsFromMeta,
 } from '@polkadot/metadata/decorate';
 import { Constants } from '@polkadot/metadata/decorate/types';
-import { Metadata, TypeRegistry } from '@polkadot/types';
-import { getSpecTypes } from '@polkadot/types-known';
+import { TypeRegistry } from '@polkadot/types';
 import { ModulesWithCalls } from '@polkadot/types/types';
+import { getSpecTypes } from '@polkadot/types-known';
 import memoizee from 'memoizee';
 
 import {
