@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/staking/bondExtra"](../modules/_src_methods_staking_bondextra_.md) / StakingBondExtraArgs
+> [Globals](../globals.md) / ["src/methods/staking/bondExtra"](../modules/_src_methods_staking_bondextra_.md) / StakingBondExtraArgs
 
 # Interface: StakingBondExtraArgs
 
@@ -22,6 +22,6 @@
 
 •  **maxAdditional**: number \| string
 
-*Defined in [src/methods/staking/bondExtra.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/staking/bondExtra.ts#L13)*
+*Defined in [src/methods/staking/bondExtra.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/staking/bondExtra.ts#L13)*
 
 The maximum amount to bond.

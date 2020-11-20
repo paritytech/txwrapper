@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/util/metadata"
+> [Globals](../globals.md) / "src/util/metadata"
 
 # Module: "src/util/metadata"
 
@@ -12,15 +12,36 @@
 
 ### Functions
 
+* [createDecoratedConstants](_src_util_metadata_.md#createdecoratedconstants)
 * [getRegistry](_src_util_metadata_.md#getregistry)
 
 ## Functions
+
+### createDecoratedConstants
+
+▸ **createDecoratedConstants**(`registry`: TypeRegistry, `metadataRpc`: string): Constants
+
+*Defined in [src/util/metadata.ts:103](https://github.com/paritytech/txwrapper/blob/4a341c0/src/util/metadata.ts#L103)*
+
+From a metadata hex string (for example returned by RPC), create decorated
+modules with their constants.
+
+#### Parameters:
+
+Name | Type | Description |
+------ | ------ | ------ |
+`registry` | TypeRegistry | The registry of the metadata. |
+`metadataRpc` | string | - |
+
+**Returns:** Constants
+
+___
 
 ### getRegistry
 
 ▸ **getRegistry**(`chainName`: \"Kusama\" \| \"Polkadot\" \| \"Polkadot CC1\" \| \"Westend\", `specName`: \"kusama\" \| \"polkadot\" \| \"westend\", `specVersion`: number, `metadataRpc?`: undefined \| string): TypeRegistry
 
-*Defined in [src/util/metadata.ts:112](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/metadata.ts#L112)*
+*Defined in [src/util/metadata.ts:132](https://github.com/paritytech/txwrapper/blob/4a341c0/src/util/metadata.ts#L132)*
 
 Given a chain name, a spec name, and a spec version, return the
 corresponding type registry. This function only returns the correct type

@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/staking/withdrawUnbonded"](../modules/_src_methods_staking_withdrawunbonded_.md) / StakingWithdrawUnbondedArgs
+> [Globals](../globals.md) / ["src/methods/staking/withdrawUnbonded"](../modules/_src_methods_staking_withdrawunbonded_.md) / StakingWithdrawUnbondedArgs
 
 # Interface: StakingWithdrawUnbondedArgs
 
@@ -22,4 +22,4 @@
 
 •  **numSlashingSpans**: number
 
-*Defined in [src/methods/staking/withdrawUnbonded.ts:10](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/staking/withdrawUnbonded.ts#L10)*
+*Defined in [src/methods/staking/withdrawUnbonded.ts:10](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/staking/withdrawUnbonded.ts#L10)*

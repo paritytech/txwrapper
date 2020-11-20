@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/methods/proxy/rejectAnnouncement"
+> [Globals](../globals.md) / "src/methods/proxy/rejectAnnouncement"
 
 # Module: "src/methods/proxy/rejectAnnouncement"
 
@@ -20,7 +20,7 @@
 
 ▸ **rejectAnnouncement**(`args`: [ProxyRejectAnnouncementArgs](../interfaces/_src_methods_proxy_rejectannouncement_.proxyrejectannouncementargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/proxy/rejectAnnouncement.ts:27](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/proxy/rejectAnnouncement.ts#L27)*
+*Defined in [src/methods/proxy/rejectAnnouncement.ts:27](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/proxy/rejectAnnouncement.ts#L27)*
 
 Remove the given announcement of a delegate and return the deposit. Made by the proxied account.
 

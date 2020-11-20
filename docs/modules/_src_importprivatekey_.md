@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/importPrivateKey"
+> [Globals](../globals.md) / "src/importPrivateKey"
 
 # Module: "src/importPrivateKey"
 
@@ -20,7 +20,7 @@
 
 Ƭ  **KeyringPair**: KeyringPairBase
 
-*Defined in [src/importPrivateKey.ts:10](https://github.com/paritytech/txwrapper/blob/ddb0953/src/importPrivateKey.ts#L10)*
+*Defined in [src/importPrivateKey.ts:10](https://github.com/paritytech/txwrapper/blob/4a341c0/src/importPrivateKey.ts#L10)*
 
 A keyring pair
 
@@ -28,9 +28,9 @@ A keyring pair
 
 ### importPrivateKey
 
-▸ **importPrivateKey**(`privateKey`: string \| Uint8Array, `ss58Format`: number): KeyringPair
+▸ **importPrivateKey**(`privateKey`: string \| Uint8Array, `ss58Format?`: number): KeyringPair
 
-*Defined in [src/importPrivateKey.ts:18](https://github.com/paritytech/txwrapper/blob/ddb0953/src/importPrivateKey.ts#L18)*
+*Defined in [src/importPrivateKey.ts:18](https://github.com/paritytech/txwrapper/blob/4a341c0/src/importPrivateKey.ts#L18)*
 
 Import a private key and create a KeyringPair.
 
@@ -39,6 +39,6 @@ Import a private key and create a KeyringPair.
 Name | Type | Default value | Description |
 ------ | ------ | ------ | ------ |
 `privateKey` | string \| Uint8Array | - | The private key of the key pair. |
-`ss58Format` | number | KUSAMA_SS58_FORMAT | The SS58 encoding of the address.  |
+`ss58Format` | number | KUSAMA\_SS58\_FORMAT | The SS58 encoding of the address.  |
 
 **Returns:** KeyringPair

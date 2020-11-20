@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/methods/staking/validate"
+> [Globals](../globals.md) / "src/methods/staking/validate"
 
 # Module: "src/methods/staking/validate"
 
@@ -20,7 +20,7 @@
 
 ▸ **validate**(`args`: [StakingValidateArgs](../interfaces/_src_methods_staking_validate_.stakingvalidateargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/staking/validate.ts:27](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/staking/validate.ts#L27)*
+*Defined in [src/methods/staking/validate.ts:27](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/staking/validate.ts#L27)*
 
 Declare the desire to validate for the origin controller.
 

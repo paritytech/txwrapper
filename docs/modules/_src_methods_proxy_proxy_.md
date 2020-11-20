@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/methods/proxy/proxy"
+> [Globals](../globals.md) / "src/methods/proxy/proxy"
 
 # Module: "src/methods/proxy/proxy"
 
@@ -20,7 +20,7 @@
 
 ▸ **proxy**(`args`: [ProxyProxy](../interfaces/_src_methods_proxy_proxy_.proxyproxy.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/proxy/proxy.ts#L33)*
+*Defined in [src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/proxy/proxy.ts#L33)*
 
 Dispatch the given `call` from an account for which the sender is authorized.
 

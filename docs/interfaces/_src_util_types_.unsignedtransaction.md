@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/util/types"](../modules/_src_util_types_.md) / UnsignedTransaction
+> [Globals](../globals.md) / ["src/util/types"](../modules/_src_util_types_.md) / UnsignedTransaction
 
 # Interface: UnsignedTransaction
 
@@ -96,7 +96,7 @@ ___
 
 •  **metadataRpc**: string
 
-*Defined in [src/util/types.ts:12](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/types.ts#L12)*
+*Defined in [src/util/types.ts:12](https://github.com/paritytech/txwrapper/blob/4a341c0/src/util/types.ts#L12)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.

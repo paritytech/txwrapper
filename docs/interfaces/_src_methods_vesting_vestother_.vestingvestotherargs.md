@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/vesting/vestOther"](../modules/_src_methods_vesting_vestother_.md) / VestingVestOtherArgs
+> [Globals](../globals.md) / ["src/methods/vesting/vestOther"](../modules/_src_methods_vesting_vestother_.md) / VestingVestOtherArgs
 
 # Interface: VestingVestOtherArgs
 
@@ -22,7 +22,7 @@
 
 •  **target**: string
 
-*Defined in [src/methods/vesting/vestOther.ts:14](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/vesting/vestOther.ts#L14)*
+*Defined in [src/methods/vesting/vestOther.ts:14](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/vesting/vestOther.ts#L14)*
 
 The account whose vested funds should be unlocked. Must have funds still
 locked under this module.

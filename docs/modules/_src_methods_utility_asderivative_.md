@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/methods/utility/asDerivative"
+> [Globals](../globals.md) / "src/methods/utility/asDerivative"
 
 # Module: "src/methods/utility/asDerivative"
 
@@ -20,7 +20,7 @@
 
 ▸ **asDerivative**(`args`: [UtilityAsDerivativeArgs](../interfaces/_src_methods_utility_asderivative_.utilityasderivativeargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/utility/asDerivative.ts:41](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/utility/asDerivative.ts#L41)*
+*Defined in [src/methods/utility/asDerivative.ts:41](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/utility/asDerivative.ts#L41)*
 
 Send a call through an indexed pseudonym of the sender.
 

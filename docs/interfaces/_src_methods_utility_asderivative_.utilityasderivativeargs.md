@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/utility/asDerivative"](../modules/_src_methods_utility_asderivative_.md) / UtilityAsDerivativeArgs
+> [Globals](../globals.md) / ["src/methods/utility/asDerivative"](../modules/_src_methods_utility_asderivative_.md) / UtilityAsDerivativeArgs
 
 # Interface: UtilityAsDerivativeArgs
 
@@ -23,7 +23,7 @@
 
 •  **call**: { args?: undefined \| string ; callIndex?: undefined \| string  } \| string
 
-*Defined in [src/methods/utility/asDerivative.ts:19](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/utility/asDerivative.ts#L19)*
+*Defined in [src/methods/utility/asDerivative.ts:19](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/utility/asDerivative.ts#L19)*
 
 The call to be dispatched from pseudonym account derived from the origin.
 To take advantage of txwrapper methods, this could be an array of
@@ -35,6 +35,6 @@ ___
 
 •  **index**: number \| string
 
-*Defined in [src/methods/utility/asDerivative.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/utility/asDerivative.ts#L13)*
+*Defined in [src/methods/utility/asDerivative.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/utility/asDerivative.ts#L13)*
 
 The sub-account index of the origin.

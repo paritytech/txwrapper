@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/democracy/activateProxy"](../modules/_src_methods_democracy_activateproxy_.md) / DemocracyActivateProxyArgs
+> [Globals](../globals.md) / ["src/methods/democracy/activateProxy"](../modules/_src_methods_democracy_activateproxy_.md) / DemocracyActivateProxyArgs
 
 # Interface: DemocracyActivateProxyArgs
 
@@ -22,6 +22,6 @@
 
 •  **proxy**: string
 
-*Defined in [src/methods/democracy/activateProxy.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/democracy/activateProxy.ts#L13)*
+*Defined in [src/methods/democracy/activateProxy.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/democracy/activateProxy.ts#L13)*
 
 Address to set as proxy, SS-58 encoded.

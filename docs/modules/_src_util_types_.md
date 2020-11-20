@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/util/types"
+> [Globals](../globals.md) / "src/util/types"
 
 # Module: "src/util/types"
 
