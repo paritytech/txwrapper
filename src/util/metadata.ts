@@ -5,8 +5,8 @@ import {
 } from '@polkadot/metadata/decorate';
 import { Constants } from '@polkadot/metadata/decorate/types';
 import { TypeRegistry } from '@polkadot/types';
-import { getSpecTypes } from '@polkadot/types-known';
 import { ModulesWithCalls } from '@polkadot/types/types';
+import { getSpecTypes } from '@polkadot/types-known';
 import memoizee from 'memoizee';
 
 import {
