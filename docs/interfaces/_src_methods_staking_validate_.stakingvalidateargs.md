@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/staking/validate"](../modules/_src_methods_staking_validate_.md) / StakingValidateArgs
+> [Globals](../globals.md) / ["src/methods/staking/validate"](../modules/_src_methods_staking_validate_.md) / StakingValidateArgs
 
 # Interface: StakingValidateArgs
 
@@ -22,7 +22,7 @@
 
 •  **prefs**: { commission: number  }
 
-*Defined in [src/methods/staking/validate.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/staking/validate.ts#L13)*
+*Defined in [src/methods/staking/validate.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/staking/validate.ts#L13)*
 
 Set the desired commission for the validator. Value is Perbill.
 

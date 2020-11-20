@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/methods/democracy/activateProxy"
+> [Globals](../globals.md) / "src/methods/democracy/activateProxy"
 
 # Module: "src/methods/democracy/activateProxy"
 
@@ -20,7 +20,7 @@
 
 ▸ **activateProxy**(`args`: [DemocracyActivateProxyArgs](../interfaces/_src_methods_democracy_activateproxy_.democracyactivateproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/democracy/activateProxy.ts:24](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/democracy/activateProxy.ts#L24)*
+*Defined in [src/methods/democracy/activateProxy.ts:24](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/democracy/activateProxy.ts#L24)*
 
 Specify a proxy that is already open to us. Called by the stash.
 

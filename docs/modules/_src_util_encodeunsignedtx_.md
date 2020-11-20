@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/util/encodeUnsignedTx"
+> [Globals](../globals.md) / "src/util/encodeUnsignedTx"
 
 # Module: "src/util/encodeUnsignedTx"
 
@@ -16,7 +16,7 @@
 
 ▸ **encodeUnsignedTransaction**(`unsigned`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `options`: [Options](../interfaces/_src_util_types_.options.md)): string
 
-*Defined in [src/util/encodeUnsignedTx.ts:9](https://github.com/paritytech/txwrapper/blob/ddb0953/src/util/encodeUnsignedTx.ts#L9)*
+*Defined in [src/util/encodeUnsignedTx.ts:9](https://github.com/paritytech/txwrapper/blob/4a341c0/src/util/encodeUnsignedTx.ts#L9)*
 
 Encode an unsigned transaction to submit.
 

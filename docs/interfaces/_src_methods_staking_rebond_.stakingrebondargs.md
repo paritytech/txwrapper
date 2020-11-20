@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/staking/rebond"](../modules/_src_methods_staking_rebond_.md) / StakingRebondArgs
+> [Globals](../globals.md) / ["src/methods/staking/rebond"](../modules/_src_methods_staking_rebond_.md) / StakingRebondArgs
 
 # Interface: StakingRebondArgs
 
@@ -22,6 +22,6 @@
 
 •  **value**: number \| string
 
-*Defined in [src/methods/staking/rebond.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/staking/rebond.ts#L13)*
+*Defined in [src/methods/staking/rebond.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/staking/rebond.ts#L13)*
 
 The number of tokens to rebond.

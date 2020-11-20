@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](README.md)**
 
-> [README](README.md) / Globals
+> Globals
 
 # @substrate/txwrapper
 

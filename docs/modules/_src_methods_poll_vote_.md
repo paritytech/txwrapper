@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/methods/poll/vote"
+> [Globals](../globals.md) / "src/methods/poll/vote"
 
 # Module: "src/methods/poll/vote"
 
@@ -20,7 +20,7 @@
 
 ▸ **vote**(`args`: [PollVoteArgs](../interfaces/_src_methods_poll_vote_.pollvoteargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/poll/vote.ts:23](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/poll/vote.ts#L23)*
+*Defined in [src/methods/poll/vote.ts:23](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/poll/vote.ts#L23)*
 
 Cast a vote on the poll.
 

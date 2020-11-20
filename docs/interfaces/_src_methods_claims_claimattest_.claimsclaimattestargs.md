@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/claims/claimAttest"](../modules/_src_methods_claims_claimattest_.md) / ClaimsClaimAttestArgs
+> [Globals](../globals.md) / ["src/methods/claims/claimAttest"](../modules/_src_methods_claims_claimattest_.md) / ClaimsClaimAttestArgs
 
 # Interface: ClaimsClaimAttestArgs
 
@@ -24,7 +24,7 @@
 
 •  **dest**: string
 
-*Defined in [src/methods/claims/claimAttest.ts:14](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/claims/claimAttest.ts#L14)*
+*Defined in [src/methods/claims/claimAttest.ts:14](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/claims/claimAttest.ts#L14)*
 
 The destination account to which to pay out the claim. This method is only
 available on Polkadot.
@@ -35,7 +35,7 @@ ___
 
 •  **ethereumSignature**: string
 
-*Defined in [src/methods/claims/claimAttest.ts:19](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/claims/claimAttest.ts#L19)*
+*Defined in [src/methods/claims/claimAttest.ts:19](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/claims/claimAttest.ts#L19)*
 
 The signature of an Ethereum signed message matching the format described
 above.
@@ -46,6 +46,6 @@ ___
 
 •  **statement**: string
 
-*Defined in [src/methods/claims/claimAttest.ts:23](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/claims/claimAttest.ts#L23)*
+*Defined in [src/methods/claims/claimAttest.ts:23](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/claims/claimAttest.ts#L23)*
 
 The identity of the statement that is being attested to in the signature.

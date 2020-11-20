@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/methods/democracy/proxyVote"
+> [Globals](../globals.md) / "src/methods/democracy/proxyVote"
 
 # Module: "src/methods/democracy/proxyVote"
 
@@ -20,7 +20,7 @@
 
 ▸ **proxyVote**(`args`: [DemocracyProxyVoteArgs](../interfaces/_src_methods_democracy_proxyvote_.democracyproxyvoteargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/democracy/proxyVote.ts:29](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/democracy/proxyVote.ts#L29)*
+*Defined in [src/methods/democracy/proxyVote.ts:29](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/democracy/proxyVote.ts#L29)*
 
 Vote in a referendum on behalf of a stash.
 

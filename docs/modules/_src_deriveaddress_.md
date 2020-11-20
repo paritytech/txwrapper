@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/deriveAddress"
+> [Globals](../globals.md) / "src/deriveAddress"
 
 # Module: "src/deriveAddress"
 
@@ -16,7 +16,7 @@
 
 ▸ **deriveAddress**(`publicKey`: string \| Uint8Array, `ss58Format`: number): string
 
-*Defined in [src/deriveAddress.ts:9](https://github.com/paritytech/txwrapper/blob/ddb0953/src/deriveAddress.ts#L9)*
+*Defined in [src/deriveAddress.ts:9](https://github.com/paritytech/txwrapper/blob/4a341c0/src/deriveAddress.ts#L9)*
 
 Derive an address from a cryptographic public key offline.
 

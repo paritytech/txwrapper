@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/methods/staking/chill"
+> [Globals](../globals.md) / "src/methods/staking/chill"
 
 # Module: "src/methods/staking/chill"
 
@@ -16,7 +16,7 @@
 
 ▸ **chill**(`args`: {}, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/staking/chill.ts:17](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/staking/chill.ts#L17)*
+*Defined in [src/methods/staking/chill.ts:17](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/staking/chill.ts#L17)*
 
 Declare the desire to cease validating or nominating. Does not unbond funds.
 

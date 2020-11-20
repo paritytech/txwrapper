@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/session/setKeys"](../modules/_src_methods_session_setkeys_.md) / SessionSetKeysArgs
+> [Globals](../globals.md) / ["src/methods/session/setKeys"](../modules/_src_methods_session_setkeys_.md) / SessionSetKeysArgs
 
 # Interface: SessionSetKeysArgs
 
@@ -23,7 +23,7 @@
 
 •  **keys**: string[]
 
-*Defined in [src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/session/setKeys.ts#L13)*
+*Defined in [src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/session/setKeys.ts#L13)*
 
 The 5 keys to set.
 
@@ -33,6 +33,6 @@ ___
 
 • `Optional` **proof**: undefined \| string
 
-*Defined in [src/methods/session/setKeys.ts:17](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/session/setKeys.ts#L17)*
+*Defined in [src/methods/session/setKeys.ts:17](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/session/setKeys.ts#L17)*
 
 Proof (unused for now).

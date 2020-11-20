@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/proxy/rejectAnnouncement"](../modules/_src_methods_proxy_rejectannouncement_.md) / ProxyRejectAnnouncementArgs
+> [Globals](../globals.md) / ["src/methods/proxy/rejectAnnouncement"](../modules/_src_methods_proxy_rejectannouncement_.md) / ProxyRejectAnnouncementArgs
 
 # Interface: ProxyRejectAnnouncementArgs
 
@@ -23,7 +23,7 @@
 
 •  **callHash**: string
 
-*Defined in [src/methods/proxy/rejectAnnouncement.ts:17](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/proxy/rejectAnnouncement.ts#L17)*
+*Defined in [src/methods/proxy/rejectAnnouncement.ts:17](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/proxy/rejectAnnouncement.ts#L17)*
 
 The hash of the call that the proxy wants to execute.
 
@@ -33,6 +33,6 @@ ___
 
 •  **delegate**: string
 
-*Defined in [src/methods/proxy/rejectAnnouncement.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/proxy/rejectAnnouncement.ts#L13)*
+*Defined in [src/methods/proxy/rejectAnnouncement.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/proxy/rejectAnnouncement.ts#L13)*
 
 The account that previously announced the call.

@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/democracy/vote"](../modules/_src_methods_democracy_vote_.md) / DemocracyVoteArgs
+> [Globals](../globals.md) / ["src/methods/democracy/vote"](../modules/_src_methods_democracy_vote_.md) / DemocracyVoteArgs
 
 # Interface: DemocracyVoteArgs
 
@@ -23,7 +23,7 @@
 
 •  **refIndex**: number
 
-*Defined in [src/methods/democracy/vote.ts:14](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/democracy/vote.ts#L14)*
+*Defined in [src/methods/democracy/vote.ts:14](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/democracy/vote.ts#L14)*
 
 ___
 
@@ -31,6 +31,6 @@ ___
 
 •  **vote**: [AccountVote](../modules/_src_methods_democracy_types_.md#accountvote)
 
-*Defined in [src/methods/democracy/vote.ts:18](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/democracy/vote.ts#L18)*
+*Defined in [src/methods/democracy/vote.ts:18](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/democracy/vote.ts#L18)*
 
 Vote.

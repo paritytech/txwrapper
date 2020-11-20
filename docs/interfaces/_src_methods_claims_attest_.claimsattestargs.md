@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / ["src/methods/claims/attest"](../modules/_src_methods_claims_attest_.md) / ClaimsAttestArgs
+> [Globals](../globals.md) / ["src/methods/claims/attest"](../modules/_src_methods_claims_attest_.md) / ClaimsAttestArgs
 
 # Interface: ClaimsAttestArgs
 
@@ -22,6 +22,6 @@
 
 •  **statement**: string
 
-*Defined in [src/methods/claims/attest.ts:13](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/claims/attest.ts#L13)*
+*Defined in [src/methods/claims/attest.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/claims/attest.ts#L13)*
 
 The identity of the statement that is being attested to in the signature.

@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/methods/democracy/deactivateProxy"
+> [Globals](../globals.md) / "src/methods/democracy/deactivateProxy"
 
 # Module: "src/methods/democracy/deactivateProxy"
 
@@ -20,7 +20,7 @@
 
 ▸ **deactivateProxy**(`args`: [DemocracyDeactivateProxyArgs](../interfaces/_src_methods_democracy_deactivateproxy_.democracydeactivateproxyargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/democracy/deactivateProxy.ts:25](https://github.com/paritytech/txwrapper/blob/ddb0953/src/methods/democracy/deactivateProxy.ts#L25)*
+*Defined in [src/methods/democracy/deactivateProxy.ts:25](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/democracy/deactivateProxy.ts#L25)*
 
 Deactivate the proxy, but leave open to this account. Called by the stash.
 The proxy must already be active.

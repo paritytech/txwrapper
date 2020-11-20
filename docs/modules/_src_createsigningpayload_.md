@@ -1,6 +1,6 @@
-**@substrate/txwrapper**
+**[@substrate/txwrapper](../README.md)**
 
-> [README](../README.md) / [Globals](../globals.md) / "src/createSigningPayload"
+> [Globals](../globals.md) / "src/createSigningPayload"
 
 # Module: "src/createSigningPayload"
 
@@ -16,7 +16,7 @@
 
 ▸ **createSigningPayload**(`unsigned`: [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md), `options`: [Options](../interfaces/_src_util_types_.options.md)): string
 
-*Defined in [src/createSigningPayload.ts:45](https://github.com/paritytech/txwrapper/blob/ddb0953/src/createSigningPayload.ts#L45)*
+*Defined in [src/createSigningPayload.ts:45](https://github.com/paritytech/txwrapper/blob/4a341c0/src/createSigningPayload.ts#L45)*
 
 Construct the signing payload from an unsigned transaction and export it to
 a remote signer (this is often called "detached signing").
