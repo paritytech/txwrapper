@@ -20,7 +20,7 @@
 
 ▸ **setController**(`args`: [StakingSetControllerArgs](../interfaces/_src_methods_staking_setcontroller_.stakingsetcontrollerargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/staking/setController.ts:24](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/staking/setController.ts#L24)*
+*Defined in [src/methods/staking/setController.ts:24](https://github.com/paritytech/txwrapper/blob/aa1756f/src/methods/staking/setController.ts#L24)*
 
 (Re-)set the controller of a stash. Effects will be felt at the beginning of
 the next era.

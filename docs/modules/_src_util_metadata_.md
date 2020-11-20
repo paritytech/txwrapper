@@ -21,7 +21,7 @@
 
 ▸ **createDecoratedConstants**(`registry`: TypeRegistry, `metadataRpc`: string): Constants
 
-*Defined in [src/util/metadata.ts:103](https://github.com/paritytech/txwrapper/blob/4a341c0/src/util/metadata.ts#L103)*
+*Defined in [src/util/metadata.ts:103](https://github.com/paritytech/txwrapper/blob/aa1756f/src/util/metadata.ts#L103)*
 
 From a metadata hex string (for example returned by RPC), create decorated
 modules with their constants.
@@ -41,7 +41,7 @@ ___
 
 ▸ **getRegistry**(`chainName`: \"Kusama\" \| \"Polkadot\" \| \"Polkadot CC1\" \| \"Westend\", `specName`: \"kusama\" \| \"polkadot\" \| \"westend\", `specVersion`: number, `metadataRpc?`: undefined \| string): TypeRegistry
 
-*Defined in [src/util/metadata.ts:132](https://github.com/paritytech/txwrapper/blob/4a341c0/src/util/metadata.ts#L132)*
+*Defined in [src/util/metadata.ts:132](https://github.com/paritytech/txwrapper/blob/aa1756f/src/util/metadata.ts#L132)*
 
 Given a chain name, a spec name, and a spec version, return the
 corresponding type registry. This function only returns the correct type

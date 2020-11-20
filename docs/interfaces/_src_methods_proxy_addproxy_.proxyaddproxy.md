@@ -24,7 +24,7 @@
 
 •  **delay**: number \| string
 
-*Defined in [src/methods/proxy/addProxy.ts:27](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/proxy/addProxy.ts#L27)*
+*Defined in [src/methods/proxy/addProxy.ts:27](https://github.com/paritytech/txwrapper/blob/aa1756f/src/methods/proxy/addProxy.ts#L27)*
 
 The number of blocks that an announcement must be in place for before the corresponding call
 may be dispatched. If zero, then no announcement is needed.
@@ -35,7 +35,7 @@ ___
 
 •  **delegate**: string
 
-*Defined in [src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/proxy/addProxy.ts#L13)*
+*Defined in [src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper/blob/aa1756f/src/methods/proxy/addProxy.ts#L13)*
 
 The account that the `caller` would like to make a proxy.
 
@@ -45,7 +45,7 @@ ___
 
 •  **proxyType**: string
 
-*Defined in [src/methods/proxy/addProxy.ts:22](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/proxy/addProxy.ts#L22)*
+*Defined in [src/methods/proxy/addProxy.ts:22](https://github.com/paritytech/txwrapper/blob/aa1756f/src/methods/proxy/addProxy.ts#L22)*
 
 The permissions for this proxy account. See the runtime for the `call` filters.
 Current known types:

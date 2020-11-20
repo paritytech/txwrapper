@@ -22,6 +22,6 @@
 
 •  **statement**: string
 
-*Defined in [src/methods/claims/attest.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/claims/attest.ts#L13)*
+*Defined in [src/methods/claims/attest.ts:13](https://github.com/paritytech/txwrapper/blob/aa1756f/src/methods/claims/attest.ts#L13)*
 
 The identity of the statement that is being attested to in the signature.

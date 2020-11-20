@@ -22,6 +22,6 @@
 
 •  **remark**: string
 
-*Defined in [src/methods/system/remark.ts:13](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/system/remark.ts#L13)*
+*Defined in [src/methods/system/remark.ts:13](https://github.com/paritytech/txwrapper/blob/aa1756f/src/methods/system/remark.ts#L13)*
 
 The remark to set on chain, in hex or bytes.
