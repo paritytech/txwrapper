@@ -23,7 +23,7 @@
 
 •  **callHash**: string
 
-*Defined in [src/methods/proxy/announce.ts:17](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/proxy/announce.ts#L17)*
+*Defined in [src/methods/proxy/announce.ts:17](https://github.com/paritytech/txwrapper/blob/18c85e5/src/methods/proxy/announce.ts#L17)*
 
 The hash of the call to be made by the `real` account.
 
@@ -33,6 +33,6 @@ ___
 
 •  **real**: string
 
-*Defined in [src/methods/proxy/announce.ts:13](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/proxy/announce.ts#L13)*
+*Defined in [src/methods/proxy/announce.ts:13](https://github.com/paritytech/txwrapper/blob/18c85e5/src/methods/proxy/announce.ts#L13)*
 
 The account that the proxy will make a call on behalf of.

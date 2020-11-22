@@ -20,7 +20,7 @@
 
 ▸ **asDerivative**(`args`: [UtilityAsDerivativeArgs](../interfaces/_src_methods_utility_asderivative_.utilityasderivativeargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/utility/asDerivative.ts:41](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/utility/asDerivative.ts#L41)*
+*Defined in [src/methods/utility/asDerivative.ts:41](https://github.com/paritytech/txwrapper/blob/18c85e5/src/methods/utility/asDerivative.ts#L41)*
 
 Send a call through an indexed pseudonym of the sender.
 
