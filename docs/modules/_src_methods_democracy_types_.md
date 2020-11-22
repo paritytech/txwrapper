@@ -17,7 +17,7 @@
 
 Ƭ  **AccountVote**: { Standard: { balance: number ; vote: [Vote](_src_methods_democracy_types_.md#vote)  }  } \| { Split: { aye: number ; nay: number  }  }
 
-*Defined in [src/methods/democracy/types.ts:26](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/democracy/types.ts#L26)*
+*Defined in [src/methods/democracy/types.ts:26](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/democracy/types.ts#L26)*
 
 A vote in a referendum. Can be one of:
 - Standard: A standard vote, one-way (approve or reject) with a given amount
@@ -31,7 +31,7 @@ ___
 
 Ƭ  **Vote**: { aye: boolean ; conviction: ArrayElementType\<*typeof* AllConvictions>  }
 
-*Defined in [src/methods/democracy/types.ts:7](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/democracy/types.ts#L7)*
+*Defined in [src/methods/democracy/types.ts:7](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/democracy/types.ts#L7)*
 
 A vote in a referendum
 
