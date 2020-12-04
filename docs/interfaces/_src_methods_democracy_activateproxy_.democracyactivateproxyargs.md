@@ -22,6 +22,6 @@
 
 •  **proxy**: string
 
-*Defined in [src/methods/democracy/activateProxy.ts:13](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/democracy/activateProxy.ts#L13)*
+*Defined in [src/methods/democracy/activateProxy.ts:13](https://github.com/paritytech/txwrapper/blob/bb152d3/src/methods/democracy/activateProxy.ts#L13)*
 
 Address to set as proxy, SS-58 encoded.

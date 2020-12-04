@@ -22,6 +22,6 @@
 
 •  **approvals**: boolean[]
 
-*Defined in [src/methods/poll/vote.ts:13](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/poll/vote.ts#L13)*
+*Defined in [src/methods/poll/vote.ts:13](https://github.com/paritytech/txwrapper/blob/bb152d3/src/methods/poll/vote.ts#L13)*
 
 The options to vote for. Must be a boolean array of length 4.
