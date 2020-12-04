@@ -2,7 +2,7 @@
   "name": "@substrate/txwrapper",
   "version": "3.10.3",
   "author": "Parity Technologies <admin@parity.io>",
-  "description": "Helper funtions for offline transaction generation.",
+  "description": "Helper functions for offline transaction generation.",
   "files": [
     "lib"
   ],
@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@polkadot/api": "2.7.1",
+    "@polkadot/api": "2.9.1",
     "@types/memoizee": "^0.4.3"
   },
   "devDependencies": {
