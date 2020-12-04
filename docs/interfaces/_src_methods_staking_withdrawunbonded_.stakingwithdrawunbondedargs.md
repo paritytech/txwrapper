@@ -22,4 +22,4 @@
 
 •  **numSlashingSpans**: number
 
-*Defined in [src/methods/staking/withdrawUnbonded.ts:10](https://github.com/paritytech/txwrapper/blob/4a341c0/src/methods/staking/withdrawUnbonded.ts#L10)*
+*Defined in [src/methods/staking/withdrawUnbonded.ts:10](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/staking/withdrawUnbonded.ts#L10)*
