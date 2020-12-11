@@ -20,7 +20,7 @@
 
 ▸ **proxy**(`args`: [ProxyProxy](../interfaces/_src_methods_proxy_proxy_.proxyproxy.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/proxy/proxy.ts#L33)*
+*Defined in [src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper/blob/2a7ffc5/src/methods/proxy/proxy.ts#L33)*
 
 Dispatch the given `call` from an account for which the sender is authorized.
 
