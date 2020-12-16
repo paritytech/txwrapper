@@ -22,7 +22,7 @@
 
 •  **calls**: ({ args?: undefined \| string ; callIndex?: undefined \| string  } \| string)[]
 
-*Defined in [src/methods/utility/batch.ts:15](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/utility/batch.ts#L15)*
+*Defined in [src/methods/utility/batch.ts:15](https://github.com/paritytech/txwrapper/blob/a0533b3/src/methods/utility/batch.ts#L15)*
 
 The calls to be dispatched from the same origin.
 To take advantage of txwrapper methods, this could be an array of
