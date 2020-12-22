@@ -16,7 +16,7 @@
 
 ▸ **deriveAddress**(`publicKey`: string \| Uint8Array, `ss58Format`: number): string
 
-*Defined in [src/deriveAddress.ts:9](https://github.com/paritytech/txwrapper/blob/968ccb6/src/deriveAddress.ts#L9)*
+*Defined in [src/deriveAddress.ts:9](https://github.com/paritytech/txwrapper/blob/47968f6/src/deriveAddress.ts#L9)*
 
 Derive an address from a cryptographic public key offline.
 

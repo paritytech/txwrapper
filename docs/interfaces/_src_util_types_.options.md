@@ -25,6 +25,6 @@ functions that only require registry.
 
 •  **registry**: TypeRegistry
 
-*Defined in [src/util/types.ts:83](https://github.com/paritytech/txwrapper/blob/968ccb6/src/util/types.ts#L83)*
+*Defined in [src/util/types.ts:83](https://github.com/paritytech/txwrapper/blob/47968f6/src/util/types.ts#L83)*
 
 The type registry of the runtime.

@@ -20,7 +20,7 @@
 
 ▸ **setPayee**(`args`: [StakingSetPayeeArgs](../interfaces/_src_methods_staking_setpayee_.stakingsetpayeeargs.md), `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/staking/setPayee.ts:27](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/staking/setPayee.ts#L27)*
+*Defined in [src/methods/staking/setPayee.ts:27](https://github.com/paritytech/txwrapper/blob/47968f6/src/methods/staking/setPayee.ts#L27)*
 
 (Re-)set the payment target for staking rewards.
 
