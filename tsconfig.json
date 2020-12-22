@@ -5,6 +5,7 @@
     "target": "ES2015",
     "outDir": "lib",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "resolveJsonModule": true
   }
 }
