@@ -25,7 +25,7 @@
 
 •  **call**: { args?: undefined \| string ; callIndex?: undefined \| string  } \| string
 
-*Defined in [src/methods/proxy/proxyAnnounced.ts:26](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/proxy/proxyAnnounced.ts#L26)*
+*Defined in [src/methods/proxy/proxyAnnounced.ts:26](https://github.com/paritytech/txwrapper/blob/96fc986/src/methods/proxy/proxyAnnounced.ts#L26)*
 
 The call to be made by the `real` account.
 To take advantage of txwrapper methods, this could be UnsignedTransaction.method.
@@ -36,7 +36,7 @@ ___
 
 •  **delegate**: string
 
-*Defined in [src/methods/proxy/proxyAnnounced.ts:13](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/proxy/proxyAnnounced.ts#L13)*
+*Defined in [src/methods/proxy/proxyAnnounced.ts:13](https://github.com/paritytech/txwrapper/blob/96fc986/src/methods/proxy/proxyAnnounced.ts#L13)*
 
 The account that previously announced the call.
 
@@ -46,7 +46,7 @@ ___
 
 •  **forceProxyType**: string
 
-*Defined in [src/methods/proxy/proxyAnnounced.ts:21](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/proxy/proxyAnnounced.ts#L21)*
+*Defined in [src/methods/proxy/proxyAnnounced.ts:21](https://github.com/paritytech/txwrapper/blob/96fc986/src/methods/proxy/proxyAnnounced.ts#L21)*
 
 Specify the exact proxy type to be used and checked for this call.
 
@@ -56,6 +56,6 @@ ___
 
 •  **real**: string
 
-*Defined in [src/methods/proxy/proxyAnnounced.ts:17](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/proxy/proxyAnnounced.ts#L17)*
+*Defined in [src/methods/proxy/proxyAnnounced.ts:17](https://github.com/paritytech/txwrapper/blob/96fc986/src/methods/proxy/proxyAnnounced.ts#L17)*
 
 The account that the proxy will make a call on behalf of.

@@ -16,7 +16,7 @@
 
 ▸ **removeProxies**(`args`: {}, `info`: [BaseTxInfo](../interfaces/_src_util_types_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_src_util_types_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_src_util_types_.unsignedtransaction.md)
 
-*Defined in [src/methods/proxy/removeProxies.ts:15](https://github.com/paritytech/txwrapper/blob/968ccb6/src/methods/proxy/removeProxies.ts#L15)*
+*Defined in [src/methods/proxy/removeProxies.ts:15](https://github.com/paritytech/txwrapper/blob/96fc986/src/methods/proxy/removeProxies.ts#L15)*
 
 Unregister all proxy accounts for the sender.
 
