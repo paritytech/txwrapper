@@ -165,7 +165,7 @@ export const TEST_METHOD_ARGS = {
   balances: {
     transfer: {
       dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
-      value: 12,
+      value: '12',
     },
     transferKeepAlive: {
       dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',

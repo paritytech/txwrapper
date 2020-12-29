@@ -42,7 +42,11 @@ function testDecodeSigningPayload(pallet: string, name: string): void {
       ),
       KUSAMA_TEST_OPTIONS
     );
-    const txInfo = decodeSigningPayload(signingPayload, KUSAMA_TEST_OPTIONS);
+    const txInfo = decodeSigningPayload(
+      signingPayload,
+      KUSAMA_TEST_OPTIONS,
+      true
+    );
 
     decodeBaseTxInfo(txInfo);
     expect(txInfo.method.pallet).toBe(pallet);
