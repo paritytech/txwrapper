@@ -158,7 +158,7 @@ export function toTxMethod(
 
   return {
     args,
-    name: method.methodName,
-    pallet: method.sectionName,
+    name: method.method,
+    pallet: method.section,
   };
 }
