@@ -42,7 +42,7 @@ function testDecodeSignedTx(pallet: string, name: string): void {
 
     const signedTx = createSignedTx(unsigned, signature, KUSAMA_TEST_OPTIONS);
 
-    const txInfo = decodeSignedTx(signedTx, KUSAMA_TEST_OPTIONS);
+    const txInfo = decodeSignedTx(signedTx, KUSAMA_TEST_OPTIONS, true);
 
     decodeBaseTxInfo(txInfo);
     expect(txInfo.method.pallet).toBe(pallet);
