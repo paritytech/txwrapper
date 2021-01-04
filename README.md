@@ -20,6 +20,10 @@
 
 <br /><br />
 
+## Note
+
+If you are a chain builder looking to build a chain specific `txwrapper` please take a look at [`txwrapper-core`](https://github.com/paritytech/txwrapper-core) and the [guide for chain builders](https://github.com/paritytech/txwrapper-core/blob/main/CHAIN_BUILDER.md). Any feedback is welcome, just make [an issue at that repo](https://github.com/paritytech/txwrapper-core/issues).
+
 ## Get Started
 
 ```bash
