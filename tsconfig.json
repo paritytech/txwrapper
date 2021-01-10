@@ -6,6 +6,7 @@
     "outDir": "lib",
     "esModuleInterop": true,
     "strict": true,
+    "skipDefaultLibCheck": true,
     "resolveJsonModule": true
   }
 }
