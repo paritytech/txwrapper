@@ -43,7 +43,7 @@ function testDecodeUnsignedTx(pallet: string, name: string): void {
       KUSAMA_TEST_OPTIONS
     );
     /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-explicit-any */
-    const txInfo = decodeUnsignedTx(unsigned, KUSAMA_TEST_OPTIONS);
+    const txInfo = decodeUnsignedTx(unsigned, KUSAMA_TEST_OPTIONS, true);
 
     decodeBaseTxInfo(txInfo);
     expect(txInfo.method.pallet).toBe(pallet);

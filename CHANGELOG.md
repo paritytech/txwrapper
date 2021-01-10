@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.10.6](https://github.com/paritytech/txwrapper/compare/v3.10.5...v3.10.6) (2021-01-04)
+
+
+### Bug Fixes
+
+* Accommodate polkadot-js meta update & AbstractInt.toJSON update ([#352](https://github.com/paritytech/txwrapper/issues/352)) ([56a1e80](https://github.com/paritytech/txwrapper/commit/56a1e804809eaf8ed3a2b5a9f8517b29a7482fb4))
+
+### [3.10.5](https://github.com/paritytech/txwrapper/compare/v3.10.4...v3.10.5) (2020-12-29)
+
 ### [3.10.4](https://github.com/paritytech/txwrapper/compare/v3.10.3...v3.10.4) (2020-12-16)
 
 ### [3.10.3](https://github.com/paritytech/txwrapper/compare/v3.10.1...v3.10.3) (2020-11-20)

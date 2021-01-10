@@ -25,7 +25,7 @@ describe('decode', () => {
 
     const signedTx = createSignedTx(unsigned, signature, KUSAMA_TEST_OPTIONS);
 
-    const txInfo = decode(signedTx, KUSAMA_TEST_OPTIONS);
+    const txInfo = decode(signedTx, KUSAMA_TEST_OPTIONS, true);
 
     decodeSignedBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
@@ -41,7 +41,7 @@ describe('decode', () => {
       TEST_BASE_TX_INFO,
       KUSAMA_TEST_OPTIONS
     );
-    const txInfo = decode(unsigned, KUSAMA_TEST_OPTIONS);
+    const txInfo = decode(unsigned, KUSAMA_TEST_OPTIONS, true);
 
     decodeUnsignedBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
@@ -59,7 +59,8 @@ describe('decode', () => {
 
     const txInfo = decode(
       signingPayload,
-      KUSAMA_TEST_OPTIONS
+      KUSAMA_TEST_OPTIONS,
+      true
     ) as DecodedSigningPayload;
 
     decodeSigningBase(txInfo);
