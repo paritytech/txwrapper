@@ -804,9 +804,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest@26.x", "@types/jest@^26.0.0":
-  version "26.0.19"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.19.tgz#e6fa1e3def5842ec85045bd5210e9bb8289de790"
-  integrity sha512-jqHoirTG61fee6v6rwbnEuKhpSKih0tuhqeFbCmMmErhtu3BYlOZaXWjffgOstMM4S/3iQD31lI5bGLTrs97yQ==
+  version "26.0.20"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.20.tgz#cd2f2702ecf69e86b586e1f5223a60e454056307"
+  integrity sha512-9zi2Y+5USJRxd0FsahERhBwlcvFh6D2GLQnY2FH2BzK8J9s9omvNHIbvABwIluXa0fD8XVKMLTO0aOEuUfACAA==
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
@@ -5639,9 +5639,9 @@ typedoc-default-themes@0.12.1:
   integrity sha512-6PEvV+/kWAJeUwEtrKgIsZQSbybW5DGCr6s2mMjHsDplpgN8iBHI52UbA+2C+c2TMCxBNMK9TMS6pdeIdwsLSw==
 
 typedoc-plugin-markdown@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.2.1.tgz#c11d1107893811b4d4d8f9443885a34d2a53e502"
-  integrity sha512-gepVk2zFFrTGaKywLEgwz6EARYjOGcx9rHF8M8a+fqz/iTp6Zobvw+7x01BJ9V4tbuXI3M9Y2/wMYwC378/msg==
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.4.0.tgz#5634f2aa74053f514b882f36782769c157c3a9aa"
+  integrity sha512-aHLWI4jeSpSDgMbRByinRp+b2u4kHXySiccZc7lKSExH4Md44ds21oH0g+xZ5lBv9dhZdTz7mhTCrbAm5Nh24w==
   dependencies:
     handlebars "^4.7.6"
 
