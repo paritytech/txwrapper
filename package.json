@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@polkadot/api": "3.4.1",
+    "@polkadot/api": "3.6.3",
     "memoizee": "^0.4.14"
   },
   "devDependencies": {
