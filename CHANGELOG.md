@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.10.7](https://github.com/paritytech/txwrapper/compare/v3.10.6...v3.10.7) (2021-01-29)
+
+
+### Bug Fixes
+
+* Silence misleading error message when decoding signed tx ([#343](https://github.com/paritytech/txwrapper/issues/343)) ([1c9166e](https://github.com/paritytech/txwrapper/commit/1c9166e21b9c8cfa7264331a934abc0fbb7e03fd))
+
 ### [3.10.6](https://github.com/paritytech/txwrapper/compare/v3.10.5...v3.10.6) (2021-01-04)
 
 
