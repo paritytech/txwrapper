@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.10.8](https://github.com/paritytech/txwrapper/compare/v3.10.6...v3.10.8) (2021-02-03)
+
+
+### Bug Fixes
+
+* revert @polkadot/api to 3.6.3 ([2db770a](https://github.com/paritytech/txwrapper/commit/2db770a42197841a4c1f43bff0cdc510bda6bff5))
+* Silence misleading error message when decoding signed tx ([#343](https://github.com/paritytech/txwrapper/issues/343)) ([1c9166e](https://github.com/paritytech/txwrapper/commit/1c9166e21b9c8cfa7264331a934abc0fbb7e03fd))
+* upgrade latest packages ([2ec5d27](https://github.com/paritytech/txwrapper/commit/2ec5d2724dbaf3b3b1ea2b867668c41772046454))
+
 ### [3.10.7](https://github.com/paritytech/txwrapper/compare/v3.10.6...v3.10.7) (2021-01-29)
 
 
