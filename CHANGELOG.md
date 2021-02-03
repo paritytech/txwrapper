@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.10.8](https://github.com/paritytech/txwrapper/compare/v3.10.7...v3.10.8) (2021-02-03)
+
+
+### Bug Fixes
+
+* testUtil specVersion 9999 => 2025 ([0b8457c](https://github.com/paritytech/txwrapper/commit/0b8457c52f0c7376de52aee8e2eab6cffa62d273))
+* upgrade packaging ([abeed34](https://github.com/paritytech/txwrapper/commit/abeed34cb389261e16b7d65cf5da95709e2e6599))
+
 ### [3.10.7](https://github.com/paritytech/txwrapper/compare/v3.10.6...v3.10.7) (2021-01-29)
 
 
