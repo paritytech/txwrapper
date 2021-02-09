@@ -40,7 +40,7 @@ const defaultChainProperties: Record<string, ChainProperties> = {
   },
   Polkadot: {
     ss58Format: POLKADOT_SS58_FORMAT,
-    tokenDecimals: 12,
+    tokenDecimals: 10,
     tokenSymbol: 'DOT',
   },
   'Polkadot CC1': {
