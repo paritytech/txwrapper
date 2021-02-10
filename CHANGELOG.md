@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.10.9](https://github.com/paritytech/txwrapper/compare/v3.10.8...v3.10.9) (2021-02-10)
+
+
+### Bug Fixes
+
+* 10 decimals for DOT ([#386](https://github.com/paritytech/txwrapper/issues/386)) ([6d868c5](https://github.com/paritytech/txwrapper/commit/6d868c54dd00efd86e563e6f273942a294add5e2))
+
 ### [3.10.8](https://github.com/paritytech/txwrapper/compare/v3.10.7...v3.10.8) (2021-02-03)
 
 
