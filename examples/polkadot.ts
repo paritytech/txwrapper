@@ -53,7 +53,7 @@ async function main(): Promise<void> {
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
   // if desired.
-  const unsigned = methods.staking.validate(
+  const unsigned = methods.balances.transfer(
     {
       value: '90071992547409910',
       dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
@@ -77,8 +77,6 @@ async function main(): Promise<void> {
       registry,
     }
   );
-
-  console.log(method);
 
   // Decode an unsigned transaction.
   const decodedUnsigned = decode(
