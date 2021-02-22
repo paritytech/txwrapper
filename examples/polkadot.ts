@@ -53,10 +53,11 @@ async function main(): Promise<void> {
   // Now we can create our `balances.transfer` unsigned tx. The following
   // function takes the above data as arguments, so can be performed offline
   // if desired.
-  const unsigned = methods.balances.transfer(
+  const unsigned = methods.staking.bond(
     {
       value: '90071992547409910',
-      dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
+      controller: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
+      payee: 'Controller',
     },
     {
       address: deriveAddress(alice.publicKey, POLKADOT_SS58_FORMAT),
@@ -77,6 +78,8 @@ async function main(): Promise<void> {
       registry,
     }
   );
+
+  console.log('method: ', unsigned.method);
 
   // Decode an unsigned transaction.
   const decodedUnsigned = decode(
