@@ -78,8 +78,6 @@ async function main(): Promise<void> {
     }
   );
 
-  console.log('method: ', unsigned.method);
-
   // Decode an unsigned transaction.
   const decodedUnsigned = decode(
     unsigned,
