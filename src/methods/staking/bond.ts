@@ -1,12 +1,12 @@
 import {
-  Args,
   BaseTxInfo,
   createMethod,
   OptionsWithMeta,
   UnsignedTransaction,
 } from '../../util';
+import { StakingSetPayeeArgs } from './setPayee';
 
-export interface StakingBondArgs extends Args {
+export interface StakingBondArgs extends StakingSetPayeeArgs {
   /**
    * The SS-58 encoded address of the Controller account.
    */
@@ -15,10 +15,6 @@ export interface StakingBondArgs extends Args {
    * The number of tokens to bond.
    */
   value: number | string;
-  /**
-   * The rewards destination. Can be "Stash", "Staked", "Controller" or "{ Account: accountId }"".
-   */
-  payee: string | { Account: string };
 }
 
 /**
