@@ -57,11 +57,11 @@ describe('decode', () => {
     );
     const signingPayload = createSigningPayload(unsigned, KUSAMA_TEST_OPTIONS);
 
-    const txInfo = decode(
+    const txInfo = (decode(
       signingPayload,
       KUSAMA_TEST_OPTIONS,
       true
-    ) as DecodedSigningPayload;
+    ) as unknown) as DecodedSigningPayload;
 
     decodeSigningBase(txInfo);
     expect(txInfo.method.pallet).toBe('balances');
