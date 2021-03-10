@@ -791,10 +791,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@substrate/dev@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@substrate/dev/-/dev-0.1.0.tgz#a3245d2a087b8028ac8797d998a123d86ce57364"
-  integrity sha512-I7sZ71d5mc1zqquKocHQw8pxQS6nrizFVyXHsy7LCfDwadLOYpNlEVIPymSC2NvKqO0jYxoAWGiDLwUZrMPCmA==
+"@substrate/dev@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@substrate/dev/-/dev-0.2.0.tgz#1eb0415b68ce12ee1771bf428931801a15f40a5f"
+  integrity sha512-50EHCe7HV728FFLcZDS+AvC1NE15DQBk7vdbXmsjukCAnLjoJcPVns/JT0mNycd9nMtryZyyeNVkgpB0SbUHGQ==
   dependencies:
     "@babel/plugin-transform-modules-commonjs" "^7.13.8"
     "@types/jest" "^26.0.20"
