@@ -10,14 +10,14 @@ import * as utility from './utility';
 import * as vesting from './vesting';
 
 export {
-  balances,
-  claims,
-  democracy,
-  poll,
-  proxy,
-  session,
-  staking,
-  system,
-  utility,
-  vesting,
+	balances,
+	claims,
+	democracy,
+	poll,
+	proxy,
+	session,
+	staking,
+	system,
+	utility,
+	vesting,
 };

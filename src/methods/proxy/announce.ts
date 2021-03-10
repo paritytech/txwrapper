@@ -1,20 +1,20 @@
 import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 
 interface ProxyAnnounceArgs extends Args {
-  /**
-   * The account that the proxy will make a call on behalf of.
-   */
-  real: string;
-  /**
-   * The hash of the call to be made by the `real` account.
-   */
-  callHash: string;
+	/**
+	 * The account that the proxy will make a call on behalf of.
+	 */
+	real: string;
+	/**
+	 * The hash of the call to be made by the `real` account.
+	 */
+	callHash: string;
 }
 
 /**
@@ -38,19 +38,19 @@ interface ProxyAnnounceArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function announce(
-  args: ProxyAnnounceArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: ProxyAnnounceArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'announce',
-        pallet: 'proxy',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'announce',
+				pallet: 'proxy',
+			},
+			...info,
+		},
+		options
+	);
 }

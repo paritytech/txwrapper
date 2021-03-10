@@ -1,13 +1,13 @@
 import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 
 export interface StakingWithdrawUnbondedArgs extends Args {
-  numSlashingSpans: number;
+	numSlashingSpans: number;
 }
 
 /**
@@ -20,19 +20,19 @@ export interface StakingWithdrawUnbondedArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function withdrawUnbonded(
-  args: StakingWithdrawUnbondedArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: StakingWithdrawUnbondedArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'withdrawUnbonded',
-        pallet: 'staking',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'withdrawUnbonded',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

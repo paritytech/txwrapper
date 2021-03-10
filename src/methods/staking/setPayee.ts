@@ -1,16 +1,16 @@
 import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 
 export interface StakingSetPayeeArgs extends Args {
-  /**
-   * The rewards destination. Can be "Stash", "Staked", "Controller" or "{ Account: accountId }"".
-   */
-  payee: string | { Account: string };
+	/**
+	 * The rewards destination. Can be "Stash", "Staked", "Controller" or "{ Account: accountId }"".
+	 */
+	payee: string | { Account: string };
 }
 
 /**
@@ -25,19 +25,19 @@ export interface StakingSetPayeeArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function setPayee(
-  args: StakingSetPayeeArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: StakingSetPayeeArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'setPayee',
-        pallet: 'staking',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'setPayee',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

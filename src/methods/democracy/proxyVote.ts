@@ -1,21 +1,21 @@
 import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 import { AccountVote } from './types';
 
 export interface DemocracyProxyVoteArgs extends Args {
-  /*
-   * Referendum index.
-   */
-  refIndex: number;
-  /**
-   * Vote.
-   */
-  vote: AccountVote;
+	/*
+	 * Referendum index.
+	 */
+	refIndex: number;
+	/**
+	 * Vote.
+	 */
+	vote: AccountVote;
 }
 
 /**
@@ -27,23 +27,23 @@ export interface DemocracyProxyVoteArgs extends Args {
  * @deprecated Update to the latest version of Substrate to use the proxy pallet.
  */
 export function proxyVote(
-  args: DemocracyProxyVoteArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: DemocracyProxyVoteArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  console.warn(
-    '`democracy.proxyVote` is now deprecated. ' +
-      'Update to the latest version of Substrate to use the proxy pallet.'
-  );
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'proxyVote',
-        pallet: 'democracy',
-      },
-      ...info,
-    },
-    options
-  );
+	console.warn(
+		'`democracy.proxyVote` is now deprecated. ' +
+			'Update to the latest version of Substrate to use the proxy pallet.'
+	);
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'proxyVote',
+				pallet: 'democracy',
+			},
+			...info,
+		},
+		options
+	);
 }

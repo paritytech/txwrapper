@@ -1,8 +1,8 @@
 import { OptionsWithMeta, UnsignedTransaction } from '../util';
 import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
 import {
-  DecodedSigningPayload,
-  decodeSigningPayload,
+	DecodedSigningPayload,
+	decodeSigningPayload,
 } from './decodeSigningPayload';
 import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
 
@@ -16,9 +16,9 @@ import { DecodedUnsignedTx, decodeUnsignedTx } from './decodeUnsignedTx';
  * Defaults to false
  */
 export function decode(
-  unsignedTx: UnsignedTransaction,
-  options: OptionsWithMeta,
-  toInt?: boolean
+	unsignedTx: UnsignedTransaction,
+	options: OptionsWithMeta,
+	toInt?: boolean
 ): DecodedUnsignedTx;
 
 /**
@@ -31,9 +31,9 @@ export function decode(
  * Defaults to false
  */
 export function decode(
-  signedTx: string,
-  options: OptionsWithMeta,
-  toInt?: boolean
+	signedTx: string,
+	options: OptionsWithMeta,
+	toInt?: boolean
 ): DecodedSignedTx;
 
 /**
@@ -46,25 +46,25 @@ export function decode(
  * Defaults to false
  */
 export function decode(
-  signingPayload: string,
-  options: OptionsWithMeta,
-  toInt?: boolean
+	signingPayload: string,
+	options: OptionsWithMeta,
+	toInt?: boolean
 ): DecodedSigningPayload;
 
 export function decode(
-  data: string | UnsignedTransaction,
-  options: OptionsWithMeta,
-  toInt = false
+	data: string | UnsignedTransaction,
+	options: OptionsWithMeta,
+	toInt = false
 ): DecodedSignedTx | DecodedUnsignedTx | DecodedSigningPayload {
-  if (typeof data === 'string') {
-    let decodedInfo: DecodedSigningPayload | DecodedSignedTx;
-    try {
-      decodedInfo = decodeSigningPayload(data, options, toInt);
-    } catch {
-      decodedInfo = decodeSignedTx(data, options, toInt);
-    }
-    return decodedInfo;
-  }
+	if (typeof data === 'string') {
+		let decodedInfo: DecodedSigningPayload | DecodedSignedTx;
+		try {
+			decodedInfo = decodeSigningPayload(data, options, toInt);
+		} catch {
+			decodedInfo = decodeSignedTx(data, options, toInt);
+		}
+		return decodedInfo;
+	}
 
-  return decodeUnsignedTx(data, options, toInt);
+	return decodeUnsignedTx(data, options, toInt);
 }

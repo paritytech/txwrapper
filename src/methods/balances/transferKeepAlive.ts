@@ -1,8 +1,8 @@
 import {
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 import { BalancesTransferArgs } from './transfer';
 
@@ -16,19 +16,19 @@ export type BalancesTransferKeepAliveArgs = BalancesTransferArgs;
  * @param options - Registry and metadata used for constructing the method.
  */
 export function transferKeepAlive(
-  args: BalancesTransferKeepAliveArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: BalancesTransferKeepAliveArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'transferKeepAlive',
-        pallet: 'balances',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'transferKeepAlive',
+				pallet: 'balances',
+			},
+			...info,
+		},
+		options
+	);
 }
