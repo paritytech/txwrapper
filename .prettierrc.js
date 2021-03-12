@@ -1,6 +1,1 @@
-module.exports = {
-  semi: true,
-  singleQuote: true,
-  tabWidth: 2,
-  useTabs: false,
-};
+module.exports = require('@substrate/dev/config/prettier');

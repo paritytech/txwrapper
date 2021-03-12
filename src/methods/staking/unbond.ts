@@ -1,16 +1,16 @@
 import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 
 export interface StakingUnbondArgs extends Args {
-  /**
-   * The number of tokens to unbond.
-   */
-  value: number | string;
+	/**
+	 * The number of tokens to unbond.
+	 */
+	value: number | string;
 }
 
 /**
@@ -24,19 +24,19 @@ export interface StakingUnbondArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function unbond(
-  args: StakingUnbondArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: StakingUnbondArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'unbond',
-        pallet: 'staking',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'unbond',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

@@ -1,21 +1,21 @@
 import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 import { AccountVote } from './types';
 
 export interface DemocracyVoteArgs extends Args {
-  /*
-   * Referendum index.
-   */
-  refIndex: number;
-  /**
-   * Vote.
-   */
-  vote: AccountVote;
+	/*
+	 * Referendum index.
+	 */
+	refIndex: number;
+	/**
+	 * Vote.
+	 */
+	vote: AccountVote;
 }
 
 /**
@@ -26,19 +26,19 @@ export interface DemocracyVoteArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function vote(
-  args: DemocracyVoteArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: DemocracyVoteArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'vote',
-        pallet: 'democracy',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'vote',
+				pallet: 'democracy',
+			},
+			...info,
+		},
+		options
+	);
 }

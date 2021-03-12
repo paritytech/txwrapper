@@ -1,16 +1,16 @@
 import {
-  Args,
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 
 export interface StakingRebondArgs extends Args {
-  /**
-   * The number of tokens to rebond.
-   */
-  value: number | string;
+	/**
+	 * The number of tokens to rebond.
+	 */
+	value: number | string;
 }
 
 /**
@@ -21,19 +21,19 @@ export interface StakingRebondArgs extends Args {
  *
  **/
 export function rebond(
-  args: StakingRebondArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: StakingRebondArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'rebond',
-        pallet: 'staking',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'rebond',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

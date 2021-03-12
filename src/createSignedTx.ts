@@ -11,20 +11,20 @@ import { createMetadata, OptionsWithMeta, UnsignedTransaction } from './util';
  * @param options - Registry and metadata used for constructing the method.
  */
 export function createSignedTx(
-  unsigned: UnsignedTransaction,
-  signature: string,
-  options: OptionsWithMeta
+	unsigned: UnsignedTransaction,
+	signature: string,
+	options: OptionsWithMeta
 ): string {
-  const { metadataRpc, registry } = options;
-  registry.setMetadata(createMetadata(registry, metadataRpc));
+	const { metadataRpc, registry } = options;
+	registry.setMetadata(createMetadata(registry, metadataRpc));
 
-  const extrinsic = registry.createType(
-    'Extrinsic',
-    { method: unsigned.method },
-    { version: unsigned.version }
-  );
+	const extrinsic = registry.createType(
+		'Extrinsic',
+		{ method: unsigned.method },
+		{ version: unsigned.version }
+	);
 
-  extrinsic.addSignature(unsigned.address, signature, unsigned);
+	extrinsic.addSignature(unsigned.address, signature, unsigned);
 
-  return extrinsic.toHex();
+	return extrinsic.toHex();
 }

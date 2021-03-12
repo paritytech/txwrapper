@@ -1,20 +1,20 @@
 import {
-  BaseTxInfo,
-  createMethod,
-  OptionsWithMeta,
-  UnsignedTransaction,
+	BaseTxInfo,
+	createMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '../../util';
 import { StakingSetPayeeArgs } from './setPayee';
 
 export interface StakingBondArgs extends StakingSetPayeeArgs {
-  /**
-   * The SS-58 encoded address of the Controller account.
-   */
-  controller: string;
-  /**
-   * The number of tokens to bond.
-   */
-  value: number | string;
+	/**
+	 * The SS-58 encoded address of the Controller account.
+	 */
+	controller: string;
+	/**
+	 * The number of tokens to bond.
+	 */
+	value: number | string;
 }
 
 /**
@@ -25,19 +25,19 @@ export interface StakingBondArgs extends StakingSetPayeeArgs {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function bond(
-  args: StakingBondArgs,
-  info: BaseTxInfo,
-  options: OptionsWithMeta
+	args: StakingBondArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-  return createMethod(
-    {
-      method: {
-        args,
-        name: 'bond',
-        pallet: 'staking',
-      },
-      ...info,
-    },
-    options
-  );
+	return createMethod(
+		{
+			method: {
+				args,
+				name: 'bond',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }
