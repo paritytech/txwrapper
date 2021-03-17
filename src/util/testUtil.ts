@@ -13,6 +13,8 @@ import { getRegistry } from './metadata';
 import apiV1_17_2MetadataRpc from './metadataStatic_api_v1_17_2';
 // Static metadata from @polkadot/api v1.32.0. Useful for testing updated proxy methods.
 import polkadot23MetadataRpc from './metadataStaticPolkadot23';
+// Static metadata from Westend v50. Useful for testing PLO functionality
+import westend50MetadataRpc from './metadataStaticWestend50';
 import { UnsignedTransaction } from './types';
 
 export { metadataRpc };
@@ -93,6 +95,11 @@ export const CC1_TEST_OPTIONS = {
 export const DOT_23_TEST_OPTIONS = {
 	metadataRpc: polkadot23MetadataRpc,
 	registry: getRegistry('Polkadot', 'polkadot', 23, polkadot23MetadataRpc),
+};
+
+export const WND_50_TEST_OPTIONS = {
+	metadataRpc: westend50MetadataRpc,
+	registry: getRegistry('Westend', 'westend', 50, westend50MetadataRpc),
 };
 
 /**
@@ -304,6 +311,19 @@ export const TEST_METHOD_ARGS = {
 		vest: {},
 		vestOther: {
 			target: 'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
+		},
+	},
+	crowdloan: {
+		contribute: {
+			value: '90071992547409910',
+			index: 12,
+			signature: {
+				Sr25519: '0xFFFFFFFFFFFFFFFF',
+			},
+		},
+		withdraw: {
+			index: 12,
+			who: 'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
 		},
 	},
 };
