@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/paritytech/txwrapper/compare/v3.10.12...v4.0.0) (2021-03-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **types:** polkadot/api to v4 w. esm; Use substrate/dev for build (#404)
+
+### Features
+
+* Add pallet methods `crowdloan.{contrbute, withdraw}` ([#409](https://github.com/paritytech/txwrapper/issues/409)) ([f881f86](https://github.com/paritytech/txwrapper/commit/f881f860a8d95bdf6530e715eca7b751162081cf)), closes [#407](https://github.com/paritytech/txwrapper/issues/407)
+
+
+### Bug Fixes
+
+* **types:** polkadot/api to v4 w. esm; Use substrate/dev for build ([#404](https://github.com/paritytech/txwrapper/issues/404)) ([2280218](https://github.com/paritytech/txwrapper/commit/228021831ffa2f45002ddd5825ccd7a0e8a86ada))
+
 ### [3.10.12](https://github.com/paritytech/txwrapper/compare/v3.10.11...v3.10.12) (2021-03-02)
 
 ### [3.10.11](https://github.com/paritytech/txwrapper/compare/v3.10.10...v3.10.11) (2021-02-23)
