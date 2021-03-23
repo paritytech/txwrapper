@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/paritytech/txwrapper/compare/v4.0.0...v4.0.1) (2021-03-23)
+
+
+### Bug Fixes
+
+* **docs:** createSigningPayload docs specify handling payloads > 256 bytes ([#410](https://github.com/paritytech/txwrapper/issues/410)) ([1fb0f41](https://github.com/paritytech/txwrapper/commit/1fb0f4105bbfa0af034562252aa5d037ee3b9fc7))
+
 ## [4.0.0](https://github.com/paritytech/txwrapper/compare/v3.10.12...v4.0.0) (2021-03-17)
 
 
