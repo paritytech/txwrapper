@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.3](https://github.com/paritytech/txwrapper/compare/v4.0.2...v4.0.3) (2021-04-19)
+
+
+### Bug Fixes
+
+* Bump polkadot-js scroped deps to get latest types ([#424](https://github.com/paritytech/txwrapper/issues/424)) ([bed18dd](https://github.com/paritytech/txwrapper/commit/bed18ddc773e35a4e53e5c7fcec6cb6ce64cfeeb))
+
 ### [4.0.2](https://github.com/paritytech/txwrapper/compare/v4.0.1...v4.0.2) (2021-03-29)
 
 
