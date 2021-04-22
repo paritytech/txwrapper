@@ -239,6 +239,11 @@ export const TEST_METHOD_ARGS = {
 			callHash:
 				'0x474235772ae94433aee7d1befac0bfcc35fd0b5dfcf0cfc14bba7d5bbe35b778',
 		},
+		anonymous: {
+			proxyType: 'Any',
+			delay: 30,
+			index: 1,
+		},
 	},
 	poll: {
 		vote: {
