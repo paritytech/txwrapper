@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/paritytech/txwrapper/compare/v4.0.3...v4.1.0) (2021-04-22)
+
+
+### Features
+
+* Add `proxy.anonymous` ([0440e50](https://github.com/paritytech/txwrapper/commit/0440e50aa78e652ffc47d9c4f426e4d40cabf057))
+
 ### [4.0.3](https://github.com/paritytech/txwrapper/compare/v4.0.2...v4.0.3) (2021-04-19)
 
 
