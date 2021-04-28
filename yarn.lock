@@ -787,10 +787,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@substrate/dev@^0.4.0":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@substrate/dev/-/dev-0.4.1.tgz#ecac16be4c2cfec74dbd91bf32044ae39d4bd84b"
-  integrity sha512-a71ppKPe2TKiW55laBH2O+vvGauhxL0wKqCM5+Ey1kw48Z2CIj3FwDmYtEBgZWzssjM5DXlNtZzosVRzj2h4DQ==
+"@substrate/dev@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@substrate/dev/-/dev-0.5.2.tgz#155785020f78976585dc489fd4d94f8c128c6be2"
+  integrity sha512-Q4WitvZZFxIKDSKlyYsgukTRZy9vg+LZhIZsisYUr2NHMXfkQiZUSEXeSm/ID27GbDb2Rb2VfqP4qsgg7VKbAw==
   dependencies:
     "@babel/plugin-transform-modules-commonjs" "^7.13.8"
     "@types/jest" "^26.0.20"
@@ -804,6 +804,7 @@
     prettier "^2.2.1"
     ts-jest "^26.5.3"
     typescript "^4.2.3"
+    yargs "^16.2.0"
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.14"
@@ -6055,7 +6056,7 @@ yargs@^15.4.1:
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
 
-yargs@^16.0.0:
+yargs@^16.0.0, yargs@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
   integrity sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==
