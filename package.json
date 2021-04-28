@@ -19,15 +19,15 @@
     "build": "rimraf lib/ && tsc -p tsconfig.build.json",
     "deploy": "yarn build && standard-version",
     "docs": "typedoc",
-    "lint": "tsc --noEmit && eslint . --ext ts",
-    "test": "jest"
+    "lint": "substrate-dev-run-lint",
+    "test": "substrate-exec-jest"
   },
   "dependencies": {
     "@polkadot/api": "4.7.2",
     "memoizee": "^0.4.14"
   },
   "devDependencies": {
-    "@substrate/dev": "^0.4.0",
+    "@substrate/dev": "^0.5.2",
     "@types/memoizee": "^0.4.3",
     "standard-version": "^9.1.1",
     "ts-node": "^9.0.0",
