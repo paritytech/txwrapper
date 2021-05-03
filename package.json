@@ -16,7 +16,7 @@
   },
   "repository": "https://github.com/paritytech/txwrapper",
   "scripts": {
-    "build": "rimraf lib/ && tsc -p tsconfig.build.json",
+    "build": "rimraf lib/ && substrate-exec-tsc -p tsconfig.build.json",
     "deploy": "yarn build && standard-version",
     "docs": "typedoc",
     "lint": "substrate-dev-run-lint",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@substrate/dev": "^0.5.2",
     "@types/memoizee": "^0.4.3",
+    "rimraf": "^3.0.2",
     "standard-version": "^9.1.1",
     "ts-node": "^9.0.0",
     "typedoc": "^0.20.32",
