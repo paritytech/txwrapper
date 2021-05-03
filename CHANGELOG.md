@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/paritytech/txwrapper/compare/v4.1.0...v5.0.0) (2021-05-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* update required node version to >= 14.0.0 (#428)
+
+### Features
+
+* update required node version to >= 14.0.0 ([#428](https://github.com/paritytech/txwrapper/issues/428)) ([9d53919](https://github.com/paritytech/txwrapper/commit/9d539199fd15562cf7f41164f5bafd121e676ab8))
+
+
+### Bug Fixes
+
+* build script ([#434](https://github.com/paritytech/txwrapper/issues/434)) ([debaba4](https://github.com/paritytech/txwrapper/commit/debaba488f0409663f24f3681099c58a1b3094d6))
+* update polkadot, fix decorateConstants bug ([#433](https://github.com/paritytech/txwrapper/issues/433)) ([fd8689a](https://github.com/paritytech/txwrapper/commit/fd8689a6a39c8f7b0a7b7327f3c675a2192fe440))
+
 ## [4.1.0](https://github.com/paritytech/txwrapper/compare/v4.0.3...v4.1.0) (2021-04-22)
 
 
