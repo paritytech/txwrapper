@@ -30,13 +30,10 @@ export function decodeSigningPayload(
 
 	registry.setMetadata(createMetadata(registry, metadataRpc));
 
-	// We use `createTypeUnsafe` here because it allows us to specify `withoutLog: true`,
-	// which silences an internal error message from polkadot-js. This is helpful in `decode`
-	// which takes in just a string. We determine if the string is a signing payload or a
+	// We determine if the string is a signing payload or a
 	// signed tx by first attempting to decode it as a signing payload with this function.
 	// If that fails we catch, knowing through process of elimination it should be a
-	// signed tx. `withoutLog: true` prevents an alarming error message from bubbling up
-	// to the user when we catch.
+	// signed tx.
 	const payload: ExtrinsicPayload = createTypeUnsafe(
 		registry,
 		'ExtrinsicPayload',
