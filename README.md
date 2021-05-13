@@ -20,13 +20,13 @@
 
 <br /><br />
 
-## Note
+## DEPRECATION NOTICE
+
+On 9 June 2021 this repo will stop being supported.
 
 Please use [`txwrapper-polkadot`](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-polkadot) instead of this package for long term support and more features. This package will be phased out in the future in favor of the packages in [`txwrapper-core`](https://github.com/paritytech/txwrapper-core/).
 
 If you are a chain builder looking to build a chain specific `txwrapper` please take a look at [`txwrapper-core`](https://github.com/paritytech/txwrapper-core) and the [guide for chain builders](https://github.com/paritytech/txwrapper-core/blob/main/CHAIN_BUILDER.md). 
-
-Any feedback for txwrapper-core and the transition from this package is welcome, just make [an issue at that repo](https://github.com/paritytech/txwrapper-core/issues).
 
 ## Get Started
 
