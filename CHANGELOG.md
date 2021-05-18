@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/paritytech/txwrapper/compare/v4.1.0...v6.0.0) (2021-05-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* update required node version to >= 14.0.0 (#428)
+
+### Features
+
+* update required node version to >= 14.0.0 ([#428](https://github.com/paritytech/txwrapper/issues/428)) ([9d53919](https://github.com/paritytech/txwrapper/commit/9d539199fd15562cf7f41164f5bafd121e676ab8))
+
+
+### Bug Fixes
+
+* **types:** Bump polkadot-js deps to get latest types ([#443](https://github.com/paritytech/txwrapper/issues/443)) ([274bce0](https://github.com/paritytech/txwrapper/commit/274bce0697658d8aaa630bb3451f1baa9381e1ba))
+* build script ([#434](https://github.com/paritytech/txwrapper/issues/434)) ([debaba4](https://github.com/paritytech/txwrapper/commit/debaba488f0409663f24f3681099c58a1b3094d6))
+* Bump polkadot-js/api; Remove deprecated createType log option ([#438](https://github.com/paritytech/txwrapper/issues/438)) ([16e13db](https://github.com/paritytech/txwrapper/commit/16e13dbec6ea1469c687f4143cef2d6888eb8aca))
+* update polkadot, fix decorateConstants bug ([#433](https://github.com/paritytech/txwrapper/issues/433)) ([fd8689a](https://github.com/paritytech/txwrapper/commit/fd8689a6a39c8f7b0a7b7327f3c675a2192fe440))
+
 ## [5.0.0](https://github.com/paritytech/txwrapper/compare/v4.1.0...v5.0.0) (2021-05-03)
 
 
