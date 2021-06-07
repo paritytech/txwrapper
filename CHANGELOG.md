@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.1](https://github.com/paritytech/txwrapper/compare/v7.0.0...v7.0.1) (2021-06-07)
+
+
+### Bug Fixes
+
+* **types:** Update polkadot-js deps to get the latest types ([#455](https://github.com/paritytech/txwrapper/issues/455)) ([795338b](https://github.com/paritytech/txwrapper/commit/795338b755cf9faf344e5319e8350518c00ae909))
+
 ## [7.0.0](https://github.com/paritytech/txwrapper/compare/v4.1.0...v7.0.0) (2021-06-01)
 
 
